@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SEOExtension>
+  <SiteMapSubmissionFailed>Thank you for voting this poll. </SiteMapSubmissionFailed>
+  <YouHadAlreadyVotedThisPoll>Sorry, You had already voted this poll. </YouHadAlreadyVotedThisPoll>
+  <ChooseYourAnswerAndThenVote>Please, choose your answer and then vote. </ChooseYourAnswerAndThenVote>
+  <NoPollQuestion>You don't have any poll question. </NoPollQuestion>
+  <AnswerSavedSuccessfully>Answers Saved Successfully. </AnswerSavedSuccessfully>
+  <PollSettingSavedSuccessfully>Poll setting saved successfully. </PollSettingSavedSuccessfully>
+  <EnterNumberOfColorAsNumberOfAnswerRequired>Please, enter number of color as number of answer required. </EnterNumberOfColorAsNumberOfAnswerRequired>
+  <PleaseEnterThePollDate>Please, enter the poll date. </PleaseEnterThePollDate>
+  <PollDeletedSuccessfully>Poll Deleted Successfully. </PollDeletedSuccessfully>
+  <EnterTheNumberOfAnswerAsSetInSettingPage>Please, enter the number of answer as set in the Setting Page. </EnterTheNumberOfAnswerAsSetInSettingPage>
+</SEOExtension>
+

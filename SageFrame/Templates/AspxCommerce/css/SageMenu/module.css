@@ -1,0 +1,146 @@
+﻿.sfLeftdiv {
+	width:57%;
+	float:left;
+}
+.sfLeftdiv table td {
+	padding:5px;
+}
+.sfLeftdiv #divPagelist {
+	max-height:200px;
+	overflow:auto;
+}
+#menuList ul li {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* W3C */
+ 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0 ); /* IE6-9 */
+	border:1px solid #d1d1d1;
+	padding:6px 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin:3px 6px;
+	text-shadow:1px 1px 0 #eff9ff;
+	font-weight:bold;
+	cursor:pointer;
+	float:left;
+	width:41%;
+	overflow:hidden;
+}
+#menuList ul li.sfOdd {
+	margin-left:0;
+}
+#menuList ul li:hover {
+	background: #e0f3fa; /* Old browsers */
+	background: -moz-linear-gradient(top, #e0f3fa 0%, #d8f0fc 50%, #b6dffd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0f3fa), color-stop(50%, #d8f0fc), color-stop(100%, #b6dffd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e0f3fa 0%, #d8f0fc 50%, #b6dffd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e0f3fa 0%, #d8f0fc 50%, #b6dffd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #e0f3fa 0%, #d8f0fc 50%, #b6dffd 100%); /* IE10+ */
+	background: linear-gradient(top, #e0f3fa 0%, #d8f0fc 50%, #b6dffd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', endColorstr='#b6dffd', GradientType=0 ); /* IE6-9 */
+}
+#menuList ul li.sfSelected {
+	background: #e0f3fa; /* Old browsers */
+	background: -moz-linear-gradient(top, #e0f3fa 0%, #d8f0fc 31%, #b6dffd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0f3fa), color-stop(31%, #d8f0fc), color-stop(100%, #b6dffd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e0f3fa 0%, #d8f0fc 31%, #b6dffd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e0f3fa 0%, #d8f0fc 31%, #b6dffd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #e0f3fa 0%, #d8f0fc 31%, #b6dffd 100%); /* IE10+ */
+	background: linear-gradient(top, #e0f3fa 0%, #d8f0fc 31%, #b6dffd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', endColorstr='#b6dffd', GradientType=0 ); /* IE6-9 */
+	border:1px solid #a2dbff;
+	color:#357299;
+}
+#menuList ul li img {
+	float:right;
+	margin-left:3px;
+	cursor:pointer;
+}
+.sfQuicklink h3 label {
+	font-size:13px;
+}
+.sfQuicklink .sfPageList {
+	padding:10px 0 0 0;
+}
+.sfPageList ul#pagesTree li {
+	margin:0 0 0 10px;
+}
+.sfPageList ul#pagesTree li label {
+	margin:0 0 0 10px;
+	font-size:11px
+}
+.sfRightdiv {
+	float:right;
+	width:40%;
+}
+.sfCheckboxholder {
+	overflow:hidden;
+}
+.sfCheckboxholder label, .sfCheckboxholder input, .sfCheckboxholder div {
+	float:left;
+	margin:0 5px 0 0;
+	padding:0;
+}
+.sfCheckboxholder label {
+	padding:0 0 0 5px;
+}
+.sfCheckboxholder select.sfListmenu {
+	padding:0 !important;
+}
+.divPermissions table tr {
+	border-bottom:1px solid #fff;
+}
+#tblTopClientMenu {
+	border-top:1px solid #f5f5f5;
+	border-bottom:1px solid #f5f5f5;
+	padding:5px 0 5px 0;
+}
+#tblSideMenu {
+	border-top: 1px solid #F5F5F5;
+	border-bottom:1px solid #f5f5f5;
+	padding:5px 0 5px 0;
+}
+.sfFormwrapper .sfGridwrapper table th label {
+	font-weight:bold !important;
+	color:#043F55;
+}
+#menuList ul li span.sfMenuname {
+	float:left;
+}
+#menuList ul li input
+{
+    float:left;
+}
+#menuList ul li img.delete {
+	float:right;
+}
+img.sfIcon {
+	max-height:30px;
+}
+#tabMenu .sfLeftdiv .sfQuicklink .cke_resizer.cke_resizer_ltr {
+	display:none !important;
+}
+#dvView .sfError {
+	display:inline-block;
+}
+span.deleteIcon {
+	cursor:pointer;
+	margin:0 0 0 10px;
+}
+.divExternalLink label.sfFormlabel, .divHtmlContent label.sfFormlabel {
+	display:block;
+	padding:0 0 5px 0;
+}
+.divExternalLink .sfCheckbox input {
+	margin-top:0;
+	margin-bottom:0;
+}
+.sfDefaultSave {
+    float: left;
+    width: 100%;
+}

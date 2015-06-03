@@ -1,0 +1,5 @@
+/*
+.sfSubscribe .sfInputbox { margin-bottom:20px;}*/
+
+#divEmailSubsCribe input.sfInputbox{ width:60%;background-color: #fff; border: solid 1px #1a3967; box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none; padding:8px; float:left; margin-right:5px;}
+.cssClassSubmitBtn,.sfBtn{width:auto}

@@ -1,0 +1,1406 @@
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_UpdatedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_UpdatedOn]
+END
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_ServiceItemSettings]    Script Date: 01/28/2014 11:49:08 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_ServiceItemSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_ServiceItemSettings]
+GO
+
+/****** Object:  Table [dbo].[Aspx_ServiceItemSettings]    Script Date: 01/28/2014 11:49:08 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_ServiceItemSettings](
+	[SettingID] [int] IDENTITY(1,1) NOT NULL,
+	[SettingKeys] [nvarchar](256) NOT NULL,
+	[SettingValues] [nvarchar](256) NOT NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] ADD  CONSTRAINT [DF_Aspx_ServiceItemSettings_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] ADD  CONSTRAINT [DF_Aspx_ServiceItemSettings_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] ADD  CONSTRAINT [DF_Aspx_ServiceItemSettings_IsModified]  DEFAULT ((0)) FOR [IsModified]
+GO
+
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] ADD  CONSTRAINT [DF_Aspx_ServiceItemSettings_AddedOn]  DEFAULT (getdate()) FOR [AddedOn]
+GO
+
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] ADD  CONSTRAINT [DF_Aspx_ServiceItemSettings_UpdatedOn]  DEFAULT (getdate()) FOR [UpdatedOn]
+GO
+
+SET IDENTITY_INSERT [dbo].[Aspx_ServiceItemSettings] ON
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (1, N'IsEnableService', N'true', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500D66B21 AS DateTime), CAST(0x0000A2B500D66B21 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (2, N'ServiceCategoryCount', N'4', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500D67EDE AS DateTime), CAST(0x0000A2B500D67EDE AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (3, N'ServiceCategoryInARow', N'4', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500D69417 AS DateTime), CAST(0x0000A2B500D69417 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (4, N'ServiceDetailsPage', N'Service', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500D6AEB2 AS DateTime), CAST(0x0000A2B500D6AEB2 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (5, N'ServiceItemDetailsPage', N'Service-Item-Details', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500D6CF65 AS DateTime), CAST(0x0000A2B500D6CF65 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (6, N'IsEnableServiceRss', N'true', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500D6E3D0 AS DateTime), CAST(0x0000A2B500D6E3D0 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (7, N'ServiceRssCount', N'4', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500D6FA7B AS DateTime), CAST(0x0000A2B500D6FA7B AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (8, N'BookAnAppointmentPage', N'Book-An-Appontment', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2C000B02B89 AS DateTime), CAST(0x0000A2C000B02B89 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (9, N'AppointmentSuccessPage', N'Appointment-Success', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2C000B06317 AS DateTime), CAST(0x0000A2C000B06317 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_ServiceItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (10, N'ServiceRssPage', N'Service-Rss', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2CE0126C9E8 AS DateTime), CAST(0x0000A2CE0126C9E8 AS DateTime), NULL, NULL, NULL, NULL)
+SET IDENTITY_INSERT [dbo].[Aspx_ServiceItemSettings] OFF
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddAppointment]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AddAppointment]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AddAppointment]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetAllServices]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetAllServices]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetAllServices]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetAllStoreForService]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetAllStoreForService]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetAllStoreForService]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetFrontServices]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetFrontServices]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetFrontServices]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceBookedTime]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceBookedTime]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceBookedTime]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceDates]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceDates]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceDates]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceDetails]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceDetails]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceDetails]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceItemDetails]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceItemDetails]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceItemDetails]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceItemInfo]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceItemInfo]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceItemInfo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceProducts]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceProducts]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceProducts]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceProviderForStore]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceProviderForStore]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceProviderForStore]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceTime]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceTime]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceTime]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ServiceItemSettingGet]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_ServiceItemSettingGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_ServiceItemSettingGet]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ServiceItemSettingsUpdate]    Script Date: 01/28/2014 11:45:26 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_ServiceItemSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_ServiceItemSettingsUpdate]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddAppointment]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedServiceTypeItem]    Script Date: 02/10/2014 17:21:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRssFeedServiceTypeItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRssFeedServiceTypeItem]
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: sept 4 2012
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_AddAppointment] (
+	@AppointmentID INT
+	,@OrderID INT
+	,@ServiceCategoryID INT
+	,@ServiceProductID INT
+	,@ServiceProductPrice DECIMAL(18, 2)
+	,@PaymentMethodID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(50)
+	,@AppointmentStatusID INT
+	,@Title NVARCHAR(50)
+	,@FirstName NVARCHAR(50)
+	,@LastName NVARCHAR(50)
+	,@Gender NVARCHAR(50)
+	,@Mobile NVARCHAR(20)
+	,@Phone NVARCHAR(20)
+	,@Email NVARCHAR(50)
+	,@PreferredDateID INT
+	,@PreferredDate DATETIME
+	,@PreferredTime NVARCHAR(256)
+	,@TypeOfTreatment NVARCHAR(256)
+	,@StoreLocation NVARCHAR(max)
+	,@CustomerType NVARCHAR(256)
+	,@MembershipElite NVARCHAR(256)
+	,@UserName NVARCHAR(256)
+	,@PreferredTimeInterval NVARCHAR(50)
+	,@PreferredTimeID INT
+	,@EmployeeID INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @AppID INT
+
+	IF (@AppointmentID <> 0)
+	BEGIN
+		UPDATE dbo.Aspx_Appointment
+		SET AppointmentStatusID = @AppointmentStatusID
+			,Title=@Title
+			,FirstName=@FirstName
+			,LastName= @LastName
+			,Gender= @Gender
+			,Mobile=@Mobile
+			,Phone= @Phone
+			,Email=@Email
+			,TypeOfTreatment=@TypeOfTreatment
+			,CustomerType=@CustomerType
+			,MembershipElite=@MembershipElite
+			,StoreLocation=@StoreLocation
+			,PreferredDate = @PreferredDate
+			,PreferredTime = @PreferredTime
+			,PreferredTimeInterval = @PreferredTimeInterval
+			,IsModified = 1
+			,UpdatedOn = GETDATE()
+			,UpdatedBy = @UserName
+		WHERE AppointmentID = @AppointmentID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+			AND CultureName = @CultureName
+
+		UPDATE Aspx_ServiceTimeDuration
+		SET PreferredTimeInterval = @PreferredTimeInterval
+			,StoreBranchID=@StoreLocation
+			,EmployeeID=@EmployeeID
+			,UpdatedOn = GETDATE()
+			,UpdatedBy = @UserName
+		WHERE AppointmentID = @AppointmentID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+			AND CultureName = @CultureName
+
+		IF (@AppointmentStatusID = 4)
+		BEGIN
+			UPDATE Aspx_ServiceTimeDuration
+			SET 
+				PreferredTimeInterval = @PreferredTimeInterval
+				,StoreBranchID=@StoreLocation
+			,EmployeeID=@EmployeeID
+			,IsDeleted = 1
+				,DeletedOn = GETDATE()
+				,DeletedBy = @UserName
+			WHERE AppointmentID = @AppointmentID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND CultureName = @CultureName
+		END
+	END
+	ELSE
+	BEGIN
+		INSERT INTO dbo.Aspx_Appointment (
+			OrderID
+			,AppointmentStatusID
+			,ServiceCategoryID
+			,ServiceProductID
+			,ServiceProductPrice
+			,PaymentMethodID
+			,Title
+			,FirstName
+			,LastName
+			,Gender
+			,Mobile
+			,Phone
+			,Email
+			,ServiceDateID
+			,PreferredDate
+			,PreferredTimeID
+			,PreferredTime
+			,PreferredTimeInterval
+			,TypeOfTreatment
+			,StoreLocation
+			,CustomerType
+			,MembershipElite
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,--IsDeleted,
+			--IsModified,
+			AddedOn
+			,
+			--UpdatedOn,
+			AddedBy
+			)
+		VALUES (
+			@OrderID
+			,@AppointmentStatusID
+			,@ServiceCategoryID
+			,@ServiceProductID
+			,@ServiceProductPrice
+			,@PaymentMethodID
+			,@Title
+			,@FirstName
+			,@LastName
+			,@Gender
+			,@Mobile
+			,@Phone
+			,@Email
+			,@PreferredDateID
+			,@PreferredDate
+			,@PreferredTimeID
+			,@PreferredTime
+			,@PreferredTimeInterval
+			,@TypeOfTreatment
+			,@StoreLocation
+			,@CustomerType
+			,@MembershipElite
+			,@StoreID
+			,@PortalID
+			,@CultureName
+			,1
+			,getdate()
+			,@UserName
+			)
+
+		SELECT @AppID = SCOPE_IDENTITY()
+
+		INSERT INTO dbo.Aspx_ServiceTimeDuration (
+			AppointmentID
+			,ServiceID
+			,ServiceDateID
+			,ServiceTimeID
+			,ServiceProductID
+			,StoreBranchID
+			,PreferredTimeInterval
+			,EmployeeID
+			,StoreID
+			,PortalID
+			,CultureName
+			,AddedOn
+			,AddedBy
+			)
+		VALUES (
+			@AppID
+			,@ServiceCategoryID
+			,@PreferredDateID
+			,@PreferredTimeID
+			,@ServiceProductID
+			,@StoreLocation
+			,@PreferredTimeInterval
+			,@EmployeeID
+			,@StoreID
+			,@PortalID
+			,@CultureName
+			,getdate()
+			,@UserName
+			)
+
+		UPDATE aspx_Order
+		SET OrderType = 2
+		WHERE OrderID = @OrderID
+	END
+END
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetAllServices]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:Rajkumar
+-- Create date: <24-Sep-2012>
+-- Description:To get service category
+-- Modified By: Rajkumar Gupta
+-- =============================================
+-- [usp_Aspx_GetAllServices] 1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetAllServices] (
+	@PortalID INT
+	,@StoreID INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT C.CategoryID AS ServiceCategoryID
+		,cid.CategoryName AS ServiceName
+		,c.BaseImage AS ServiceImagePath
+	FROM Aspx_category c
+	INNER JOIN dbo.Aspx_CategoryInformationDetails cid ON cid.CategoryID = c.CategoryID
+	WHERE c.StoreID = @StoreID
+		AND c.PortalID = @PortalID
+		AND c.IsActive = 1
+		AND c.IsService = 1
+		AND cid.CultureName = @CultureName
+		AND c.IsDeleted = 0
+		AND (
+			c.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND c.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetAllStoreForService]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+---[usp_Aspx_GetAllStoreForService] 1,1,''
+CREATE PROCEDURE [dbo].[usp_Aspx_GetAllStoreForService] (
+	@PortalID INT
+	,@StoreID INT
+	,@ServiceID INT = NULL
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@ServiceID IS NOT NULL)
+	BEGIN
+		SELECT DISTINCT S.StoreBranchID
+			,S.PortalID
+			,S.StoreID
+			,IsNULL(L.StreetName, '') AS StreetName
+			,IsNULL(L.LocalityName, '') AS LocalityName
+			,ISNULL(L.City, '') AS City
+			,ISNULL(L.STATE, '') AS STATE
+			,ISNULL(L.Country, '') AS Country
+			,ISNULL(L.ZIP, 0) AS ZIP
+			,ISNULL(L.Latitude, 0) AS Latitude
+			,ISNULL(L.Longitude, 0) AS Longitude
+			,ISNULL(S.BranchName, '') AS StoreName
+			,'StoreDescription' AS StoreDescription
+			,ISNULL(S.BranchImage, '') AS BranchImage
+			,L.LocationID
+		FROM Aspx_StoreBranchLocator_Locations AS L
+		INNER JOIN Aspx_StoreBranch AS S ON L.StoreBranchID = S.StoreBranchID
+		INNER JOIN Aspx_ServiceCategory si ON si.StoreBranchID = S.StoreBranchID
+		WHERE S.PortalID = @PortalID
+			AND S.StoreID = @StoreID
+			AND S.IsActive = 1
+			AND S.IsDeleted = 0
+			AND L.IsActive = 1
+			AND L.IsDeleted = 0
+			AND si.CategoryID = @ServiceID
+	END
+	ELSE
+	BEGIN
+		SELECT DISTINCT S.StoreBranchID
+			,S.PortalID
+			,S.StoreID
+			,IsNULL(L.StreetName, '') AS StreetName
+			,IsNULL(L.LocalityName, '') AS LocalityName
+			,ISNULL(L.City, '') AS City
+			,ISNULL(L.STATE, '') AS STATE
+			,ISNULL(L.Country, '') AS Country
+			,ISNULL(L.ZIP, 0) AS ZIP
+			,ISNULL(L.Latitude, 0) AS Latitude
+			,ISNULL(L.Longitude, 0) AS Longitude
+			,ISNULL(S.BranchName, '') AS StoreName
+			,'StoreDescription' AS StoreDescription
+			,ISNULL(S.BranchImage, '') AS BranchImage
+			,L.LocationID
+		FROM Aspx_StoreBranchLocator_Locations AS L
+		INNER JOIN Aspx_StoreBranch AS S ON L.StoreBranchID = S.StoreBranchID
+		WHERE S.PortalID = @PortalID
+			AND S.StoreID = @StoreID
+			AND S.IsActive = 1
+			AND S.IsDeleted = 0
+			AND L.IsActive = 1
+			AND L.IsDeleted = 0
+	END
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetFrontServices]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- [dbo].[usp_Aspx_GetFrontServices] 1 ,1, 'en-US',10
+CREATE PROCEDURE [dbo].[usp_Aspx_GetFrontServices] (
+	@PortalID INT
+	,@StoreID INT
+	,@CultureName NVARCHAR(256)
+	,@Count INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT TOP (@Count + 1) C.CategoryID AS ServiceID
+		,cid.CategoryName AS ServiceName
+		,cid.ShortDescription AS ServiceDetail
+		,c.BaseImage AS ServiceImagePath
+	FROM Aspx_category c
+	INNER JOIN [dbo].[Aspx_CategoryInformationDetails] cid ON cid.categoryID = c.CategoryID
+	WHERE c.StoreID = @StoreID
+		AND c.PortalID = @PortalID
+		AND c.IsActive = 1
+		AND c.IsDeleted = 0
+		AND IsService = 1
+		AND (
+			c.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND c.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND cid.CultureName = @CultureName
+	ORDER BY c.AddedOn DESC
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceBookedTime]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: 12/03/2012
+-- Description:	<Description,,>
+-- ============================================= 
+-- [dbo].[usp_Aspx_GetBookedServiceTime] 9,1,1,1,'',1,2,1,1,'en-US'
+-- [usp_Aspx_GetServiceBookedTime] 22,5,1,3,'05/06/2013',4,39,1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetServiceBookedTime] (
+	@ServiceCategoryID INT
+	,@BranchID INT
+	,@EmployeeID INT
+	,@ServiceDateID NVARCHAR(50)
+	,@ServiceDate NVARCHAR(256)
+	,@ServiceTimeID INT
+	,@ItemID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(50)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT std.ServiceTimeID
+		,st.ServiceTimeFrom
+		,st.ServiceTimeTo
+		,std.PreferredTimeInterval AS ServiceBookedInterval
+		,a.AppointmentID
+	FROM dbo.Aspx_ServiceTimeDuration std
+	INNER JOIN dbo.Aspx_ServiceTime st ON st.ServiceTimeID = std.ServiceTimeID
+	INNER JOIN dbo.Aspx_Appointment a ON a.ServiceDateID = std.ServiceDateID
+		AND a.AppointmentID = std.AppointmentID and a.IsDeleted =0
+	WHERE std.ServiceID = @ServiceCategoryID
+		AND std.StoreBranchID = @BranchID
+		AND std.ServiceTimeID = @ServiceTimeID
+		AND std.EmployeeID = @EmployeeID
+		AND std.StoreID = @StoreID
+		AND std.PortalID = @PortalID
+		AND a.PreferredDate = @ServiceDate
+		AND std.IsDeleted=0
+END
+
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceDates]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		haripds
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+-- EXEC [dbo].[usp_Aspx_GetServiceDates] 9,1,1,1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetServiceDates] (
+	@ServiceID INT
+	,@BranchID INT
+	,@EmployeeID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(50)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT sd.ServiceID
+		,sd.ServiceDateID
+		,sd.ServiceDateFrom
+		,sd.ServiceDateTo
+	FROM Aspx_ServiceDate sd
+	INNER JOIN Aspx_ServiceCategory si ON si.ServiceID = sd.ServiceID
+	INNER JOIN Aspx_ServiceAssignEmployee sae ON sae.ServiceEmployeeID = sd.ServiceEmployeeID
+	WHERE si.CategoryID = @ServiceID
+		AND sd.StoreBranchID = @BranchID
+		AND sae.EmployeeID = @EmployeeID
+		AND sd.StoreID = @StoreID
+		AND sd.PortalID = @PortalID
+		AND sd.IsDeleted = 0
+		AND si.IsDeleted = 0
+		AND si.IsActive = 1
+END
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceDetails]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+--EXEC [dbo].[usp_Aspx_GetServiceDetails] 'Facials',1,1,'en-US','superuser'
+-- =============================================
+-- Author:		rajkumar gupta
+-- Create date: 25-09-2012
+-- Description: Getting Service Details
+-- Modified by:  haripds
+-- Modified date: Feb 25 2013
+-- Modified by : Chandra Dev Singh,Kamal
+-- Modified Date: 3/4/2013
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_GetServiceDetails] (
+	--@CategoryID int, 
+	@ServiceKey NVARCHAR(max)
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(10)
+	,@UserName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT c.CategoryID
+		,i.ItemID
+		,iid.NAME as ItemName
+		,si.ServiceDuration
+		,dbo.[ufn_CatalogPriceRule](i.ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,iid.ShortDescription
+		,c.BaseImage as CategoryImagePath
+		,cid.ShortDescription as CategoryDetails
+		,cid.CategoryName
+	FROM dbo.Aspx_Items i
+	INNER JOIN Aspx_ItemsCategories ic ON ic.ItemID = i.ItemID
+	INNER JOIN Aspx_Category c ON c.CategoryID = ic.CategoryID
+	INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		AND iid.CultureName = @CultureName
+	INNER JOIN [dbo].[Aspx_CategoryInformationDetails] cid ON cid.CategoryID = c.CategoryID
+		AND cid.CultureName = @CultureName
+	INNER JOIN [dbo].[Aspx_ServiceItem] si ON si.ItemID = i.ItemID
+	WHERE cid.CategoryName = @ServiceKey
+		AND c.IsActive = 1
+		AND c.StoreID = @StoreID
+		AND c.PortalID = @PortalID
+		AND c.IsDeleted = 0
+		AND i.IsActive = 1
+		AND i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND i.IsDeleted = 0
+		AND (
+			i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceItemDetails]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		rajkumar gupta
+-- Create date: 25-09-2012
+-- Description: Getting Service Details
+-- Modified by : Chandra Dev Singh
+-- Modified Date: 3/4/2013
+-- =============================================
+--EXEC [dbo].[usp_Aspx_GetServiceItemDetails]  515047,1,1,'superuser','en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetServiceItemDetails] (
+	-- Add the parameters for the stored procedure here
+	@ItemID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@Username NVARCHAR(256)
+	,@CultureName NVARCHAR(10)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT i.ItemID
+		,c.CategoryID
+		,iid.NAME AS ItemName
+		,si.ServiceDuration
+		,dbo.[ufn_CatalogPriceRule](i.ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,iid.ShortDescription AS ShortDescription
+		,iid.[Description] AS [Description]
+		,ImagePath
+	FROM [dbo].[Aspx_Items] i
+	INNER JOIN [dbo].[Aspx_ItemsCategories] c ON i.ItemID = c.ItemID
+	INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+	INNER JOIN [dbo].[Aspx_ServiceItem] si ON si.ItemID = i.ItemID
+	LEFT JOIN [dbo].[Aspx_ItemImages] ii ON ii.ItemID = i.ItemID
+		AND ii.ImageTypeID = 1
+		AND ii.IsActive = 1
+	WHERE i.ItemID = @ItemID
+		AND i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND iid.CultureName = @CultureName
+		AND i.ItemTypeID = 4
+		AND i.AttributeSetID = 3
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceItemInfo]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: 28 sept 2012
+-- Description:	<Description,,>
+-- =============================================
+-- EXEC [dbo].[usp_Aspx_GetServiceItemInfo] 'serviceDate',1,1,'en-US',1,null,null
+CREATE PROCEDURE [dbo].[usp_Aspx_GetServiceItemInfo] (
+	@Option NVARCHAR(50)
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(50)
+	,@CategoryID INT = NULL
+	,@ServiceID INT = NULL
+	,@ServiceDateID INT = NULL
+	,@ServiceEmployeeID INT = NULL
+	)
+	--,@ServiceInfoID int = null
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@Option = 'serviceInfo')
+	BEGIN
+		SELECT ServiceID
+			,CategoryID
+			,Position
+			,StoreBranchID AS BranchId
+			,StoreBranchName AS BranchName
+		FROM dbo.Aspx_ServiceCategory
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+			--AND CultureName =@CultureName				
+			AND CategoryID = @CategoryID
+			AND IsDeleted = 0
+			AND IsActive = 1
+	END
+	ELSE
+		IF (@Option = 'serviceEmployeeData')
+		BEGIN
+			SELECT ServiceEmployeeId AS ServiceEmployeeId
+				,EmployeeID AS EmployeeId
+				,ServiceEmployeeName AS EmployeeName
+			FROM dbo.Aspx_ServiceAssignEmployee
+			WHERE ServiceID = @ServiceID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+				--AND CultureName =@CultureName					
+				AND IsDeleted = 0
+				AND IsActive = 1
+		END
+		ELSE
+			IF (@Option = 'serviceDate')
+			BEGIN
+				SELECT ServiceDateID AS ServiceDateId
+					,ServiceDateFrom
+					,ServiceDateTo
+				FROM dbo.Aspx_ServiceDate
+				WHERE StoreID = @StoreID
+					AND PortalID = @PortalID
+					--AND CultureName =@CultureName					
+					AND ServiceID = @ServiceID
+					AND ServiceEmployeeID = @ServiceEmployeeID
+					AND IsDeleted = 0
+					AND IsActive = 1
+			END
+			ELSE
+				IF (@Option = 'serviceTime')
+				BEGIN
+					SELECT ServiceTimeID AS ServiceTimeId
+						,ServiceTimeFrom
+						,ServiceTimeTo
+					FROM dbo.Aspx_ServiceTime
+					WHERE StoreID = @StoreID
+						AND PortalID = @PortalID
+						--AND CultureName =@CultureName							
+						AND ServiceDateID = @ServiceDateID
+						AND ServiceEmployeeID = @ServiceEmployeeID
+						AND IsDeleted = 0
+						AND IsActive = 1
+				END
+END
+	--select *  FROM dbo.Aspx_ServiceAssignEmployee
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceProducts]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- Modified by:  haripds
+-- Modified date: Feb 27 2013
+-- Modified by : Chandra Dev Singh
+-- Modified Date: 3/4/2013
+-- =============================================
+--EXEC [dbo].[usp_Aspx_GetServiceProducts]  7,1,1,'superuser','en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetServiceProducts] (
+	-- Add the parameters for the stored procedure here
+	@ServiceID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(50)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT ic.ItemID
+		,i.SKU
+		,iid.NAME AS ItemName
+		,dbo.[ufn_CatalogPriceRule](i.ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,si.ServiceDuration
+	FROM dbo.Aspx_ItemsCategories ic
+	INNER JOIN dbo.Aspx_Items i ON ic.ItemID = i.ItemID
+	INNER JOIN dbo.Aspx_ItemInformationDetails AS iid ON iid.ItemID = i.ItemID
+	INNER JOIN dbo.Aspx_ServiceItem si ON si.ItemID = i.ItemID
+	WHERE i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND iid.CultureName = @CultureName
+		AND ic.CategoryID = @ServiceID
+		AND i.IsDeleted = 0
+		AND i.IsActive = 1
+		AND (
+			i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceProviderForStore]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+-- [dbo].[usp_Aspx_GetServiceProviderForStore]  1,1,'en-US',9,1
+CREATE PROCEDURE [dbo].[usp_Aspx_GetServiceProviderForStore] (
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(50)
+	,@ServiceCategoryID INT
+	,@StoreBranchID INT
+	)
+	--@ServiceProductID int,
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT se.EmployeeID
+		,se.EmployeeName
+		,se.EmployeeNickName
+	FROM aspx_serviceemployee se
+	INNER JOIN aspx_serviceAssignEmployee sae ON sae.EmployeeID = se.EmployeeID
+	INNER JOIN Aspx_ServiceCategory si ON si.ServiceID = sae.ServiceID
+	WHERE si.CategoryID = @ServiceCategoryID
+		AND sae.StoreBranchID = @StoreBranchID
+		AND se.StoreID = @StoreID
+		AND se.PortalID = @PortalID
+		--AND se.CultureName = @CultureName
+		AND sae.IsDeleted = 0
+END
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceTime]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		haripds
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+--	EXEC [dbo].[usp_Aspx_GetServiceTime] 9,1,1,'1-5','12/05/2012',2,1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetServiceTime] (
+	@CategoryID INT
+	,@BranchID INT
+	,@EmployeeID INT
+	,@ServiceDateID NVARCHAR(50)
+	,@ServiceDate NVARCHAR(256)
+	,@ItemID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(50)
+	)
+AS
+BEGIN
+	DECLARE @serviceId INT
+	DECLARE @serviceCount INT
+	DECLARE @serviceDateCounter INT
+		,@serviceRowCount INT
+	DECLARE @tbltemp TABLE (
+		RowNum INT identity(1, 1)
+		,ID INT
+		)
+	DECLARE @tempFinalTbl TABLE (
+		RowNumber INT identity(1, 1)
+		,ServiceID INT
+		,ServiceDateID INT
+		,ServiceTimeID INT
+		,ServiceTimeFrom NVARCHAR(50)
+		,ServiceTimeTo NVARCHAR(50)
+		)
+
+	INSERT INTO @tbltemp (ID)
+	SELECT rtrim(ltrim(items))
+	FROM split(@ServiceDateID, '-')
+
+	SELECT @serviceRowCount = @@rowcount
+
+	SET @serviceDateCounter = 1
+
+	WHILE (
+			@serviceDateCounter <= @serviceRowCount
+			OR @serviceDateCounter = 1
+			)
+	BEGIN
+		DECLARE @serviceDateKey NVARCHAR(500)
+
+		SELECT @serviceDateKey = ID
+		FROM @tbltemp
+		WHERE RowNum = @serviceDateCounter
+
+		PRINT @serviceDateKey
+
+		DECLARE @tempTable TABLE (
+			RowNumber INT identity(1, 1)
+			,ServiceID INT
+			)
+
+		INSERT INTO @tempTable
+		SELECT ServiceID
+		FROM Aspx_ServiceCategory
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+			--AND CultureName =@CultureName				
+			AND CategoryID = @CategoryID
+			AND StoreBranchID = @BranchID
+			AND IsDeleted = 0
+			AND IsActive = 1
+
+		DECLARE @counter INT
+			,@RowCount INT
+
+		SELECT @RowCount = @@rowcount
+
+		SET @counter = 1
+
+		INSERT INTO @tempFinalTbl
+		SELECT st.ServiceID
+			,sd.ServiceDateID
+			,st.ServiceTimeID
+			,st.ServiceTimeFrom
+			,st.ServiceTimeTo
+		FROM aspx_serviceTime st
+		INNER JOIN aspx_serviceDate sd ON sd.ServiceDateID = st.ServiceDateID
+		INNER JOIN aspx_serviceAssignEmployee sae ON sae.ServiceEmployeeID = st.ServiceEmployeeID
+		WHERE st.ServiceDateID = @serviceDateKey
+			AND sd.StoreBranchID = @BranchID
+			AND st.StoreID = @StoreID
+			AND st.PortalID = @PortalID
+			--AND st.CultureName =@CultureName				
+			AND st.IsDeleted = 0
+			AND st.IsActive = 1
+			AND sae.EmployeeID = @EmployeeID
+
+		SET @serviceDateCounter = @serviceDateCounter + 1
+	END
+
+	SELECT RowNumber
+		,ServiceID
+		,ServiceTimeID
+		,ServiceDateID
+		,CAST(ServiceTimeFrom AS DATETIME) AS ServiceTimeFrom
+		,ServiceTimeTo
+	INTO #t1
+	FROM @tempFinalTbl
+	ORDER BY ServiceTimeFrom
+
+	SELECT RowNumber
+		,ServiceID
+		,ServiceTimeID
+		,ServiceDateID
+		,LTRIM(RIGHT(CONVERT(VARCHAR(20), CAST(ServiceTimeFrom AS DATETIME), 100), 7)) AS ServiceTimeFrom
+		,ServiceTimeTo
+	FROM #t1
+
+	DROP TABLE #t1
+END
+
+
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ServiceItemSettingGet]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Rajkumar Gupta>
+-- =============================================
+--[usp_Aspx_ServiceItemSettingGet] 0,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_ServiceItemSettingGet] (
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (
+			NOT EXISTS (
+				SELECT SettingID
+				FROM [dbo].[Aspx_ServiceItemSettings]
+				WHERE StoreID = @StoreID
+					AND PortalID = @PortalID
+				)
+			)
+	BEGIN
+		INSERT INTO [Aspx_ServiceItemSettings] (
+			SettingKeys
+			,SettingValues
+			,StoreID
+			,PortalID
+			,CultureName
+			)
+		SELECT SettingKeys
+			,SettingValues
+			,@StoreID
+			,@PortalID
+			,@CultureName
+		FROM [dbo].[Aspx_ServiceItemSettings]
+		WHERE PortalID = 1
+			AND StoreID = 0
+	END;
+
+	WITH SettingCTE
+	AS (
+		SELECT SettingKeys
+			,SettingValues
+		FROM [dbo].[Aspx_ServiceItemSettings]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		)
+		,ServiceItemSettings
+	AS (
+		SELECT *
+		FROM (
+			SELECT SettingValues
+				,CASE [SettingKeys]
+				   WHEN 'IsEnableService'
+						THEN 'IsEnableService'
+				    WHEN 'ServiceCategoryCount'
+						THEN 'ServiceCategoryCount'	
+					WHEN 'ServiceCategoryInARow'
+						THEN 'ServiceCategoryInARow'					   
+					WHEN 'ServiceDetailsPage'
+						THEN 'ServiceDetailsPage'	
+					WHEN 'ServiceItemDetailsPage'
+						THEN 'ServiceItemDetailsPage'	
+					WHEN 'IsEnableServiceRss'
+					    THEN 'IsEnableServiceRss'
+					WHEN 'ServiceRssCount'
+					    THEN 'ServiceRssCount'	
+					WHEN 'BookAnAppointmentPage'
+					    THEN 'BookAnAppointmentPage'		
+					WHEN 'AppointmentSuccessPage'
+					    THEN 'AppointmentSuccessPage'
+					WHEN 'ServiceRssPage'
+					    THEN 'ServiceRssPage'		    															
+					END AS SKey
+			FROM SettingCTE
+			) DataTable
+		pivot(max(SettingValues) FOR Skey IN (IsEnableService,ServiceCategoryCount
+		,ServiceCategoryInARow,ServiceDetailsPage,ServiceItemDetailsPage
+		,IsEnableServiceRss,ServiceRssCount,BookAnAppointmentPage,AppointmentSuccessPage,ServiceRssPage)) PivotTable
+		)
+	SELECT *
+	FROM ServiceItemSettings
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ServiceItemSettingsUpdate]    Script Date: 01/28/2014 11:45:26 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Rajkumar Gupta>
+-- =============================================
+--[dbo].[usp_Aspx_ServiceItemSettingsUpdate]1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_ServiceItemSettingsUpdate] (
+	@StoreID INT
+	,@PortalID INT
+	,@SettingKeys NVARCHAR(max)
+	,@SettingValues NVARCHAR(max)	
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @tblKey TABLE (
+		RowNum INT identity(1, 1)
+		,SettingKey NVARCHAR(500)
+		)
+	DECLARE @tblValue TABLE (
+		RowNum INT identity(1, 1)
+		,SettingValue NVARCHAR(500)
+		)
+
+	INSERT INTO @tblKey
+	SELECT rtrim(ltrim(items))
+	FROM split(@SettingKeys, '*')
+
+	INSERT INTO @tblValue
+	SELECT rtrim(ltrim(items))
+	FROM split(@SettingValues, '*')
+
+	DECLARE @counter INT
+		,@RowCount INT
+
+	SELECT @RowCount = count(RowNum)
+	FROM @tblKey
+
+	SET @counter = 1
+
+	WHILE (
+			@counter <= @RowCount
+			OR @counter = 1
+			)
+	BEGIN
+		DECLARE @key NVARCHAR(2000)
+			,@value NVARCHAR(2000)
+
+		SELECT @key = SettingKey
+		FROM @tblKey
+		WHERE RowNum = @counter
+
+		SELECT @value = SettingValue
+		FROM @tblValue
+		WHERE RowNum = @counter
+
+		UPDATE [dbo].[Aspx_ServiceItemSettings]
+		SET SettingValues = @value
+		WHERE SettingKeys = @key
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+
+		SET @counter = @counter + 1
+	END
+END
+
+GO
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedServiceTypeItem]    Script Date: 02/10/2014 17:21:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- Modified by:  haripds
+-- Modified date: Feb 27 2013
+-- =============================================
+-- [dbo].[usp_Aspx_GetRssFeedServiceTypeItem] 1,1,'superuser','en-US',10
+CREATE PROCEDURE [dbo].[usp_Aspx_GetRssFeedServiceTypeItem] (
+	@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+	,@Count INT
+	)
+AS
+BEGIN
+	SET ROWCOUNT @Count;
+
+	SELECT DISTINCT c.CategoryID AS ServceID
+		,cid.CategoryName AS ServiceName
+		,c.ActiveFrom AS AddedOn
+		,c.BaseImage AS ImagePath
+		,cid.ShortDescription
+	FROM Aspx_Category c
+	INNER JOIN dbo.Aspx_CategoryInformationDetails cid ON cid.CategoryID = c.CategoryID
+	INNER JOIN Aspx_ServiceCategory si ON si.CategoryID = c.CategoryID
+	WHERE c.StoreID = @StoreID
+		AND c.PortalID = @PortalID
+		AND cid.CultureName = @CultureName
+		AND c.IsActive = 1
+		AND c.IsDeleted = 0
+		AND (
+			c.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND c.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+
+	SET ROWCOUNT 0
+END
+
+GO
+
+

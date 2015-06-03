@@ -1,0 +1,159 @@
+﻿
+.sfCenterdivB
+{
+    float: left;
+    width: 100%;
+}
+.sfCenterWrapperB
+{
+    margin-left: 250px;
+    background: #485f7e;
+    padding: 7px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+}
+.sfCenterB
+{
+    background: #fff;
+    padding: 14px;
+    border-radius: 3px; min-height: 500px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+}
+
+.sfLeftdivB
+{
+    margin-left: -100%;
+    border-radius: 3px;
+    float: left;
+    font-weight: bold;
+    position: relative;
+    padding: 10px 0px 10px 10px;
+    margin-top: 22px;
+    color: #4C4C4C;
+    width: 250px;
+    background: #485f7e;
+    min-height: 300px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+}
+
+#divBindRolesList .sfLeftdivB h3 {
+ color:#fff; font-weight:normal; border-bottom:1px solid #617f99; margin-bottom:10px;}
+
+
+.sfLeftdivB ul#roleTree {
+    margin-right: -7px;
+}
+#roleTree {
+    margin-right: -7px;
+    max-height: 450px;
+    overflow: hidden;
+}
+#roleTree:hover{ overflow: auto;
+}
+ul#roleTree li
+{
+    padding: 8px 6px;
+    margin-bottom: 3px;
+    border-bottom: none\9;
+    overflow: hidden;
+    cursor: pointer;
+    color: #fff;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+}
+ul#roleTree li span.sfMenuname
+{
+    float: left;
+    width: calc(100% - 65px);
+}
+ul#roleTree li span.sfDefault
+{
+    float: left;
+    margin-left: 69px;
+    margin-top: -18px;
+}
+ul#roleTree li span.sfMenuOption
+{
+    float: left;
+    width: 50px;
+}
+ul#roleTree li span.sfMenuChecked { float:left; width:18px; margin-top:3px; font-size:16px;}
+ul#roleTree li span.sfMenuChecked.icon-checked { color:#9AC659;}
+ul#roleTree li span.sfMenuChecked.icon-unchecked {}
+ul#roleTree li span.sfMenuOption i
+{
+    margin-left: 10px;
+    color: #6d7f95;
+    font-size: 14px;
+}
+
+ul#roleTree li:hover
+{
+    background: #f3f3f3;
+    color: #0b4b83;
+    border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    -ms-border-radius: 3px 0px 0px 3px;
+    -o-border-radius: 3px 0px 0px 3px;
+}
+ul#roleTree li.sfHighLight
+{
+    margin-right: 0px;
+    border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    -o-border-radius: 3px 3px 0px 0px;
+    -ms-border-radius: 3px 3px 0px 0px;
+}
+ul#roleTree li.sfHighLight span.sfMenuname
+{
+    color: #0B4B83;
+}
+.sfHighLight
+{
+    background: #F3F3F3;
+    color: #0B4B83;
+}
+ul#roleTree li.sfActive
+{
+    background: #fff !important;
+    color: #0b4b83; 
+	    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+}
+
+ul#roleTree li img
+{
+    float: right;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+
+
+#tblPermission tr .sfSingleSaveBtn {
+visibility:hidden;}
+#tblPermission tr:hover .sfSingleSaveBtn {
+visibility:visible;}
+#tblPermission tr td .sfBtn {
+ padding:3px 6px;}
+
+.sfButtonwrapperB {
+    margin: 20px 0 0 250px;
+    overflow: visible;
+}

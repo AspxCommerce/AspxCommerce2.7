@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ddlAdvanceSearchURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlAppointBookURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlCategoryDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlCatMgntPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlCatWiseItemURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlCompareItemURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlDetailsPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlItemDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlItemMgntPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlMultiCheckOutURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlMyAccountURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlRssFeedURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlServicesDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlServiceURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlShippingDetailPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlShoppingCartURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlSingleCheckOutURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlSItemDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlStoreLocatorURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlTrackPackageUrlResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlWishListURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label1Resource1.Text" xml:space="preserve">
+    <value>Shipping Setting</value>
+  </data>
+  <data name="Label1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label2Resource1.Text" xml:space="preserve">
+    <value>For Front End:</value>
+  </data>
+  <data name="Label2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label3Resource1.Text" xml:space="preserve">
+    <value>Apply Watermark Image:</value>
+  </data>
+  <data name="Label3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label4Resource1.Text" xml:space="preserve">
+    <value>Watermark Text:</value>
+  </data>
+  <data name="Label4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label5Resource1.Text" xml:space="preserve">
+    <value>Watermark Position:</value>
+  </data>
+  <data name="Label5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label6Resource1.Text" xml:space="preserve">
+    <value>Watermark Text Rotate:</value>
+  </data>
+  <data name="Label6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label7Resource1.Text" xml:space="preserve">
+    <value>Users/Cart</value>
+  </data>
+  <data name="Label7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label8Resource1.Text" xml:space="preserve">
+    <value>Watermark Image Position:</value>
+  </data>
+  <data name="Label8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label9Resource1.Text" xml:space="preserve">
+    <value>Watermark Image Rotate:</value>
+  </data>
+  <data name="Label9Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelResource1.Text" xml:space="preserve">
+    <value>For Back End:</value>
+  </data>
+  <data name="LabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdditionalCVRResource1.Text" xml:space="preserve">
+    <value>Currency Conversion Surcharges:</value>
+  </data>
+  <data name="lblAdditionalCVRResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAddToCartButtonTextResource1.Text" xml:space="preserve">
+    <value>Add To Cart Button Text:</value>
+  </data>
+  <data name="lblAddToCartButtonTextResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdvanceSearchURLResource1.Text" xml:space="preserve">
+    <value>Advance Search URL:</value>
+  </data>
+  <data name="lblAdvanceSearchURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowAnonymousCheckOutResource1.Text" xml:space="preserve">
+    <value>Allow Anonymous Checkout:</value>
+  </data>
+  <data name="lblAllowAnonymousCheckOutResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowAnonymousUserToWriteReviewsResource1.Text" xml:space="preserve">
+    <value>Allow Anonymous User to Write Reviews and Ratings:</value>
+  </data>
+  <data name="lblAllowAnonymousUserToWriteReviewsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowBillingCountryResource1.Text" xml:space="preserve">
+    <value>List of allowed Billing Countries:</value>
+  </data>
+  <data name="lblAllowBillingCountryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowCouponDiscountResource1.Text" xml:space="preserve">
+    <value>Show Coupon Discount in Cart Page:</value>
+  </data>
+  <data name="lblAllowCouponDiscountResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowMultipleAddressResource1.Text" xml:space="preserve">
+    <value>Allow Users To Create Multiple Addresses:</value>
+  </data>
+  <data name="lblAllowMultipleAddressResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowMultipleShippingAddressResource1.Text" xml:space="preserve">
+    <value>Allow Multiple Shipping Address:</value>
+  </data>
+  <data name="lblAllowMultipleShippingAddressResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowOutStockPurchaseResource1.Text" xml:space="preserve">
+    <value>Allow purchases when out of stock:</value>
+  </data>
+  <data name="lblAllowOutStockPurchaseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowShippingCountryResource1.Text" xml:space="preserve">
+    <value>List of allowed Shipping Countries:</value>
+  </data>
+  <data name="lblAllowShippingCountryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowShippingEstimateResource1.Text" xml:space="preserve">
+    <value>Show Shipping Rate Estimate in Cart Page:</value>
+  </data>
+  <data name="lblAllowShippingEstimateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAppointBookURLResource1.Text" xml:space="preserve">
+    <value>Book An Appointment URL:</value>
+  </data>
+  <data name="lblAppointBookURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAskCustomerToSubscribeResource1.Text" xml:space="preserve">
+    <value>Ask Customer To Subscribe:</value>
+  </data>
+  <data name="lblAskCustomerToSubscribeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBestSellItemRssResource1.Text" xml:space="preserve">
+    <value>Best Sell Item:</value>
+  </data>
+  <data name="lblBestSellItemRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBrandRssResource1.Text" xml:space="preserve">
+    <value>Brands:</value>
+  </data>
+  <data name="lblBrandRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCartAbandonTimeResource1.Text" xml:space="preserve">
+    <value>Cart Abandon Time(In Hours):</value>
+  </data>
+  <data name="lblCartAbandonTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryBannerImageHeightResource1.Text" xml:space="preserve">
+    <value>Category Banner Image Height:</value>
+  </data>
+  <data name="lblCategoryBannerImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryBannerImageWidthResource1.Text" xml:space="preserve">
+    <value>Category Banner Image Width:</value>
+  </data>
+  <data name="lblCategoryBannerImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryDetailURLResource1.Text" xml:space="preserve">
+    <value>Category Details Page URL:</value>
+  </data>
+  <data name="lblCategoryDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryLargeThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>Category Large Thumbnail Image Height:</value>
+  </data>
+  <data name="lblCategoryLargeThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryLargeThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>Category Large Thumbnail Image Size:</value>
+  </data>
+  <data name="lblCategoryLargeThumbnailImageSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryLargeThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>Category Large Thumbnail Image Width:</value>
+  </data>
+  <data name="lblCategoryLargeThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryMediumThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>Category Medium Thumbnail Image Height:</value>
+  </data>
+  <data name="lblCategoryMediumThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryMediumThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>Category Medium Thumbnail Image Size:</value>
+  </data>
+  <data name="lblCategoryMediumThumbnailImageSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryMediumThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>Category Medium Thumbnail Image Width:</value>
+  </data>
+  <data name="lblCategoryMediumThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryMgntPageURLResource1.Text" xml:space="preserve">
+    <value>My Category Management Page URL:</value>
+  </data>
+  <data name="lblCategoryMgntPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryResource1.Text" xml:space="preserve">
+    <value>New Category:</value>
+  </data>
+  <data name="lblCategoryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategorySmallThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>Category Small Thumbnail Image Height:</value>
+  </data>
+  <data name="lblCategorySmallThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategorySmallThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>Category Small Thumbnail Image Size:</value>
+  </data>
+  <data name="lblCategorySmallThumbnailImageSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategorySmallThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>Category Small Thumbnail Image Width:</value>
+  </data>
+  <data name="lblCategorySmallThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCatWiseItemURLResource1.Text" xml:space="preserve">
+    <value>Category Wise Item Page URL:</value>
+  </data>
+  <data name="lblCatWiseItemURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCompareItemURLResource1.Text" xml:space="preserve">
+    <value>Compare Item List URL:</value>
+  </data>
+  <data name="lblCompareItemURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDefaultImageProductURLResource1.Text" xml:space="preserve">
+    <value>Default Image Product URL:</value>
+  </data>
+  <data name="lblDefaultImageProductURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDetailPageURLResource1.Text" xml:space="preserve">
+    <value>Details Page URL:</value>
+  </data>
+  <data name="lblDetailPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDimensionUnitResource1.Text" xml:space="preserve">
+    <value>Dimension Unit:</value>
+  </data>
+  <data name="lblDimensionUnitResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEmailSettingFormResource1.Text" xml:space="preserve">
+    <value>Email Settings</value>
+  </data>
+  <data name="lblEmailSettingFormResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEnableCompareItemsResource1.Text" xml:space="preserve">
+    <value>Enable 'Compare Items':</value>
+  </data>
+  <data name="lblEnableCompareItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEnableEmailAFriendResource1.Text" xml:space="preserve">
+    <value>Enable 'Email a Friend' :</value>
+  </data>
+  <data name="lblEnableEmailAFriendResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEnableLatestItemsResource1.Text" xml:space="preserve">
+    <value>Enable 'Latest Items':</value>
+  </data>
+  <data name="lblEnableLatestItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEnableRecentlyComparedItemsResource1.Text" xml:space="preserve">
+    <value>Enable 'Recently Compared Items':</value>
+  </data>
+  <data name="lblEnableRecentlyComparedItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEnableRecentlyViewedItemsResource1.Text" xml:space="preserve">
+    <value>Enable 'Recently Viewed Items':</value>
+  </data>
+  <data name="lblEnableRecentlyViewedItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEnableSpecialItemsResource1.Text" xml:space="preserve">
+    <value>Enable 'Special Items':</value>
+  </data>
+  <data name="lblEnableSpecialItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEnableWishListResource1.Text" xml:space="preserve">
+    <value>Enable 'WishList':</value>
+  </data>
+  <data name="lblEnableWishListResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEstimateShippingCostInCartPageResource1.Text" xml:space="preserve">
+    <value>Estimate Shipping Cost In Cart Page:</value>
+  </data>
+  <data name="lblEstimateShippingCostInCartPageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFeaturedItemsRssResource1.Text" xml:space="preserve">
+    <value>Feature Item:</value>
+  </data>
+  <data name="lblFeaturedItemsRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblHeadingResource1.Text" xml:space="preserve">
+    <value>Store Settings</value>
+  </data>
+  <data name="lblHeadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblHeavyDiscountRssResource1.Text" xml:space="preserve">
+    <value>Heavy Discount Item:</value>
+  </data>
+  <data name="lblHeavyDiscountRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIItemImageMaxWidthResource1.Text" xml:space="preserve">
+    <value>Maximum Width Of Item Image:</value>
+  </data>
+  <data name="lblIItemImageMaxWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemDetailURLResource1.Text" xml:space="preserve">
+    <value>Item Details Page URL:</value>
+  </data>
+  <data name="lblItemDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemDisplayModeResource1.Text" xml:space="preserve">
+    <value>Item Display Mode:</value>
+  </data>
+  <data name="lblItemDisplayModeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemImageMaxHeightResource1.Text" xml:space="preserve">
+    <value>Maximum Height Of Item Image:</value>
+  </data>
+  <data name="lblItemImageMaxHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemLargeThumbImageHeightResource1.Text" xml:space="preserve">
+    <value>Item Large Thumbnail Image Height:</value>
+  </data>
+  <data name="lblItemLargeThumbImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemLargeThumbImageSizeResource1.Text" xml:space="preserve">
+    <value>Item Large Thumbnail Image Size:</value>
+  </data>
+  <data name="lblItemLargeThumbImageSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemLargeThumbImageWidthResource1.Text" xml:space="preserve">
+    <value>Item Large Thumbnail Image Width:</value>
+  </data>
+  <data name="lblItemLargeThumbImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemMediumThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>Item Medium Thumbnail Image Height:</value>
+  </data>
+  <data name="lblItemMediumThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemMediumThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>Item Medium Thumbnail Image Size:</value>
+  </data>
+  <data name="lblItemMediumThumbnailImageSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemMediumThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>Item Medium Thumbnail Image Width:</value>
+  </data>
+  <data name="lblItemMediumThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemMgntPageURLResource1.Text" xml:space="preserve">
+    <value>My Item Management Page URL:</value>
+  </data>
+  <data name="lblItemMgntPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemSmallThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>Item Small Thumbnail Image Height:</value>
+  </data>
+  <data name="lblItemSmallThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemSmallThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>Item Small Thumbnail Image Size:</value>
+  </data>
+  <data name="lblItemSmallThumbnailImageSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemSmallThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>Item Small Thumbnail Image Width:</value>
+  </data>
+  <data name="lblItemSmallThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLatestItemRssResource1.Text" xml:space="preserve">
+    <value>Latest Items:</value>
+  </data>
+  <data name="lblLatestItemRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLowStockItemRssResource1.Text" xml:space="preserve">
+    <value>Low Stock Item:</value>
+  </data>
+  <data name="lblLowStockItemRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLowStockQuantityResource1.Text" xml:space="preserve">
+    <value>Low Stock Quantity:</value>
+  </data>
+  <data name="lblLowStockQuantityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMainCurrencyResource1.Text" xml:space="preserve">
+    <value>Main Currency:</value>
+  </data>
+  <data name="lblMainCurrencyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMaxCartQuantityResource1.Text" xml:space="preserve">
+    <value>Maximum Cart Quantity:</value>
+  </data>
+  <data name="lblMaxCartQuantityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMaxDownloadFileSizeResource1.Text" xml:space="preserve">
+    <value>Maximum Download File Size:</value>
+  </data>
+  <data name="lblMaxDownloadFileSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMaximumImageSizeResource1.Text" xml:space="preserve">
+    <value>Maximum Uploaded Image/File Size:</value>
+  </data>
+  <data name="lblMaximumImageSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMediaSettingResource1.Text" xml:space="preserve">
+    <value>Media Settings</value>
+  </data>
+  <data name="lblMediaSettingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMinCartQuantityResource1.Text" xml:space="preserve">
+    <value>Minimum Cart Quantity:</value>
+  </data>
+  <data name="lblMinCartQuantityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMinimumCartSubTotalResource1.Text" xml:space="preserve">
+    <value>Minimum Cart Sub Total Amount:</value>
+  </data>
+  <data name="lblMinimumCartSubTotalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblModuleCollapsibleResource1.Text" xml:space="preserve">
+    <value>Module Collapsible:</value>
+  </data>
+  <data name="lblModuleCollapsibleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMultiCheckOutURLResource1.Text" xml:space="preserve">
+    <value>Multiple Address CheckOut URL:</value>
+  </data>
+  <data name="lblMultiCheckOutURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMultipleReviewsPerIPResource1.Text" xml:space="preserve">
+    <value>Allow Users To Write Multiple Reviews From Same IP:</value>
+  </data>
+  <data name="lblMultipleReviewsPerIPResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMultipleReviewsPerUserResource1.Text" xml:space="preserve">
+    <value>Allow Users To Write Multiple Reviews:</value>
+  </data>
+  <data name="lblMultipleReviewsPerUserResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMyAccountURLResource1.Text" xml:space="preserve">
+    <value>My Account URL:</value>
+  </data>
+  <data name="lblMyAccountURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNewCustomerRssResource1.Text" xml:space="preserve">
+    <value>New Customer:</value>
+  </data>
+  <data name="lblNewCustomerRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNewItemReviewResource1.Text" xml:space="preserve">
+    <value>New Item Review:</value>
+  </data>
+  <data name="lblNewItemReviewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNewOrderRssResource1.Text" xml:space="preserve">
+    <value>New Order:</value>
+  </data>
+  <data name="lblNewOrderRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNewTagResource1.Text" xml:space="preserve">
+    <value>New Item Tag:</value>
+  </data>
+  <data name="lblNewTagResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfBestSellersResource1.Text" xml:space="preserve">
+    <value>No Of BestSeller Items:</value>
+  </data>
+  <data name="lblNoOfBestSellersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfDisplayItemsResource1.Text" xml:space="preserve">
+    <value>Number Of Items To display in a Row:</value>
+  </data>
+  <data name="lblNoOfDisplayItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfItemsCompareResource1.Text" xml:space="preserve">
+    <value>Maximum Number Of Items Allowed To Compare:</value>
+  </data>
+  <data name="lblNoOfItemsCompareResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfLatestItemsInARowResource1.Text" xml:space="preserve">
+    <value>No Of Latest Items In A Row:</value>
+  </data>
+  <data name="lblNoOfLatestItemsInARowResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfLatestItemsResource1.Text" xml:space="preserve">
+    <value>No Of Latest Items:</value>
+  </data>
+  <data name="lblNoOfLatestItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfPopTagsResource1.Text" xml:space="preserve">
+    <value>No Of Popular Tags:</value>
+  </data>
+  <data name="lblNoOfPopTagsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfRecentAddedWishItemsResource1.Text" xml:space="preserve">
+    <value>Number Of Recently Added WishItems:</value>
+  </data>
+  <data name="lblNoOfRecentAddedWishItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfRecentlyComparedItemsResource1.Text" xml:space="preserve">
+    <value>No Of Recently Compared Items:</value>
+  </data>
+  <data name="lblNoOfRecentlyComparedItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfRecentlyViewedItemsResource1.Text" xml:space="preserve">
+    <value>No Of Recently Viewed Items:</value>
+  </data>
+  <data name="lblNoOfRecentlyViewedItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfSpecialItemsResource1.Text" xml:space="preserve">
+    <value>No Of Special Items:</value>
+  </data>
+  <data name="lblNoOfSpecialItemsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNoOfYouMayAlsoLikeResource1.Text" xml:space="preserve">
+    <value>No Of You May Also Like Items:</value>
+  </data>
+  <data name="lblNoOfYouMayAlsoLikeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOtherSettingsResource1.Text" xml:space="preserve">
+    <value>Other Settings</value>
+  </data>
+  <data name="lblOtherSettingsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOutOfStockQuantityResource1.Text" xml:space="preserve">
+    <value>Out Of Stock Quantity:</value>
+  </data>
+  <data name="lblOutOfStockQuantityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPopularTagRssResource1.Text" xml:space="preserve">
+    <value>Popular Tag:</value>
+  </data>
+  <data name="lblPopularTagRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRealTimeNotificationsResource1.Text" xml:space="preserve">
+    <value>Allow Real Time Notifications:</value>
+  </data>
+  <data name="lblRealTimeNotificationsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedCountResource1.Text" xml:space="preserve">
+    <value>Rss Feed Count</value>
+  </data>
+  <data name="lblRssFeedCountResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedHeadingResource1.Text" xml:space="preserve">
+    <value>RssFeed Setting</value>
+  </data>
+  <data name="lblRssFeedHeadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedStatusResource1.Text" xml:space="preserve">
+    <value>Rss Feed Status</value>
+  </data>
+  <data name="lblRssFeedStatusResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedTabResource1.Text" xml:space="preserve">
+    <value>Rss Feed</value>
+  </data>
+  <data name="lblRssFeedTabResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedTitleResource1.Text" xml:space="preserve">
+    <value>Rss Feed For:</value>
+  </data>
+  <data name="lblRssFeedTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedURLResource1.Text" xml:space="preserve">
+    <value>RssFeed URL:</value>
+  </data>
+  <data name="lblRssFeedURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSendEmailsFromResource1.Text" xml:space="preserve">
+    <value>Send E-Commerce Emails From:</value>
+  </data>
+  <data name="lblSendEmailsFromResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSendOrderNotificationResource1.Text" xml:space="preserve">
+    <value>Send Order Notification:</value>
+  </data>
+  <data name="lblSendOrderNotificationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSEODisplayResource1.Text" xml:space="preserve">
+    <value>Display Settings</value>
+  </data>
+  <data name="lblSEODisplayResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblServiceCatCountResource1.Text" xml:space="preserve">
+    <value>Number Of Service Category To display:</value>
+  </data>
+  <data name="lblServiceCatCountResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblServicesDetailURLResource1.Text" xml:space="preserve">
+    <value>Service Details Page URL:</value>
+  </data>
+  <data name="lblServicesDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblServiceTypeItemResource1.Text" xml:space="preserve">
+    <value>Service type Item:</value>
+  </data>
+  <data name="lblServiceTypeItemResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblServiceURLResource1.Text" xml:space="preserve">
+    <value>Services URL:</value>
+  </data>
+  <data name="lblServiceURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShippingDetailPageURLResource1.Text" xml:space="preserve">
+    <value>Shipping Detail Page URL:</value>
+  </data>
+  <data name="lblShippingDetailPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShoppingCartURLResource1.Text" xml:space="preserve">
+    <value>Shopping Cart URL:</value>
+  </data>
+  <data name="lblShoppingCartURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShoppingOptionRangeResource1.Text" xml:space="preserve">
+    <value>Shopping Option Range:</value>
+  </data>
+  <data name="lblShoppingOptionRangeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShowAddToCartButtonResource1.Text" xml:space="preserve">
+    <value>Show Add To Cart Button:</value>
+  </data>
+  <data name="lblShowAddToCartButtonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShowBestSellersResource1.Text" xml:space="preserve">
+    <value>Enable 'BestSeller Items':</value>
+  </data>
+  <data name="lblShowBestSellersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShowItemImagesInCartResource1.Text" xml:space="preserve">
+    <value>Show Item Images in Cart:</value>
+  </data>
+  <data name="lblShowItemImagesInCartResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShowItemImagesInWishListResource1.Text" xml:space="preserve">
+    <value>Show Item Images in WishList:</value>
+  </data>
+  <data name="lblShowItemImagesInWishListResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShowMiniShoppingCartResource1.Text" xml:space="preserve">
+    <value>Show 'Mini Shopping Cart':</value>
+  </data>
+  <data name="lblShowMiniShoppingCartResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSingleCheckOutURLResource1.Text" xml:space="preserve">
+    <value>Single Address CheckOut URL:</value>
+  </data>
+  <data name="lblSingleCheckOutURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSItemDetailURLResource1.Text" xml:space="preserve">
+    <value>Service Item Detail URL:</value>
+  </data>
+  <data name="lblSItemDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSortByOptionsDefaultResource1.Text" xml:space="preserve">
+    <value>Sort By Options Default:</value>
+  </data>
+  <data name="lblSortByOptionsDefaultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSortByOptionsResource1.Text" xml:space="preserve">
+    <value>Sort By Options:</value>
+  </data>
+  <data name="lblSortByOptionsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSpecialItemRssResource1.Text" xml:space="preserve">
+    <value>Special Items:</value>
+  </data>
+  <data name="lblSpecialItemRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStoreLocatorURLResource1.Text" xml:space="preserve">
+    <value>Store Locator URL:</value>
+  </data>
+  <data name="lblStoreLocatorURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStoreLogoResource1.Text" xml:space="preserve">
+    <value>Store Logo:</value>
+  </data>
+  <data name="lblStoreLogoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStoreNameResource1.Text" xml:space="preserve">
+    <value>Store Name: </value>
+  </data>
+  <data name="lblStoreNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTab1InfoResource1.Text" xml:space="preserve">
+    <value>Standard Settings</value>
+  </data>
+  <data name="lblTab1InfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTab2InfoResource1.Text" xml:space="preserve">
+    <value>General Settings</value>
+  </data>
+  <data name="lblTab2InfoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTabTitle1Resource1.Text" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="lblTabTitle1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTabTitle2Resource1.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="lblTabTitle2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTimeToDeleteAbandCartResource1.Text" xml:space="preserve">
+    <value>Abandoned Carts Deletion Time(In Hours):</value>
+  </data>
+  <data name="lblTimeToDeleteAbandCartResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleUserCartsResource1.Text" xml:space="preserve">
+    <value>User/Cart Settings</value>
+  </data>
+  <data name="lblTitleUserCartsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTrackPackageUrlResource1.Text" xml:space="preserve">
+    <value>Trace Package Page URL:</value>
+  </data>
+  <data name="lblTrackPackageUrlResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblViewAsOptionsDefaultResource1.Text" xml:space="preserve">
+    <value>View As Options Default:</value>
+  </data>
+  <data name="lblViewAsOptionsDefaultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblViewAsOptionsResource1.Text" xml:space="preserve">
+    <value>View As Options:</value>
+  </data>
+  <data name="lblViewAsOptionsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWeightUnitResource1.Text" xml:space="preserve">
+    <value>Weight Unit:</value>
+  </data>
+  <data name="lblWeightUnitResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWishListURLResource1.Text" xml:space="preserve">
+    <value>WishList URL:</value>
+  </data>
+  <data name="lblWishListURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblYouMayAlsoLikeResource1.Text" xml:space="preserve">
+    <value>Enable 'You May Also Like':</value>
+  </data>
+  <data name="lblYouMayAlsoLikeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbTabTitle3Resource1.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lbTabTitle3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbTabTitle4Resource1.Text" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="lbTabTitle4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbTabTitle5Resource1.Text" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="lbTabTitle5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbTabTitle8Resource1.Text" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="lbTabTitle8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbTabTitle9Resource2.Text" xml:space="preserve">
+    <value>Shipping</value>
+  </data>
+  <data name="lbTabTitle9Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

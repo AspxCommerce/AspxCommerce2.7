@@ -1,0 +1,69 @@
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedLatestItem]    Script Date: 02/21/2014 16:00:30 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRssFeedLatestItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRssFeedLatestItem]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemSettingGet]    Script Date: 02/21/2014 16:00:30 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_LatestItemSettingGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_LatestItemSettingGet]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemSettingsUpdate]    Script Date: 02/21/2014 16:00:30 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_LatestItemSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_LatestItemSettingsUpdate]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemsGetByCount]    Script Date: 02/21/2014 16:00:30 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_LatestItemsGetByCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_LatestItemsGetByCount]
+GO
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_LatestItemSettings_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] DROP CONSTRAINT [DF_Aspx_LatestItemSettings_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_LatestItemSettings_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] DROP CONSTRAINT [DF_Aspx_LatestItemSettings_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_LatestItemSettings_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] DROP CONSTRAINT [DF_Aspx_LatestItemSettings_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_LatestItemSettings_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] DROP CONSTRAINT [DF_Aspx_LatestItemSettings_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_LatestItemSettings_UpdatedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] DROP CONSTRAINT [DF_Aspx_LatestItemSettings_UpdatedOn]
+END
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_LatestItemSettings]    Script Date: 02/21/2014 16:01:52 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_LatestItemSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_LatestItemSettings]
+GO
+
+

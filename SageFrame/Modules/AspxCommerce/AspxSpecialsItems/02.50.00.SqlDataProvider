@@ -1,0 +1,2237 @@
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_SpecialItemsSetting]    Script Date: 03/28/2014 11:19:27 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_SpecialItemsSetting]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_SpecialItemsSetting]
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_SpecialItemsSetting]    Script Date: 03/28/2014 11:19:27 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_SpecialItemsSetting](
+	[SettingID] [int] IDENTITY(1,1) NOT NULL,
+	[SettingKey] [nvarchar](256) NULL,
+	[SettingValue] [nvarchar](256) NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_SpecialItemsSetting] PRIMARY KEY CLUSTERED 
+(
+	[SettingID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET IDENTITY_INSERT [dbo].[Aspx_SpecialItemsSetting] ON
+INSERT [dbo].[Aspx_SpecialItemsSetting] ([SettingID], [SettingKey], [SettingValue], [StoreID], [PortalID], [CultureName], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (1, N'IsEnableSpecialItems', N'True', 0, 1, N'en-US', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_SpecialItemsSetting] ([SettingID], [SettingKey], [SettingValue], [StoreID], [PortalID], [CultureName], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (2, N'NoOfItemShown', N'25', 0, 1, N'en-US', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_SpecialItemsSetting] ([SettingID], [SettingKey], [SettingValue], [StoreID], [PortalID], [CultureName], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (3, N'NoOfItemInRow', N'3', 0, 1, N'en-US', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_SpecialItemsSetting] ([SettingID], [SettingKey], [SettingValue], [StoreID], [PortalID], [CultureName], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (4, N'IsEnableSpecialItemsRss', N'True', 0, 1, N'en-US', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_SpecialItemsSetting] ([SettingID], [SettingKey], [SettingValue], [StoreID], [PortalID], [CultureName], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (5, N'SpecialItemsRssCount', N'10', 0, 1, N'en-US', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_SpecialItemsSetting] ([SettingID], [SettingKey], [SettingValue], [StoreID], [PortalID], [CultureName], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (6, N'SpecialItemsRssPageName', N'SpecialRss', 0, 1, N'en-US', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_SpecialItemsSetting] ([SettingID], [SettingKey], [SettingValue], [StoreID], [PortalID], [CultureName], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (7, N'SpecialItemsDetailPageName', N'SpecialDetail', 0, 1, N'en-US', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+SET IDENTITY_INSERT [dbo].[Aspx_SpecialItemsSetting] OFF
+
+GO
+
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedSpecialItem]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRssFeedSpecialItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRssFeedSpecialItem]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByDiscount]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByDiscount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByDiscount]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsFeatured]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsFeatured]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsFeatured]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsSpecial]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsSpecial]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsSpecial]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDAsc]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDAsc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDAsc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDDesc]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDDesc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDDesc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByName]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByName]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByName]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceAsc]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceAsc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceAsc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceDesc]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceDesc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceDesc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByRatedValue]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByRatedValue]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByRatedValue]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortBySoldItem]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortBySoldItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortBySoldItem]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByViewCount]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItemDetailsSortByViewCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByViewCount]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItems]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetSpecialItems]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetSpecialItems]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_SpecialItemsGetByCount]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_SpecialItemsGetByCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_SpecialItemsGetByCount]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_SpecialItemsSettingsGet]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_SpecialItemsSettingsGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_SpecialItemsSettingsGet]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_SpecialItemsSettingsUpdate]    Script Date: 03/28/2014 11:45:12 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_SpecialItemsSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_SpecialItemsSettingsUpdate]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedSpecialItem]    Script Date: 03/28/2014 11:45:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- Modified by:  haripds
+-- Modified date: Feb 27 2013
+-- Modified by : Chandra Dev Singh
+-- Modified Date: 3/4/2013
+-- =============================================
+--[dbo].[usp_Aspx_GetRssFeedSpecialItem] 1,1,'superuser','en-US',5
+CREATE PROCEDURE [dbo].[usp_Aspx_GetRssFeedSpecialItem] (
+	@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+	,@Count INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+	SET ROWCOUNT @Count;
+
+	SELECT i.SKU
+		,iid.ItemID
+		,i.ItemTypeID
+		,i.SpecialFromDate AS AddedOn
+		,iid.NAME AS ItemName
+		,im.ImagePath
+		,IMA.AlternateText
+		,iid.ShortDescription AS ShortDescription
+	FROM dbo.Aspx_Items i
+	INNER JOIN dbo.Aspx_ItemInformationDetails iid ON iid.ItemID = i.ItemID
+	LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.itemID = i.ItemID
+		AND im.IsActive = 1
+		AND im.ImageTypeID = 1
+	LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = im.ItemImageID
+		AND IMA.CultureName = @CultureName
+	WHERE i.IsSpecial = 1
+		AND i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND i.IsActive = 1
+		AND i.IsDeleted = 0
+		AND iid.CultureName = @CultureName
+		AND (
+			i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+			AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND (
+			i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND (
+			i.HideInRSSFeed IS NULL
+			OR i.HideInRSSFeed = 0
+			)
+	ORDER BY COALESCE(i.UpdatedOn, i.AddedOn) DESC
+
+	SET ROWCOUNT 0
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByDiscount]    Script Date: 03/28/2014 11:45:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByDiscount] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByDiscount] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[TotalDiscount] DESC
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsFeatured]    Script Date: 03/28/2014 11:45:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsFeatured] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsFeatured] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[IsFeatured] DESC
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsSpecial]    Script Date: 03/28/2014 11:45:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsSpecial] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByIsSpecial] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[IsSpecial] DESC
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDAsc]    Script Date: 03/28/2014 11:45:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDAsc] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDAsc] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[ItemID]
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDDesc]    Script Date: 03/28/2014 11:45:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDDesc] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByItemIDDesc] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[ItemID] DESC
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByName]    Script Date: 03/28/2014 11:45:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByName] 1,1,1,'superuser',8,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByName] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY [Name]
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name] as ItemName
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceAsc]    Script Date: 03/28/2014 11:45:12 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceAsc] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceAsc] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[Price]
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name] as ItemName
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceDesc]    Script Date: 03/28/2014 11:45:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceDesc] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByPriceDesc] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[Price] DESC
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name] as ItemName
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByRatedValue]    Script Date: 03/28/2014 11:45:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByRatedValue] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByRatedValue] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[RatedValue] DESC
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name] as ItemName
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortBySoldItem]    Script Date: 03/28/2014 11:45:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortBySoldItem] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortBySoldItem] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[SoldItem] DESC
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name] as ItemName
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItemDetailsSortByViewCount]    Script Date: 03/28/2014 11:45:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author: 
+-- Create date: 
+-- Description: 
+-- Modified By: bhuvan joshi
+-- Modified by : Kamal Khanal
+-- Modified Date: 3/4/2013
+-- ============================================= 
+--  [dbo].[usp_Aspx_GetSpecialItemDetailsSortByViewCount] 1,1,1,'superuser',100,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItemDetailsSortByViewCount] (
+	@offset INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@limit INT
+	,@CultureName NVARCHAR(250)
+	,@RowTotal INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@RowTotal = 0)
+		SELECT @RowTotal = COUNT(i.ItemID)
+		FROM [dbo].[Aspx_Items] i
+		INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				);
+
+	WITH SpecialItems (
+		CostVariants
+		,ItemTypeID
+		,SKU
+		,[Name]
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,ListPrice
+		,RowNumber
+		)
+	AS (
+		SELECT (i.HasCostVariants) AS CostVariants
+			,i.ItemTypeID
+			,i.SKU
+			,iid.[Name]
+			,i.ItemID
+			,i.[IsFeatured]
+			,i.IsSpecial
+			,im.ImagePath
+			,IMA.AlternateText
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+			,ROW_NUMBER() OVER (
+				ORDER BY i.[ViewCount] DESC
+				) AS RowNumber
+		FROM [dbo].[Aspx_Items] AS i
+		INNER JOIN [dbo].[Aspx_Currency] c ON c.CurrencyCode = i.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.ItemID = i.ItemID
+			AND im.ImageTypeID = 1
+			AND im.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = IM.ItemImageID
+			AND IMA.CultureName = @CultureName
+		WHERE i.ItemTypeID != 4
+			AND i.IsSpecial = 1
+			AND i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsActive = 1
+			AND i.Visibility = 1
+			AND i.IsDeleted = 0
+			AND ias.StoreID = @StoreID
+			AND ias.PortalID = @PortalID
+			AND ias.IsActive = 1
+			AND ias.IsDeleted = 0
+			AND (
+				i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+				AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+				AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+				)
+			AND (
+				(
+					HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND iid.CultureName = @CultureName
+		)
+	SELECT @RowTotal AS RowTotal
+		,CostVariants
+		,ItemTypeID
+		,SKU
+		,[dbo].[ufn_CheckOutOfStock](ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,[Name] as ItemName
+		,ItemID
+		,[IsFeatured]
+		,IsSpecial
+		,ImagePath
+		,AlternateText
+		,dbo.[ufn_CatalogPriceRule](ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,ListPrice
+		,RowNumber
+	FROM SpecialItems c
+	WHERE RowNumber >= @offset
+		AND RowNumber <= (@offset + @limit - 1)
+
+	SET NOCOUNT OFF
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetSpecialItems]    Script Date: 03/28/2014 11:45:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+--[dbo].[usp_Aspx_GetSpecialItems] 1,1,'superuser',30,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetSpecialItems] (
+	@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@count INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+SET STATISTICS TIME ON;
+	SET NOCOUNT ON;
+
+	SELECT TOP (@Count + 1) im.ImagePath
+		,i.HasCostVariants as CostVariants
+		,[dbo].[ufn_CheckOutOfStock](i.ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		,i.SKU
+		,iid.[Name] AS [ItemName]
+		,i.ItemID
+		,i.ItemTypeID
+		,dbo.[ufn_CatalogPriceRule](i.ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+	FROM [dbo].[Aspx_items] AS i
+	JOIN Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+	INNER JOIN [dbo].[Aspx_ItemInformationDetails] AS iid ON iid.ItemID = i.ItemID
+	LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.itemID = i.ItemID
+		AND im.IsActive = 1
+		AND im.[ImageTypeID] = 1
+	WHERE i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND i.IsActive = 1
+		AND i.Visibility = 1
+		AND i.IsDeleted = 0
+		AND ias.StoreID = @StoreID
+		AND ias.PortalID = @PortalID
+		AND ias.IsActive = 1
+		AND ias.IsDeleted = 0
+		AND iid.CultureName = @CultureName
+		AND i.IsSpecial = 1
+		AND (
+			i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+			AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND (
+			i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND (
+			(
+				HideToAnonymous = 0
+				AND @UserName = 'anonymoususer'
+				)
+			OR @UserName != 'anonymoususer'
+			)
+	ORDER BY i.ItemID DESC
+END
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_SpecialItemsGetByCount]    Script Date: 03/28/2014 11:45:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:  Milson Munakami
+-- Create date: 2012-07-20
+-- Description: Special Item Front Gallery Display
+-- ============================================= 
+--[dbo].[usp_Aspx_SpecialItemsGetByCount] 1, 1,'superuser','zh-CN',10
+CREATE PROCEDURE [dbo].[usp_Aspx_SpecialItemsGetByCount] (
+	@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+	,@Count INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT TOP (@Count) im.ImagePath
+		,i.SKU
+		,iid.[Name]
+		,i.ItemID
+		,i.ItemTypeID
+		,dbo.[ufn_CatalogPriceRule](i.ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+	FROM [dbo].[Aspx_items] AS i
+	JOIN Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+	INNER JOIN [dbo].[Aspx_ItemInformationDetails] AS iid ON iid.ItemID = i.ItemID
+	LEFT JOIN [dbo].[Aspx_ItemImages] im ON im.itemID = i.ItemID
+		AND im.IsActive = 1
+		AND im.[ImageTypeID] = 1
+	WHERE i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND i.IsActive = 1
+		AND i.Visibility = 1
+		AND i.IsDeleted = 0
+		AND ias.StoreID = @StoreID
+		AND ias.PortalID = @PortalID
+		AND ias.IsActive = 1
+		AND ias.IsDeleted = 0
+		AND iid.CultureName = @CultureName
+		AND i.IsSpecial = 1
+		AND (
+			i.SpecialFromDate <= convert(VARCHAR(10), getdate(), 111)
+			AND i.SpecialToDate >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND (
+			i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND (
+			(
+				HideToAnonymous = 0
+				AND @UserName = 'anonymoususer'
+				)
+			OR @UserName != 'anonymoususer'
+			)
+	ORDER BY i.ItemID DESC
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_SpecialItemsSettingsGet]    Script Date: 03/28/2014 11:45:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+-- [dbo].[usp_Aspx_SpecialItemsSettingsGet] 1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_SpecialItemsSettingsGet] (
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (
+			NOT EXISTS (
+				SELECT SettingKey
+				FROM dbo.Aspx_SpecialItemsSetting
+				WHERE storeID = @StoreID
+					AND PortalID = @PortalID
+				)
+			)
+	BEGIN
+		INSERT INTO dbo.Aspx_SpecialItemsSetting (
+			SettingKey
+			,SettingValue
+			,StoreID
+			,PortalID
+			,CultureName
+			,[IsActive]
+			,[IsDeleted]
+			,[IsModified]
+			,[AddedOn]
+			,[UpdatedOn]
+			,[DeletedOn]
+			,[AddedBy]
+			,[UpdatedBy]
+			,[DeletedBy]
+			)
+		SELECT SettingKey
+			,SettingValue
+			,@StoreID
+			,@PortalID
+			,@CultureName
+			,[IsActive]
+			,[IsDeleted]
+			,[IsModified]
+			,[AddedOn]
+			,[UpdatedOn]
+			,[DeletedOn]
+			,[AddedBy]
+			,[UpdatedBy]
+			,[DeletedBy]
+		FROM dbo.Aspx_SpecialItemsSetting
+		WHERE PortalID = 1
+			AND StoreId = 0
+	END;
+
+	WITH SettingCTE
+	AS (
+		SELECT sis.SettingKey
+			,sis.SettingValue
+		FROM dbo.Aspx_SpecialItemsSetting sis
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		)
+		,SpecialItemsDiscountSetting
+	AS (
+		SELECT *
+		FROM (
+			SELECT SettingValue
+				,CASE [SettingKey]
+					WHEN 'IsEnableSpecialItems'
+						THEN 'IsEnableSpecialItems'
+					WHEN 'NoOfItemShown'
+						THEN 'NoOfItemShown'
+					WHEN 'NoOfItemInRow'
+						THEN 'NoOfItemInRow'
+						
+					WHEN 'IsEnableSpecialItemsRss'
+						THEN 'IsEnableSpecialItemsRss'
+					WHEN 'SpecialItemsRssCount'
+						THEN 'SpecialItemsRssCount'
+					WHEN 'SpecialItemsRssPageName'
+						THEN 'SpecialItemsRssPageName'
+					WHEN 'SpecialItemsDetailPageName'
+						THEN 'SpecialItemsDetailPageName'
+					END AS SKey
+			FROM SettingCTE
+			) DataTable
+		pivot(max(SettingValue) FOR Skey IN (
+					IsEnableSpecialItems
+					,NoOfItemShown
+					,NoOfItemInRow,
+					IsEnableSpecialItemsRss,SpecialItemsRssCount
+					,SpecialItemsRssPageName,SpecialItemsDetailPageName
+					)) PivotTable
+		)
+	SELECT *
+	FROM SpecialItemsDiscountSetting
+END
+
+
+
+-- select * from Aspx_SpecialItemsSetting
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_SpecialItemsSettingsUpdate]    Script Date: 03/28/2014 11:45:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_SpecialItemsSettingsUpdate] (
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@SettingKeys NVARCHAR(max)
+	,@SettingValues NVARCHAR(max)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @tblKey TABLE (
+		RowNum INT identity(1, 1)
+		,SettingKey NVARCHAR(500)
+		)
+	DECLARE @tblValue TABLE (
+		RowNum INT identity(1, 1)
+		,SettingValue NVARCHAR(500)
+		)
+
+	INSERT INTO @tblKey
+	SELECT rtrim(ltrim(items))
+	FROM split(@SettingKeys, '*')
+
+	INSERT INTO @tblValue
+	SELECT rtrim(ltrim(items))
+	FROM split(@SettingValues, '*')
+
+	DECLARE @counter INT
+		,@RowCount INT
+
+	SELECT @RowCount = count(RowNum)
+	FROM @tblKey
+
+	SET @counter = 1
+
+	WHILE (
+			@counter <= @RowCount
+			OR @counter = 1
+			)
+	BEGIN
+		DECLARE @key NVARCHAR(2000)
+			,@value NVARCHAR(2000)
+
+		SELECT @key = SettingKey
+		FROM @tblKey
+		WHERE RowNum = @counter
+
+		SELECT @value = SettingValue
+		FROM @tblValue
+		WHERE RowNum = @counter
+
+		UPDATE [dbo].[Aspx_SpecialItemsSetting]
+		SET SettingValue = @value
+		WHERE SettingKey = @key
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+
+		SET @counter = @counter + 1
+	END
+END
+
+
+GO
+
+

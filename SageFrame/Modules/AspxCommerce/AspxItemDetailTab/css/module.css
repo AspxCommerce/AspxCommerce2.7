@@ -1,0 +1,8 @@
+.cssClassTabPanelTable table{border:solid 1px #ededed; width:100%; margin-bottom:15px;}
+.cssClassTabPanelTable table td{padding:10px 15px; border-bottom:solid 1px #ededed;vertical-align: top; font-size:14px; line-height:20px;}
+.cssClassTabPanelTable table td.cssClassTableLeftCol{ width:150px; font-weight:bold;}
+.cssClassPopularTagBox{ background:#fff; border:1px solid #ccc;}
+.cssClassPopularItemTags {padding: 10px;}
+.cssClassRatingdesc {float: left; width: 65%;}
+.cssClassRateReview .cssClassItemRatingBox{ background:none; margin:0;}
+.cssClassRatingInfo p span,.cssClassRatingReviewDate{ color:#686868;}

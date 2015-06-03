@@ -1,0 +1,754 @@
+﻿#wrapper {
+}
+#schedulerHeader {
+}
+#schedulerHeader span.month {
+	float: right;
+	margin-right: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#schedulerHeader span.week {
+	float: right;
+	margin-right: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#schedulerHeader span.day {
+	float: right;
+	margin-right: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#schedulerHeader span.all {
+	float: right;
+	margin-right: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#schedulerHeader span.date {
+	float: left;
+	margin-left: 20px;
+	font-weight: bold;
+	font-size: small;
+}
+#schedulerHeader img {
+	float: left;
+}
+#scheduler {
+	display:none;
+}
+#allDaySchedule {
+	width: 95%;
+	max-height: 80px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #5695af;
+	margin: 0 auto;
+	margin-top: 4px;/* overflow: auto;
+  overflow-x: hidden;*/
+}
+#allDaySchedule span.header {
+	font-weight: bold;
+	border-top: 1px solid #666;
+	border-bottom: 1px solid #666;
+}
+#allDayScheduleList {
+	width: 100%;
+	margin-top: 4px;
+}
+.allDayScheduleItem {
+	width: 40%;
+	height: 20px;
+	padding: 3px;
+	background-color: #fff5af;
+	border: 1px solid #ffcd6b;
+	-moz-border-radius: 3px;
+	float: left;
+	margin-left: 4px;
+	cursor: pointer;
+	margin-top: 3px;
+	color: #696671;
+}
+#allSchedule {
+	width: 95%;
+	max-height: 320px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #5695af;
+	margin: 0 auto;
+	margin-top: 4px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+.cssClassScheduleList {
+	width: 100%;
+}
+.cssClassScheduleList td.time {
+	width: 20px;
+	height: 40px;
+	padding: 4px;
+	background-color: #c8c6cc;
+	font-size: small;
+	font-family: Arial;
+}
+.cssClassScheduleList td.task {
+	width: 50px;
+	height: 40px;
+	background-color: #c8c6cc;
+}
+.cssClassScheduleItem {
+	width: 250px;
+	height: 20px;
+	padding: 3px;
+	background-color: #fff5af;
+	border: 1px solid #ffcd6b;
+	-moz-border-radius: 3px;
+	float: left;
+	margin-left: 4px;
+	cursor: pointer;
+	color: #696671;
+	margin-top: 2px;
+}
+.cssClassScheduleItem:hover {
+	background-color: #c6f372;
+}
+.invisibleDiv {
+	width:430px;
+	background-color:#b0b0b0;
+	display: none;
+	position: fixed;
+	top: 2%;
+	left: 20%;
+	z-index: 99999;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	padding:10px;
+}
+.loading-visible  {
+	z-index:1000;
+	position:absolute;
+	top:12%;
+	left: 30%;
+	display: none; 	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.35);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.35);
+	-ms-box-shadow: 0 0 10px rgba(0,0,0,0.35);
+	background-color:#fff;
+	width:540px; padding:20px;
+}
+.detail {
+	float: right;
+	cursor: pointer;
+}
+.delete {
+	float: right;
+	cursor: pointer;
+}
+.allDayScheduleItem span.delete {
+	float: right;
+	cursor: pointer;
+}
+.cssClassScheduleItemLong {
+	width: 80%;
+	height: 20px;
+	padding: 3px;
+	background-color: #fff5af;
+	border: 1px solid #ffcd6b;
+	-moz-border-radius: 3px;
+	float: left;
+	margin-left: 4px;
+	cursor: pointer;
+	color: #696671;
+	margin-top: 3px;
+}
+.cssClassScheduleItemLong:hover {
+	background-color: #c6f372;
+}
+.cssClassScheduleItemLong span.delete {
+	float: right;
+	cursor: pointer;
+}
+#bottomControlDiv {
+}
+#bottomControlDiv span {
+	cursor: pointer;
+	font-size: small;
+	font-weight: bold;
+}
+#bottomControlDiv span.history {
+	cursor: pointer;
+	margin-left: 20px;
+	font-size: small;
+	font-weight: bold;
+}
+#bottomControlDiv span.active {
+	cursor: pointer;
+	margin-left: 20px;
+	font-size: small;
+	font-weight: bold;
+}
+#scheduleListAll {
+	width: 95%;
+	height: 350px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #5695af;
+	margin: 0 auto;
+	margin-top: 4px;/* overflow: auto;
+    overflow-x: hidden;*/
+}
+#backgroundFilter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	background-color: #000;
+	filter: alpha(opacity=60);
+	opacity: 0.5;
+	display: none;
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+}
+#scheduleListWeekly {
+	width: 95%;
+	height: 350px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #5695af;
+	margin: 0 auto;
+	margin-top: 4px;
+	overflow: auto;
+	overflow-x: hidden;
+	display: none;
+}
+#scheduleListMonthly {
+	width: 95%;
+	height: 350px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #5695af;
+	margin: 0 auto;
+	margin-top: 4px;
+	overflow: auto;
+	overflow-x: hidden;
+	display: none;
+}
+.cssClassScheduleList td.day {
+	width: 30px;
+	height: 40px;
+	padding: 4px;
+	background-color: #c8c6cc;
+	font-size: small;
+	font-family: Arial;
+}
+#taskHistoryDiv {
+	width: 95%;
+	height: 350px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #5695af;
+	margin: 0 auto;
+	margin-top: 4px;
+	overflow: auto;
+	overflow-x: hidden;
+	display: none;
+}
+#activeTasksDiv {
+	width: 95%;
+	height: 350px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #5695af;
+	margin: 0 auto;
+	margin-top: 4px;
+	overflow: auto;
+	overflow-x: hidden;
+	display: none;
+}
+#imgAddTimeFrame {
+	cursor:pointer;
+}
+#timeFrameDiv {
+	width:100%;
+	display:none;
+	border:1px solid #000;
+	padding:3px;
+}
+.closePopUp {
+	position:absolute;
+	right:-33px;
+	top:-33px;
+	cursor:pointer;
+}
+
+
+.cssClassPopUpBoxInfo h2 {
+	color: #716F69;
+	font: bold 18px/24px Tahoma, Geneva, sans-serif;
+	padding: 0 0 0 5px;
+}
+.cssClassPopUpBoxInfo label {
+	color: #666666;
+	font: bold 11px/30px Tahoma, Geneva, sans-serif;
+	text-shadow: 1px 1px 0 #fff;
+	min-width:80px;
+}
+.cssClassPopUpBoxInfo label.error,.fileUploadMsg,.error{ color: red; padding-left: 10px;}
+.cssClassPopUpBoxInfo fieldset {
+	border:1px solid #acd2e2;
+	background-color:#f5fdff;
+	padding:5px; margin:10px 0;
+}
+.cssClassPopUpBoxInfo fieldset legend {
+	color: #666666;
+	font: bold 11px/30px Tahoma, Geneva, sans-serif;
+	text-shadow: 1px 1px 0 #fff;
+}
+.cssClassPopUpBoxInfo span.closePopUp input {
+	border:none !important;
+	background:none !important;
+}
+/*------------------DATE PICK CALANDER---------------*/
+.datepick {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	font:11px Tahoma, Geneva, sans-serif !important;
+	font-size: 90%;
+	padding:5px;
+}
+.datepick-rtl {
+	direction: rtl;
+}
+.datepick-popup {
+	z-index: 1000;
+}
+.datepick-disable {
+	position: absolute;
+	z-index: 100;
+	background-color: white;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.datepick a {
+	color: #000;
+	text-decoration: none;
+}
+.datepick a.datepick-disabled {
+	color: #888;
+	cursor: auto;
+}
+.datepick button {
+	margin: 0.25em;
+	padding: 0.125em 0em;
+	background-color: #fcc;
+	border: none;
+	font-weight: bold;
+}
+.datepick-nav, .datepick-ctrl {
+	float: left;
+	width: 100%;
+	background-color: #a09d9d;
+	color: #fff;
+	font-size: 90%;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 5px 0;
+}
+.datepick-ctrl {
+	background-color: #CCCCCC;
+}
+.datepick-cmd {
+	width: 30%;
+}
+.datepick-cmd:hover {
+	background-color: #777;
+	color:#fff;
+}
+.datepick-ctrl .datepick-cmd:hover {
+	background-color: #a09d9d;
+	color:#fff;
+}
+.datepick-cmd-prevJump, .datepick-cmd-nextJump {
+	width: 8%;
+}
+a.datepick-cmd {
+	height: 1.5em;
+}
+button.datepick-cmd {
+	text-align: center;
+}
+.datepick-cmd-prev, .datepick-cmd-prevJump, .datepick-cmd-clear {
+	float: left;
+	padding-left: 2%;
+}
+.datepick-cmd-current, .datepick-cmd-today {
+	float: left;
+	width: 35%;
+	text-align: center;
+}
+.datepick-cmd-next, .datepick-cmd-nextJump, .datepick-cmd-close {
+	float: right;
+	padding-right: 2%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-prev, .datepick-rtl .datepick-cmd-prevJump, .datepick-rtl .datepick-cmd-clear {
+	float: right;
+	padding-left: 0%;
+	padding-right: 2%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-current, .datepick-rtl .datepick-cmd-today {
+	float: right;
+}
+.datepick-rtl .datepick-cmd-next, .datepick-rtl .datepick-cmd-nextJump, .datepick-rtl .datepick-cmd-close {
+	float: left;
+	padding-left: 2%;
+	padding-right: 0%;
+	text-align: left;
+}
+.datepick-month-nav {
+	float: left;
+	background-color: #777;
+	text-align: center;
+}
+.datepick-month-nav div {
+	float: left;
+	width: 12.5%;
+	margin: 1%;
+	padding: 1%;
+}
+.datepick-month-nav span {
+	color: #888;
+}
+.datepick-month-row {
+	clear: left;
+}
+.datepick-month {
+	float: left;
+	width: 15em;
+	border:none;
+	text-align: center;
+}
+.datepick-month-header, .datepick-month-header select, .datepick-month-header input {
+	background-color: #cccccc;
+	color: #fff;
+	font-weight: bold;
+}
+.datepick-month-header select, .datepick-month-header input {
+	height: 1.4em;
+	border: none;
+}
+.datepick-month-header input {
+	position: absolute;
+	display: none;
+}
+.datepick-month table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.datepick-month thead {
+/*	border-bottom: 1px solid #aaa;*/
+}
+.datepick-month th, .datepick-month td {
+	margin: 0em;
+	padding: 0em;
+	font-weight: normal;
+	text-align: center;
+}
+.datepick-month th {
+	border: 1px solid #fff;
+	font:bold 11px Tahoma, Geneva, sans-serif;
+	color:#666;
+}
+.datepick-month th, .datepick-month th a {
+	background-color: #fff;
+	color: #000;
+}
+.datepick-month td {
+	background-color: #fff;
+	border: 1px solid #fff;
+}
+.datepick-month td.datepick-week {
+	border: 1px solid #777;
+}
+.datepick-month td.datepick-week * {
+	background-color: #777;
+	color: #fff;
+	border: none;
+}
+.datepick-month a {
+	display: block;
+	width: 100%;
+	padding: 0.125em 0em;
+	background-color: #eee;
+	color: #000;
+	text-decoration: none;
+	text-shadow:1px 1px 0 #fff;
+}
+.datepick-month span {
+	display: block;
+	width: 100%;
+	padding: 0.125em 0em;
+}
+.datepick-month td span {
+	color: #888;
+}
+.datepick-month td .datepick-other-month {
+	background-color: #fff;
+}
+.datepick-month td .datepick-weekend {
+	background-color: #ddd;
+}
+.datepick-month td .datepick-today {
+	background-color: #a09d9d;
+}
+.datepick-month td .datepick-highlight {
+	background-color: #a09d9d;
+}
+.datepick-month td .datepick-selected {
+	background-color: #a09d9d;
+	color: #fff;
+}
+.datepick-month th.datepick-week {
+	background-color: #777;
+	color: #fff;
+}
+.datepick-status {
+	clear: both;
+	background-color: #ddd;
+	text-align: center;
+}
+.datepick-clear-fix {
+	clear: both;
+}
+.datepick-cover {
+	display: none;
+	display/**/: block;
+	position: absolute;
+	z-index: -1;
+	filter: mask();
+	top: -1px;
+	left: -1px;
+	width: 100px;
+	height: 100px;
+}
+/*-------------------- Schedular START ---------------------*/
+.cssClassSchedular {
+}
+.cssClassActionOnClick {
+	position:relative;
+}
+.cssClassActionOnClickShow {
+	padding:0 0 0 0;
+	position:absolute;
+	z-index:10;
+	right:28px;
+	top:0;
+	background:url(images/onclickarrow.gif) no-repeat top right;
+}
+.cssClassActionOnClickShowInfo {
+	background-color:#2b7793;
+	-moz-box-shadow: 0 3px 4px #999;
+	-webkit-box-shadow: 0 3px 4px #999;
+	box-shadow: 3px 3px 4px #999;
+}
+.cssClassActionOnClickShowInfo p a {
+	font:bold 12px/18px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	padding:0 10px 0 10px;
+}
+.cssClassActionOnClickShowInfo p a:hover {
+	text-decoration:underline;
+	color:#fff;
+}
+.cssClassActionOnClickShowInfo a {
+	display:block;
+	height:22px;
+}
+p.cssClassActionImg a {
+	background:url(../images/action.png) no-repeat;
+	text-indent:-99999px;
+	display:block;
+	outline:none;
+	margin:0 0 0 15px;
+}
+
+#gdvSchedularListAll td {
+	border-top:none;
+	border-right:none; text-align: left;
+}
+.cssClassScheduleTopBtn { margin-bottom: 20px;}
+.cssClassScheduleTopBtn img, .cssClassScheduleTopBtn label {cursor:pointer; padding-left:4px;}
+.cssClassPagination {
+	padding:10px 0 0 0;
+}
+.cssClassPagination .cssClassPages, .cssClassPagination .cssClassViewPerPage, .cssClassPagination .cssClassPageNumber {
+	float:left;
+	margin:0 10px 0 0;
+}
+.cssClassPagination .cssClassPageNumber {
+	height:auto;
+}
+.cssClassPagination .cssClassPages input {
+	width:20px;
+	text-align:center;
+}
+input.cssClassBtnbg {
+	background-color:#0082B5;
+	border:none;
+	padding:5px 4px !important;
+	font:bold 12px/22px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	cursor:pointer;
+}
+input.cssClassBtnbg:hover {
+	background-color:#1aa2d7;
+}
+.cssClassPopUpBoxInfo {
+	
+	background-color:#fff;
+	position:relative;
+}
+.cssClassOnClickShow li label{ width:93px; display:inline-block; }
+.cssClassOnClickShow #s2 ul{ float:right; width:356px;}
+
+.cssClassOnClickShow #s3 span{ width:150px; display:inline-block; color: #666666; font: bold 11px/30px Arial,Helvetica,sans-serif;}
+.cssClassOnClickShow #s3 ul {margin:0 0 0 170px;}/*
+.cssClassOnClickShow #s3 ul li label{ width:auto; min-width:65px; padding:0 0 0 10px;}*/
+.cssClassOnClickShow #s5{ margin:0 0 0 150px;}
+
+
+/* Added By Jivan Shrestha (July 18, 2012)*/
+
+#facebox_overlay, #BoxOverlay, #loading { background:#2e2335 !important; opacity:0.4 !important; filter:alpha(opacity=40)  !important; width:100%; height:100%; box-shadow:0 17px 40px rgba(0,0,0,0.35); position:fixed; left:0; top:0; }
+
+.content { margin:15px; overflow:hidden}
+.content ul li { margin-bottom:5px; padding-bottom:5px; border-bottom:1px solid #ddd;}
+.content ul li strong { padding-right:5px; font-weight: bold;}
+
+
+.cssClassmarginTop10 { margin-top:10px;}
+#alert-Buttons { padding:10px 0;}
+
+#alert-Box { background:#fff; border-radius:4px; padding:20px;}
+
+.sfModulecontent  { min-height:200px;}
+
+#loading img { position:fixed; left:49%; top:49%; background:#fff; padding:20px; text-align:center; border-radius:4px;}
+
+
+
+#facebox {
+	position:absolute;
+	top:15%;
+	left:35%;
+	z-index: 9000;
+	text-align: left;
+-webkit-box-shadow:0 17px 40px rgba(0,0,0,0.35); box-shadow:0 17px 40px rgba(0,0,0,0.35); background:#fff ;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	padding:10px;
+}
+#facebox .popup {
+	position:relative;
+}
+#facebox .content {
+	display:table;
+	width: 600px;
+	padding: 10px;
+	background: #fff;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+#facebox .content > p:first-child {
+	margin-top:0;
+}
+#facebox .content > p:last-child {
+	margin-bottom:0;
+}
+#facebox .close {
+	position:absolute;
+	top:-27px;
+	right:-23px;
+}
+#facebox .close img {
+}
+#facebox .close:hover img {
+}
+#facebox .loading {
+	text-align: center;
+}
+#facebox .image {
+	text-align: center;
+}
+#facebox img {
+	border: 0;
+	margin: 0;
+}
+#facebox_overlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+}
+.facebox_hide {
+	z-index:-100;
+}
+.facebox_overlayBG {
+	background-color: #000;
+	z-index: 99;
+}
+#facebox .content #editorDiv {
+	border:1px solid #000 !important;
+}
+#facebox .content ul{ overflow:hidden;}
+#facebox .content ul li{ float:left; width:100%; clear:both; }
+#facebox .content ul li{ font:normal 12px/22px Tahoma, Geneva, sans-serif; color:#666; }
+.cssClassPageNumber{ display:none;}
+.content td, .content th { padding:5px;}
+
+
+#s2 { overflow:hidden;}
+.cssClassPopUpBoxInfo table td { padding: 5px;}
+
+.cssClassButtonWrapper .sfBtn { float: right;}
+.sfGridwrapper td p.Sageshowhide{ border-width: 0px !important; }
+.datepick-month-header select{ width:94%;}
+.cssTableGridWrapper{ overflow-x:auto;}
+#fade1 {
+	display: none;
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .40;
+	z-index:999;
+}
+

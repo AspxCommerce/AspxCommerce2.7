@@ -1,0 +1,161 @@
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_IsActive_1]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_IsActive_1]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_UpdatedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_UpdatedOn]
+END
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItemDetails]    Script Date: 03/10/2014 11:17:08 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_CompareItemDetails]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_CompareItemDetails]
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItems]    Script Date: 03/10/2014 11:17:08 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_CompareItems]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_CompareItems]
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItemSettings]    Script Date: 03/10/2014 11:17:08 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_CompareItemSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_CompareItemSettings]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CompareItemSettingGet]    Script Date: 03/10/2014 16:21:08 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_CompareItemSettingGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_CompareItemSettingGet]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CompareItemSettingsUpdate]    Script Date: 03/10/2014 16:21:08 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_CompareItemSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_CompareItemSettingsUpdate]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddComparedItems]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AddComparedItems]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AddComparedItems]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddItemsToCompare]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AddItemsToCompare]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AddItemsToCompare]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CheckCompareItems]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_CheckCompareItems]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_CheckCompareItems]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ClearCompareItems]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_ClearCompareItems]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_ClearCompareItems]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_DeleteCompareItem]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_DeleteCompareItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_DeleteCompareItem]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareItemsCount]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetCompareItemsCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetCompareItemsCount]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareItemsList]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetCompareItemsList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetCompareItemsList]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareList]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetCompareList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetCompareList]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemCompareList]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemCompareList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemCompareList]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemDetailsForCompare]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemDetailsForCompare]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemDetailsForCompare]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRecentlyComparedItemList]    Script Date: 03/13/2014 11:45:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRecentlyComparedItemList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRecentlyComparedItemList]
+GO

@@ -1,0 +1,365 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* common styles */
+body {background: #f2f2f2;
+font:13px/20px Tahoma, Geneva, sans-serif;
+	margin:0;
+	padding:0;
+	color:#555;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:Tahoma, Geneva, sans-serif !important;
+}
+/*---Normal link---*/
+a {
+	color: #034D68;
+	text-decoration: none;
+	font:13px Tahoma, Geneva, sans-serif;
+}
+a:hover, a:active, a:focus {
+	color: #034D68;
+	text-decoration: underline;
+}
+input:focus {
+    outline: none;
+}
+img {
+	margin:0 auto;
+	display:block;
+}
+p {
+	font:13px/18px Tahoma, Geneva, sans-serif;
+	color:#545454;
+}
+.sfInputbox {
+	-moz-transition: all 0.3s ease-out 0s;
+	background:#fff;
+	border: 1px solid #aaa;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #999;
+	font-size: 12px;
+	padding:7px 5px;
+	margin:3px 0 0 0;
+	width: 200px;
+}
+.sfInputbox:focus {
+ background:#fff;
+	-webkit-box-shadow:0 0 8px rgba(0, 0, 0, 0.2); box-shadow:0 0 8px rgba(0, 0, 0, 0.2); -o-box-shadow:0 0 8px rgba(0, 0, 0, 0.2); -ms-box-shadow:0 0 8px rgba(0, 0, 0, 0.2); border: 1px solid #96b3fc;
+	outline:none;
+	outline:none;}
+.sfButtonwrapper .sfBtn {
+	margin-right:12px;
+	font-size:16px;
+	color:#fff;
+	border:none;
+	padding:10px 20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor:pointer;
+	display:inline-block;
+	background: #4a4a4a; 
+}
+.sfButtonwrapper .sfBtn:hover {
+	background: #419936; 
+	color:#fff;
+	text-decoration:none;
+}
+.sfinstalbtn {
+	float:right;
+	margin:69px -53px 50px;
+}
+.sfinstalbtn .sfBtn {
+	margin-right:12px;
+	font-size:28px;
+	color:#fff;
+	border:none;
+	padding:12px 24px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor:pointer;
+	display:inline-block;
+	background: #36802d; 
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.5); -moz-box-shadow: 0 0 5px rgba(0,0,0,.5); box-shadow: 0 0 5px rgba(0,0,0,.5); -o-box-shadow: 0 0 5px rgba(0,0,0,.5); -ms-box-shadow: 0 0 5px rgba(0,0,0,.5);	-moz-transition:background 0.2s linear;
+
+}
+.sfinstalbtn .sfBtn:hover {
+	background:#419936; 
+	color:#fff;
+	text-decoration:none;
+}
+.sfinstalbtn .sfBtn:active {
+	background-position:0 -120px;
+}
+.sfFormlabel {
+	font-weight:bold;
+	font-size:13px;
+	color:#434343;
+	display:block;
+	white-space:nowrap;
+}
+h2 {
+	font-size:28px;
+	color:#0B4B83;
+	margin:0px 0 30px; text-align:center;
+}
+h3 {
+	font-size:18px;
+	color:#222;
+	padding-bottom:5px;
+	border-bottom:1px solid #ccc;
+}
+#sfInstallWrapper {
+	margin:0 auto;
+	width:750px; position:relative;
+}
+.sfLogo h1 {
+	background:url(../images/aspxcommerce.png) no-repeat;
+    background-size:100% auto;
+	width:185px;
+	margin:40px auto;
+	min-height:66px;
+	
+}
+#sfInstallWrapper .sfOuter {
+	background:#fff;
+	position:relative;
+	padding:40px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,.25); -moz-box-shadow: 0 0 5px rgba(0,0,0,.25); box-shadow: 0 0 5px rgba(0,0,0,.25); -o-box-shadow: 0 0 5px rgba(0,0,0,.25); -ms-box-shadow: 0 0 5px rgba(0,0,0,.25);	-moz-transition:background 0.2s linear;
+}
+.sfInstallpart {
+	/*padding:30px 50px 0;*/
+}
+/*---Form Wrapper---*/
+.sfHelptext {
+	font-size:11px; line-height:18px;
+	padding-top:5px;
+	display:block !important;
+	color:#777;
+	overflow:hidden;
+}
+.sfHelptext.sfInline { padding-top:0; color:#1a1a1a; font-size:12px;}
+table tr td {
+	padding:5px 0;
+}
+table tr td table td {
+	padding:0; vertical-align:top;
+}
+.sfTemplate {
+	margin:20px 0 0 0;
+	overflow:hidden;
+}
+.sfTemplate ul {
+	padding:0;
+	margin:0;
+}
+.sfTemplate ul li {
+	float:left;
+	list-style:none;
+	margin:0 15px 15px;
+	width:185px;
+}
+.sfTemplate ul li img {
+	width: 185px; height:185px;
+	background:#fff;
+	text-align:center; 
+}
+.sfTemplate ul li p {
+	color:#4a626e;
+	text-transform:capitalize;
+	font-size:13px;
+	margin-bottom:3px;
+}
+.sfSuccess {
+	color:#138240;
+}
+.sfError {
+	color:#943c30;
+	display:block;
+	font-size:12px;
+}
+.sfInner > .sfError, .sfInner > .sfSuccess {
+	display:block;
+	font:bold 13px/18px Tahoma, Geneva, sans-serif;
+	padding:16px 50px;
+	border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px;
+	margin-bottom:2px;
+}
+.sfInner > .sfError {
+	background:#fadebc url(../images/error.png) no-repeat 16px 14px;
+}
+.sfInner > .sfSuccess {
+	background:#89dd94 url(../images/success.png) no-repeat 16px 14px;
+}
+.sfCheckBox {
+	float:left;
+}
+.sfInline {
+	display:inline;
+}
+.sfgap {
+	padding:0 0 0 27px;
+}
+.sfgap2 {
+	padding-left:52px;
+}
+.sfButtonwrapper { margin:40px 0px; overflow:hidden; border-bottom:1px dashed #ccc; padding:15px 0;}
+.sfButtonwrapper p { float:left; width:450px; margin:0px; font-weight:normal; font-size:11px; color:#777;}
+.sfButtonwrapper input.sfBtn { float:right; width:auto;}
+
+
+/* processing page */
+.sfloadingDiv { padding:20px 0px;}
+.sfloadingDiv span, .sfloadingDiv img { margin:10px auto; }
+.sfloadingDiv span { text-align:left; padding-left:50px; font:bold 12px/18px Tahoma, Geneva, sans-serif; display:block;}
+.sfmaincontent textarea { border:none; font:bold 12px/30px Tahoma, Geneva, sans-serif; text-transform:capitalize; padding:20px 50px; color:#555;}
+.sfProcessWrapper .sfButtonwrapper { display:none; }
+
+textarea {
+  resize: none;}
+  
+.sfHelp { top:111px; right:7px; position:absolute; display:inline-block; z-index:999;}
+.sfHelp a {padding:10px; color:#0B4B83; padding-left:20px; font-size:20px; display:inline-block;}
+.sfHelp a:hover { text-decoration:none;}
+
+
+table.sfInstalllationTable tr {}
+table.sfInstalllationTable tr td { vertical-align:top; padding:4px;}
+
+
+/*************************font-icon*******************************************/
+@font-face {
+  font-family: "aspx";
+  src:url("../../Administrator/Templates/Default/css/fonts/aspx.eot");
+  src:url("../../Administrator/Templates/Default/css/fonts/aspx.eot?#iefix") format("embedded-opentype"),
+    url("../../Administrator/Templates/Default/css/fonts/aspx.woff") format("woff"),
+    url("../../Administrator/Templates/Default/css/fonts/aspx.ttf") format("truetype"),
+    url("../../Administrator/Templates/Default/css/fonts/aspx.svg#aspx") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  
+
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "aspx" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before {
+	content: "\e654";
+}
+.icon-help:before {
+	content: "\e705";
+}
+.icon-close:before {
+	content: "\e614";
+}
+
+table.sfInstalllationTable tr td .icon-info:before { margin-right:5px; color:#7a7a7a;}
+
+
+p.sfWelcomeText { font-size:18px; font-weight:normal; line-height:28px; text-align:center; margin:0 0 15px;}
+
+table.sfSubTable { background:#f3f3f3; padding:20px;}
+table.sfSubTable tr td { vertical-align:middle;}
+
+
+/*Tooltip*/
+
+i.icon-info {
+  color: #900;
+  text-decoration: none;
+  cursor:help;
+}
+
+i:hover.icon-info {
+  color: red;
+  position: relative;
+}
+
+i.icon-info[data-title]:hover:after {
+  content: attr(data-title);
+  padding: 4px 10px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 999;
+  background:#2a2a2a;
+  font-style:normal;
+  font-size:12px;
+  border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px;
+}
+a.icon-help[data-title]:hover:after {
+  content: attr(data-title);
+  padding: 4px 10px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  white-space: nowrap;
+  z-index: 999;
+  background:#0B4B83;
+  font-style:normal;
+  font-size:12px;
+  text-decoration:none;
+  border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px;
+}
+
+
+/*accordian*/
+.accordion-header {
+	background-color: #e6e6e6; border:1px solid #ccc; border-bottom:none; margin-bottom:-1px;
+	padding:10px; font-size:16px; color:#3c3c3c; font-weight:normal;
+}
+
+.active-header {
+	background:#bababa;
+   color:#fff;
+}
+
+.active-header:hover {
+}
+
+.inactive-header {
+}
+
+.inactive-header:hover {background:#f2f2f2;
+	cursor:pointer;
+}
+
+.accordion-content {
+	display: none;
+	padding: 20px;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	border-top: 0;
+}
+
+a.back.icon-close { position:absolute; top:-18px; right:-18px; display:block; background:#3a3a3a; padding:10px; font-size:18px; color:#fff; cursor:pointer;
+border-radius:50%; -webkit-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%;}
+a.back.icon-close:hover { text-decoration:none; background:#5a5a5a;}
+
+.sfInstallationGuide h2 { text-align:left;}
+.sfInstallationGuide p { line-height:22px; margin:0px 0px 15px;}
+#accordion-container h2 { margin-bottom:0px;}
+.sfInstallationGuide .sfOuter { margin-bottom:50px;}
+
+
+
+.sfHide { display:none;}

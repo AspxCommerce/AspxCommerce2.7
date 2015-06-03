@@ -1,0 +1,8 @@
+GO
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll]    Script Date: 04/30/2013 15:40:41 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll]
+GO
+
+
+

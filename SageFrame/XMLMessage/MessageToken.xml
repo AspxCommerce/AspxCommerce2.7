@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<messagetokens>
+  <token value="%Username%" key="%Username%" />
+  <token value="%First Name%" key="%firstname%" />
+  <token value="%Last Name%" key="%lastname%" />
+  <token value="%Email%" key="%email%" />
+  <token value="%UserActivationCode%" key="%UserActivationCode%" />
+</messagetokens>
+  

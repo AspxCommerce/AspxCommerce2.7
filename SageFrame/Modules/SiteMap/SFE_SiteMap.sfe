@@ -1,0 +1,36 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SiteMap</name>
+      <friendlyname>SiteMap</friendlyname>
+      <foldername>SiteMap</foldername>
+      <modulename>SiteMap</modulename>
+      <description>For Pages Information</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.SiteMap.EventController, SageFrame.Modules.SiteMap</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>Sageframe Pvt. Ltd.</owner>
+      <organization>Sageframe Pvt. Ltd</organization>
+      <url>www.sageframe.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This is test release notes for SageFrame SiteMap Application</releasenotes>
+      <license>This is test license copy for SageFrame SiteMap Application</license>
+      <modules>
+        <module>
+          <friendlyname>SiteMap</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			  <key>SiteMap</key>
+              <title>SiteMap</title>
+              <src>Modules/SiteMap/SiteMap.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>false</supportspartialrendering>
+            </control>  
+        </controls>
+        </module>
+      </modules>
+    </folder>
+  </folders>
+</sageframe>

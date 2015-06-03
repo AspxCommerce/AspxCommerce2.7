@@ -1,0 +1,14 @@
+﻿#top_side {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #003A6C !important;
+    color: white;
+    left: 0;
+    position: fixed;
+    text-align: left;
+    top: -33px;
+    vertical-align: bottom;
+    width: 100%;
+    z-index: 100000;
+}
+.top_side_content { margin:0 auto 5px; width:900px; color:#333; padding: 2px 0 0;}
+.top_side_content span.cssClassShare{font-weight:bold;}

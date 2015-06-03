@@ -1,0 +1,51 @@
+﻿<sageframe version="2.5.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_AspxWishList</name>
+      <friendlyname>AspxWishItemsFront</friendlyname>
+      <foldername>AspxCommerce/AspxWishList</foldername>
+      <modulename>AspxWishItemsFront</modulename>
+      <description>This module is used to view wished item list.</description>
+      <version>02.50.00</version>
+      <businesscontrollerclass>SageFrame.Modules.AspxWishItem.EventController, SageFrame.Modules.AspxWishItem</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>BrainDigit IT Soultion Pvt. Ltd.</owner>
+      <organization>BrainDigit IT Soultion Pvt. Ltd.</organization>
+      <url>www.aspxcommerce.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This is test release notes for AspxWishItem Application</releasenotes>
+      <license>This is test license copy for AspxWishItem Application</license>
+      <modules>
+        <module>
+          <friendlyname>AspxWishItemsFront</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>            
+            <control>
+              <key>AspxWishItemsFront</key>
+              <title>AspxWishItem Container</title>
+              <src>Modules/AspxCommerce/AspxWishList/WishItems.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>           
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>02.50.00.SqlDataProvider</name>
+        </file>
+        <file>
+          <name>AspxCommerce.WishItem.dll</name>
+        </file>
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>
+      </files>
+      <interfaceimplementedclass>AspxCommerce.WishItem,WishItemsIModuleExtraCodeExecute</interfaceimplementedclass>
+      <apijs>
+        <js>WishItemApi.js</js>
+      </apijs>
+    </folder>
+  </folders>
+</sageframe>

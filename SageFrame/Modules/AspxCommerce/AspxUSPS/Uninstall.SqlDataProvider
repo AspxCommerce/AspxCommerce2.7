@@ -1,0 +1,4 @@
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetUSPSShippingProviderSetting]    Script Date: 11/27/2012 17:44:37 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetUSPSShippingProviderSetting]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetUSPSShippingProviderSetting]
+GO

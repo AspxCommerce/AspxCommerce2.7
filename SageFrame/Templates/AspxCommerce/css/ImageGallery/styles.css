@@ -1,0 +1,149 @@
+.pika-wrap {
+    margin: 0 auto;
+    width: 0;
+}
+.pika-image {
+    background-color: #FFFFFF;
+    border: 1px solid #C4C7C6;
+    padding: 5px;
+    position: relative;
+}
+.pika-image .animation, .pika-image .main-image {
+    position: relative;
+    vertical-align: middle;
+}
+.pika-image .animation {
+    display: none;
+    z-index: 2;
+}
+.pika-image img {
+    border: 0 none;
+    margin-bottom: 15px;
+}
+.pika-image .caption {
+    background: url("../../images/transpBlack.png") repeat scroll 0 0 transparent;
+    bottom: 0;
+    color: #FAFAFA;
+    font-size: 11px;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    text-align: right;
+}
+.pika-image .caption p {
+    line-height: 14px;
+    margin: 0;
+    padding: 0;
+}
+.pika-imgnav a {
+    display: block;
+    position: absolute;
+    text-indent: -5000px;
+    z-index: 3;
+}
+.pika-imgnav a.previous {
+    background: url("../../images/prev.png") no-repeat scroll left 50% transparent;
+    cursor: pointer;
+    height: 40px;
+    left: 5px;
+    top: 10px;
+    width: 50px;
+}
+.pika-imgnav a.next {
+    background: url("../../images/next.png") no-repeat scroll right 50% transparent;
+    cursor: pointer;
+    height: 340px;
+    right: 5px;
+    top: 10px;
+    width: 50px;
+}
+.pika-imgnav a.play {
+	background: url(../../images/play.png) no-repeat 50% 50%;
+	height: 100px;
+	width: 40px;
+	top: 0;
+	left: 50%;
+	display: none;
+	cursor: pointer;
+}
+.pika-imgnav a.pause {
+    background: url("../../images/pause.png") no-repeat scroll 50% 50% transparent;
+    cursor: pointer;
+    display: none;
+    height: 100px;
+    left: 50%;
+    top: 0;
+    width: 40px;
+}
+.pika-textnav {
+    display: none;
+    margin: 10px 0 0;
+    overflow: hidden;
+}
+.pika-textnav a {
+    color: #333333;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 12px;
+    padding: 4px;
+    text-decoration: none;
+}
+.pika-textnav a:hover {
+    background: none repeat scroll 0 0 #E5E5E5;
+    color: #0065B2;
+}
+.pika-textnav a.previous {
+    display: block;
+    float: left;
+    width: auto;
+}
+.pika-textnav a.next {
+    display: block;
+    float: right;
+    width: auto;
+}
+.pika-thumbs {
+    margin: 10px 0 0;
+    overflow: hidden;
+    padding: 0;
+}
+.pika-thumbs li {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #E5E5E5;
+    cursor: pointer;
+    float: left;
+    list-style-type: none;
+    margin: 0 2px;
+    padding: 3px;
+    width: 74px;
+}
+.pika-thumbs li .clip {
+    height: 74px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 74px;
+}
+.clip span {
+    background-color: black;
+    display: block;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+}
+ul#pikame {
+    width: 100px;
+}
+.jcarousel-skin-pika .jcarousel-clip-horizontal {
+    overflow: hidden;
+}
+.jcarousel-skin-pika .jcarousel-item-horizontal {
+    margin-right: 11px;
+}
+.jcarousel-skin-pika .jcarousel-item-placeholder {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #FFFFFF;
+    position: relative;
+}
+.jcarousel-skin-pika {
+}

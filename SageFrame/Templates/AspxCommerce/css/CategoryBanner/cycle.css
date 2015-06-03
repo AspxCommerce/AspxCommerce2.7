@@ -1,0 +1,128 @@
+#sliderObj {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#sliderObj div.cat-slide-container-inner {
+    height: 220px;
+    overflow: hidden;
+    width: 100%;
+}
+#sliderObj div.cat-slide-container-inner + p {
+    display: none;
+}
+#sliderObj div.cat-slide-container div.cat-slide-container-inner div {
+   /* height: 100%;*/
+    width: 100%;
+}
+#sliderObj div.cat-slide-container div.cat-slide-container-inner img {
+    display: block;
+    width: 100%;
+}
+#sliderObj div.slideshow-progress-bar-wrap {
+    position: relative;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.slideshow-progress-bar {
+    border-top: 1px solid #9CADB5;
+    margin: 10px 0 20px;
+    position: relative;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.slideshow-progress-bar div.pagerLink {
+    float: left;
+    height: 70px;
+    margin: -35px 0 0;
+    position: relative;
+    width: 25%;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.highlight-bar {
+    background:#00aeae;
+    height: 7px;
+    left: 0;
+    position: absolute;
+    top: -3px;
+    width: 25%;
+    z-index: 10;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.highlight-bar div.edge {
+    background:#f2f7fa;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 2px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.highlight-bar div.edge.left {
+    left: -2px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.highlight-bar div.edge.right {
+    right: -2px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div {
+    background: url("images/page-numbers.png") no-repeat scroll 0 0 transparent;
+    height: 12px;
+    left: -7px;
+    overflow: hidden;
+    position: relative;
+    top: 43px;
+    width: 14px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager1 {
+    background-position: 0 0;
+    left: 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager1 {
+    background-position: 0 -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager2 {
+    background-position: -16px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager2 {
+    background-position: -16px -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager3 {
+    background-position: -33px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager3 {
+    background-position: -33px -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager4 {
+    background-position: -49px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager4 {
+    background-position: -49px -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager5 {
+    background-position: -66px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager5 {
+    background-position: -66px -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager6 {
+    background-position: -83px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager6 {
+    background-position: -83px -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager7 {
+    background-position: -100px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager7 {
+    background-position: -100px -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager8 {
+    background-position: -117px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager8 {
+    background-position: -117px -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager9 {
+    background-position: -134px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager9 {
+    background-position: -134px -12px;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink div.pager10 {
+    background-position: -151px 0;
+}
+#sliderObj div.slideshow-progress-bar-wrap div.pagerLink.active div.pager10 {
+    background-position: -151px -12px;
+}

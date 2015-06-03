@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><layout name="layout_all">
+  <section name="sfHeader"><placeholder name="headers" width="46,54">logo,search</placeholder><placeholder name="navigation" >navigation</placeholder><placeholder name="fulltopspan" >getstarted</placeholder></section>
+  <section name="sfContent"><placeholder name="middlemainbottom" >whyuse</placeholder></section>
+  <section name="sfFooter"><placeholder name="copyright" >copyright</placeholder></section>
+</layout>

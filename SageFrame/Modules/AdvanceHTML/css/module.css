@@ -1,0 +1,9 @@
+﻿
+
+.TabbedPanelsTabGroup, .TabbedPanelsTabGroup li { margin-bottom:0; }
+.TabbedPanelsTabGroup li:first-child { border-left: 1px solid #e5e5e5;}
+.TabbedPanelsTabGroup li {float: left; background: #f5f5f5;  padding: 10px 15px; border-top: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; cursor: pointer; }
+.TabbedPanelsTabGroup li.TabbedPanelsTabSelected {  -webkit-box-shadow:0 1px 0 #fff; box-shadow:0 1px 0 #fff;}
+.TabbedPanelsTabGroup li.TabbedPanelsTabSelected , .TabbedPanelsTabGroup li.TabbedPanelsTabSelected:hover { background:#fff;}
+.TabbedPanelsTabGroup li:hover { background: #f1f1f1;}
+.TabbedPanelsContentGroup { padding:15px;  border: 1px solid #e5e5e5; clear: both; }

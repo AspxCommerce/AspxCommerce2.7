@@ -1,0 +1,136 @@
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_PopularTagSettings_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_PopularTagSettings] DROP CONSTRAINT [DF_Aspx_PopularTagSettings_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_PopularTagSettings_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_PopularTagSettings] DROP CONSTRAINT [DF_Aspx_PopularTagSettings_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_PopularTagSettings_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_PopularTagSettings] DROP CONSTRAINT [DF_Aspx_PopularTagSettings_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_PopularTagSettings_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_PopularTagSettings] DROP CONSTRAINT [DF_Aspx_PopularTagSettings_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_PopularTagSettings_UpdatedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_PopularTagSettings] DROP CONSTRAINT [DF_Aspx_PopularTagSettings_UpdatedOn]
+END
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_PopularTagSettings]    Script Date: 05/08/2014 11:34:49 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_PopularTagSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_PopularTagSettings]
+GO
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByDiscount]    Script Date: 05/08/2014 11:40:15 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByDiscount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByDiscount]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByIsFeatured]    Script Date: 05/08/2014 11:40:15 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByIsFeatured]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByIsFeatured]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByIsSpecial]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByIsSpecial]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByIsSpecial]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByItemIDAsc]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByItemIDAsc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByItemIDAsc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByItemIDDesc]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByItemIDDesc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByItemIDDesc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByName]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByName]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByName]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByPriceAsc]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByPriceAsc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByPriceAsc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByPriceDesc]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByPriceDesc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByPriceDesc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByRatedValue]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByRatedValue]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByRatedValue]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortBySoldItem]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortBySoldItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortBySoldItem]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemsByTagIDSortByViewCount]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemsByTagIDSortByViewCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemsByTagIDSortByViewCount]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetPopularTags]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetPopularTags]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetPopularTags]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedNewTag]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRssFeedNewTag]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRssFeedNewTag]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedPopularTag]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRssFeedPopularTag]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRssFeedPopularTag]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_PopularTagSettingGet]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_PopularTagSettingGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_PopularTagSettingGet]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_PopularTagSettingsUpdate]    Script Date: 05/08/2014 11:40:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_PopularTagSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_PopularTagSettingsUpdate]
+GO
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_PopularTagsSettingValueGetBYKey]    Script Date: 05/08/2014 11:46:18 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_PopularTagsSettingValueGetBYKey]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_PopularTagsSettingValueGetBYKey]
+GO

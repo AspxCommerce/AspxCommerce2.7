@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<layout name="default">
+  <blocks name="top">
+    <block name="mainnav">
+      <block class="a"></block>
+      <block class="b"></block>
+      <block class="c"></block>
+    </block>
+    <clear/>
+    <block name="header"></block>
+    <block name="topsl"></block>
+  </blocks>
+  <blocks name="middle">
+    <block name="left"></block>
+    <block name="right"></block>
+    <block name="content"></block>
+  </blocks>
+  <blocks name="bottom">
+    <block name="botsl"></block>
+    <block name="botsl"></block>
+    <block name="footer"></block>
+  </blocks>
+</layout>

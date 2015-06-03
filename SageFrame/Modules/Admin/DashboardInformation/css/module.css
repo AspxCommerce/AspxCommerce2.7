@@ -1,0 +1,103 @@
+﻿#main
+{
+    position: relative;
+    text-align: center;
+    top: 50px;
+}
+.portableTourDiv
+{
+    z-index: 9998;
+    background-color: black;
+    opacity: 0.5;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    position: absolute;
+}
+#divSfTourIntro {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:black;
+    opacity:.5;
+    z-index:8888;
+}
+
+.div_5
+{
+background-color:rgba(255,255,255,0.2);
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+-webkit-box-shadow:0 0px 7px 5px rgba(255, 255, 255, 0.98);
+box-shadow: 0 0px 7px 5px rgba(255, 255, 255, 0.98); -ms-box-shadow: 0 0px 7px 5px rgba(255, 255, 255, 0.98); -o-box-shadow: 0 0px 7px 5px rgba(255, 255, 255, 0.98);
+z-index:9999;
+}
+
+.div_5_hide
+{
+    background-color: black;
+    opacity: 0.5;
+	z-index:9999;
+
+}
+.tourMsg
+{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index:9999;
+    background-color:#fff;
+    height:auto;
+	min-height: 120px;
+    width: 250px;
+    opacity: 1;
+    color: #515357;
+	padding:18px;
+	border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px;
+	-webkit-box-shadow: 0 0 10px 0.1px rgba(0,0,0,.4);
+box-shadow: 0 0 10px 0.1px rgba(0,0,0,.4); -ms-box-shadow: 0 0 10px 0.1px rgba(0,0,0,.4); -o-box-shadow: 0 0 10px 0.1px rgba(0,0,0,.4);
+}
+.tourMsg i.icon-close:before { position:inherit; top:-16px; left:-16px; background:#242424; height:32px; line-height:32px; text-align:center; width:32px; color:#fff; cursor:pointer;
+border-radius:50%; -webkit-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; }
+.tourMsg i.icon-close:hover:before { background:#505F7C;}
+#divTourMsg p { font-size:13px; line-height:22px; margin-bottom:15px;}
+
+button
+{
+    
+   
+    z-index: 9999;
+    opacity: 1;
+}
+
+
+#sfTakeTour
+{
+    position:relative;
+    height:100px;
+    width:210px;
+    z-index:1;
+}
+#btnSfTourSkip
+{
+    position:absolute;
+    right:0px;
+    top:0px;
+}
+
+.sfTrHeading { font-size:16px; font-weight:bold; margin-bottom:12px; display:block;}
+
+
+.tourMsg .sfBtn {
+	background:#235391;
+	border:1px solid #0E64B0; color:#fff;
+	border-bottom:2px solid #153359;
+}
+.tourMsg .sfBtn[class*="icon-"]:before  { color:#f2f2f2; }
+.tourMsg .sfBtn:hover {
+	background: #2d6aba;
+	border:1px solid #2d6aba;
+	border-bottom:2px solid #1e477d;
+	text-decoration:none; }
+
+#paraTourMsg #btnSfFinish { float:right; width:auto; margin-top:16px;}
+

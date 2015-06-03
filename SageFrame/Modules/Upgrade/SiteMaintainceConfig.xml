@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Config>
+    <MySection1>
+        <isDown>false</isDown>
+        <toPage>/Modules/upgrade/down.aspx</toPage>
+    </MySection1>
+</Config>

@@ -1,0 +1,37 @@
+﻿.sfLanguage .sfTreeview {
+	float:left;
+	min-width:25%;
+	margin:0 20px 0 0;
+	background:#485F7E;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.sfLanguage .sfTreeview td {
+	padding:0 0 0 6px;
+	margin:0;
+	white-space:normal;
+}
+.sfLanguage .sflanguagecontent {
+	overflow:hidden;
+}
+img.sfEdit {
+	cursor:pointer;
+}
+.sfLanguage .sfGridwrapper li {
+	font-weight:normal;
+}
+.sfLanguage .sfGridwrapper li.sfResxvalue {
+	margin:5px 0 0 0;
+	font-weight:bold;
+}
+.sfLanguage .sfFormwrapper textarea.sfTextarea {
+	height:45px;
+}
+.sfLanguage td.sfSelectednode a {
+	background:#7C8EA4;
+	padding:2px 10px;
+	margin:0px;
+	border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px;
+}
+table.hideTD tr td:first-child { padding:0;}

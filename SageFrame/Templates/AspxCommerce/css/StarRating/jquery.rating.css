@@ -1,0 +1,71 @@
+div.rating-cancel, div.star-rating {
+	float:left;
+	width:16px;
+	height:13px;
+	text-indent:-999em;
+	cursor:pointer;
+	display:inline-block;
+	background:transparent;
+	overflow:hidden
+}
+/*div.rating-cancel, div.rating-cancel a {
+	background:url(delete.gif) no-repeat 0 -16px
+}*/
+div.star-rating, div.star-rating a {
+	background:url(star.png) no-repeat 0 0px
+}
+div.rating-cancel a, div.star-rating a {
+	display:block;
+	width:12px;
+	height:12px;
+	background-position:0 0px;
+	border:0
+}
+div.star-rating-on a {
+	background-position:0 -12px!important
+}
+div.star-rating-hover a {
+	background-position:0 -24px
+}
+div.star-rating-readonly a {
+	cursor:default !important
+}
+div.star-rating {
+	background:transparent!important;
+	overflow:hidden!important
+}
+table.cmxform label.error {
+	display: none;
+}
+
+.cssClassRatingInfo { margin-bottom:10px;}
+.cssClassRatingInfo p { font-size:14px; font-weight:bold;}
+.cssClassRatingInfo p span { display:block; font-size:13px; font-weight:normal; color:#aaa;}
+.cssClassRatingInfo p span strong { }
+.cssClassToolTip .cssClassRatingTitle2 { padding-right:5px; float:left;}
+.cssClassRatingDesc { float:left;}
+
+.cssClassRatingTitle, .cssClassCriteriaTitle {float:left; margin-right:10px; margin-top:-4px; text-align:right;  }
+.cssClassToolTipInfo, .cssClassToolTipDetailInfo { clear:both; display:block;}
+
+
+.cssClassToolTip .cssClassToolTipInfo {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 20px;
+    z-index: 9999;
+}
+
+#tblRatingPerUser .sfButtonwrapper p { float:right; width:auto;}
+
+/*Latest comments*/
+.cssClassItemRating {}
+.cssRatingDesWrap { float:left; width:65%; margin-left:20px; }
+.cssClassRatingReviewDate { clear:left;}
+.cssClassRatingReviewDate p { color:#aaa;}
+
+.cssClassRateReviewWrapper { float:left; width:90%;}
+#tblRatingPerUser .sfButtonwrapper { float:right; width:9%; margin:5px 0 0 0;}
+
+#tblLatestReviews .cssClassPageNumber .pagination span { width:auto; padding:0px 5px; display:inline-block;}

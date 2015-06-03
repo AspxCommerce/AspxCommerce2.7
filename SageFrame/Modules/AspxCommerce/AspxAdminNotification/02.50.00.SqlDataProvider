@@ -1,0 +1,786 @@
+﻿
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_NotificationItemLowStock_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_NotificationItemLowStock] DROP CONSTRAINT [DF_Aspx_NotificationItemLowStock_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_NotificationItemOutOfStock_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_NotificationItemOutOfStock] DROP CONSTRAINT [DF_Aspx_NotificationItemOutOfStock_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_NotificationOrders_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_NotificationOrders] DROP CONSTRAINT [DF_Aspx_NotificationOrders_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_NotificationSubscription_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_NotificationSubscription] DROP CONSTRAINT [DF_Aspx_NotificationSubscription_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_NotificationUser_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_NotificationUser] DROP CONSTRAINT [DF_Aspx_NotificationUser_IsDeleted]
+END
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationItemLowStock]    Script Date: 04/01/2014 16:06:03 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationItemLowStock]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationItemLowStock]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationItemOutOfStock]    Script Date: 04/01/2014 16:06:03 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationItemOutOfStock]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationItemOutOfStock]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationOrders]    Script Date: 04/01/2014 16:06:03 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationOrders]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationOrders]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationSettings]    Script Date: 04/01/2014 16:06:03 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationSettings]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationSubscription]    Script Date: 04/01/2014 16:06:03 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationSubscription]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationSubscription]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationUser]    Script Date: 04/01/2014 16:06:03 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationUser]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationUser]
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationItemLowStock]    Script Date: 04/01/2014 16:06:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_NotificationItemLowStock](
+	[NotificationItemLowStockID] [int] IDENTITY(1,1) NOT NULL,
+	[ItemID] [int] NULL,
+	[ItemCostVariantID] [nvarchar](250) NULL,
+	[IsChecked] [bit] NULL,
+	[IsCheckedFull] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_NotificationItemLowStock] PRIMARY KEY CLUSTERED 
+(
+	[NotificationItemLowStockID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationItemOutOfStock]    Script Date: 04/01/2014 16:06:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_NotificationItemOutOfStock](
+	[NotificationItemOutofStockID] [int] IDENTITY(1,1) NOT NULL,
+	[ItemID] [int] NULL,
+	[ItemCostVariantID] [nvarchar](250) NULL,
+	[IsChecked] [bit] NULL,
+	[IsCheckedFull] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_NotificationItemOutOfStock] PRIMARY KEY CLUSTERED 
+(
+	[NotificationItemOutofStockID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationOrders]    Script Date: 04/01/2014 16:06:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_NotificationOrders](
+	[NotificationOrdersID] [int] IDENTITY(1,1) NOT NULL,
+	[OrderID] [int] NULL,
+	[ItemID] [int] NULL,
+	[ItemCostVariantID] [nvarchar](250) NULL,
+	[IsChecked] [bit] NULL,
+	[IsCheckedFull] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_NotificationOrders] PRIMARY KEY CLUSTERED 
+(
+	[NotificationOrdersID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationSettings]    Script Date: 04/01/2014 16:06:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_NotificationSettings](
+	[NotificationSettingsID] [int] IDENTITY(1,1) NOT NULL,
+	[AllActive] [bit] NULL,
+	[UserNotificationActive] [bit] NULL,
+	[UserNotificationCount] [int] NULL,
+	[SubscriptionNotificationActive] [bit] NULL,
+	[SubscriptionNotificationCount] [int] NULL,
+	[OutofStockNotificationActive] [bit] NULL,
+	[OutofStockNotificationCount] [int] NULL,
+	[ItemsLowStockNotificationActive] [bit] NULL,
+	[ItemsLowStockCount] [int] NULL,
+	[ItemsLowStockQuantity] [int] NULL,
+	[OrdersNotificationAtive] [bit] NULL,
+	[OrdersNotificationCount] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](10) NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](50) NULL,
+	[UpdatedBy] [nvarchar](50) NULL,
+	[DeletedBy] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Aspx_NotificationSettings] PRIMARY KEY CLUSTERED 
+(
+	[NotificationSettingsID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationSubscription]    Script Date: 04/01/2014 16:06:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_NotificationSubscription](
+	[NotificationSubscriptionID] [int] IDENTITY(1,1) NOT NULL,
+	[SubscriptionEmail] [nvarchar](250) NULL,
+	[UserName] [nvarchar](250) NULL,
+	[IsChecked] [bit] NULL,
+	[IsCheckedFull] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_NotificationSubscription] PRIMARY KEY CLUSTERED 
+(
+	[NotificationSubscriptionID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationUser]    Script Date: 04/01/2014 16:06:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_NotificationUser](
+	[NotificationUserID] [int] IDENTITY(1,1) NOT NULL,
+	[UserName] [nvarchar](250) NULL,
+	[IsChecked] [bit] NULL,
+	[IsCheckedFull] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_NotificationUser] PRIMARY KEY CLUSTERED 
+(
+	[NotificationUserID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Aspx_NotificationItemLowStock] ADD  CONSTRAINT [DF_Aspx_NotificationItemLowStock_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_NotificationItemOutOfStock] ADD  CONSTRAINT [DF_Aspx_NotificationItemOutOfStock_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_NotificationOrders] ADD  CONSTRAINT [DF_Aspx_NotificationOrders_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_NotificationSubscription] ADD  CONSTRAINT [DF_Aspx_NotificationSubscription_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_NotificationUser] ADD  CONSTRAINT [DF_Aspx_NotificationUser_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationGetAll]    Script Date: 04/01/2014 16:07:02 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationGetAll]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationItemsGetAll]    Script Date: 04/01/2014 16:07:02 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationItemsGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationItemsGetAll]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationOrdersGetAll]    Script Date: 04/01/2014 16:07:02 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationOrdersGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationOrdersGetAll]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationSaveUpdateSettings]    Script Date: 04/01/2014 16:07:02 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationSaveUpdateSettings]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationSaveUpdateSettings]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationSettingsGetAll]    Script Date: 04/01/2014 16:07:02 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationSettingsGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationSettingsGetAll]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationUsersGetAll]    Script Date: 04/01/2014 16:07:02 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationUsersGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationUsersGetAll]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationGetAll]    Script Date: 04/01/2014 16:07:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Jainul Khan>
+-- Create date: <March 27, 2014>
+-- Description:	<GET USER Notification Settings>
+-- =============================================
+--[dbo].[usp_Aspx_NotificationGetAll] 
+CREATE PROCEDURE [dbo].[usp_Aspx_NotificationGetAll]
+	-- Add the parameters for the stored procedure here	
+	
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+IF  EXISTS(SELECT 1 FROM [dbo].[aspnet_Users] WHERE UserName NOT IN (SELECT UserName FROM [dbo].[Aspx_NotificationUser] ))
+BEGIN	
+	INSERT INTO [dbo].[Aspx_NotificationUser]([UserName] ,[IsChecked] ,[IsCheckedFull] ,[IsDeleted] ,[IsModified] ,[AddedOn] ,[UpdatedOn] ,[DeletedOn] ,[AddedBy] ,[UpdatedBy] ,[DeletedBy])
+	SELECT UserName ,0  ,0 ,0 ,0 ,LastActivityDate ,NULL ,NULL ,'superuser' ,NULL ,NULL 
+	FROM [dbo].[aspnet_Users] WHERE UserName NOT  IN (SELECT UserName FROM [dbo].[Aspx_NotificationUser] )
+END
+
+IF  EXISTS(SELECT 1 FROM [dbo].[NL_EmailSubscriber] WHERE SubscriberEmail NOT IN (SELECT SubscriptionEmail FROM [dbo].[Aspx_NotificationSubscription] ))
+BEGIN	
+	INSERT INTO [dbo].[Aspx_NotificationSubscription]([SubscriptionEmail],[UserName],[IsChecked],[IsCheckedFull],[IsDeleted],[IsModified],[AddedOn],[UpdatedOn],[DeletedOn],[AddedBy],[UpdatedBy],[DeletedBy])    
+	SELECT SubscriberEmail,AddedBy,0,0,0,0,AddedOn,NULL ,NULL ,'superuser' ,NULL ,NULL 
+	FROM [dbo].[NL_EmailSubscriber] WHERE SubscriberEmail NOT  IN (SELECT SubscriptionEmail FROM [dbo].[Aspx_NotificationSubscription] )
+END
+
+IF  EXISTS(SELECT 1 FROM [dbo].[Aspx_Items] WHERE ItemID NOT IN (SELECT ItemID FROM [dbo].[Aspx_NotificationItemOutOfStock] ))
+BEGIN	
+	INSERT INTO [dbo].[Aspx_NotificationItemOutOfStock]
+           ([ItemID] ,[ItemCostVariantID] ,[IsChecked] ,[IsCheckedFull] ,[IsDeleted] ,[IsModified] ,[AddedOn] ,[UpdatedOn] ,[DeletedOn] ,[AddedBy] ,[UpdatedBy] ,[DeletedBy])
+	SELECT [ItemID],NULL,0,0,[IsDeleted],[IsModified],[AddedOn],[UpdatedOn] ,[DeletedOn] ,[AddedBy],[UpdatedBy] ,[DeletedBy] 
+	FROM [dbo].[Aspx_Items] WHERE ItemID NOT  IN (SELECT ItemID FROM [dbo].[Aspx_NotificationItemOutOfStock] )
+END
+
+IF  EXISTS(SELECT 1 FROM [dbo].[Aspx_Items] WHERE ItemID NOT IN (SELECT ItemID FROM [dbo].[Aspx_NotificationItemLowStock] ))
+BEGIN	
+	INSERT INTO [dbo].[Aspx_NotificationItemLowStock]
+           ([ItemID] ,[ItemCostVariantID] ,[IsChecked] ,[IsCheckedFull] ,[IsDeleted] ,[IsModified] ,[AddedOn] ,[UpdatedOn] ,[DeletedOn] ,[AddedBy] ,[UpdatedBy] ,[DeletedBy])
+	SELECT [ItemID],NULL,0,0,[IsDeleted],[IsModified],[AddedOn],[UpdatedOn] ,[DeletedOn] ,[AddedBy],[UpdatedBy] ,[DeletedBy] 
+	FROM [dbo].[Aspx_Items] WHERE ItemID NOT  IN (SELECT ItemID FROM [dbo].[Aspx_NotificationItemLowStock] )
+END
+
+IF EXISTS ( SELECT 1 FROM [dbo].[Aspx_Order] WHERE OrderID NOT IN ( SELECT OrderID FROM [dbo].[Aspx_NotificationOrders] ) )
+BEGIN
+	INSERT INTO [dbo].[Aspx_NotificationOrders] ( [OrderID] ,[ItemID] ,[ItemCostVariantID] ,[IsChecked] ,[IsCheckedFull] ,[IsDeleted] ,[IsModified] ,[AddedOn] ,[UpdatedOn] ,[DeletedOn] ,[AddedBy] ,[UpdatedBy] ,[DeletedBy] )
+	SELECT OrderID ,NULL ,NULL ,0 ,0 ,0 ,0 ,AddedOn ,NULL ,NULL ,'superuser' ,NULL ,NULL
+	FROM [dbo].[Aspx_Order] WHERE OrderID NOT IN ( SELECT OrderID FROM [dbo].[Aspx_NotificationOrders] )
+END
+
+	DECLARE @UserCount INT, @SubscriptionCount INT, @OutOfStockCount INT, @LowStockCount INT, @NewOrdersCount INT
+	SET @UserCount= (SELECT ISNULL(COUNT(NotificationUserID),0)  FROM [dbo].[Aspx_NotificationUser] WHERE IsChecked=0 )
+	SET @SubscriptionCount= (SELECT ISNULL(COUNT(NotificationSubscriptionID),0)  FROM [dbo].[Aspx_NotificationSubscription] WHERE IsChecked=0 )
+
+	SET @OutOfStockCount=(SELECT ISNULL(COUNT(NI.ItemID),0) 
+							FROM [dbo].[Aspx_Items]  I
+							INNER JOIN [dbo].[Aspx_NotificationItemOutOfStock] NI ON I.ItemID=NI.ItemID
+							WHERE Quantity=0 AND IsChecked=0)
+
+	SET @LowStockCount=(SELECT ISNULL(COUNT(LI.ItemID),0) 
+						FROM [dbo].[Aspx_Items]  I
+						INNER JOIN [dbo].[Aspx_NotificationItemLowStock] LI ON I.ItemID=LI.ItemID
+						WHERE Quantity<= (SELECT ISNULL(ItemsLowStockCount,0) FROM [dbo].[Aspx_NotificationSettings]) AND IsChecked=0)
+	
+	SET @NewOrdersCount = ( SELECT ISNULL(COUNT(OrderID),0) FROM [dbo].[Aspx_NotificationOrders] WHERE IsChecked = 0)
+
+		SELECT @UserCount + @SubscriptionCount AS UsersInfoCount, @OutOfStockCount + @LowStockCount AS ItemsInfoCount, @NewOrdersCount AS NewOrdersCount
+
+		
+
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationItemsGetAll]    Script Date: 04/01/2014 16:07:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Jainul Khan>
+-- Create date: <March 27, 2014>
+-- Description:	<GET USER Notification Settings>
+-- =============================================
+--[dbo].[usp_Aspx_NotificationItemsGetAll] 
+CREATE PROCEDURE [dbo].[usp_Aspx_NotificationItemsGetAll]
+	-- Add the parameters for the stored procedure here
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT RowNumber
+		,ItemID
+			,ItemCostVariantID
+			,AddedOn
+			,IsChecked
+			,IsCheckedFull
+	FROM (
+		SELECT ROW_NUMBER() OVER (
+				ORDER BY NotificationItemOutofStockID DESC
+				) AS RowNumber
+			,ItemID
+			,ItemCostVariantID
+			,AddedOn
+			,IsChecked
+			,IsCheckedFull
+		FROM [dbo].[Aspx_NotificationItemOutOfStock]
+		) AS tbl
+	WHERE RowNumber <= (SELECT ISNULL(OutofStockNotificationCount,0) FROM [dbo].[Aspx_NotificationSettings])
+	UPDATE [dbo].[Aspx_NotificationItemOutOfStock] SET  IsChecked=1
+	
+
+	SELECT RowNumber
+		,ItemID
+			,ItemCostVariantID
+			,AddedOn
+			,IsChecked
+			,IsCheckedFull
+	FROM (
+		SELECT ROW_NUMBER() OVER (
+				ORDER BY NotificationItemLowStockID DESC
+				) AS RowNumber
+			,ItemID
+			,ItemCostVariantID
+			,AddedOn
+			,IsChecked
+			,IsCheckedFull
+		FROM [dbo].[Aspx_NotificationItemLowStock]
+		) AS tbl
+	WHERE RowNumber <= (SELECT ISNULL(ItemsLowStockCount,0) FROM [dbo].[Aspx_NotificationSettings])
+	UPDATE [dbo].[Aspx_NotificationItemLowStock] SET  IsChecked=1
+	
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationOrdersGetAll]    Script Date: 04/01/2014 16:07:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Jainul Khan>
+-- Create date: <March 27, 2014>
+-- Description:	<GET USER Notification Settings>
+-- =============================================
+--[dbo].[usp_Aspx_NotificationOrdersGetAll] 
+CREATE PROCEDURE [dbo].[usp_Aspx_NotificationOrdersGetAll]
+	-- Add the parameters for the stored procedure here
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT RowNumber
+		,OrderID
+		,OrderStatusAliasName
+		,ItemID
+		,ItemCostVariantID
+		,AddedOn
+		,IsChecked
+		,IsCheckedFull
+	FROM (
+		SELECT ROW_NUMBER() OVER (
+				ORDER BY NotificationOrdersID DESC
+				) AS RowNumber
+			,NOS.OrderID
+			,OS.OrderStatusAliasName
+			,NOS.ItemID
+			,NOS.ItemCostVariantID
+			,NOS.AddedOn
+			,NOS.IsChecked
+			,NOS.IsCheckedFull
+		FROM [dbo].[Aspx_NotificationOrders] NOS
+		INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID=NOS.OrderID
+        INNER JOIN [dbo].[Aspx_OrderStatusAlias] OS on OS.OrderStatusID=O.OrderStatusID
+		) AS tbl
+	WHERE RowNumber <= (SELECT ISNULL(OrdersNotificationCount,0) FROM [dbo].[Aspx_NotificationSettings])
+	UPDATE [dbo].[Aspx_NotificationItemOutOfStock] SET  IsChecked=1
+	
+
+
+
+
+	
+END
+select * FROM [dbo].[Aspx_NotificationOrders]
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationSaveUpdateSettings]    Script Date: 04/01/2014 16:07:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Jainul Khan>
+-- Create date: <March 27, 2014>
+-- Description:	<Save Update Admin Notification Settings>
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_NotificationSaveUpdateSettings]
+	-- Add the parameters for the stored procedure here
+	@AllActive BIT
+	,@UserNotificationActive BIT
+	,@UserNotificationCount INT
+	,@SubscriptionNotificationActive BIT
+	,@SubscriptionNotificationCount INT
+	,@OutofStockNotificationActive BIT
+	,@OutofStockNotificationCount INT
+	,@ItemsLowStockNotificationActive BIT
+	,@ItemsLowStockCount INT
+	,@ItemsLowStockQuantity INT
+	,@OrdersNotificationAtive BIT
+	,@OrdersNotificationCount INT
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(250)
+	,@CultureName NVARCHAR(50)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@AllActive = 0)
+	BEGIN
+		SET @UserNotificationActive = 0
+		SET @SubscriptionNotificationActive = 0
+		SET @OutofStockNotificationActive = 0
+		SET @ItemsLowStockNotificationActive = 0
+		SET @OrdersNotificationAtive = 0
+	END
+
+	IF EXISTS (
+			SELECT 1
+			FROM [dbo].[Aspx_NotificationSettings]
+			WHERE [StoreID] = @StoreID
+				AND [PortalID] = @PortalID
+			)
+	BEGIN
+		UPDATE [dbo].[Aspx_NotificationSettings]
+		SET [AllActive] = @AllActive
+			,[UserNotificationActive] = @UserNotificationActive
+			,[UserNotificationCount] = @UserNotificationCount
+			,[SubscriptionNotificationActive] = @SubscriptionNotificationActive
+			,[SubscriptionNotificationCount] = @SubscriptionNotificationCount
+			,[OutofStockNotificationActive] = @OutofStockNotificationActive
+			,[OutofStockNotificationCount] = @OutofStockNotificationCount
+			,[ItemsLowStockNotificationActive] = @ItemsLowStockNotificationActive
+			,[ItemsLowStockCount] = @ItemsLowStockCount
+			,[ItemsLowStockQuantity] = @ItemsLowStockQuantity
+			,[OrdersNotificationAtive] = @OrdersNotificationAtive
+			,[OrdersNotificationCount] = @OrdersNotificationCount
+		WHERE [StoreID] = @StoreID
+			AND [PortalID] = @PortalID
+	END
+	ELSE
+	BEGIN
+		INSERT INTO [dbo].[Aspx_NotificationSettings] (
+			[AllActive]
+			,[UserNotificationActive]
+			,[UserNotificationCount]
+			,[SubscriptionNotificationActive]
+			,[SubscriptionNotificationCount]
+			,[OutofStockNotificationActive]
+			,[OutofStockNotificationCount]
+			,[ItemsLowStockNotificationActive]
+			,[ItemsLowStockCount]
+			,[ItemsLowStockQuantity]
+			,[OrdersNotificationAtive]
+			,[OrdersNotificationCount]
+			,[StoreID]
+			,[PortalID]
+			,[CultureName]
+			,[IsDeleted]
+			,[IsModified]
+			,[AddedOn]
+			,[UpdatedOn]
+			,[DeletedOn]
+			,[AddedBy]
+			,[UpdatedBy]
+			,[DeletedBy]
+			)
+		VALUES (
+			@AllActive
+			,@UserNotificationActive
+			,@UserNotificationCount
+			,@SubscriptionNotificationActive
+			,@SubscriptionNotificationCount
+			,@OutofStockNotificationActive
+			,@OutofStockNotificationCount
+			,@ItemsLowStockNotificationActive
+			,@ItemsLowStockCount
+			,@ItemsLowStockQuantity
+			,@OrdersNotificationAtive
+			,@OrdersNotificationCount
+			,@StoreID
+			,@PortalID
+			,@CultureName
+			,0
+			,0
+			,GETDATE()
+			,NULL
+			,NULL
+			,@UserName
+			,NULL
+			,NULL
+			)
+	END
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationSettingsGetAll]    Script Date: 04/01/2014 16:07:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Jainul Khan>
+-- Create date: <March 27, 2014>
+-- Description:	<GET Admin Notification Settings>
+-- =============================================
+--[dbo].[usp_Aspx_NotificationSettingsGetAll] 1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_NotificationSettingsGetAll]
+	-- Add the parameters for the stored procedure here
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(50)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF EXISTS (
+			SELECT 1
+			FROM [dbo].[Aspx_NotificationSettings]
+			WHERE [StoreID] = @StoreID
+				AND [PortalID] = @PortalID
+				AND [CultureName] = @CultureName
+			)
+	BEGIN
+		SELECT [AllActive]
+			,[UserNotificationActive]
+			,[UserNotificationCount]
+			,[SubscriptionNotificationActive]
+			,[SubscriptionNotificationCount]
+			,[OutofStockNotificationActive]
+			,[OutofStockNotificationCount]
+			,[ItemsLowStockNotificationActive]
+			,[ItemsLowStockCount]
+			,[ItemsLowStockQuantity]
+			,[OrdersNotificationAtive]
+			,[OrdersNotificationCount]
+		FROM [dbo].[Aspx_NotificationSettings]
+		WHERE [StoreID] = @StoreID
+			AND [PortalID] = @PortalID
+			AND [CultureName] = @CultureName
+	END
+	ELSE
+	BEGIN
+		SELECT CAST(0 AS BIT) AS [AllActive]
+			,CAST(0 AS BIT) AS [UserNotificationActive]
+			,0 AS [UserNotificationCount]
+			,CAST(0 AS BIT) AS [SubscriptionNotificationActive]
+			,0 AS [SubscriptionNotificationCount]
+			,CAST(0 AS BIT) AS [OutofStockNotificationActive]
+			,0 AS [OutofStockNotificationCount]
+			,CAST(0 AS BIT) AS [ItemsLowStockNotificationActive]
+			,0 AS [ItemsLowStockCount]
+			,0 AS [ItemsLowStockQuantity]
+			,CAST(0 AS BIT) AS [OrdersNotificationAtive]
+			,0 AS [OrdersNotificationCount]
+	END
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationUsersGetAll]    Script Date: 04/01/2014 16:07:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Jainul Khan>
+-- Create date: <March 27, 2014>
+-- Description:	<GET USER Notification Settings>
+-- =============================================
+--[dbo].[usp_Aspx_NotificationUsersGetAll] 
+CREATE PROCEDURE [dbo].[usp_Aspx_NotificationUsersGetAll]
+	-- Add the parameters for the stored procedure here
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT RowNumber
+		,UserName
+		,AddedOn
+		,IsChecked
+		,IsCheckedFull
+	FROM (
+		SELECT ROW_NUMBER() OVER (
+				ORDER BY NotificationUserID DESC
+				) AS RowNumber
+			,UserName
+			,AddedOn
+			,IsChecked
+			,IsCheckedFull
+		FROM [dbo].[Aspx_NotificationUser]
+		) AS tbl
+	WHERE RowNumber <= (SELECT ISNULL(UserNotificationCount,0) FROM [dbo].[Aspx_NotificationSettings])
+
+	UPDATE [dbo].[Aspx_NotificationUser] SET  IsChecked=1
+
+	SELECT RowNumber
+		,UserName
+		,SubscriptionEmail
+		,AddedOn
+		,IsChecked
+		,IsCheckedFull
+	FROM (
+		SELECT ROW_NUMBER() OVER (
+				ORDER BY NotificationSubscriptionID DESC
+				) AS RowNumber
+			,UserName
+			,SubscriptionEmail
+			,AddedOn
+			,IsChecked
+			,IsCheckedFull
+		FROM [dbo].[Aspx_NotificationSubscription]
+		) AS tbl
+	WHERE RowNumber <= (SELECT ISNULL(SubscriptionNotificationCount,0) FROM [dbo].[Aspx_NotificationSettings])
+	UPDATE [dbo].[Aspx_NotificationSubscription] SET  IsChecked=1
+END
+
+GO
+
+

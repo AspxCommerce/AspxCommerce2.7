@@ -1,0 +1,56 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_ServiceItem</name>
+      <friendlyname>AspxServiceItems</friendlyname>
+      <foldername>AspxCommerce/AspxServiceItems</foldername>
+      <modulename>AspxServiceItems</modulename>
+      <description>Service Type Item View.</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.AspxServiceItems.ServiceItemsController, SageFrame.Modules.ServiceItemsProvider</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>Sageframe Pvt. Ltd.</owner>
+      <organization>Sageframe Pvt. Ltd.</organization>
+      <url>www.sageframe.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This is  release notes for Service Items</releasenotes>
+      <license>This is  license copy for  Service Items Control Application</license>
+      <modules>
+        <module>
+          <friendlyname>AspxServiceItems</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+              <key>AspxServiceFrontItemsView</key>
+              <title>AspxServiceFrontItemsView</title>
+              <src>Modules/AspxCommerce/AspxServiceItems/FrontServiceView.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>           
+            <control>
+              <key>AspxServiceItemsSetting</key>
+              <title>AspxServiceItemsSetting</title>
+              <src>Modules/AspxCommerce/AspxServiceItems/ServiceItemSetting.ascx</src>
+              <type>Setting</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>
+        <file>
+          <name>AspxCommerce.ServiceItem.dll</name>         
+        </file>
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>
+      </files>
+      <interfaceimplementedclass>AspxCommerce.ServiceItem,ServiceItemIModuleExtraCodeExecute</interfaceimplementedclass>
+    </folder>
+  </folders>
+</sageframe>

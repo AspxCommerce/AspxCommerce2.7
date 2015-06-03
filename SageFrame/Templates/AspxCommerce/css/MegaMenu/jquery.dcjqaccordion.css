@@ -1,0 +1,67 @@
+#divCategoryVertical {
+	font: bold 14px Arial, sans-serif;
+	padding-bottom:10px;
+}
+#divCategoryVertical li {
+	margin: 0;
+	padding: 0;
+
+}
+.cssClassCategoryNav h2 { padding-left: 22px;}
+
+.cssClassCategoryNav { padding: 10px 0 0 !important;}
+
+#divCategoryVertical a, .cssClassCategoryNav ul li a {
+	padding:7px 10px 7px 22px !important;
+	text-decoration:none;
+	display: block;
+		background: url(../images/cat-sep.jpg) repeat-x bottom;
+	color:#d6f1f8;
+}
+#divCategoryVertical a:hover, .cssClassCategoryNav ul li a:hover {
+	color:#fff;
+}
+#divCategoryVertical a.dcjq-parent, #divCategoryVertical a.dcjq-parent:hover {
+	background: #2b8298 url(../images/add.png) no-repeat 5px center;
+	-moz-box-shadow: inset 2px 2px 2px #256F81;
+	-webkit-box-shadow:inset 2px 2px 2px #256F81;
+	height:16px;
+	border-bottom:1px solid #52a8bd;
+	box-shadow: inset 2px 2px 2px #256F81;
+}
+ #divCategoryVertical .dcjq-icon {
+	position: absolute;
+	top: -2px;
+	left: 180px;
+	width: 34px;
+	height: 34px;
+	background: url(../images/arrow-blues.png) no-repeat right;
+}
+ .cssClassCategoryNav #divCategoryVertical .cssClassCategoryParent ul{
+}
+.cssClassCategoryNav #divCategoryVertical .cssClassCategoryParent ul li:last-child {
+	border-bottom:none !important
+}
+.dcjq-parent-li  ul  {
+margin:0px 0 10px 10px;
+}
+.dcjq-parent-li  ul li{
+*zoom:1;	}
+.dcjq-parent-li  ul  li .dcjq-icon{
+left: 160px;
+top: -2px;
+	}
+	.dcjq-parent-li  ul li ul{
+		margin-top:0px !important}
+		.dcjq-parent-li  ul  li ul li .dcjq-icon{
+left: 150px!important;
+top: -2px!important;
+	}
+			.dcjq-parent-li  ul  li ul li ul li .dcjq-icon{
+				left: 140px!important;
+top: -2px!important;
+				}
+						.dcjq-parent-li  ul  li ul li ul li ul li.dcjq-icon{
+				left: 140px!important;
+top: -2px!important;
+				}

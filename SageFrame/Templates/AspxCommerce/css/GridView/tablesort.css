@@ -1,0 +1,5 @@
+.header {background-image: url(../../images/bg.gif);background-repeat: no-repeat;background-position: center left;cursor: pointer; padding-left:18px !important;}
+.headerSortUp {background-image: url(../../images/asc.gif);}
+.headerSortDown {background-image: url(../../images/desc.gif)}
+
+

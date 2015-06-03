@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SageFrameAminHelp>
+  <admin>
+    AspxCommerce enables quick and immediate access to statistics through its Admin Dashboard. Store retailers can therefore watch over business performance of their store closely and promulgate new business ideas.
+    Site administrator can see a graphical and tabular view of the total store revenue, percentage of sales conversion, their inventory status, order overview, most ordered items, items of highest revenue, most viewed items, list of recent orders, top and recent searches made for items, newly registered users, latest comments and reviews and many more. Admin Dashboard on a whole is a quick tour of your store activities and performance.
+  </admin>
+
+  <default>
+    <AdminHelp>asdf</AdminHelp>
+    <AdminHelps>asdf</AdminHelps>
+    <AdminHelped>asdfadsf</AdminHelped>
+  </default>
+
+  <modules>
+    <![CDATA[
+    Add modules to a template based wireframe of the pages.
+    <ul>
+      <li><b>Install Module: </b>It lets you install a new module from your local file system as an extension package in your website.</li>
+      <li><b>Create New Module: </b>Creating more advanced settings for module controls, you get to build up a totally new module with Create New Module.</li>
+      <li><b>Create Composite Module: </b>Create Composite Module helps create a compound module by configuring the package information with the extensions.</li>
+      <li><b>Create Package: </b>You get to build up a whole package by configuring the information like module name, license, release notes, URL, compatible versions, cache time and so on.</li>
+     </ul>
+    ]]>
+  </modules>
+
+  <portals>The Portal enables the creation of new child portals and editing the existing ones in your site. Web Portals provide a way for enterprises to provide a consistent look and feel with access control and procedures for multiple applications and databases, which otherwise would have been different entities altogether. The administrators and super users can manage multiple portals at one time. </portals>
+
+  <users>
+    <![CDATA[
+        Allows to manage users: create new users, edit roles, delete users, update user profile info and change password.
+    <ul>
+     <li><b>Add User: </b>It lets you create a new user and assign the role by filling up a small form. </li>
+     <li><b>Delete Selected User: </b>It lets you select the users to delete them from your site. </li>
+     <li><b>Update changes: </b>Whenever you make a change by managing the users, make sure you update those changes as they might not work until you update them. </li>
+     <li><b>User Settings: </b>It allows you to enable a duplicate email and support captcha for user registration. </li>
+    </ul>
+     ]]>
+  </users>
+
+  <roles>
+    <![CDATA[
+     
+          Enables you to create new roles and edit them. The four roles however by default cannot be edited.
+        <ul>
+          <li><b>Super User: </b>Super User is a special user account used for system administration.</li>
+          <li><b>Anonymous User: </b>Anonymous users can't edit their own user pages until a logged-in user begins it. They can't log in, sign up or start their own user page themselves.</li>        
+          <li><b>Site Admin: </b>Site Admin is a person who is responsible for the upkeep, configuration, and reliable operation of the entire website.</li>
+          <li><b>Registered User:  </b>A registered user is one who uses a program or a website and provides his/her credentials, effectively proving his/her identity.</li>
+      </ul>
+     ]]>
+  </roles>
+
+  <pages>
+    <![CDATA[
+    Page Manager provides you with the control to create or manage pages for the site. 
+    Creating and handling pages like home, search result, support, layout, contact sitemap, discover and many more; 
+    you can as well manage the logo, navigation, banner, HTML, design, extension and copyright with Page Manager.
+<br/>
+    <b>Create Page: </b> Through Create Page you can build up both Portal Pages and Admin Pages. 
+    Creating Portal Pages lets you play with logo, navigation, banner, lefta, footer content, 
+    footer menu, contact, copyright, etc. whereas Admin Pages deals with message, navigation, toppane, c-panel and so on.
+    ]]>
+  </pages>
+
+  <menu>
+    Menu helps you add, manage and remove the multiple menus of different types. From main menu as a default menu to Footer Menu, Side Menu, Footer Community, Footer Resources, Blue Drops Top Menu, Blue Drops Footer Menu, Furniture Top Menu and Furniture Footer Menu; you can assign pages, external links and html content as menu items to all of them. Similarly, those menu items can also be managed with regards to home, discover, layout, support and contact as well.
+  </menu>
+
+  <page-modules></page-modules>
+
+  <templates>Template Manager allows you to install or create new templates, layouts and assign those across pages to edit the template related files directly. With this, you can view the demo at first to make sure whether you want to activate that specific template or not. If it is that you want to make some changes by customizing the template or editing its files, you can even do that with Template Manager.   </templates>
+
+  <sql>
+    Creates queries and other SQL scripts to execute them against SQL Server database. Without going to the backend, SQL queries can be entered individually or as a file which will then be executed. Besides, you can upload big files as SQL Query and have them 'Run as a script' to make changes, or to access the system without going through the inside details of software coding.
+  </sql>
+
+  <lists>
+    <![CDATA[
+    
+    The List is a powerful module that enables administrator to maintain records which are in the form of a list which can be reused later.
+     <ul>
+    <li><b>Add New List: </b>A new list can be created by filling the required details like List Name, Parent List, Parent Entry, Entry Text and Entry Value.</li>
+    <li><b>Add List Item: </b>A new list item can be added by filling the details of Entry Text and Entry Value.</li>
+    <li><b>Delete Country List: </b>The existing list can be deleted when no longer in use.</li>
+     </ul>
+     ]]>
+  </lists>
+
+  <links>The Links module helps you to easily manage the dashboard by addition of frequently visited pages and modules to the side bar. The quick links and side bar helps you to get to those pages quickly. You can individually add the required sidebar tab as well as sidebar item and also remove them according to your requirement.</links>
+
+  <event-log>Logs the details of each and every events that occurred in the site. Select the type as per the area you are concerned about and you will have a list of logs that includes detailed information along with portal names and client IP addresses. Additionally, you get the feasibility of reporting exceptions through emails. It aids in tracking and solving issues, if any, during the runtime.</event-log>
+
+  <system-event-startup>Sets events that you want to run during your webpage start. You simply add the event you want started and the event is carried out automatically every time your webpage starts. All you need to do is specify the Control URL, the location and activate the event. If you want any event changed or deleted, you also have the 'Edit' and 'Delete' functionalities right here!</system-event-startup>
+
+  <cache-maintenance>Helps set the cache priorities and performs cache maintenance. Also clears the cache memory to flush out useless data stored on server cache. Here, you can "Enable Cache" or 'Clear Cache" to locations that you choose. From a range of locations provided, check on any or all to have cache enabled or cleared and have the command implemented to your SageFrame site.</cache-maintenance>
+
+  <scheduler>Schedules tasks to be run on the exact time that has been previously defined. Here, you can add tasks and assign the time when the tasks are supposed to run. This way, you are saved from the hassle of repeated works, instead you can schedule tasks beforehand and have them run automatically.</scheduler>
+
+  <message-template>Provides fundamental facilities for managing the generation of auto generated emails, message-boards and their messages. It is an informational piece displayed at the top of the page whenever you make any changes or updated. It helps the website communicate with users. Here you can add new message templates, edit the ones already available, activate them and delete the ones that are now rendered void.</message-template>
+
+  <module-message>
+    An information bar that appears when a new page is opened.
+
+    o Module Message Manager: With an info about your current module, Module Message Manager allows you to manage the display mode, culture, message position and type by notifying if its active or not.
+  </module-message>
+
+  <files>The Files module enables administrator/superuser to work with the files and folders on the site. There are options for adding or deleting a file, adding or deleting a folder, copy and moving the files. The files manager allows user interface to work on files and folders located in various templates, modules and systems.</files>
+
+  <seo>
+    <![CDATA[
+    The SEO module lets you generate Google Analytics, Sitemap and Robots automatically and submit to major search engines such as Google, Yahoo, MSN and Bing at the same time.
+    <ul>
+     <li><b>Google Analytics: </b>It is a service which generates a detail statistics about the visitors to a website.</li>
+     <li><b>Sitemap: </b>Sitemap is a list of pages in a website that is accessible to crawlers or users.</li>
+     <li><b>Robots: </b>Robots are a list of pages in the site that indicates the search engine crawler to crawl or not to crawl on the pages of your site.</li>
+    </ul>
+     ]]>
+  </seo>
+
+  <localization>Sets language to match your location and preference. The system default is set to English whereas you can install new language packs and enable or disable them as per your requirement. Here you get to create new language pack, edit time zone, localize your menu and localize module titles to suit your language preference as well. </localization>
+
+  <portal-settings></portal-settings>
+
+  <settings>
+    <![CDATA[
+    The Settings module enables site administrator to configure settings from basic, advanced to superuser settings for the site.
+    <ul>
+      <li>The Basic Setting includes Site Details, Site Marketing, Appearance, Optimization and OpenID Service Provider.</li>
+     <li>The Advanced Setting includes Security Settings, Page Management, Message Settings and Other Settings.</li>
+   <li>The Superuser Setting includes Configuration, Super User Details, SMTP Server Settings and Other Settings.</li>
+   </ul>
+      ]]>
+  </settings>
+
+  <cdn>Enables you to add JS and CSS URL contributing to high availability and performance of the site. This feature, as employed by SageFrame optimizes the speed with which the content is delivered to end users. It is here that you can submit links and edit or delete them as per your requirement.</cdn>
+
+  <site-analytics>Site analytics enables you to evaluate the measurement, collection, analysis and reporting of your webpage's internet data understanding and optimizing the overall web usage. Not just a tool for measuring web traffic, it can moreover be used as a tool for business and market research to assess and improve the effectiveness of your website. Gauging the traffic and popularity trends, it also provides information about the number of visitors along with the page views of your website. Such an analysis of your site in terms of date, country, browser and page can either be obtained from charts or the direct factual data too. </site-analytics>
+
+  <ctl_moduleinstaller.ascx></ctl_moduleinstaller.ascx>
+
+  <editmoduledefinition.ascx></editmoduledefinition.ascx>
+
+  <template-file-editor></template-file-editor>
+
+  <admin-dashboard>
+    AspxCommerce enables quick and immediate access to statistics through its Admin Dashboard. Store retailers can therefore watch over business performance of their store closely and promulgate new business ideas.
+    Site administrator can see a graphical and tabular view of the total store revenue, percentage of sales conversion, their inventory status, order overview, most ordered items, items of highest revenue, most viewed items, list of recent orders, top and recent searches made for items, newly registered users, latest comments and reviews and many more. Admin Dashboard on a whole is a quick tour of your store activities and performance.
+  </admin-dashboard>
+
+  <catalog>
+    Catalog features all the items and services provided in your store.
+    An attractive and all-encompassing catalog is the first step to showcasing your services to your customers.
+    Hence, this module is of paramount importance for storekeepers. This is where you can manage items, make categories of items, define attributes and variants, notify customers about in-stock and out-of-stock items, manage tags, comments and reviews, brands, gift cards and the likes.
+    This is also the place for you to manage appointments.
+  </catalog>
+
+  <sales>
+    <![CDATA[
+    Here, you can check your sales report regarding Orders Overview, Invoices, Shipments and Returns.
+    <ul>    
+      <li>Orders Overview: This aids in efficiently receiving, managing as well as fulfilling orders. You can not only access reports on orders but also manage them in order to fulfill demands of your customers. </li>    
+      <li>Invoices: This helps in viewing, sorting and managing invoices. You can not only access reports on invoices but also edit and convert them to other formats. </li>
+      <li>Shipments: This gives an easy way of viewing and managing all shipment orders placed. You can edit the information associated and also export them to other file formats. </li>
+      <li>Returns: This helps you get access to a list of items that have been returned for various reasons. You can view and manage returns as well as add and edit order status. </li>
+      </ul>
+       ]]>
+  </sales>
+  <promotions>
+
+  </promotions>
+
+  <reports>
+
+    Reports manages all the updates starting from Sales Reports, Shopping Carts, Items, Store Customers, Reviews and Store Tags. Each of these modules have their individual functions and features. All these reports can be downloaded in CVS or Excel format for future reference.
+  </reports>
+
+  <sales-reports>
+    Sales Reports manages the different types of reports starting from Order Reports, Invoiced Reports, Shipping Reports, Return Reports, Tax Reports and Coupon Reports. All these reports can be accessed and downloaded in CVS or Excel format.
+  </sales-reports>
+  <order-reports>
+    Order Reports provides a summary of all the orders made in your website. Use the Order Reports to view Order ID, Customer Name, Order Status, Grand Total and Ordered Date.
+  </order-reports>
+  <invoiced-reports>
+    Invoiced Reports are detail reports consisting of Invoice Number, Invoice Date, Order ID, Customer Name, Order Name, Bill to Date, Status and Amount.
+  </invoiced-reports>
+  <shipping-reports>
+    Shipping Reports display the shipping methods used for orders along with the total amount charged for shipping those orders. Use this report to view Shipping Method Name, Number of Orders, Total Shipping and Period.
+  </shipping-reports>
+  <return-reports>
+    Return Reports shows Refunded Amount, Shipping Cost, Other Postal Charges, Quantity, No. of Returns and Period. This report can be viewed on a daily, monthly or yearly basis.
+  </return-reports>
+  <tax-reports> Tax Reports consist of Tax Name, Rate, Quantity, Is Percent, No. of Orders, Tax Amount and Period. You can view this report on a yearly, monthly or daily basis. </tax-reports>
+  <coupon-reports> Coupon Reports shows you the number of orders that used a specific coupon code, provided that you have activated coupon in your website. This is managed in two ways – Coupon Per Sales and Coupon Per Customers.</coupon-reports>
+  <coupon-per-sales>Coupon Per Sales lists all the coupons on the basis of sales and here you can view Coupon Code, Number of Uses as Order, Total Discount Amount Gained by Coupon, Total Sales Amount and Actions. </coupon-per-sales>
+  <coupon-Per-customers> Coupon Per Customers provides reports on each coupon as per the customers while also retrieving information on the validity of each coupon and its status.</coupon-Per-customers>
+  
+  <gift-card-items>
+  Stores occasionally introduce Gift Cards as special treats to their supportive customers. The card might provide cash or some kind of discount provision for future purchases.
+  This is where you can find a complete report regarding the gift cards currently active in your store. Along with it, you can also find out how your customers are using their Gift Cards. The details including the type of card, items purchased, its code, total amount, and total purchase can be accessed easily from here
+</gift-card-items>
+
+  <customers-tags>
+  Access complete reports on the customers and the number of approved tags submitted by them. Each item is tagged in the store and while purchasing each tag needs to be scanned. This is where the information regarding each tag can be found.
+  The View option under Action gives further information regarding the details on individual tags submitted by the customer during checkout.
+</customers-tags>
+
+  <items-tags>
+  This report displays a list of items with tags. Listed here are:
+  Item Name: The name of the tagged item.
+  Number of Unique Tags: The number of item as differentiated by unique tags
+  Besides, you can choose to view further details about the items tags by choosing the View option from under Actions.
+</items-tags>
+  
+  <popular-tags>
+  This report lists all the approved tags, and the number of times each tag has been used in your store. And the number of times it was used accounts for the popularity of that item in the store. The one with more number of uses will be regarded as more popular. Click on the view option from under actions to get further details on each tag.
+  </popular-tags>
+  
+  <notification-management >
+    <![CDATA[
+    Admin Notification in AspxCommerce is a simple way to inform the site administrators about the recent activities happening in the store. Though appears trivial, it is a very useful feature to get store owners notified about the newly registered and subscribed users, out of stock and low stock items and fresh orders placed. You can customize the settings of this admin notification anytime from the Administration section. The Admin Notification comes with three options (in the form of icons) categorized as Users, Stocks and Orders.
+    <ul>
+    <li>Users: This notifies the admin about the users who recently registered to the store along with the date and time of their registration. The username is hyperlinked which redirects to the profile page of the user. Also, it notifies about the new members who subscribed to your email newsletter. </li>
+    <li> Stocks: This notifies about the items that are low stock and out of stock. Similarly, the items are hyperlinked that takes you directly to the items page to check the status.</li>
+    <li>Orders: If a customer (user) places an order, it appears in this notification bar. You can see the order number and the status of all recent orders made. </li>
+    </ul>
+     ]]>
+  </notification-management >
+
+  <comments-and-reviews-overview>
+
+    This section looks after managing all comments and reviews received from the customers (users). You can add new review and ratings, approve existing comments and reviews for each individual product or add item rating criteria based on parameters like price, quantity, value, etc. The Comments and Reviews Overview is divided into two sections.
+  </comments-and-reviews-overview>
+  <manage-item-rating-criteria>You can search, add, edit or delete any item rating criteria.</manage-item-rating-criteria>
+  <comments-and-reviews>
+    You can approve comments and reviews, add new rating and review, and edit or delete any comments.
+  </comments-and-reviews>
+
+
+
+  <c-panel>
+    C-Panel helps provide a graphical interface and automation tools designed to manage the store easily. With C-panel, administrators can take a total control over managing, designing and marketing the store in the simplest way possible, as it comprises of all the necessary tools to set up an online store in minutes. With features ranging from designing and administering store, managing items, categories and catalogs, setting price rules and taxation, processing orders and checkout and handling shipments and delivery to finally marketing your store, the C-panel on whole is a home for all your e-store solutions.
+  </c-panel>
+
+
+
+  <orders-overview>
+    This aids in efficiently receiving, managing as well as fulfilling orders. You can not only access reports on orders but also manage them in order to fulfill demands of your customers. The Orders Overview is further expanded to Orders and Manage Order Status.
+  </orders-overview>
+
+  <order> This gives a list of all orders made by the customers and the details associated with the order can also be accessed.</order>
+  <manage-order-status>: This section is all about managing the order status. You can get a list of all order status added and can see the details associated with it.</manage-order-status>
+
+
+
+
+  <orders>
+    This gives a list of all orders made by the customers and the details associated with the order can also be accessed. The details contain order id, customer name, order status, grand total, ordered date and a customized search can be made based on these fields. You can see a detailed overview of the orders in a separate page and can also export the list to your excel worksheet or csv file anytime.
+  </orders>
+
+  <manage-order-status>
+    This section is all about managing the order status. You can get a list of all order status added and can see the details associated with it like order status name, alias tool tip, alias help, system, isactive and reduce item quantity. You can edit any order status and export the list to excel or csv files.
+  </manage-order-status>
+
+
+  <invoices>
+    You can find all your invoices here with the details attached to them like invoice id, order date, customer name, order date, bill to name, ship to name, status and amount. You can also customize your search with respect to the invoice number, bill number and the status of the invoice. You can also export the invoices to Excel or CSV files. You will also get to see a categorically sorted detailed page view of each invoice on the action button.
+  </invoices>
+
+  <shipping-label>
+    The Shipping Label gives all the details on billing address, warehouse address, address to be delivered and the package details. Each of the addresses gives their basic details like Customer name, Address, Country, City, State, Zip Code, Email address and Phone number. The package detail on the other hand provides information on the Total Weight, Weight Unit, Service Type and the Package Dimension to create the label. This label is attached after packing  the product at the time of shipment.
+  </shipping-label>
+
+  <shipments>
+    All the shipping information of orders received or processed can be seen here. The shipping detail comprises of shipping method name, order id, ship to name and shipping cost. Similarly, you can narrow your search for a particular shipment of order by the shipping method name, order id and ship to name. You can also export the shipping details to your excel worksheet or csv files and get to view a detailed page of each shipment of orders and their status thereof.
+  </shipments>
+
+  <returns> This helps you get access to a list of items that have been returned for various reasons. You can see details of each returns that comprise of return id, order id, customer, return status, date added and date modified, and also make a customized search based on these fields. You can export the returns list to excel or csv files and can edit each returns or add comments and reviews accordingly.</returns>
+
+
+  <manage-item-rating-criteria>
+    Depending on the need of the store, you can manage all your item-rating criteria in this section. The rating criteria are based on parameters like price, value, quantity, stock, etc. of the products. You can either add, delete or edit any rating criteria and search for related criteria. The storeowners can also view the name of the criteria, the date added on and status of the criteria.
+  </manage-item-rating-criteria>
+
+  <comments-and-reviews>
+    The comments and reviews section helps the storeowners to manage the entire comments and reviews received for the products. You can simply approve, disapprove, or leave the comments and reviews pending. Moreover you can also search, add, delete or edit any comments and reviews as per your need. You will also get to see a quick glimpse of the nickname of the product, total rating average, view from IP, summary of review, status, item name and date added on.
+  </comments-and-reviews>
+
+  <tags>
+
+    A tag is a keyword or phrase that is added to products to make it easy for you to find them again. The tag option under Content gives you two more options for managing tags.
+  </tags>
+  <all-tags>
+    This takes you to all the available tags that are added to products irrespective of whether they are approved or not and helps you search, view, delete and approve or disapprove the tags.
+  </all-tags>
+  <pending-tags>
+    This takes you to all pending tags that are in queue to get approved. Once a new tag is added to a product, it goes to the pending queue. The storeowners will then decide to approve depending on whether the tag resembles to the nature of the product or not.
+  </pending-tags>
+
+
+  <all-tags>
+    This takes you to all the available tags that are added to products irrespective of whether they are approved or not. You can find a list of all the tags that are added by users to the products with their tag name, user count and item count. You can search for any tag using the tag name or view the tag to either approve, disable or leave it pending. You can also delete a group of selected tags at once.
+  </all-tags>
+
+  <pending-tags>
+    Once a new tag is added to a product, it goes to the pending queue. The storeowners will then decide to approve depending on whether the tag resembles to the nature of the product or not. You will see a list of pending tags that are in queue to get approved with their tag name, user count and item count. Similarly, you can search for any tag using tag name. You can also select different tags and approve them at once.
+
+  </pending-tags>
+
+
+
+  <manage-items>
+    <![CDATA[
+  This is the section where the complete management of items or products is carried out. You can search, add, edit or delete items and make changes in the system settings of the items. Similarly, you can view a list of items with respect to their attributes.
+  <ul><li>Add New Item: You can add any new item from here. You have to select item type in the form of Attribute Set and Item Type from respective drop down lists, set item details in the form of General Information and Advanced Setting. The General option will help you enter information related to the item or add new attribute to set attribute and frontend properties to the items whereas the Advanced option will help you set advanced pricing rules. You can also choose category from a list of options and finally upload an item image.</li>
+  <li>Item Settings: The item settings will help storeowners configure a set of six predefined system decisions associated with the items like showing or not the cost variant option, group price, tier price, related items, cross sell items and up sell items. You can either select the checkbox beside each option to enable or uncheck to disable the feature.</li></ul>
+  ]]>
+  </manage-items>
+
+
+  <manage-categories>
+    <![CDATA[
+  Category is one of the essential elements for any online store. People search by category and grouping in categories makes a store more managed and products easily accessible. This section deals with managing all aspects of categories whether it is adding, editing or deleting categories and sub-categories and the likes. You can also simply drag and drop the categories and sub-categories to change the order of the placement.</li></ul>
+  <ul><li>Add Category: You can add a category by filling out the fields and making necessary settings associated with the categories. Enter your general and meta information, configure your display settings and choose your category image. Similarly, you can add a sub-category as well but you need to select a root category first to add a child to it.</li></ul>
+  ]]>
+  </manage-categories>
+
+  <attributes>
+    <![CDATA[
+  Attributes are the features of the products such as color, weight, price, manufacturer, etc. AspxCommerce by default includes several necessary attributes. You can create your own attribute or use the default system attributes.
+ <ul><li> Manage Attributes: Here, you can add, edit or delete your attributes. You can select multiple attributes and delete them at once. You can search for attributes or get a list of all attributes that are present.</li>
+ <li> Manage Attribute Sets: A set of attribute is a group of attributes that are marked by common specifications. You get a complete list of attribute sets and can edit, delete or add the sets as required as well as you have the facility of activating or deactivating the set.</li></ul>
+  ]]>
+  </attributes>
+
+
+  <manage-attributes>
+    <![CDATA[
+  This section helps you manage all your attributes. You can either add, edit or delete your attributes. You can also select multiple attributes and delete them at once. You can search for attributes or get a list of all attributes that are added to your store.
+ <ul><li> Add Attributes: Here, you can add a new attribute to any item. Just fill the general information tab which contains details like attribute name, default and unique value, input and validation type, alias, display order and the likes. From the frontend properties tab, you can choose settings to customize your frontend display and it comprises of the likes of enabling editor, using filter and advanced search, comparisons and price rule conditions, showing item listing and item detail page, etc.</li></ul>
+  ]]>
+  </manage-attributes>
+
+
+  <manage-attribute-sets>
+    <![CDATA[
+    A set of attribute is a group of attributes that are marked by common specifications. Here, you get a complete list of attribute sets and can edit, delete or add the sets as required as well as you have the facility of activating or deactivating the set.
+   <ul><li> Add Set: To add a set, you just need to supply a set name and choose a basis for which the set is to be derived from. Once the set is added, you can see it in the list of other sets and you can anytime edit, delete, or view the status of the set.</li></ul>
+  ]]>
+  </manage-attribute-sets>
+
+  <variant-options>
+    <![CDATA[
+  Variant Options enables a seller to put different prices to the same product based on some variant properties such as color, size, etc. You can search for a cost variant and view a list of variants available with details like name and status signifying whether they are used in the system or not. You can also add or delete cost variants.
+  <ul><li>Add Cost Variants: To add a cost variant, you have to enter values to the fields as given in the General Information tab. The fields are cost variant name, description, type, display order and whether the variant is active or not. Moreover, you can also change the properties of variants in the Variant Properties tab by setting the status to either active or disable for any variant.</li></ul>
+]]>
+  </variant-options>
+
+  <out-of-stock-notification>
+    The goods that no longer exist in store stock are basically the out of stock items. Notifications are sent to customers for out of stock items using their email addresses. You can see a list of items that are out of stock and the details associated with them like variant value, storekeeping unit, customer, their email address, whether a mail is sent or not and date received on. You also have options to delete or show all items at once.
+  </out-of-stock-notification>
+
+
+  <manage-brands>
+    <![CDATA[
+    Brand is what increases the credibility of your store and makes your items sellable. You have all the options to manage the brands here. You can see a list of all the brands that you have in your store with their name, image, display option and statuses. You can anytime edit or delete a brand and activate or deactivate the status. You can also show or delete all brands at once.
+   <ul><li> Add Brand: To add a brand, you just need to fill the details of the brand. The details include brand name, description, whether or not it is shown in slider or featured, and if featured, the start and end date of the featuring and finally a brand image. That’s all. Your brand is created.</li></ul>
+   ]]>
+  </manage-brands>
+
+  <gift-cards>
+    <![CDATA[
+    Card is the earnest way of expressing your love, exchanging greetings, sending wishes and letting your loved ones know how much you care for them. Be it festival, seasonal greet, occasion or anything, card is the best celebration gift. Gift Cards option takes care of managing cards and their categories.
+   <ul><li> Manage Gift Card: You can simply view the list of cards available for different occasions and the details like gift card code, status, added date, notification sent or not and balance. You can also simply add or delete a card.</li></ul>
+   <ul><li> Manage Gift Card Categories: Category is basically the reason for which the card is sent. One category can have many different cards. You can search, view, add, edit or delete categories.</li></ul>
+    ]]>
+  </gift-cards>
+
+  <manage-gift-card>
+    <![CDATA[
+    This section lets you manage all the gift cards added to your store. You can search for cards and find a list of cards available for different occasions with the details associated like gift card code, status, added date, notification sent or not and balance available. You can also simply add or delete a card.
+    <ul><li>Add Gift Card: You can add a new card filling out details like category, amount, expiry date, card theme image, recipient name and email, sender name and email, a brief message and status.</li></ul>
+       ]]>
+  </manage-gift-card>
+
+  <manage-gift-card-categories>
+    <![CDATA[
+    Category is basically the reason (occasion/event) for which the card is sent. One category can have many different cards and there can be as many categories as possible. You can search, view, add, edit or delete categories with the details associated like category name, date added on and the status.
+    <ul><li>Add Category: To add a category, you simply need to put a category name and set the status whether it should be active or inactive.</li></ul>
+  ]]>
+  </manage-gift-card-categories>
+
+  <search-terms>
+    The search terms provides a list of all terms that were searched on your store. For example, customer may search for an item called laptop, the search term laptop will be stored in the Search Term Manage page. This feature benefits the store owner to know what items the customers are searching for or which is in demand, accordingly the store owner can enhance their sale. Search Term Manage page gives a list of searched terms and the number of searches made. You can also delete search terms and can export your data to Excel or CSV files.
+
+  </search-terms>
+
+  <appointments>
+    <![CDATA[
+  With AspxCommerce, appointments and statuses can be created and managed from the site itself. There are different statuses to appointments like processed, pending, cancelled, completed, etc. that can all be managed through this section.
+ <ul><li> Appointment Management: You can view the appointments, make changes in the status, edit or delete the appointments. You can also export the data to excel or csv files.</li>
+ <li> Appointment Status Management: This section helps you manage all your statuses. The status could be either processed, pending, cancelled or completed depending on the need of your store. You can search, view, edit or delete the status.</li></ul>
+   ]]>
+  </appointments>
+
+  <appointment-management>
+    If a customer has an appointment with any of your store branches, then those appointments are listed down here. You can view the appointments, make changes in the status, edit or delete the appointments. You can search for an appointment your customer has based on the store location and the service provider. You can also export the data to excel or csv files.
+  </appointment-management>
+
+  <appointment-status-management>
+    This section helps you manage all your statues. The status could be either processed, pending, cancelled or completed depending on the need of your store. You can search, view, edit or delete the status. The status comes with details like whether or not it is used in the system or is active or not.
+  </appointment-status-management>
+
+
+  <index-management>
+    Indexes in database are data structures that helps fast retrieval of data from tables without requiring to scan every row whenever a database is being accessed. Though indexing increases the performance of database, lack of proper index management leads to cluttered indexes thus deteriorating the optimization. Frequent transaction of sql queries often leads to fragmentation of indexes thus decreasing performance. This index management defragments the fragmented indexes and maintains the health of database. You can use this module to re-index all your tables. You will see a list of table names and their respective index names and statuses, and you can choose the required table you want to defragment the index of.
+  </index-management>
+
+  <shopping-carts>
+    Shopping carts accumulates all the carts along with their items in full detail. It shows the report for two sections – Items in Carts and Abandoned Carts.
+  </shopping-carts>
+
+  <items-in-carts> in Carts lists all the products in the cart with all of its required details. You can benefit with a quick search by entering Item Name, Customer Name and Quantity. This report consists of Cart ID, Item ID, Customer Name, Item Name, Quantity, Price, Weight and SKU (Stock Keeping Unit).</items-in-carts>
+  <abandoned-carts> Abandoned Carts lists the details of each registered customers who added products to their carts and logged out with orders still placed in the shopping cart. You can make the search easier by entering the Customer Name. This report consists of Customer Name, Number of Items, Quantity of Items and Subtotal.</abandoned-carts>
+
+
+
+  <items>
+    Items gives you all the necessary details regarding the items that are available which include Items Ordered, Most Viewed, Low Stock, Downloadable, Gift Card Items and Services Items.
+  </items>
+  <items-ordered> – It shows the list of items that have been ordered along with their quantity. You can do a quick search by entering the Item Name. This report consists of Item Name and Quantity Ordered.</items-ordered>
+  <most-viewed>– It shows the list of items that have been most viewed by the users along with their price across different period. You can do a quick search by entering the Item Name. This report consists of Item Name, Price and Number of Views.</most-viewed>
+  <low-stock> – It shows the stock of items and helps you to plan ahead of time and restore proper quantity of stock in case the stocks get low. You can do a quick search by entering Item Name, SKU and IsActive to search the item. This report consists of Item Name, SKU, Price, Quantity and IsActive.</low-stock>
+  <downloadable> – downloadable displays a report of items that were downloaded from your store. You can do a quick search by entering Item Name and SKU. This report includes SKU, Item Name, Sample Link, Actual Link, Purchases and Downloads.</downloadable>
+  <services-items> – This report shows details of services provided to the customers and lists the branch name that provides services in each case. You can do a quick search by entering Service Name and Branch Name. This report shows Service Name, Branch Name and Actions.</services-items>
+
+
+
+
+  <store-customers>
+    It provides a report on customer behaviors in your store with regard to sales and accounts created. You can view this report either in Excel in CSV format. You can access reports on two criteria – New Account and Customers by Total Orders.
+  </store-customers>
+
+  <new-accounts> – New Account provides you a detailed report on each of the new accounts created in your store by the customers. You can view the report selecting from the dropdown list of yearly, monthly or daily report. This report consists of Period and Number of New Accounts.</new-accounts>
+
+  <customers-by-total-orders> – It allows you to access a report on total order amount along with the average order amount each of the customers have made. You can do a quick search by entering the Customer Name. This report shows Customer Name, Number of Orders, Average Order Amount and Total Order Amount.</customers-by-total-orders>
+
+
+
+
+  <customers-reviews>
+    This report gives you the detail reviews which include Customer Reviews and Item Reviews. This report can be exported either in Excel or CSV format. You can view the detail reviews of each item from various customers and also view the number of reviews for each of them.
+  </customers-reviews>
+  <items-reviews>
+    – This report gives you the reviews as per the items in your store. From here, you will get an idea on which items are popular and which are not. It consists of Item Name, Number of Reviews, Average Rating, Last Review and Actions.
+  </items-reviews>
+
+
+  <store-tags>
+
+    Store Tags shows the reports of various tags including Customer Tags, Item Tags and Popular Tags. This report can be exported either in Excel or CSV format. You can view the details of each of these tags.
+  </store-tags>
+  <customer-tags> – Customer Tags report lists the customers and the number of approved tags that were submitted by them. This report consists of Customer Name, Total Tags and Actions. You can view the extra settings under Actions.</customer-tags>
+  <item-tags>    – Item Tags report displays a list of items with tags. This report consists of Item Name, Number of Unique Tags, Number of Tags and Actions. The Number of Tags shows the total number of tags from all the users and Number of Unique Tags lists only the unique items. </item-tags>
+  <popular-tags> – Popular Tags lists all the approved tags, and the number of times each tag has been used in your store. This report consists of Tag Name, Popularity and Actions.</popular-tags>
+
+
+
+
+  <customers>
+
+    Find every details relating to customers here. You can access your list of customers and find details about their shopping activities, including their current status.
+  </customers>
+
+  <manage-customers> Get details about customers visiting your store.</manage-customers>
+  <online-customers> Keep track of your customers currently online.</online-customers>
+  <abandoned-and-live-carts> Find out the status of carts in your store.</abandoned-and-live-carts>
+
+
+
+
+  <manage-customers>
+
+    This is where you find the list of customers active in your store at the moment. These details help you keep track of customers in your store and better manage them. Here, you get to:
+    Add new customer
+    Delete customer from the list
+    And View details regarding their identification and activities online
+
+  </manage-customers>
+
+
+  <online-customers>
+    <![CDATA[
+    Learn the status and activities of customers currently online in your store, including both registered and anonymous customers.
+   <ul><li> Registered Customers: This tab provides you information about your currently online registered customers regarding their Session User Host Address, Session User Agent, Session Browser and Session URL.</li>
+    <li>Anonymous Customers: Similar information regarding Host Address, User Agent, Browser and URL are displayed in the Anonymous customers tab.</li>
+   </ul>
+   ]]>
+  </online-customers>
+
+  <abandoned-and-live-carts>
+    Here you get details about your customer’s cart, be it a live cart or an abandoned one. The items in the cart, their ID, name of the customer, purchase quantity and price are some of the essential information that can be gathered here. Also you can retrieve that information as a CSV or Excel file.
+  </abandoned-and-live-carts>
+
+  <promotions>
+
+    Better promote your store among your customers with these promotion tools. You can employ rewards, coupons or price rules to promote your store and products.
+  </promotions>
+  <reward-points> Manage specifications about reward points in your store here.</reward-points>
+  <Coupons-overview> Manage coupon types and their status here.</Coupons-overview>
+  <catalog-price-rules> Administer rules for providing different types of discounts to customers.</catalog-price-rules>
+  <shopping-cart-price-rules>
+    Manage pricing rules for items placed inside the cart.
+  </shopping-cart-price-rules>
+
+
+
+  <reward-points>
+    <![CDATA[
+  Access details about the points rewarded to customers and their activities regarding the same. Here, you get two options that include:
+ <ul><li> Reward Points History: View the list of customers who have accumulated reward points in your store.</li>
+  <li>Manage Settings: Edit settings with regard to reward points and reward rules.</li>
+  </ul>
+ ]]>
+  </reward-points>
+
+
+  <coupons>
+    Administered by the store administrator, coupons help promote business by providing discounts and various offers. Manage your store coupons, their types and status from here.
+    Access details like coupon code, validity and coupon amount from here. You can also add new coupon, edit any coupon details or delete the ones not required.
+  </coupons>
+  <manage-coupon-types>
+    Add new coupon types or edit information to the already present ones. All such coupon managing options are available here.
+  </manage-coupon-types>
+  <manage-coupon-status>
+    By default AspxCommerce comes with 3 coupon status, namely: Used, Expired and Pending. This is where you can edit them.
+  </manage-coupon-status>
+  <catalog-price-rules>
+    Catalog Price Rule allows the administrator to create a variety of rules for offering discounts to the customers based on their purchase. Catalog Price Rule is applied before any product is added to the cart. Find options to:
+    Add new price rules
+    Check/modify their validity
+    Modify rule information, condition and action
+  </catalog-price-rules>
+
+  <shopping-cart-price-rules>
+    Shopping Cart Price Rules are applied to items placed in the cart. You can assign discount rules to items in the shopping cart with the help of this module. Here you can add new price rules, delete unnecessary ones and edit details.
+  </shopping-cart-price-rules>
+
+
+
+  <administration>
+    This is the admin section to your online store from where you access and control all the administrative specifications to your store. Given below are the modules included:
+  </administration>
+  <shipping>
+    Find/Edit specifications about shipping methods, shipping providers and store warehouse from here.
+  </shipping>
+  <taxes> Manage tax-related specifications including tax class, tax rates and tax rules here.</taxes>
+  <store-locator> Locate your store on the Google Maps along with the branch stores you may have.</store-locator>
+  <store-settings> All of your specifications for the proper running of your store can be set or edited from here.</store-settings>
+  <Payment-methods> Preview and edit payment methods for your store’s online shopping. </Payment-methods>
+  <currencies> Manage every details regarding the currencies used in your store.</currencies>
+  <credit-cards>Revise and set specifications related to credit cards in your store.</credit-cards>
+  <store-access>
+    Access your list of blocked IP or email addresses and/or block any unwanted users from your store.
+  </store-access>
+  <import-manager> This option enables you to import files from Excel to the database.</import-manager>
+  <notification-management> Access the status of notifications or make changes as per your requirement.</notification-management>
+
+  <shipping>
+    <![CDATA[
+  AspxCommerce employs a wide range of shipping methods in order to make delivery of items swift for all its customers. Find here the information on Shipping Method, Shipping Providers and Store Warehouse.
+  <ul><li>Shipping Method: Define custom shipping methods and/or make changes in the existing ones</li>
+  <li>Shipping Providers: Access or make changes to the shipping providers in your store.</li>
+  <li>Store Warehouse: Manage specifications related to your warehouse settings here.</li>
+  </ul>
+ ]]>
+  </shipping>
+
+  <shipping-methods>
+    This is where you manage the shipping methods as per customer’s preferred option.  Shipping methods might range from self-pickup to using various shipping alternatives. You can also set different criteria for varying shipping methods.
+  </shipping-methods>
+
+  <shipping-providers>
+    Shipping Providers is the means of transportation that you choose to deliver goods form one point to another. This may include – Air Freight Services, Road and Railways Freight Services, and the likes.
+  </shipping-providers>
+
+  <store-warehouse>
+    Manage specifications related to your warehouse settings here.
+  </store-warehouse>
+
+  <taxes>
+    <![CDATA[
+  AspxCommerce offers effective taxing mechanism. It enables you to set different tax rules for different products and customer types. You can also assign multiple tax rules to a single item and/or a group of customers. When a customer proceeds through checkout process, the tax is automatically calculated for each item separately (as Unit Tax) at the checkout page giving a vivid picture also of the total tax incurred for all the purchases done.
+ <ul><li> Manage Item Tax Class: Here you can form a tax class so that similar items fall under same tax criteria.</li>
+  <li>Manage Tax Rates: Tax rates might differ for different items or upon differing circumstances. Manage the rates here.</li>
+ <li> Manage Tax Rules: Tax rule is the amount of tax that is to be paid if you are the specified class of customer, who has bought this particular class of item at the given rate.</li>
+ </ul>
+ ]]>
+  </taxes>
+
+  <manage-item-tax-class>
+    Item Tax Class is associated with the different products in your store. Items can be any electronic good, apparel or foot wear, all of which are applicable of different tax rates. In order to apply different tax rates to different items, you need to define Item Tax Class first.
+  </manage-item-tax-class>
+
+
+  <manage-tax-rates>
+    Tax Rate is associated with different types of taxes that are to be applied to different products. Taxes can be charged as an absolute amount or on a percentage basis and are automatically applied to the total order during checkout. AspxCommerce enables you to set multiple taxes for different products.
+  </manage-tax-rates>
+
+
+  <manage-tax-rules>
+    Tax Rule is a combination of Item Tax Class and Tax Rates for specific customer roles. Tax rule is the amount of tax that is to be paid if you are the specified class of customer, who has bought this particular class of item at the given rate.
+  </manage-tax-rules>
+
+
+  <store-locator>
+    <![CDATA[
+  The location to your store can be easily set up along with your branch offices and chains. All you need to do is name your store and locate it in Google Maps. Here, you also get to edit already entered information as per your requirement. The management options being:
+  <ul><li>Store Locator Management: Manage specifications about the location of your store.</li>
+  <li>Store Branch Management: Add branches or edit info regarding already existing branches.</li>
+  </ul>
+  ]]>
+  </store-locator>
+
+  <store-locator-management>
+    This option opens up your list of stores along with its physical location on Google Maps. Apart from accessing this information, you can choose to Edit Store in order to change any information as per your requirement.
+  </store-locator-management>
+
+  <store-branch-management>
+    Branch Management allows you to access a list of branch names and the date they were added. Further, you can also add new branches by selecting the Add New Branch option. Simply prove a branch name and upload a logo to go with it.
+  </store-branch-management>
+
+
+
+  <store-settings>
+    <![CDATA[
+  Store Setting enables you to set the design of your store. It includes visibility, page settings, designing, managing customer profiles and much more. There are eight tabs under Store Settings:
+  <ul><li>Standard: Here, you get options to select and upload a product image and details regarding the page URL you want to load when a user clicks on any item from the menu.</li>
+  <li>General: Find options to upload a store logo along with other general specifications on your store that include store name, currency, shopping option range, low stock quantity, out of stock quantity, and the likes.</li>
+  <li>Email: Manage email settings for the account you want to use for sending emails to and from the store.</li>
+ <li> Display: Control what is displayed in the front end from here. The text you want displayed for add to card button, item display mode, sort by options etc.</li>
+ <li> Media: This is where you can set image and file settings.
+ <li> Shipping: Use this tab to specify customers from which countries are to be billed and countries where you can ship the products.</li>
+ <li> Users/Cart: From this page you can decide whether to enable multiple addresses, implement minimum cart amount and small currency charges involved.</li>
+ <li> Rss Feed: RSS feed controls the feeds for individual elements and feed counts for both front end and back end.</li>
+ <li> Other: Here you get to control other essential store settings, not covered under the above categories. Those include, enabling email a friend, showing mini shopping cart, number of items to display in a row and the likes.</li>
+</ul>
+]]>
+  </store-settings>
+
+
+  <payment-methods>
+    Here, you get to preview and edit payment methods for your store’s online shopping. All of your added payment methods are displayed in the table, from where you can access their details and also make changes as is necessary.
+  </payment-methods>
+
+
+  <currencies>
+    Manage every details regarding the currencies used in your store. You can see your list of currencies installed and can also edit them. Besides, you can add or delete any currency from here as well.
+  </currencies>
+
+
+  <out-of-stock-notification-management>
+    The goods that no longer exist in store stock are basically the out of stock items. Notifications are sent to customers for out of stock items using their email addresses. You can see a list of items that are out of stock and the details associated with them like variant value, storekeeping unit, customer, their email address, whether a mail is sent or not and date received on. You also have options to delete or show all items at once.
+  </out-of-stock-notification-management>
+
+ <sfupgrader>
+   
+    <![CDATA[
+             Enables you to upgrade your system. <br />
+             
+             Note: During upgrading manually down and up the site.
+    ]]>
+
+  </sfupgrader>
+  <paymentsetting>
+    Payment gateway setting is the management where we can manage all the settings of n numbers of payment gateway service provider reducing the time and effort to maintain the setting table.
+  </paymentsetting>
+  <module-maker>
+    Module maker helps  to generate a module in sageframe including the 3-tier basic logic, MSSQL storeprocedre and  registering control. Also developer can generarate needed 3-tier logic file  and  store procedure as zip nd download it.
+  </module-maker>
+
+</SageFrameAminHelp>

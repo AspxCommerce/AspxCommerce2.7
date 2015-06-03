@@ -1,0 +1,120 @@
+.ui-tree {
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	padding: 0px;
+	margin: 0px;
+}
+.ui-tree ul {
+	background-image: url(../images/vert.gif);
+	background-repeat: repeat-y;
+	background-position: top left;
+	margin: 0;
+	padding: 0;
+}
+.ui-tree li {
+	list-style-type: none;
+	padding: 2px 0 2px 10px;
+	margin: 0px;
+	border-bottom: 1px solid #C4DFF4;
+	border-top: 1px solid #FFFFFF;
+	color: #136686;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	line-height: 25px;
+	text-shadow:0px 1px 0 #FFFFFF;
+}
+.ui-tree li:first-child {
+	border-top:none;
+}
+.ui-tree li:last-child {
+	border-bottom:none;
+}
+li.ui-tree-node {
+	padding-top:0;
+	padding-bottom:0;
+	margin-top:0;
+	margin-bottom:0;
+}
+.ui-tree li span.ui-tree-title {
+	padding: 0px;
+	padding-left: 25px;
+	margin: 0px;
+	/*white-space: nowrap;*/
+	cursor:pointer;
+}
+.ui-tree .ui-tree-node > span.ui-tree-title {
+	background-image: url(../images/directory.png);
+	background-position: 1px 0px;
+	background-repeat: no-repeat;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 4px;
+}
+.ui-tree .ui-tree-node > * {
+	display: none;
+}
+.ui-tree .ui-tree-node > span {
+	display: inline;
+}
+.ui-tree-node ul {
+	margin-top: 4px;
+}
+.ui-tree .ui-tree-list > span.ui-tree-title {
+	background-image: url(../images/file.png);
+	background-repeat: no-repeat;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 4px;
+	background-position: 1px 1px;
+}
+.ui-tree .ui-tree-expanded > span.ui-tree-title {
+	background-image: url(../images/folder_open.png);
+	background-repeat: no-repeat;
+	background-position: 1px top;
+}
+.ui-tree .ui-tree-expanded > * {
+	display: block;
+}
+.ui-tree .ui-tree-selected {
+	outline: 1px dashed #34abff;
+}
+.ui-tree-droppable {
+	background-color: #dafff9 !important;
+}
+.ui-tree-droppable-top {
+	border-top: 2px solid black !important;
+}
+.ui-tree-droppable-bottom {
+	border-bottom: 2px solid black !important;
+}
+.ui-tree-droppable-left {
+	border-left: 2px solid black !important;
+}
+.ui-tree-droppable-right {
+	border-right: 2px solid black !important;
+}
+div#d1 {
+	width: 40%;
+	height: 300px;
+	float: left;
+}
+div#d2 {
+	width: 60%;
+	float: left;
+}
+div#dd_demo {
+	clear: both;
+}
+li.ui-draggable-dragging span.ui-tree-expand-control {
+	padding-left: 0;
+}
+li.ui-tree-node {
+	padding-bottom: 4px;
+	padding-top:4px;
+}
+li.ui-draggable-dragging span.ui-tree-expand-control {
+	display: none;
+}
+
+/*li.sfChild{ border:none !important;}*/

@@ -1,0 +1,72 @@
+.cssClassAccordionWrapper {
+	padding:10px;
+}
+.ui-accordion {
+	width: 100%;
+}
+.ui-accordion .ui-accordion-header {
+	cursor: pointer;
+	position: relative;
+	margin-top: 1px;
+	zoom: 1;
+	height:30px;
+}
+.ui-accordion .ui-accordion-li-fix {
+	display: inline;
+}
+.ui-accordion .ui-accordion-header-active {
+	border-bottom: 0 !important;
+}
+.ui-accordion .ui-accordion-header a {
+	display: block;
+	font:bold 12px/30px Arial, Helvetica, sans-serif !important;
+	color:#4b4a4a;
+	text-shadow:1px 1px 0 #dcc8ad;
+}
+.ui-accordion-icons .ui-accordion-header a {
+	padding-left: 25px;
+}
+.ui-accordion .ui-state-default .ui-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -2px;
+	background:url(../../images/accordion-down-arrow.png) no-repeat;
+}
+.ui-accordion .ui-state-active .ui-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -2px;
+	background:url(../../images/accordion-top-arrow.png) no-repeat;
+}
+.ui-accordion .ui-state-active {
+	background-color:#d6be9c;
+}
+.ui-accordion .ui-accordion-content {
+	border-top: 0;
+	margin-top: -2px;
+	position: relative;
+	top: 1px;
+	margin-bottom: 2px;
+	overflow: auto;
+	display: none;
+	zoom: 1;
+}
+.sfFormwrapper .accordionHeading h3, .accordionHeading h3 {
+	margin:0;
+	padding:0;
+	border-bottom:none;
+}
+.ui-accordion .ui-accordion-content-active {
+	display:block;
+	padding:10px;
+}
+.ui-accordion .ui-widget-content {
+	border:1px solid #CBBBA5;
+}/*
+.ui-accordion .ui-widget-content table td {
+	padding:3px 0;
+}*/
+.ui-accordion .cssClassPagination{ margin:10px 0 0 0;}
+#divInvoiceForm { width:936px;}

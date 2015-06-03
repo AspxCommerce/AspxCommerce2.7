@@ -1,0 +1,131 @@
+/* CSS Document */
+.popupbox {
+	background-color:#FFF;
+	display:none;
+
+	z-index: 9999;
+}
+
+#fade {
+	display: none;  
+	background:#000;
+	opacity:0.5;  filter: alpha(opacity=50); 
+	left: 0; position:fixed;top: 0;  
+	z-index:9000;
+	width:100%; height:100%;}
+
+.popupbox2 {
+background: #6D84B4  !important;
+border-color: #3B5998 #3B5998 -moz-use-text-color;
+border-style: solid solid none;
+border-width: 1px 1px medium;
+color: #FFFFFF;
+font-size: 14px;
+font-weight: bold;
+padding: 3px;
+margin: 0;
+}
+.popupbox3 {
+	width:502px;
+	height:302px;
+	background-image:url(../../images/3_03.png);
+	background-repeat:no-repeat;
+	display: none;
+	float: left;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	-webkit-box-shadow: 0px 0px 10px #fff;
+	-moz-box-shadow: 0px 0px 10px #fff;
+	box-shadow: 0px 0px 10px #fff;
+}
+
+#intabdiv {
+	padding:10px;
+}
+#close img {
+	text-decoration:none;
+}
+#close {
+	width:50px;
+	height:50px;
+	position: absolute;
+	float:right;
+}
+#intabdiv2 {
+	padding:70px;
+}
+
+.popupbox a{ margin:0 10px 0 10px}
+#intabdiv2 p {
+	font-size:12px;
+	color:#696868;
+	line-height:20px;
+}
+#intabdiv3 {
+	padding:70px;
+}
+.popupbox{
+position: fixed;
+z-index: 99999;
+margin: auto;
+top: 0; left: 0; bottom: 0; right: 0;
+width: 60%;
+height:60%; -webkit-box-shadow: 0 0 0 10px rgba(0,0,0,.09); -moz-box-shadow: 0 0 0 10px rgba(0,0,0,.09); box-shadow: 0 0 0 10px rgba(0,0,0,.09);font-size:14px;
+padding:15px 0 15px 15px;
+
+}
+.popupbox .sfFormwrapper .cssClassTextarea {
+	height:100px;
+} 
+.popupbox .sfFormwrapper select { margin:3px 5px;}
+.error {
+	font-size:11px;
+	color:#F00;
+
+	padding:0 0 0 5px;
+}
+.popupbox .sfFormwrapper td{ border-bottom:none;}
+input.error, .textarea.error{	border: 1px dashed #F00!important;
+padding: 8px;}
+
+.cssClassReviewInfos {
+	padding:5px;
+	background-color:#bcebff;
+	margin:5px 0 0 0;
+}
+.cssClassReviewInfos a {
+	text-decoration:underline;
+}
+.cssClassPopUpHeading {
+	margin:7px 0;
+}
+span.star-rating-control {
+	float:left;
+	height:21px;
+	padding-top:5px;
+}
+.cssClassToolTipInfo span.star-rating-control {float:right;}
+span.cssClassRatingText {float:left;padding:0 0 0 5px;}
+td.cssClassReviewCriteria {width:152px;}
+.cssClassItemCostVariant { width:auto;}
+.cssClassItemCostVariant .ui-corner-all {max-height:390px; margin: 12px 10px 0; overflow: auto;width: 640px;} 
+.cssClassItemCostVariant .ui-tabs .ui-tabs-panel {padding: 20px 0 0;}
+
+.popupbox  .sfFormwrapper input{ margin:5px; padding:4px 5px; }
+#trigger {text-align:center;}
+/*.popupbox .sfButtonwrapper button{margin:2px 6px 6px 5px;
+font-size:13px;
+border:1px solid #039;
+background-color:#5B74A8;
+background-position:0 -28px;
+border-color:#29447E #29447E #1A356E;
+color:#FFFFFF;
+padding:2px 6px
+text-align:center;
+text-decoration:none;
+vertical-align:middle;
+white-space:nowrap;}*/
+.cssClassQuickView .cssClassProductImage{ width:40%}
+.cssClassQuickView .cssClassProductPictureDetails{ width:57%}]

@@ -1,0 +1,60 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_TaskToDo</name>
+      <friendlyname>TaskToDo</friendlyname>
+      <foldername>TaskToDo</foldername>
+      <modulename>TaskToDo</modulename>
+      <description>This module is used for TaskToDo.</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.TaskToDo.EventController, SageFrame.Modules.TaskToDo</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>BrainDigit IT Soultion Pvt. Ltd.</owner>
+      <organization>BrainDigit IT Soultion Pvt. Ltd.</organization>
+      <url>www.braindigit.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>TaskToDo Application </releasenotes>
+    <license>SageFrame® - http://www.sageframe.com
+	  Copyright (c) 2009-2010 by SageFrame
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      </license>
+      <modules>
+        <module>
+          <friendlyname>TaskToDo</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			  <key>TaskToDoView</key>
+              <title>TaskToDoView</title>
+              <src>Modules/TaskToDo/TaskToDoView.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>   
+<file>
+          <name>SageFrame.TaskToDo.dll</name>
+        </file>        
+             
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file> 
+      </files>
+    </folder>
+  </folders>
+</sageframe>

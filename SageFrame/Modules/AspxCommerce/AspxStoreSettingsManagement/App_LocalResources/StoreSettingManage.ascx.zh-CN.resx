@@ -1,0 +1,796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Label1Resource1.Text" xml:space="preserve">
+    <value>航运设定</value>
+  </data>
+  <data name="lblAdvanceSearchURLResource1.Text" xml:space="preserve">
+    <value>推进搜索网址:</value>
+  </data>
+  <data name="lblAllowAnonymousCheckOutResource1.Text" xml:space="preserve">
+    <value>允许匿名结帐:</value>
+  </data>
+  <data name="lblAllowAnonymousUserToWriteReviewsResource1.Text" xml:space="preserve">
+    <value>允许匿名用户发表评论和评分:</value>
+  </data>
+  <data name="lblAllowBillingCountryResource1.Text" xml:space="preserve">
+    <value>允许开票国家名单:</value>
+  </data>
+  <data name="lblAllowCreditCardDataResource1.Text" xml:space="preserve">
+    <value>允许用户存储信用卡数据，个人资料:</value>
+  </data>
+  <data name="lblAllowMultipleAddressResource1.Text" xml:space="preserve">
+    <value>允许用户创建多个地址:</value>
+  </data>
+  <data name="lblAllowMultipleShippingAddressResource1.Text" xml:space="preserve">
+    <value>允许多个送货地址:</value>
+  </data>
+  <data name="lblAllowOutStockPurchaseResource1.Text" xml:space="preserve">
+    <value>允许购买股票时:</value>
+  </data>
+  <data name="lblAllowPrivateMessagesResource1.Text" xml:space="preserve">
+    <value>允许私人讯息:</value>
+  </data>
+  <data name="lblAllowRePayOrderResource1.Text" xml:space="preserve">
+    <value>让客户再次支付订单，如果交易被拒绝:</value>
+  </data>
+  <data name="lblAllowShippingCountryResource1.Text" xml:space="preserve">
+    <value>允许的航运国家名单:</value>
+  </data>
+  <data name="lblAllowUserGroupResource1.Text" xml:space="preserve">
+    <value>允许客户注册用户组:</value>
+  </data>
+  <data name="lblBlogsRssFeedResource1.Text" xml:space="preserve">
+    <value>在浏览器地址栏显示博客的RSS新闻链接:</value>
+  </data>
+  <data name="lblCartAbandonTimeResource1.Text" xml:space="preserve">
+    <value>购物车放弃时间（以小时计）:</value>
+  </data>
+  <data name="lblCategoryLargeThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>类大型缩图大小:</value>
+  </data>
+  <data name="lblCategoryMediumThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>类别中等缩略图大小:</value>
+  </data>
+  <data name="lblCategorySmallThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>分类小缩图大小:</value>
+  </data>
+  <data name="lblCompareItemURLResource1.Text" xml:space="preserve">
+    <value>比较项目列表URL:</value>
+  </data>
+  <data name="lblDefaultCountryResource1.Text" xml:space="preserve">
+    <value>默认国家:</value>
+  </data>
+  <data name="lblDefaultImageProductURLResource1.Text" xml:space="preserve">
+    <value>默认图像产品网址
+:</value>
+  </data>
+  <data name="lblDefaultMetaDescriptionResource1.Text" xml:space="preserve">
+    <value>默认的meta描述:</value>
+  </data>
+  <data name="lblDefaultMetaKeywordsResource1.Text" xml:space="preserve">
+    <value>默认Meta关键字:</value>
+  </data>
+  <data name="lblDefaultStoreTimeZoneResource1.Text" xml:space="preserve">
+    <value>默认存储时区:</value>
+  </data>
+  <data name="lblDefaultTitleResource1.Text" xml:space="preserve">
+    <value>默认标题:</value>
+  </data>
+  <data name="lblDetailPageURLResource1.Text" xml:space="preserve">
+    <value>详细信息页网址:</value>
+  </data>
+  <data name="lblEmailSettingFormResource1.Text" xml:space="preserve">
+    <value>邮箱设置</value>
+  </data>
+  <data name="lblEnableCompareItemsResource1.Text" xml:space="preserve">
+    <value>启用“项目比较':</value>
+  </data>
+  <data name="lblEnableEmailAFriendResource1.Text" xml:space="preserve">
+    <value>启用“向朋友发送电子邮件' :</value>
+  </data>
+  <data name="lblEnableLatestItemsResource1.Text" xml:space="preserve">
+    <value>启用的最新项目':</value>
+  </data>
+  <data name="lblEnableRecentlyComparedItemsResource1.Text" xml:space="preserve">
+    <value>启用“最近比较项目':</value>
+  </data>
+  <data name="lblEnableRecentlyViewedItemsResource1.Text" xml:space="preserve">
+    <value>启用“最近浏览记录':</value>
+  </data>
+  <data name="lblEnableSpecialItemsResource1.Text" xml:space="preserve">
+    <value>启用“特殊物品':</value>
+  </data>
+  <data name="lblEnableStoreNamePrefixResource1.Text" xml:space="preserve">
+    <value>启用存储名称前缀:</value>
+  </data>
+  <data name="lblEnableWishListResource1.Text" xml:space="preserve">
+    <value>启用“愿望清单”:</value>
+  </data>
+  <data name="lblGoogleMapAPIKeyResource1.Text" xml:space="preserve">
+    <value>谷歌地图API键分店:</value>
+  </data>
+  <data name="lblHeadingResource1.Text" xml:space="preserve">
+    <value>商店设置</value>
+  </data>
+  <data name="lblItemLargeThumbImageSizeResource1.Text" xml:space="preserve">
+    <value>项目大缩略图大小:</value>
+  </data>
+  <data name="lblItemMediumThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>项目中缩图大小:</value>
+  </data>
+  <data name="lblItemReviewsApprovedResource1.Text" xml:space="preserve">
+    <value>商品评价，必须经:</value>
+  </data>
+  <data name="lblItemSmallThumbnailImageSizeResource1.Text" xml:space="preserve">
+    <value>项目小缩图图片大小：</value>
+  </data>
+  <data name="lblLowStockQuantityResource1.Text" xml:space="preserve">
+    <value>低库存数量:</value>
+  </data>
+  <data name="lblMainCurrencyResource1.Text" xml:space="preserve">
+    <value>主要货币:</value>
+  </data>
+  <data name="lblMaximumImageSizeResource1.Text" xml:space="preserve">
+    <value>最大图像大小:</value>
+  </data>
+  <data name="lblMaximumItemQuantityResource1.Text" xml:space="preserve">
+    <value>最大购买数量:</value>
+  </data>
+  <data name="lblMediaSettingResource1.Text" xml:space="preserve">
+    <value>媒体设置</value>
+  </data>
+  <data name="lblMinimumItemQuantityResource1.Text" xml:space="preserve">
+    <value>最低数量要购买:</value>
+  </data>
+  <data name="lblMinimumCartSubTotalResource1.Text" xml:space="preserve">
+    <value>子总量最小车:</value>
+  </data>
+  <data name="lblMultiCheckOutURLResource1.Text" xml:space="preserve">
+    <value>多地址结账网址:</value>
+  </data>
+  <data name="lblMultipleReviewsPerIPResource1.Text" xml:space="preserve">
+    <value>允许用户写入多个来自同一IP的评论:</value>
+  </data>
+  <data name="lblMultipleReviewsPerUserResource1.Text" xml:space="preserve">
+    <value>允许用户写多个评论:</value>
+  </data>
+  <data name="lblMyAccountURLResource1.Text" xml:space="preserve">
+    <value>我的帐户网址:</value>
+  </data>
+  <data name="lblNewsRssFeedResource1.Text" xml:space="preserve">
+    <value>在浏览器地址栏显示新闻的RSS新闻链接:</value>
+  </data>
+  <data name="lblNoOfBestSellersResource1.Text" xml:space="preserve">
+    <value>畅销书项目:</value>
+  </data>
+  <data name="lblNoOfDisplayItemsResource1.Text" xml:space="preserve">
+    <value>的项目数显示在页:</value>
+  </data>
+  <data name="lblNoOfItemsCompareResource1.Text" xml:space="preserve">
+    <value>最大数量的项目比较:</value>
+  </data>
+  <data name="lblNoOfLatestItemsInARowResource1.Text" xml:space="preserve">
+    <value>没有最后一行中的项目:</value>
+  </data>
+  <data name="lblNoOfLatestItemsResource1.Text" xml:space="preserve">
+    <value>没有最新项目:</value>
+  </data>
+  <data name="lblNoOfPopTagsResource1.Text" xml:space="preserve">
+    <value>没有热门标签:</value>
+  </data>
+  <data name="lblNoOfRecentAddedWishItemsResource1.Text" xml:space="preserve">
+    <value>最近添加WishItems数目:</value>
+  </data>
+  <data name="lblNoOfRecentlyComparedItemsResource1.Text" xml:space="preserve">
+    <value>没有最近比较项目的:</value>
+  </data>
+  <data name="lblNoOfRecentlyViewedItemsResource1.Text" xml:space="preserve">
+    <value>否最近浏览的项目:</value>
+  </data>
+  <data name="lblNoOfRelatedItemsInCartResource1.Text" xml:space="preserve">
+    <value>没有相关车中的项目:</value>
+  </data>
+  <data name="lblNoOfSpecialItemsResource1.Text" xml:space="preserve">
+    <value>无特殊项目:</value>
+  </data>
+  <data name="lblNotifyAboutItemReviewsResource1.Text" xml:space="preserve">
+    <value>通知关于商品的评论:</value>
+  </data>
+  <data name="lblOtherSettingsResource1.Text" xml:space="preserve">
+    <value>其他设置</value>
+  </data>
+  <data name="lblRelatedItemsInCartResource1.Text" xml:space="preserve">
+    <value>启用“相关车中的项目':</value>
+  </data>
+  <data name="lblSearchResultURlResource1.Text" xml:space="preserve">
+    <value>搜索结果网址:</value>
+  </data>
+  <data name="lblSendEmailsFromResource1.Text" xml:space="preserve">
+    <value>发送电子商务电子邮件:</value>
+  </data>
+  <data name="lblSendEmailsToResource1.Text" xml:space="preserve">
+    <value>发送电子商务邮件:</value>
+  </data>
+  <data name="lblSendOrderNotificationResource1.Text" xml:space="preserve">
+    <value>发送订单通知:</value>
+  </data>
+  <data name="lblSendPaymentNotificationResource1.Text" xml:space="preserve">
+    <value>发送付款通知:</value>
+  </data>
+  <data name="lblSEODisplayResource1.Text" xml:space="preserve">
+    <value>SEO/显示</value>
+  </data>
+  <data name="lblShoppingCartURLResource1.Text" xml:space="preserve">
+    <value>购物车URL:</value>
+  </data>
+  <data name="lblShoppingOptionRangeResource1.Text" xml:space="preserve">
+    <value>购物选项范围:</value>
+  </data>
+  <data name="lblShowBestSellersResource1.Text" xml:space="preserve">
+    <value>启用“畅销书项目':</value>
+  </data>
+  <data name="lblShowItemImagesInCartResource1.Text" xml:space="preserve">
+    <value>显示购物车中的物品图片:</value>
+  </data>
+  <data name="lblShowItemImagesInWishListResource1.Text" xml:space="preserve">
+    <value>显示项目中的图像愿望清单:</value>
+  </data>
+  <data name="lblShowMiniShoppingCartResource1.Text" xml:space="preserve">
+    <value>显示“迷你购物车':</value>
+  </data>
+  <data name="lblSingleCheckOutURLResource1.Text" xml:space="preserve">
+    <value>显示“迷你购物车':</value>
+  </data>
+  <data name="lblSSLSecurePagesResource1.Text" xml:space="preserve">
+    <value>SSL的安全网页:</value>
+  </data>
+  <data name="lblStoreAdminEmailResource1.Text" xml:space="preserve">
+    <value>存储管理者邮箱:</value>
+  </data>
+  <data name="lblStoreClosedResource1.Text" xml:space="preserve">
+    <value>店铺关闭:</value>
+  </data>
+  <data name="lblStoreLocatorURLResource1.Text" xml:space="preserve">
+    <value>分店网址:</value>
+  </data>
+  <data name="lblStoreLogoResource1.Text" xml:space="preserve">
+    <value>店徽:</value>
+  </data>
+  <data name="lblStoreNameResource1.Text" xml:space="preserve">
+    <value>店铺名称: </value>
+  </data>
+  <data name="lblStoreNotAccessedResource1.Text" xml:space="preserve">
+    <value>存储未访问的信息:</value>
+  </data>
+  <data name="lblStorURLResource1.Text" xml:space="preserve">
+    <value>存储关闭信息:</value>
+  </data>
+  <data name="lblTab1InfoResource1.Text" xml:space="preserve">
+    <value>标准设置</value>
+  </data>
+  <data name="lblTab2InfoResource1.Text" xml:space="preserve">
+    <value>常规设置</value>
+  </data>
+  <data name="lblTabTitle1Resource1.Text" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="lblTabTitle2Resource1.Text" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="lblTimeToDeleteAbandCartResource1.Text" xml:space="preserve">
+    <value>被遗弃的手推车删除时间（以小时):</value>
+  </data>
+  <data name="lblTitleCustomerProfilesResource1.Text" xml:space="preserve">
+    <value>客户配置文件设置</value>
+  </data>
+  <data name="lblWeightUnitResource1.Text" xml:space="preserve">
+    <value>重量单位:</value>
+  </data>
+  <data name="lblWelcomMsgResource1.Text" xml:space="preserve">
+    <value>显示在首页上的欢迎辞</value>
+  </data>
+  <data name="lblWishListURLResource1.Text" xml:space="preserve">
+    <value>许愿网址:</value>
+  </data>
+  <data name="lbTabTitle3Resource1.Text" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="lbTabTitle5Resource1.Text" xml:space="preserve">
+    <value>媒体</value>
+  </data>
+  <data name="lbTabTitle7Resource1.Text" xml:space="preserve">
+    <value>客户简介</value>
+  </data>
+  <data name="lbTabTitle8Resource1.Text" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="lbTabTitle9Resource1.Text" xml:space="preserve">
+    <value>航运设定</value>
+  </data>
+  <data name="lblRealTimeNotificationsResource1.Text" xml:space="preserve">
+    <value>允许实时通知：</value>
+  </data>
+  <data name="lblRealTimeNotificationsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label2Resource1.Text" xml:space="preserve">
+    <value>对于前端：</value>
+  </data>
+  <data name="Label2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label3Resource1.Text" xml:space="preserve">
+    <value>适用水印图片：</value>
+  </data>
+  <data name="Label3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label4Resource1.Text" xml:space="preserve">
+    <value>水印文本：</value>
+  </data>
+  <data name="Label4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label5Resource1.Text" xml:space="preserve">
+    <value>浮水印的位置：</value>
+  </data>
+  <data name="Label5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label6Resource1.Text" xml:space="preserve">
+    <value>水印文本旋转：</value>
+  </data>
+  <data name="Label7Resource1.Text" xml:space="preserve">
+    <value>用户/车</value>
+  </data>
+  <data name="Label7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label8Resource1.Text" xml:space="preserve">
+    <value>水印图像的位置：</value>
+  </data>
+  <data name="Label8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label9Resource1.Text" xml:space="preserve">
+    <value>水印图像旋转：</value>
+  </data>
+  <data name="Label9Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelResource1.Text" xml:space="preserve">
+    <value>对于后端：</value>
+  </data>
+  <data name="LabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdditionalCVRResource1.Text" xml:space="preserve">
+    <value>货币兑换附加费：</value>
+  </data>
+  <data name="lblAdditionalCVRResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAddToCartButtonTextResource1.Text" xml:space="preserve">
+    <value>Add to Cart按钮文字：</value>
+  </data>
+  <data name="lblAddToCartButtonTextResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowCouponDiscountResource1.Text" xml:space="preserve">
+    <value>显示在购物车页面优惠券折扣：</value>
+  </data>
+  <data name="lblAllowCouponDiscountResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAllowShippingEstimateResource1.Text" xml:space="preserve">
+    <value>在购物车页面显示运费率估计：</value>
+  </data>
+  <data name="lblAllowShippingEstimateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAskCustomerToSubscribeResource1.Text" xml:space="preserve">
+    <value>问客户要订阅：</value>
+  </data>
+  <data name="lblAskCustomerToSubscribeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryBannerImageHeightResource1.Text" xml:space="preserve">
+    <value>类别横幅图片高度：</value>
+  </data>
+  <data name="lblCategoryBannerImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryBannerImageWidthResource1.Text" xml:space="preserve">
+    <value>类别横幅图像宽度：</value>
+  </data>
+  <data name="lblCategoryBannerImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryDetailURLResource1.Text" xml:space="preserve">
+    <value>类别详细说明页网址：</value>
+  </data>
+  <data name="lblCategoryDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryLargeThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>类别Large缩略图图像高度：</value>
+  </data>
+  <data name="lblCategoryLargeThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryLargeThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>类别Large缩略图图像宽度：</value>
+  </data>
+  <data name="lblCategoryLargeThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryMediumThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>类别中等缩略图图像高度：</value>
+  </data>
+  <data name="lblCategoryMediumThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryMediumThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>分类中的缩略图图像宽度：</value>
+  </data>
+  <data name="lblCategoryMediumThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategoryResource1.Text" xml:space="preserve">
+    <value>新的分类：</value>
+  </data>
+  <data name="lblCategoryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategorySmallThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>产品类型：小型缩略图图像高度：</value>
+  </data>
+  <data name="lblCategorySmallThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCategorySmallThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>产品类型：小型缩略图图像宽度：</value>
+  </data>
+  <data name="lblCategorySmallThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDimensionUnitResource1.Text" xml:space="preserve">
+    <value>尺寸单位：</value>
+  </data>
+  <data name="lblDimensionUnitResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEstimateShippingCostInCartPageResource1.Text" xml:space="preserve">
+    <value>估计运费在购物车页面：</value>
+  </data>
+  <data name="lblEstimateShippingCostInCartPageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIItemImageMaxWidthResource1.Text" xml:space="preserve">
+    <value>最大宽度产品形象：</value>
+  </data>
+  <data name="lblIItemImageMaxWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemDetailURLResource1.Text" xml:space="preserve">
+    <value>产品详细信息页网址：</value>
+  </data>
+  <data name="lblItemDetailURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemDisplayModeResource1.Text" xml:space="preserve">
+    <value>项目显示模式：</value>
+  </data>
+  <data name="lblItemDisplayModeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemImageMaxHeightResource1.Text" xml:space="preserve">
+    <value>最大高度产品形象：</value>
+  </data>
+  <data name="lblItemImageMaxHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemLargeThumbImageHeightResource1.Text" xml:space="preserve">
+    <value>项目大缩略图图像高度：</value>
+  </data>
+  <data name="lblItemLargeThumbImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemLargeThumbImageWidthResource1.Text" xml:space="preserve">
+    <value>项目大缩略图图像宽度：</value>
+  </data>
+  <data name="lblItemLargeThumbImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemMediumThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>项目中的缩略图图像高度：</value>
+  </data>
+  <data name="lblItemMediumThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemMediumThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>项目中的缩略图图像宽度：</value>
+  </data>
+  <data name="lblItemMediumThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemSmallThumbnailImageHeightResource1.Text" xml:space="preserve">
+    <value>项目小缩略图图像高度：</value>
+  </data>
+  <data name="lblItemSmallThumbnailImageHeightResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblItemSmallThumbnailImageWidthResource1.Text" xml:space="preserve">
+    <value>项目小缩略图图像宽度：</value>
+  </data>
+  <data name="lblItemSmallThumbnailImageWidthResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLowStockItemRssResource1.Text" xml:space="preserve">
+    <value>低库存编号：</value>
+  </data>
+  <data name="lblLowStockItemRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMaxDownloadFileSizeResource1.Text" xml:space="preserve">
+    <value>最大下载文件大小：</value>
+  </data>
+  <data name="lblMaxDownloadFileSizeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMinCartQuantityResource1.Text" xml:space="preserve">
+    <value>最小车数量：</value>
+  </data>
+  <data name="lblMinCartQuantityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblModuleCollapsibleResource1.Text" xml:space="preserve">
+    <value>模块可折叠：</value>
+  </data>
+  <data name="lblModuleCollapsibleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNewCustomerRssResource1.Text" xml:space="preserve">
+    <value>新客户：</value>
+  </data>
+  <data name="lblNewCustomerRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNewItemReviewResource1.Text" xml:space="preserve">
+    <value>新商品评价：</value>
+  </data>
+  <data name="lblNewItemReviewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNewOrderRssResource1.Text" xml:space="preserve">
+    <value>新秩序：</value>
+  </data>
+  <data name="lblNewOrderRssResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNewTagResource1.Text" xml:space="preserve">
+    <value>新项目标签：</value>
+  </data>
+  <data name="lblNewTagResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOutOfStockQuantityResource1.Text" xml:space="preserve">
+    <value>缺货产品数量：</value>
+  </data>
+  <data name="lblOutOfStockQuantityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedCountResource1.Text" xml:space="preserve">
+    <value>RSS订阅计数</value>
+  </data>
+  <data name="lblRssFeedCountResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedHeadingResource1.Text" xml:space="preserve">
+    <value>的RSSFeed设置</value>
+  </data>
+  <data name="lblRssFeedHeadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedStatusResource1.Text" xml:space="preserve">
+    <value>RSS Feed状态</value>
+  </data>
+  <data name="lblRssFeedStatusResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedTabResource1.Text" xml:space="preserve">
+    <value>RSS订阅</value>
+  </data>
+  <data name="lblRssFeedTabResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedTitleResource1.Text" xml:space="preserve">
+    <value>RSS源：</value>
+  </data>
+  <data name="lblRssFeedTitleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRssFeedURLResource1.Text" xml:space="preserve">
+    <value>的RSSFeed网址：</value>
+  </data>
+  <data name="lblShippingDetailPageURLResource1.Text" xml:space="preserve">
+    <value>送货详细信息页面的URL：</value>
+  </data>
+  <data name="lblShippingDetailPageURLResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblShowAddToCartButtonResource1.Text" xml:space="preserve">
+    <value>显示添加到购物车按钮：</value>
+  </data>
+  <data name="lblShowAddToCartButtonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSortByOptionsDefaultResource1.Text" xml:space="preserve">
+    <value>排序选项默认：</value>
+  </data>
+  <data name="lblSortByOptionsDefaultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSortByOptionsResource1.Text" xml:space="preserve">
+    <value>排序选项：</value>
+  </data>
+  <data name="lblSortByOptionsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleUserCartsResource1.Text" xml:space="preserve">
+    <value>用户/车设置</value>
+  </data>
+  <data name="lblTitleUserCartsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTrackPackageUrlResource1.Text" xml:space="preserve">
+    <value>跟踪包装网页网址：</value>
+  </data>
+  <data name="lblTrackPackageUrlResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblViewAsOptionsDefaultResource1.Text" xml:space="preserve">
+    <value>查看选项默认：</value>
+  </data>
+  <data name="lblViewAsOptionsDefaultResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblViewAsOptionsResource1.Text" xml:space="preserve">
+    <value>查看选项：</value>
+  </data>
+  <data name="lblViewAsOptionsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbTabTitle4Resource1.Text" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="lbTabTitle4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbTabTitle9Resource2.Text" xml:space="preserve">
+    <value>航运</value>
+  </data>
+  <data name="lbTabTitle9Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>最大的购物车数量：</value>
+  </data>
+</root>

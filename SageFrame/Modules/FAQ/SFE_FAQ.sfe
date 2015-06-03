@@ -1,0 +1,56 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_FAQ</name>
+      <friendlyname>FAQ</friendlyname>
+      <foldername>FAQ</foldername>
+      <modulename>FAQ</modulename>
+      <description>This module is used for FAQ.</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.FAQ.EventController, SageFrame.Modules.FAQ</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>BrainDigit IT Soultion Pvt. Ltd.</owner>
+      <organization>BrainDigit IT Soultion Pvt. Ltd.</organization>
+      <url>www.braindigit.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This FAQ Application For Sageframe</releasenotes>
+      <license>This is test license copy for FAQ Application</license>
+      <modules>
+        <module>
+          <friendlyname>FAQ</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			  <key>FAQView</key>
+              <title>FAQ View</title>
+              <src>Modules/FAQ/FAQView.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+			<control>
+			  <key>FAQEdit</key>
+              <title>FAQ Edit</title>
+              <src>Modules/FAQ/FAQEdit.ascx</src>
+              <type>Edit</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>   
+<file>
+          <name>SageFrame.FAQ.dll</name>
+        </file>        
+             
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file> 
+      </files>
+    </folder>
+  </folders>
+</sageframe>

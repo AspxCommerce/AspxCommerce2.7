@@ -1,0 +1,76 @@
+div.cssClassCarousel {
+	float: left;
+	height: 20px;
+	margin: 0 10px;
+	overflow: hidden;
+	padding: 5px 0;
+}
+div.cssClassCarousel ul {
+	position:relative;
+	left:-5px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow:hidden;
+}
+div.cssClassCarousel ul li {
+	float: left;
+	list-style:none;
+	margin:0 2px;
+	padding:2px;
+}
+div.cssClassCarousel ul li img {
+	cursor:pointer;
+	cursor: hand;
+	border:0px;
+	margin:0;
+	padding:0;
+}
+div.cssClassLeftScroll, div.cssClassRightScroll {
+	float:left;
+	height:22px;
+	padding-top:9px;
+}
+div.cssClassLeftScroll img, div.cssClassRightScroll img {
+	cursor: pointer;
+	cursor: hand;
+}
+.CssClassLanguageWrapper {
+	overflow:hidden;
+	display:inline-block;
+	border:none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.CssClassLanguageWrapperInside {
+	overflow:hidden;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width:auto;
+}
+div.cssClassCarousel ul li.cssClassSelectedFlag {
+	filter: alpha(opacity=100); /* internet explorer */
+	-khtml-opacity: 1;      /* khtml, old safari */
+	-moz-opacity: 1;       /* mozilla, netscape */
+	opacity: 1;           /* fx, safari, opera */
+}
+div.cssClassCarousel ul li a {
+	float:left;
+	margin:0;
+	padding:0;
+}
+#carousel_inner, #left_scroll, #right_scroll {
+	display:inline-block;
+}
+#left_scroll, #right_scroll {
+	cursor:pointer;
+}
+#right_scroll {
+	margin-left:-5px;
+}
+#carousel_ul li {
+	float:left;
+	margin:0 5px
+}

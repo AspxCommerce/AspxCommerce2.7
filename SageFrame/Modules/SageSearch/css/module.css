@@ -1,0 +1,38 @@
+.sfSearchwrapper ul li { list-style: none; float: left;}
+.sfSearchwrapper ul li:first-child { width:80%;}
+.sfSearchwrapper ul li:last-child { width:20%;}
+.sfSearchwrapper ul li .sfBtn { margin-left:-1px; padding:7px 12px;}
+.sfSearchwrapper ul li input[type="image"].sfBtn { padding: 8px 12px;}
+.sfSearchwrapper ul li a.sfBtn { border:none; background:none;}
+.sfSearchwrapper ul li span { display: none;}
+
+
+.sfSearchlist li a { font-weight: bold;}
+.sfSearchlist li { padding:20px; border-bottom: 1px solid rgba(0,0,0,0.15); list-style: none;}
+
+
+
+.pagination { background:#e6e6e6; border:1px solid #bbb; border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; width:auto; display:inline-block;  }
+.pagination a {
+	text-decoration:none;
+	color:#15B;
+}
+.pagination a, .pagination span {
+	float:left;
+	width:20px;
+	height:20px; line-height:20px;
+	color:#000;
+	text-align:center;
+	border-right:1px solid #bbb;
+}
+.pagination a i.icon-arrow-slim-e:before, .pagination span i.icon-arrow-slim-e:before,.pagination a i.icon-arrow-slim-w:before, .pagination span i.icon-arrow-slim-w:before { line-height:20px !important;} 
+.pagination a:last-child, .pagination span:last-child { border-right:none;}
+
+.pagination a.current, .pagination span.current,  .pagination span.click {
+	background:#fff;
+	color:#000; font-weight:bold;
+}
+.pagination .current.prev, div.pagination .current.next {
+	background:#d7d7d7;
+	color:#7d7d7d;
+}

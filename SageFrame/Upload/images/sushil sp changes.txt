@@ -1,0 +1,415 @@
+
+CREATE TABLE [dbo].[PagePreview](
+	[PreviewID] [int] IDENTITY(1,1) NOT NULL,
+	[PageID] [int] NULL,
+	[PreviewCode] [nvarchar](256) NULL,
+ CONSTRAINT [PK_PagePreview] PRIMARY KEY CLUSTERED 
+(
+	[PreviewID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[usp_GetPages]    Script Date: 25/10/2013 12:56:19 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- exec [dbo].[usp_GetPages] 1,0
+ALTER PROC [dbo].[usp_GetPages] @PortalID INT, 
+                                @IsAdmin  BIT=NULL 
+AS 
+  --BEGIN 
+  --    IF @IsAdmin = 0 
+        BEGIN 
+            SELECT *,pp.PreviewCode,
+                   Isnull((SELECT MAX([PageOrder]) 
+                           FROM   [dbo].[Pages] 
+                           WHERE  [Level] = p.[Level] 
+                                  AND parentid = p.parentid 
+                                  AND portalid = @PortalID), p.pageorder) AS 
+                   [MaxPageOrder] 
+            FROM   pages p 
+                   INNER JOIN pagemenu pm 
+                     ON p.pageid = pm.pageid
+					 
+					inner join PagePreview pp 
+					 on pp.PageID=p.PageID 
+            WHERE  pm.portalid = @PortalID 
+                   AND pm.isadmin = @IsAdmin 
+            ORDER  BY --p.pageid, 
+                      p.pageorder 
+        END 
+
+-------------------------------------------------------------------------------------------------
+GO
+/****** Object:  StoredProcedure [dbo].[usp_MasterPageGetPageModulesAdmin]    Script Date: 25/10/2013 12:55:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+--select * from portal
+--[dbo].[usp_MasterPageGetPageModules] 1,'Admin',1,'superuser'
+ALTER PROCEDURE [dbo].[usp_MasterPageGetPageModulesAdmin]
+ @ControlType [int],
+ @PageSEOName [nvarchar](1000),
+ @PortalID [int],
+ @UserName [nvarchar](256)
+WITH EXECUTE AS CALLER
+AS
+BEGIN
+SET NOCOUNT ON;
+-----------------------------------------------------------
+--Declare All Variables Here
+-----------------------------------------------------------
+DECLARE @IsPageAvailable bit,@IsPageAccessible bit,@PageID int
+-----------------------------------------------------------
+--Get PageID From PageSEOName
+-----------------------------------------------------------
+SELECT @PageID=PageID FROM Pages WHERE SEOName=@PageSEOName AND (PortalID=@PortalID OR PortalID=-1)
+-----------------------------------------------------------
+--Check If the User Has Access To the Page
+-----------------------------------------------------------
+IF EXISTS(SELECT PageID FROM Pages where SEOName=@PageSEOName AND PortalID=@PortalID OR PortalID=-1)
+BEGIN
+SET @IsPageAvailable=1
+END
+IF EXISTS(SELECT [dbo].[Pages].* 
+FROM   [dbo].[Pages] 
+       INNER JOIN [dbo].[PagePermission] 
+         ON [dbo].[PagePermission].pageid = [dbo].[Pages].pageid 
+WHERE  ( [dbo].[PagePermission].[RoleID] IN (SELECT 
+         [dbo].[aspnet_UsersInRoles].roleid 
+                                             FROM   [dbo].[aspnet_UsersInRoles] 
+         INNER JOIN [dbo].[aspnet_Users] 
+           ON 
+                  [dbo].[aspnet_Users].userid = 
+                  [dbo].[aspnet_UsersInRoles].userid 
+                                             WHERE 
+                  [dbo].[aspnet_Users].username = @UserName 
+                                             UNION ALL 
+                                             SELECT [RoleId] 
+                                             FROM   dbo.aspnet_roles 
+                                             WHERE 
+         loweredrolename = 'anonymous user') 
+          OR [dbo].[PagePermission].username = @UserName ) 
+       AND [dbo].[Pages].seoname = @PageSEOName 
+       AND ( [dbo].[Pages].[IsDeleted] = 0 
+              OR [dbo].[Pages].[IsDeleted] IS NULL ) 
+       AND ( [dbo].[Pages].portalid = @PortalID 
+              OR [dbo].[Pages].portalid = -1 ) 
+       AND ( [dbo].[PagePermission].[IsDeleted] = 0 
+              OR [dbo].[PagePermission].[IsDeleted] IS NULL ) )
+BEGIN
+SET @IsPageAccessible=1
+END
+-----------------------------------------------------------
+--Create the PageDetails Table
+-----------------------------------------------------------
+DECLARE @Title nvarchar(250),@RefreshInterval nvarchar(250),@Description nvarchar(500),@KeyWords nvarchar(500)
+SELECT @Title=p.Title,@RefreshInterval=CAST(p.RefreshInterval AS nvarchar),@Description=p.Description,@KeyWords=p.KeyWords 
+FROM   pages p
+WHERE  p.seoname = @PageSEOName
+       AND (p.portalid = @PortalID  OR p.PortalID=-1)
+
+-----------------------------------------------------------
+--Get The List Of Page Modules By PageSEOName and Portal ID
+-----------------------------------------------------------
+SELECT DISTINCT @IsPageAvailable AS IsPageAvailable,@IsPageAccessible AS IsPageAccessible,v.PageID,v.usermoduleid,v.panename, 
+       v.moduleorder, 
+       v.ishandheld, 
+       v.suffixclass, 
+       v.showheadertext, 
+       v.headertext ,
+	   v.ControlSrc,
+	   v.SupportsPartialRendering,
+	   --RoleID,
+	   v.ControlsCount,
+v.PortalID,
+	   (select
+	   COUNT(*) as IsEdit 
+	FROM   usermodulepermission ump 
+       INNER JOIN moduledefpermission mdp 
+         ON ump.moduledefpermissionid = mdp.moduledefpermissionid 
+            AND ump.usermoduleid = v.UserModuleID
+            AND ((ump.roleid IN (SELECT roleid 
+                               FROM   dbo.aspnet_usersinroles 
+                                      INNER JOIN dbo.aspnet_users 
+                                        ON dbo.aspnet_usersinroles.userid = 
+                                           dbo.aspnet_users.userid 
+                               WHERE  dbo.aspnet_users.username = @UserName)) OR ump.username=@UserName)
+            AND mdp.permissionid = 2  and ump.PortalID=@PortalID ) AS IsEdit,
+		@Title AS Title,
+		@RefreshInterval AS RefreshInterval,
+		@Description AS [Description],
+		@KeyWords AS KeyWords,
+	    v.usermoduletitle as UserModuleTitle	      
+	FROM   vw_PageUserModules v 
+	WHERE  ((v.[RoleID] IN (SELECT 
+         [dbo].[aspnet_UsersInRoles].roleid 
+                                             FROM   [dbo].[aspnet_UsersInRoles] 
+         INNER JOIN [dbo].[aspnet_Users] 
+           ON 
+                  [dbo].[aspnet_Users].userid = 
+                  [dbo].[aspnet_UsersInRoles].userid 
+                                             WHERE 
+                  [dbo].[aspnet_Users].username = @UserName 
+                                             UNION ALL 
+                                             SELECT [RoleId] 
+                                             FROM   dbo.aspnet_roles 
+                                             WHERE 
+         loweredrolename = 'anonymous user') 
+          OR v.username = @UserName))	
+      
+AND  ((v.PageID = @PageID) OR(v.AllPages=1)
+ or( @PageID IN (SELECT Rtrim(Ltrim(items)) 
+            FROM   Split(v.showinpages, ',') WHERE (v.isdeleted=0 or v.IsDeleted is null )))
+               )
+       AND (v.portalid = 1 or v.portalid=-1)
+
+and v.ControlType=1
+and (v.IsDeleted=0 or v.IsDeleted is null)
+and v.IsActive=1 
+order by v.moduleorder asc
+
+
+END
+
+-----------------------------------------------------------------------------------------------
+
+GO
+/****** Object:  StoredProcedure [dbo].[usp_MasterPageGetPageModules_Superuser]    Script Date: 25/10/2013 12:55:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+--[dbo].[usp_MasterPageGetPageModules_Superuser]  1,'home',1,'superuser','en-US'
+ALTER PROCEDURE [dbo].[usp_MasterPageGetPageModules_Superuser] 
+ @CONtrolType [INT],
+ @PageSEOName [NVARCHAR](1000),
+ @PortalID [INT],
+ @UserName [NVARCHAR](256),
+ @CultureCode [NVARCHAR](100)
+WITH EXECUTE AS CALLER
+AS
+BEGIN
+SET NOCOUNT ON;
+DECLARE @temprole TABLE
+(
+	roleid NVARCHAR(250),
+	username NVARCHAR(50)
+)
+INSERT INTO @temprole 
+
+SELECT  [dbo].[aspnet_UsersInRoles].roleid, [dbo].[aspnet_Users].username
+FROM         [dbo].[aspnet_UsersInRoles] INNER JOIN
+			 [dbo].[aspnet_Users] ON [dbo].[aspnet_Users].userid = [dbo].[aspnet_UsersInRoles].userid
+WHERE     [dbo].[aspnet_Users].LoweredUserName = 'superuser'
+	
+-----------------------------------------------------------
+--Declare All Variables Here
+-----------------------------------------------------------
+DECLARE @PageID INT
+-----------------------------------------------------------
+--Get PageID From PageSEOName
+-----------------------------------------------------------
+SELECT @PageID=PageID FROM Pages WHERE SEOName=@PageSEOName AND PortalID=@PortalID and IsActive = 1 and Isdeleted = 0
+-----------------------------------------------------------
+--Check If the User Has Access To the Page
+-----------------------------------------------------------
+IF EXISTS(SELECT PageID FROM Pages WHERE SEOName=@PageSEOName AND PortalID=@PortalID)
+
+  IF(Exists(
+        select p.PageID
+				FROM dbo.Pages p
+				INNER join dbo.PagePermission pm on pm.PageID=p.PageID
+				inner join dbo.aspnet_UsersInRoles uir on uir.RoleId=pm.RoleID
+				Inner join dbo.aspnet_Users u on u.UserId=uir.UserId
+				where pm.RoleID='cd3ca2e2-7120-44ad-a520-394e76aac552' 
+				and  u.UserName='superuser'
+				 AND p.PageID = @PageID
+                       AND ( p.[isdeleted] = 0 
+                              OR p.[isdeleted] IS NULL ) 
+                       AND ( p.portalid = @PortalID 
+                              OR p.portalid = -1 ) 
+                       AND ( pm.[isdeleted] = 0 
+                              OR pm.[isdeleted] IS NULL )))
+
+-----------------------------------------------------------
+--Create the PageDetails Table
+-----------------------------------------------------------
+DECLARE @Title NVARCHAR(250),@RefreshINTerval NVARCHAR(250),@DescriptiON NVARCHAR(500),@KeyWords NVARCHAR(500)
+SELECT @Title=p.Title,@RefreshINTerval=CAST(p.RefreshINTerval AS NVARCHAR),@DescriptiON=p.DescriptiON,@KeyWords=p.KeyWords 
+FROM   pages p
+WHERE  p.PageID = @PageID
+       AND p.portalid = @PortalID 
+-----------------------------------------------------------
+--Get The List Of Page Modules BY PageSEOName AND Portal ID
+-----------------------------------------------------------
+SELECT DISTINCT 1 AS IsPageAvailable,1 AS IsPageAccessible,v.PageID,v.usermoduleid,v.panename, 
+       v.moduleORDER, 
+       v.ishANDheld, 
+       v.suffixclass, 
+       v.showheadertext, 
+       ISNULL(lmt.LocalModuleTitle,v.HeaderText) as headertext, 
+	   v.CONtrolSrc,
+	   v.SupportsPartialRENDering,
+	   --RoleID,
+	   v.CONtrolsCount,
+	   v.PortalID,
+	   (SELECT
+	   COUNT(ump.UserModulePermissionID) 
+	FROM   usermodulepermissiON ump 
+       INNER JOIN moduledefpermissiON mdp 
+         ON ump.moduledefpermissiONid = mdp.moduledefpermissiONid 
+            AND ump.usermoduleid = v.UserModuleID
+            AND ((ump.roleid IN (SELECT roleid 
+                            From @temprole where username=@UserName)
+                               ) OR ump.username=@UserName)
+           AND mdp.permissiONid = 2  AND ump.PortalID=@PortalID ) AS IsEdit,
+		@Title AS Title,
+		@RefreshINTerval AS RefreshINTerval,
+		@DescriptiON AS [DescriptiON],
+		@KeyWords AS KeyWords,
+	    v.usermoduletitle as UserModuleTitle	      
+	FROM   vw_PageUserModules v 
+	left join dbo.LocalModuleTitle lmt on lmt.UserModuleID=v.UserModuleID and  lmt.CultureCode=@CultureCode
+	 WHERE  ( v.username = @UserName or
+		 v.RoleID='cd3ca2e2-7120-44ad-a520-394e76aac552' ) 
+             AND ( ( v.pageid = @PageID ) 
+                    OR ( v.allpages = 1 ) 
+                    OR ( @PageID = (SELECT Rtrim(Ltrim(items)) 
+                                    FROM   Split(v.showinpages, ',') 
+                                    WHERE  items = @PageID 
+                                          
+                                                  ) ) ) 
+             AND v.portalid = @PortalID 
+             AND v.controltype = 1 
+             AND v.isactive = 1 
+      ORDER  BY v.moduleorder ASC 
+
+
+END
+------------------------------------------------------------------------------------------
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[usp_MasterPageGetPageModules_Superuser]    Script Date: 25/10/2013 12:55:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+--[dbo].[usp_MasterPageGetPageModules_Superuser]  1,'home',1,'superuser','en-US'
+ALTER PROCEDURE [dbo].[usp_MasterPageGetPageModules_Superuser] 
+ @CONtrolType [INT],
+ @PageSEOName [NVARCHAR](1000),
+ @PortalID [INT],
+ @UserName [NVARCHAR](256),
+ @CultureCode [NVARCHAR](100)
+WITH EXECUTE AS CALLER
+AS
+BEGIN
+SET NOCOUNT ON;
+DECLARE @temprole TABLE
+(
+	roleid NVARCHAR(250),
+	username NVARCHAR(50)
+)
+INSERT INTO @temprole 
+
+SELECT  [dbo].[aspnet_UsersInRoles].roleid, [dbo].[aspnet_Users].username
+FROM         [dbo].[aspnet_UsersInRoles] INNER JOIN
+			 [dbo].[aspnet_Users] ON [dbo].[aspnet_Users].userid = [dbo].[aspnet_UsersInRoles].userid
+WHERE     [dbo].[aspnet_Users].LoweredUserName = 'superuser'
+	
+-----------------------------------------------------------
+--Declare All Variables Here
+-----------------------------------------------------------
+DECLARE @PageID INT
+-----------------------------------------------------------
+--Get PageID From PageSEOName
+-----------------------------------------------------------
+SELECT @PageID=PageID FROM Pages WHERE SEOName=@PageSEOName AND PortalID=@PortalID and IsActive = 1 and Isdeleted = 0
+-----------------------------------------------------------
+--Check If the User Has Access To the Page
+-----------------------------------------------------------
+IF EXISTS(SELECT PageID FROM Pages WHERE SEOName=@PageSEOName AND PortalID=@PortalID)
+
+  IF(Exists(
+        select p.PageID
+				FROM dbo.Pages p
+				INNER join dbo.PagePermission pm on pm.PageID=p.PageID
+				inner join dbo.aspnet_UsersInRoles uir on uir.RoleId=pm.RoleID
+				Inner join dbo.aspnet_Users u on u.UserId=uir.UserId
+				where pm.RoleID='cd3ca2e2-7120-44ad-a520-394e76aac552' 
+				and  u.UserName='superuser'
+				 AND p.PageID = @PageID
+                       AND ( p.[isdeleted] = 0 
+                              OR p.[isdeleted] IS NULL ) 
+                       AND ( p.portalid = @PortalID 
+                              OR p.portalid = -1 ) 
+                       AND ( pm.[isdeleted] = 0 
+                              OR pm.[isdeleted] IS NULL )))
+
+-----------------------------------------------------------
+--Create the PageDetails Table
+-----------------------------------------------------------
+DECLARE @Title NVARCHAR(250),@RefreshINTerval NVARCHAR(250),@DescriptiON NVARCHAR(500),@KeyWords NVARCHAR(500)
+SELECT @Title=p.Title,@RefreshINTerval=CAST(p.RefreshINTerval AS NVARCHAR),@DescriptiON=p.DescriptiON,@KeyWords=p.KeyWords 
+FROM   pages p
+WHERE  p.PageID = @PageID
+       AND p.portalid = @PortalID 
+-----------------------------------------------------------
+--Get The List Of Page Modules BY PageSEOName AND Portal ID
+-----------------------------------------------------------
+SELECT DISTINCT 1 AS IsPageAvailable,1 AS IsPageAccessible,v.PageID,v.usermoduleid,v.panename, 
+       v.moduleORDER, 
+       v.ishANDheld, 
+       v.suffixclass, 
+       v.showheadertext, 
+       ISNULL(lmt.LocalModuleTitle,v.HeaderText) as headertext, 
+	   v.CONtrolSrc,
+	   v.SupportsPartialRENDering,
+	   --RoleID,
+	   v.CONtrolsCount,
+	   v.PortalID,
+	   (SELECT
+	   COUNT(ump.UserModulePermissionID) 
+	FROM   usermodulepermissiON ump 
+       INNER JOIN moduledefpermissiON mdp 
+         ON ump.moduledefpermissiONid = mdp.moduledefpermissiONid 
+            AND ump.usermoduleid = v.UserModuleID
+            AND ((ump.roleid IN (SELECT roleid 
+                            From @temprole where username=@UserName)
+                               ) OR ump.username=@UserName)
+           AND mdp.permissiONid = 2  AND ump.PortalID=@PortalID ) AS IsEdit,
+		@Title AS Title,
+		@RefreshINTerval AS RefreshINTerval,
+		@DescriptiON AS [DescriptiON],
+		@KeyWords AS KeyWords,
+	    v.usermoduletitle as UserModuleTitle	      
+	FROM   vw_PageUserModules v 
+	left join dbo.LocalModuleTitle lmt on lmt.UserModuleID=v.UserModuleID and  lmt.CultureCode=@CultureCode
+	 WHERE  ( v.username = @UserName or
+		 v.RoleID='cd3ca2e2-7120-44ad-a520-394e76aac552' ) 
+             AND ( ( v.pageid = @PageID ) 
+                    OR ( v.allpages = 1 ) 
+                    OR ( @PageID = (SELECT Rtrim(Ltrim(items)) 
+                                    FROM   Split(v.showinpages, ',') 
+                                    WHERE  items = @PageID 
+                                          
+                                                  ) ) ) 
+             AND v.portalid = @PortalID 
+             AND v.controltype = 1 
+             AND v.isactive = 1 
+      ORDER  BY v.moduleorder ASC 
+
+
+END
+

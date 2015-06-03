@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><layout name="layout_all">
+  <section name="sfHeader">
+    <placeholder name="topHeaderLink" width="80">toplinks,login</placeholder>
+    <placeholder name="headertop" width="25">aspxlogo,aspxshoppingbag</placeholder>
+    <placeholder name="catmenu">aspxmenubar</placeholder>
+    <placeholder name="banner">sagebanner</placeholder>
+  </section>
+  <section name="sfContent">
+    <placeholder name="middlemaincurrent">latestitems</placeholder>
+  </section>
+  <section name="sfContentMiddle">
+    <placeholder name="specialitem">specialitem</placeholder>
+  </section>
+  <section name="sfContentBottom">
+    <placeholder name="brand">brands</placeholder>
+    <placeholder name="compare">compareitem</placeholder>
+    <placeholder name="ads">aspxfrontmodules</placeholder>
+  </section>
+  <section name="sfFooter">
+    <placeholder name="footertop" width="33,33,33">aspxaboutus,aspxservice,aspxhelp</placeholder>
+    <placeholder name="footermiddle" width="33,33,33">aspxsociallink,newsletter,aspxcopyright</placeholder>
+  </section>
+  <wrappers>
+    <wrap name="footer" type="placeholder" class="sfFooterbtn">footertop,footermiddle</wrap>
+    <wrap name="topheader" type="placeholder" class="topheader">sfHeader,sfContent</wrap>
+  </wrappers>
+</layout>

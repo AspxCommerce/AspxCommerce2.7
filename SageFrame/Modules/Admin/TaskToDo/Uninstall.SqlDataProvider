@@ -1,0 +1,20 @@
+/****** Object:  StoredProcedure [dbo].[usp_TaskToDo_DeleteTask]    Script Date: 02/18/2014 15:23:22 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_TaskToDo_DeleteTask]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_TaskToDo_DeleteTask]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_TaskToDo_GetTask]    Script Date: 02/18/2014 15:23:22 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_TaskToDo_GetTask]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_TaskToDo_GetTask]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_TaskToDo_GetTaskContent]    Script Date: 02/18/2014 15:23:22 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_TaskToDo_GetTaskContent]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_TaskToDo_GetTaskContent]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_TaskToDo_InsertTask]    Script Date: 02/18/2014 15:23:22 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_TaskToDo_InsertTask]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_TaskToDo_InsertTask]
+GO
+/****** Object:  Table [dbo].[TaskToDo]    Script Date: 02/18/2014 15:23:21 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[TaskToDo]') AND type in (N'U'))
+DROP TABLE [dbo].[TaskToDo]
+GO

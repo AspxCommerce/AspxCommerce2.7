@@ -1,0 +1,109 @@
+﻿.divscroll
+{
+    height:252px;    
+    overflow: auto;
+	margin-top:-29px;
+	
+}
+#divSearch { margin-top:0px;}
+#dvaddNew, #divSearch{background-color:#fff; border:1px solid #dadada; padding:20px; height:254px;
+border-radius:6px; -webkit-border-radius:6px; -ms-border-radius:6px; -o-border-radius:6px;}
+#dvaddNew h4 { margin-bottom:10px; color:#515357; font-weight:bold;}
+#dvaddNew div { margin-bottom:10px;}
+#dvaddNew div label { float:left; width:80px;}
+#dvaddNew textarea { height:100px;}
+#dvaddNew div.sfButtonwrapper { margin-left:80px;}
+#dvaddNew div.sfButtonwrapper label { width:auto;}
+.sfInputbox
+{
+    width: 40%;
+    height: 18px;
+}
+
+#ErrorMsg
+{
+    color: #FF0000;
+}
+.scrollTodayTask
+{
+    height:200px;
+    width: 100%;
+    overflow: auto;
+}
+.sfTaskToDoWrapper { position:relative;}
+.sfTaskToDoWrapper h2 { padding-right:50px;}
+
+
+.tasktodo { border-bottom:1px solid #e8e8e8; padding:10px 18px; position:relative;}
+.tasktodo.active { background:#E4EFFA;}
+
+.EditTaskWrapper textarea, .EditTaskWrapper input{ float:left; width:auto;}
+.EditTaskWrapper textarea { height:56px; margin-right:5px;}
+.EditTaskWrapper input#EditDate { width:115px;margin-right:5px;}
+
+
+.btnDelete  { position:absolute; top:15px; right:15px; color:#8C8C8C; font-size:14px; cursor:pointer;}
+.sftaskNote { display:block; position:inherit; margin-right:15px;}
+.sftaskNote:before { position:absolute; top:15px; right:40px; cursor:pointer; color:#8C8C8C; font-size:14px;
+content: "\e616";
+font-family: "sageframe" !important;
+font-style: normal !important;
+font-weight: normal !important;
+font-variant: normal !important;
+text-transform: none !important;
+speak: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.sftaskNote:hover:before { color:#1a1a1a;}
+.btnDelete:hover { color:#1a1a1a;}
+
+.sfSearch, #AddTaskTab
+{
+    position: absolute;
+    top: -2px;
+    right: 0px;
+}
+.sfSearch { right:73px; }
+.sfSearch input#txtSearchDate
+{
+    margin:0 5px 5px 0;
+	color:#515357;
+	padding:8px 6px;
+	display:inline-block;
+	background:#fff;
+	border:1px solid #bbbbbb;
+	border-bottom:2px solid #cbcbcb;
+	font-weight:bold;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+}	
+.sfSearch span
+{
+    cursor: pointer;
+}
+.sfSearch span.icon-search
+{
+	cursor:pointer;
+    position: inherit;
+    color:#F27337;
+    top: 8px;
+    right:14px;
+    font-size: 18px;
+}
+.sfSearch span.icon-search:hover{ color:#C43E00;}
+
+.sftaskNote {}
+.taskDate { background:#e9e9e9; padding:2px 6px; font-size:11px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;}
+
+
+

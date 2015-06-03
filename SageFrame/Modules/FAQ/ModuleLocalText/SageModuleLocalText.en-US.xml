@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FAQ>
+  <FAQSaveSuccessfully>FAQ Save Successfully. </FAQSaveSuccessfully>
+  <FAQSettingSaveSuccessfully>Setting Save Successfully.</FAQSettingSaveSuccessfully>
+  <NoAnswer>No Answer For This Question. Please Give Answer And Active.</NoAnswer>
+  <DeleteSuccessfully>FAQ Delete Successfully.</DeleteSuccessfully>
+  <UpdateSuccessfully>Category Saved Successfully.</UpdateSuccessfully>
+  <CategoryDeletedSuccessfully>Category Deleted Successfully.</CategoryDeletedSuccessfully>
+</FAQ>
+

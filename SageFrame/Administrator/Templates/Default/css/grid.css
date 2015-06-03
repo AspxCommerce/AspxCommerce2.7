@@ -1,0 +1,439 @@
+/* 100 Fluid Grid System */
+.sfInnerwrapper [class*="sfCol_"]
+{
+    float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sfInnerwrapper .sfMoreblocks, .sfInnerwrapper .sfMoreblocks .sfColswrap
+{
+    margin: 0 -15px;
+}
+
+.sfInnerwrapper .sfMoreblocks:before, .sfInnerwrapper .sfMoreblocks:after
+{
+    display: table;
+    content: " ";
+}
+.sfInnerwrapper .sfMoreblocks:after
+{
+    clear: both;
+}
+
+/* Equal Width Calibration */
+.sfFixed.sfCol_33
+{
+    width: 33.33%;
+}
+.sfFixed.sfCol_16
+{
+    width: 16.66%;
+}
+
+/* width from 1 to 100% */
+.sfCol_1
+{
+    width: 1%;
+}
+.sfCol_2
+{
+    width: 2%;
+}
+.sfCol_3
+{
+    width: 3%;
+}
+.sfCol_4
+{
+    width: 4%;
+}
+.sfCol_5
+{
+    width: 5%;
+}
+.sfCol_6
+{
+    width: 6%;
+}
+.sfCol_7
+{
+    width: 7%;
+}
+.sfCol_8
+{
+    width: 8%;
+}
+.sfCol_9
+{
+    width: 9%;
+}
+.sfCol_10
+{
+    width: 10%;
+}
+.sfCol_11
+{
+    width: 11%;
+}
+.sfCol_12
+{
+    width: 12%;
+}
+.sfCol_13
+{
+    width: 13%;
+}
+.sfCol_14
+{
+    width: 14%;
+}
+.sfCol_15
+{
+    width: 15%;
+}
+.sfCol_16
+{
+    width: 16%;
+}
+.sfCol_17
+{
+    width: 17%;
+}
+.sfCol_18
+{
+    width: 18%;
+}
+.sfCol_19
+{
+    width: 19%;
+}
+.sfCol_20
+{
+    width: 20%;
+}
+.sfCol_21
+{
+    width: 21%;
+}
+.sfCol_22
+{
+    width: 22%;
+}
+.sfCol_23
+{
+    width: 23%;
+}
+.sfCol_24
+{
+    width: 24%;
+}
+.sfCol_25
+{
+    width: 25%;
+}
+.sfCol_26
+{
+    width: 26%;
+}
+.sfCol_27
+{
+    width: 27%;
+}
+.sfCol_28
+{
+    width: 28%;
+}
+.sfCol_29
+{
+    width: 29%;
+}
+.sfCol_30
+{
+    width: 30%;
+}
+.sfCol_31
+{
+    width: 31%;
+}
+.sfCol_32
+{
+    width: 32%;
+}
+.sfCol_33
+{
+    width: 33%;
+}
+.sfCol_34
+{
+    width: 34%;
+}
+.sfCol_35
+{
+    width: 35%;
+}
+.sfCol_36
+{
+    width: 36%;
+}
+.sfCol_37
+{
+    width: 37%;
+}
+.sfCol_38
+{
+    width: 38%;
+}
+.sfCol_39
+{
+    width: 39%;
+}
+.sfCol_40
+{
+    width: 40%;
+}
+.sfCol_41
+{
+    width: 41%;
+}
+.sfCol_42
+{
+    width: 42%;
+}
+.sfCol_43
+{
+    width: 43%;
+}
+.sfCol_44
+{
+    width: 44%;
+}
+.sfCol_45
+{
+    width: 45%;
+}
+.sfCol_46
+{
+    width: 46%;
+}
+.sfCol_47
+{
+    width: 47%;
+}
+.sfCol_48
+{
+    width: 48%;
+}
+.sfCol_49
+{
+    width: 49%;
+}
+.sfCol_50
+{
+    width: 50%;
+}
+.sfCol_51
+{
+    width: 51%;
+}
+.sfCol_52
+{
+    width: 52%;
+}
+.sfCol_53
+{
+    width: 53%;
+}
+.sfCol_54
+{
+    width: 54%;
+}
+.sfCol_55
+{
+    width: 55%;
+}
+.sfCol_56
+{
+    width: 56%;
+}
+.sfCol_57
+{
+    width: 57%;
+}
+.sfCol_58
+{
+    width: 58%;
+}
+.sfCol_59
+{
+    width: 59%;
+}
+.sfCol_60
+{
+    width: 60%;
+}
+.sfCol_61
+{
+    width: 61%;
+}
+.sfCol_62
+{
+    width: 62%;
+}
+.sfCol_63
+{
+    width: 63%;
+}
+.sfCol_64
+{
+    width: 64%;
+}
+.sfCol_65
+{
+    width: 65%;
+}
+.sfCol_66
+{
+    width: 66%;
+}
+.sfCol_67
+{
+    width: 67%;
+}
+.sfCol_68
+{
+    width: 68%;
+}
+.sfCol_69
+{
+    width: 69%;
+}
+.sfCol_70
+{
+    width: 70%;
+}
+.sfCol_71
+{
+    width: 71%;
+}
+.sfCol_72
+{
+    width: 72%;
+}
+.sfCol_73
+{
+    width: 73%;
+}
+.sfCol_74
+{
+    width: 74%;
+}
+.sfCol_75
+{
+    width: 75%;
+}
+.sfCol_76
+{
+    width: 76%;
+}
+.sfCol_77
+{
+    width: 77%;
+}
+.sfCol_78
+{
+    width: 78%;
+}
+.sfCol_79
+{
+    width: 79%;
+}
+.sfCol_80
+{
+    width: 80%;
+}
+.sfCol_81
+{
+    width: 81%;
+}
+.sfCol_82
+{
+    width: 82%;
+}
+.sfCol_83
+{
+    width: 83%;
+}
+.sfCol_84
+{
+    width: 84%;
+}
+.sfCol_85
+{
+    width: 85%;
+}
+.sfCol_86
+{
+    width: 86%;
+}
+.sfCol_87
+{
+    width: 87%;
+}
+.sfCol_88
+{
+    width: 88%;
+}
+.sfCol_89
+{
+    width: 89%;
+}
+.sfCol_90
+{
+    width: 90%;
+}
+.sfCol_91
+{
+    width: 91%;
+}
+.sfCol_92
+{
+    width: 92%;
+}
+.sfCol_93
+{
+    width: 93%;
+}
+.sfCol_94
+{
+    width: 94%;
+}
+.sfCol_95
+{
+    width: 95%;
+}
+.sfCol_96
+{
+    width: 96%;
+}
+.sfCol_97
+{
+    width: 97%;
+}
+.sfCol_98
+{
+    width: 98%;
+}
+.sfCol_99
+{
+    width: 99%;
+}
+.sfCol_100
+{
+    width: 100%;
+}
+

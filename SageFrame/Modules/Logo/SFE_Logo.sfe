@@ -1,0 +1,55 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_Logo</name>
+      <friendlyname>Logo</friendlyname>
+      <foldername>Logo</foldername>
+      <modulename>Logo</modulename>
+      <description>This module is used for Logo.</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.Logo.EventController, SageFrame.Modules.Logo</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>sageframe</owner>
+      <organization>sageframe</organization>
+      <url>www.sageframe.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This is test release notes for Logo Application</releasenotes>
+      <license>This is test license copy for Logo Application</license>
+      <modules>
+        <module>
+          <friendlyname>Logo</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			  <key>LogoContainer</key>
+              <title>Logo Container</title>
+              <src>Modules/Logo/LogoView.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>false</supportspartialrendering>
+            </control>			
+            <control>
+              <key>LogoSetting</key>
+              <title>Logo Setting</title>
+              <src>Modules/Logo/LogoSetting.ascx</src>
+              <type>Setting</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl> 
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>   
+		<file>
+          <name>SageFrame.Logo.dll</name>
+        </file>  
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file> 
+      </files>
+    </folder>
+  </folders>
+</sageframe>

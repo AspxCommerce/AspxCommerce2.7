@@ -1,0 +1,392 @@
+/****** Object:  Table [dbo].[Aspx_LatestItemSettings]    Script Date: 02/19/2014 12:40:37 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_LatestItemSettings](
+	[SettingID] [int] IDENTITY(1,1) NOT NULL,
+	[SettingKeys] [nvarchar](256) NOT NULL,
+	[SettingValues] [nvarchar](256) NOT NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] ADD  CONSTRAINT [DF_Aspx_LatestItemSettings_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] ADD  CONSTRAINT [DF_Aspx_LatestItemSettings_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] ADD  CONSTRAINT [DF_Aspx_LatestItemSettings_IsModified]  DEFAULT ((0)) FOR [IsModified]
+GO
+
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] ADD  CONSTRAINT [DF_Aspx_LatestItemSettings_AddedOn]  DEFAULT (getdate()) FOR [AddedOn]
+GO
+
+ALTER TABLE [dbo].[Aspx_LatestItemSettings] ADD  CONSTRAINT [DF_Aspx_LatestItemSettings_UpdatedOn]  DEFAULT (getdate()) FOR [UpdatedOn]
+GO
+
+
+
+/****** Object:  Table [dbo].[Aspx_LatestItemSettings]    Script Date: 02/19/2014 12:37:17 ******/
+DELETE FROM [dbo].[Aspx_LatestItemSettings]
+GO
+/****** Object:  Table [dbo].[Aspx_LatestItemSettings]    Script Date: 02/19/2014 12:37:17 ******/
+SET IDENTITY_INSERT [dbo].[Aspx_LatestItemSettings] ON
+INSERT [dbo].[Aspx_LatestItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (1, N'IsEnableLatestItem', N'true', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500B4655A AS DateTime), CAST(0x0000A2B500B4655A AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_LatestItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (2, N'LatestItemCount', N'15', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500ADABC6 AS DateTime), CAST(0x0000A2B500ADABC6 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_LatestItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (3, N'LatestItemInARow', N'3', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500ADE825 AS DateTime), CAST(0x0000A2B500ADE825 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_LatestItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (4, N'IsEnableLatestRss', N'true', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500ADFF53 AS DateTime), CAST(0x0000A2B500ADFF53 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_LatestItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (5, N'LatestItemRssCount', N'15', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500B51A76 AS DateTime), CAST(0x0000A2B500B51A76 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_LatestItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (6, N'LatestItemRssPage', N'Latest-Item-Rss', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2D60129687F AS DateTime), CAST(0x0000A2D60129687F AS DateTime), NULL, NULL, NULL, NULL)
+SET IDENTITY_INSERT [dbo].[Aspx_LatestItemSettings] OFF
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedLatestItem]    Script Date: 02/19/2014 17:53:55 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRssFeedLatestItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRssFeedLatestItem]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemSettingGet]    Script Date: 02/19/2014 17:53:55 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_LatestItemSettingGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_LatestItemSettingGet]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemSettingsUpdate]    Script Date: 02/19/2014 17:53:55 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_LatestItemSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_LatestItemSettingsUpdate]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemsGetByCount]    Script Date: 02/19/2014 17:53:55 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_LatestItemsGetByCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_LatestItemsGetByCount]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedLatestItem]    Script Date: 02/19/2014 17:53:55 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- Modified by:  haripds
+-- Modified date: Feb 27 2013
+-- =============================================
+-- [dbo].[usp_Aspx_GetRssFeedLatestItem] 1,1,'superuser','en-US',10
+CREATE PROCEDURE [dbo].[usp_Aspx_GetRssFeedLatestItem] (
+	@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+	,@Count INT
+	)
+AS
+BEGIN
+	SET ROWCOUNT @Count
+
+	SELECT i.SKU
+		,i.ItemID
+		,i.ItemTypeID
+		,i.AddedOn
+		,iid.NAME AS ItemName
+		,ii.ImagePath
+		,IMA.AlternateText
+		,iid.ShortDescription AS ShortDescription
+	FROM aspx_items i
+	INNER JOIN dbo.Aspx_ItemInformationDetails iid ON iid.ItemID = i.ItemID
+	LEFT JOIN dbo.Aspx_ItemImages ii ON ii.ItemID = i.ItemID
+		AND ii.ImageTypeID = 1
+		AND ii.IsActive = 1
+	LEFT JOIN [dbo].[Aspx_ItemImagesAlias] IMA ON IMA.ItemImageID = ii.ItemImageID
+		AND IMA.CultureName = @CultureName
+	WHERE i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND iid.CultureName = @CultureName
+		AND i.ItemTypeID != 4
+		AND (
+			i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND i.IsDeleted = 0
+		AND (
+			i.HideInRSSFeed IS NULL
+			OR i.HideInRSSFeed = 0
+			)
+	ORDER BY i.AddedOn DESC
+
+	SET ROWCOUNT 0
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemSettingGet]    Script Date: 02/19/2014 17:53:55 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Rajkumar Gupta>
+-- =============================================
+--[usp_Aspx_LatestItemSettingGet] 0,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_LatestItemSettingGet] (
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (
+			NOT EXISTS (
+				SELECT SettingID
+				FROM [dbo].[Aspx_LatestItemSettings]
+				WHERE StoreID = @StoreID
+					AND PortalID = @PortalID
+				)
+			)
+	BEGIN
+		INSERT INTO [dbo].[Aspx_LatestItemSettings] (
+			SettingKeys
+			,SettingValues
+			,StoreID
+			,PortalID
+			,CultureName
+			)
+		SELECT SettingKeys
+			,SettingValues
+			,@StoreID
+			,@PortalID
+			,@CultureName
+		FROM [dbo].[Aspx_LatestItemSettings]
+		WHERE PortalID = 1
+			AND StoreID = 0
+	END;
+
+	WITH SettingCTE
+	AS (
+		SELECT SettingKeys
+			,SettingValues
+		FROM [dbo].[Aspx_LatestItemSettings]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		)
+		,LatestItemSettings
+	AS (
+		SELECT *
+		FROM (
+			SELECT SettingValues
+				,CASE [SettingKeys]
+				    WHEN 'IsEnableLatestItem'
+						THEN 'IsEnableLatestItem'	
+					WHEN 'LatestItemCount'
+						THEN 'LatestItemCount'				
+					WHEN 'LatestItemInARow'
+						THEN 'LatestItemInARow'						
+					WHEN 'IsEnableLatestRss'
+						THEN 'IsEnableLatestRss'							
+					WHEN 'LatestItemRssCount'
+						THEN 'LatestItemRssCount'
+					WHEN 'LatestItemRssPage'
+						THEN 'LatestItemRssPage'								
+					END AS SKey
+			FROM SettingCTE
+			) DataTable
+		pivot(max(SettingValues) FOR Skey IN (IsEnableLatestItem,LatestItemCount,LatestItemInARow
+		,IsEnableLatestRss,LatestItemRssCount,LatestItemRssPage)) PivotTable
+		)
+	SELECT *
+	FROM LatestItemSettings
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemSettingsUpdate]    Script Date: 02/19/2014 17:53:55 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Rajkumar Gupta>
+-- =============================================
+--[dbo].[usp_Aspx_LatestItemSettingsUpdate]1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_LatestItemSettingsUpdate] (
+	@StoreID INT
+	,@PortalID INT
+	,@SettingKeys NVARCHAR(max)
+	,@SettingValues NVARCHAR(max)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @tblKey TABLE (
+		RowNum INT identity(1, 1)
+		,SettingKey NVARCHAR(500)
+		)
+	DECLARE @tblValue TABLE (
+		RowNum INT identity(1, 1)
+		,SettingValue NVARCHAR(500)
+		)
+
+	INSERT INTO @tblKey
+	SELECT rtrim(ltrim(items))
+	FROM split(@SettingKeys, '*')
+
+	INSERT INTO @tblValue
+	SELECT rtrim(ltrim(items))
+	FROM split(@SettingValues, '*')
+
+	DECLARE @counter INT
+		,@RowCount INT
+
+	SELECT @RowCount = count(RowNum)
+	FROM @tblKey
+
+	SET @counter = 1
+
+	WHILE (
+			@counter <= @RowCount
+			OR @counter = 1
+			)
+	BEGIN
+		DECLARE @key NVARCHAR(2000)
+			,@value NVARCHAR(2000)
+
+		SELECT @key = SettingKey
+		FROM @tblKey
+		WHERE RowNum = @counter
+
+		SELECT @value = SettingValue
+		FROM @tblValue
+		WHERE RowNum = @counter
+
+		UPDATE [dbo].[Aspx_LatestItemSettings]
+		SET SettingValues = @value
+		WHERE SettingKeys = @key
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+
+		SET @counter = @counter + 1
+	END
+END
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_LatestItemsGetByCount]    Script Date: 02/19/2014 17:53:55 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+--[dbo].[usp_Aspx_LatestItemsGetByCount] 1,1,'superuser','en-US',30
+CREATE PROCEDURE [dbo].[usp_Aspx_LatestItemsGetByCount] (
+	@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+	,@Count INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT TOP (@count) (i.HasCostVariants) AS IsCostVariantItem
+		,i.ItemID
+		,i.SKU
+		--,i.AttributeSetID
+		--,i.ItemTypeID
+		--,i.ActiveFrom
+		--,i.ActiveTo
+		,i.HidePrice
+		--,i.HideInRSSFeed
+		,i.HideToAnonymous
+		,[dbo].[ufn_CheckOutOfStock](i.ItemID, @StoreID, @PortalID) AS IsOutOfStock
+		--,i.AddedOn
+		,ii.ImagePath
+		,(
+			SELECT TOP 1 [ImagePath]
+			FROM [dbo].[Aspx_ItemImages]
+			WHERE ImageTypeID = 3
+				AND ItemID = i.ItemID
+			) AS AlternateImagePath
+		,ima.AlternateText
+		,iid.NAME
+		,dbo.[ufn_CatalogPriceRule](i.ItemID, @StoreID, @PortalID, @UserName, @CultureName) AS Price
+		,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+		--,i.Quantity
+		,ROW_NUMBER() OVER (
+			ORDER BY i.[ItemID] DESC
+			) AS RowNumber
+	FROM Aspx_items i
+	INNER JOIN dbo.Aspx_Currency c ON i.CurrencyCode = c.CurrencyCode
+		AND c.StoreID = @StoreID
+		AND c.PortalID = @PortalID
+		AND c.IsDeleted = 0
+		AND c.IsActive = 1
+	INNER JOIN dbo.Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+	INNER JOIN dbo.Aspx_ItemInformationDetails iid ON i.ItemID = iid.ItemID
+	LEFT JOIN dbo.Aspx_ItemImages ii ON ii.ItemID = iid.ItemID
+		AND ii.ImageTypeID = 1
+		AND ii.IsActive = 1
+	LEFT JOIN [dbo].[Aspx_ItemImagesAlias] ima ON ima.ItemImageID = ii.ItemImageID
+		AND ima.CultureName = @CultureName
+	WHERE i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND iid.CultureName = @CultureName
+		AND i.IsDeleted = 0
+		AND i.IsActive = 1
+		AND i.Visibility = 1
+		AND (
+			i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND ias.IsActive = 1
+		AND ias.IsDeleted = 0
+		AND i.ItemTypeID != 4
+		AND (
+			(
+				i.HideToAnonymous = 0
+				AND @UserName = 'anonymoususer'
+				)
+			OR @UserName != 'anonymoususer'
+			)
+END
+
+GO
+
+
+

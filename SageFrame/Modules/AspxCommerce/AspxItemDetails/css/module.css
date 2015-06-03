@@ -1,0 +1,38 @@
+.cssClassLeftSide h1{ margin-bottom:10px;}
+.cssClassLeftSide h1 span{ font-size:22px;}
+.cssClassLeftSide li{ float:left; margin:0 15px 0 0;}
+.cssClassLeftSide div{ line-height:26px;}
+.cssClassOutOfStock{ padding:15px 0 0px 0}
+.cssViewer{ position:absolute; left:-70px; top:12px;}
+.cssClassItemCategoriesHeading {float:left; margin-right:3px;}
+.cssClassRatingStar {float: left; margin-right:5px; font-size:14px;}
+/*.cssClassItemRating{ overflow:hidden;}*/
+.cssClassRatingTitle, .cssClassCriteriaTitle{ font-size:14px;}
+.cssItemCategories .cssClassCategoriesName li{ margin:0;}
+#spanAvailability{ color:#3b5998;}
+.cssPriceDetailwrap,.cssClassItemQuickOverview,.itemBrand{border-right:solid 1px #ededed;border-bottom:solid 1px #ededed;background:#fff; padding:25px; margin:30px 0;}
+.cssClassProductRealPrice,.cssClassProductOffPrice{margin-bottom:10px;}
+.cssClassGroupedItems {max-height:280px; overflow:auto;}
+.cssClassGroupedItems table{ width:100%;}
+.cssClassGroupedItems table thead th{ text-align:left;}
+.cssClassCartPictureInformation h3{ font-size:14px; line-height:20px;}
+.tblGroupedItem thead tr th{ padding:10px 0 8px;}
+
+/*Css For Kit Products*/
+.cssClassDwnWrapper{ max-height:268px; overflow:auto; width:100%;}
+.cssClassDwnWrapper .cssClassHeader h3{ font-size:20px;}
+.cssClassDwnWrapper .component{ background:#f1f4f5; padding:5px 7px 3px; font-weight:bold;}
+.componentkit{ padding:5px 0; font-size:14px;}
+.componentkit label{ float:left; width:50%;}
+.detailButtonWrapper label{float:left;}
+.detailButtonWrapper .sfButtonwrapper button{float:none;}
+.detailButtonWrapper #lblNotification{float:none; position:absolute; left:0; top:-30px; width:350px; font-size:14px;}
+.cssClassProductOffPrice span.cssClassFormatCurrency{ color:#a4a4a4; text-decoration:line-through; }
+.cssClassLeftSide label input{ margin:0 5px; padding:6px 5px 7px;}
+.cssDlinks{margin-top:25px; border-top:solid 1px #dce3e7; padding-top:15px;}
+.cssDlinks ul li a,.popbox a{padding-right:15px;border-right:solid 1px #dce3e7; font-size:14px;}
+#divItemShortDesc { line-height:20px; font-size:14px;}
+.itemBrand h3{ font-size:28px;}
+.itemBrand p{ font-size:14px; margin:15px 0;}
+.itemBrand a{font-size:14px;}
+.itemBrand p a img{margin:0 10px 0 0}

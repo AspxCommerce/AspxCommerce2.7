@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layout name="layout_all">
+  <section name="sfHeader">
+    <placeholder name="headertop">headertop</placeholder>
+    <placeholder name="banner">banner</placeholder>
+    <placeholder name="navigation">navigation</placeholder>
+    <placeholder name="spotlight" mode="fixed">pos1,pos2,pos3</placeholder>
+  </section>
+  <section name="sfContent" colwidth="20">
+    <placeholder name="fulltopspan">FullTopSpan</placeholder>
+    <placeholder name="lefttop" class="sfLeftTop">LeftTop</placeholder>
+    <placeholder name="leftA" class="leftaclass">LeftA</placeholder>
+    <placeholder name="leftB">LeftB</placeholder>
+    <placeholder name="leftbottom">LeftBottom</placeholder>
+    <placeholder name="righttop">RightTop</placeholder>
+    <placeholder name="rightA">RightA</placeholder>
+    <placeholder name="rightB">RightB</placeholder>
+    <placeholder name="rightbottom">RightBottom</placeholder>
+    <placeholder name="middletop">MiddleTop</placeholder>
+    <placeholder name="middlebottom">MiddleBottom</placeholder>
+    <placeholder name="middlemaintop">MiddleMainTop</placeholder>
+    <placeholder name="MiddleMainBottom">MiddleMainBottom</placeholder>
+    <placeholder name="middlemaincurrent">middlemaincurrent</placeholder>
+    <placeholder name="fullbottomspan">FullBottomSpan</placeholder>
+  </section>
+  <section name="sfFooter">
+    <placeholder name="footer">footer</placeholder>
+  </section>
+  <wrappers>
+    <wrap type="placeholder" class="testblock" depth="3">middle,right</wrap>
+  </wrappers>
+</layout>

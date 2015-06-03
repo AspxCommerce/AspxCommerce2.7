@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <SageFrameMessage>
+    <NoContentYet>There is No contain published yet!</NoContentYet>
+    <PleaseFillBlankValues>Please Fill required values.</PleaseFillBlankValues>
+    <SavedSuccessfully>Saved successfully</SavedSuccessfully>
+    <DeltedSuccessfully>Deleted successfully</DeltedSuccessfully>
+    <AreYouSureToDelete>Are you sure to delete!</AreYouSureToDelete>
+  </SageFrameMessage> 
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SageFrameMessage>
+  <BannerSavedsuccesfully>Banner content saved successfully.</BannerSavedsuccesfully>
+  <ImageEditedSuccesfully>Image edited succesfully.</ImageEditedSuccesfully>
+  <DeletedSucessfully>Banner deleted sucessfully.</DeletedSucessfully>
+  <BannerEditedSuccesfully>Banner edited succesfully.</BannerEditedSuccesfully>
+  <BannerHTMLContentSavedSuccessfully>Banner HTML content saved successfully.</BannerHTMLContentSavedSuccessfully>
+  <BannerImageDeletedsuccesfully>Banner image deleted succesfully.</BannerImageDeletedsuccesfully>
+  <PleaseEnterSomeContent>Please enter some content.</PleaseEnterSomeContent>
+  <SettingSavedSucessfully>Setting saved sucessfully.</SettingSavedSucessfully>
+  <DuplicateName>Duplicate banner name.</DuplicateName>
+  <TheBannerContentIsShiftedUpSuccessfully>Successfully shifted up.</TheBannerContentIsShiftedUpSuccessfully>
+  <TheBannerContentIsShiftedDownSuccessfully>Successfully shifted down.</TheBannerContentIsShiftedDownSuccessfully>
+  <BannerSuccessfullySaved>Banner successfully saved.</BannerSuccessfullySaved>
+  <NoBannerImage>Banner image not selected.</NoBannerImage>
+  <NoBannerContent>Banner content was not found.</NoBannerContent>
+  <BannerAddedSucessfully>Banner added successfully.</BannerAddedSucessfully>
+</SageFrameMessage>

@@ -1,0 +1,87 @@
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll]    Script Date: 04/30/2013 15:39:45 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll]    Script Date: 04/30/2013 15:39:45 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+-- =============================================
+-- Author:		bhuvan,santosh
+-- Create date: 30-06-2011
+-- Modified by: <Jainul Khan>
+-- Modified date: <2013-02-25>
+-- Description:	Payment get all settings
+-- =============================================
+-- [dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll] 2,1,1
+CREATE PROCEDURE [dbo].[usp_Aspx_AIMAuthorizeNETSettingsGetAll]
+	-- Add the parameters for the stored procedure here
+	@PaymentGatewayTypeID [int]
+	,@PortalID [int]
+	,@StoreID INT
+	WITH EXECUTE AS CALLER
+AS
+BEGIN
+	SELECT *
+	FROM (
+		SELECT [dbo].[Aspx_PaymentGateWaySettingByKey].[SettingKey] AS SettingKey
+			,Coalesce([dbo].[Aspx_PaymentGateWaySettingByValue].SettingValue, [dbo].[Aspx_PaymentGateWaySettingByKey].SettingValue) AS SettingValue
+		FROM [dbo].[Aspx_PaymentGateWaySettingByValue]
+		RIGHT JOIN [dbo].[Aspx_PaymentGateWaySettingByKey] ON [dbo].[Aspx_PaymentGateWaySettingByValue].SettingKey = [dbo].[Aspx_PaymentGateWaySettingByKey].SettingKey
+			AND [dbo].[Aspx_PaymentGateWaySettingByValue].[PaymentGatewayTypeID] = @PaymentGatewayTypeID
+			AND [dbo].[Aspx_PaymentGateWaySettingByValue].StoreID = @StoreID
+			AND [dbo].[Aspx_PaymentGateWaySettingByValue].PortalID = @PortalID
+		) DataTable
+	PIVOT(MAX([SettingValue]) FOR [SettingKey] IN (
+				[Version]
+				,[DelimData]
+				,[APILoginID]
+				,[TransactionKey]
+				,[RelayResponse]
+				,[DelimChar]
+				,[EncapChar]
+				,[XEmailCustomerAIM]
+				,[XMerchantEmailAIM]
+				,[XFooterEmailReceiptAIM]
+				,[XHeaderEmailReceiptAIM]
+				,[XHeaderHtmlReceiptAIM]
+				,[XMerchantDescriptorAIM]
+				,[IsTestAIM]
+				)) PivotTable
+END
+
+GO
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetTransactionDetailById]    Script Date: 07/11/2011 17:57:47 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetTransactionDetailById]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetTransactionDetailById]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[usp_Aspx_GetTransactionDetailById] 	
+@OrderID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+		
+		SELECT TransactionID FROM Aspx_Order WHERE OrderID = @OrderID
+
+SET NOCOUNT OFF
+END
+GO
+
+

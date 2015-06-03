@@ -1,0 +1,36 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SocialShare</name>
+      <friendlyname>SocialShare</friendlyname>
+      <foldername>SocialShare</foldername>
+      <modulename>SocialShare</modulename>
+      <description></description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.SocialShare.EventController, SageFrame.Modules.SocialShare</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>BrainDigit IT Soultion Pvt. Ltd.</owner>
+      <organization>BrainDigit IT Soultion Pvt. Ltd.</organization>
+      <url>www.braindigit.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes> Share </releasenotes>
+      <license>This is test license copy for SocialShare Module</license>
+      <modules>
+        <module>
+          <friendlyname>SocialShare</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			  <key>SocialShareView</key>
+              <title>SocialShareView </title>
+              <src>Modules/SocialShare/SocialShareView.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>               
+          </controls>
+        </module>
+      </modules>
+    </folder>
+  </folders>
+</sageframe>

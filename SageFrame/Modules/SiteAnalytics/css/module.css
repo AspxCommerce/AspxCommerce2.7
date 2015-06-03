@@ -1,0 +1,75 @@
+﻿
+.sfTab li
+{
+    float: left;
+    list-style-type: none;
+}
+.sfTab li label
+{
+    padding: 5px; cursor:pointer; font-size:14px;
+}
+
+#divData .sfGridwrapper { float:left; width:47%;  margin:0px 12px 24px;}
+
+
+#divData .sfGridwrapper .sfFormlable { font-weight:bold; font-size:14px; padding:10px; display:block;}
+
+
+/*Radionbutton  or  option bar*/
+ul.sfTab { background:#636363; width:auto; overflow:hidden; height:34px; line-height:34px; display:inline-block; border:none;
+border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px; }
+ul.sfTab li { height:34px; line-height:34px; font-size:13px; color:#bfbfbf; padding:0px 12px; margin-right:0px; float:left; width:auto; cursor:pointer; border-right:1px solid #4F4F4F; }
+ul.sfTab li:last-child { border-right:none;}
+ul.sfTab li:hover { background:#808080;}
+ul.sfTab li.sfDefault { background:#2d4c80; color:#fff;}
+
+
+
+
+
+
+ul.sfTab li .sfFormlabel{ color:#fff; text-shadow:none;}
+.sfChartSelection { margin-bottom:20px;}
+
+
+div.sfPagination { margin:10px;}
+/*div.sfPagination span { display:inline-block;
+	float: none;
+	width:20px;
+	margin:10px 5px 5px 0;
+	background:#fff;
+	border: 1px solid #4692C3;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	color:#000; cursor:pointer;
+	text-align:center; }
+	
+div.sfPagination span:hover {
+	background:#6cb5e4;
+	color:#fff;
+	text-shadow:0 1px 0 #069;
+}
+div.sfPagination span.click { 	background:#4692c3;
+	border:1px solid #4692c3;
+	color:#fff;}
+
+*/.sfGridwrapper .sfListmenu { margin-bottom:10px;}
+
+#MonthlyVisitMeterGaugeChart canvas.jqplot-event-canvas { border:2px solid #AAAAAA;}
+
+
+#divVisitedPageList select.sfListmenu {
+    float: right;
+    margin-right: 10px;
+    margin-top: -34px;
+    width: 200px;
+	padding:3px;
+}
+
+.sfPagination { background:#e6e6e6; border:1px solid #bbb; border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; width:auto; display:inline-block;  }
+
+#divVisitedCountryList, #divVisitedPageList, #divBrowserList, #divRefSite { height:398px;}
+#DailyVisit, #MonthlyVisitMeterGaugeChart, #CountryWiseVisit, #BrowserWiseVisit { height:300px;}
+
+#spnVistTime { float:none !important; background-color:#ccc; padding:2px 5px;}

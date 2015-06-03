@@ -1,0 +1,105 @@
+﻿ #notifs_icon_wrapper {
+    float: left;
+    margin: 15px 10px 0;
+    position: relative;
+    width: 95px;
+}
+.notifs {
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    margin: 0;
+    padding: 5px;
+    position: relative;
+    width: 18px;
+}
+#orders_notif {
+    background: url("../../../../Modules/AspxCommerce/AspxNotification/image/notif_order.png") no-repeat scroll center top transparent;
+}
+#customers_notif {
+    background: url("../../../../Modules/AspxCommerce/AspxNotification/image/notif_customer.png") no-repeat scroll center top transparent;
+}
+#customer_messages_notif {
+    background: url("../img/notif_message.png") no-repeat scroll center top transparent;
+}
+#orders_notif.open_notifs, #customers_notif.open_notifs, #customer_messages_notif.open_notifs {
+    background-color: #FFFFFF;
+    background-position: center bottom;
+    border: 1px solid #000000;
+    display: block;
+    position: relative;
+}
+.number_wrapper {
+    color: white;
+    display: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 5px;
+    position: absolute;
+    right: -8px;
+    top: -10px;
+    z-index: 101;
+}
+.number_wrapper span {
+    background-color: #F03D25;
+    border-color: -moz-use-text-color #DD3822 #DD3822;
+    border-radius: 2px 2px 2px 2px;
+    border-style: none solid solid;
+    border-width: 0;
+    display: block;
+    font-size: 11px;
+    padding: 1px 3px;
+}
+.notifs_wrapper {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: -moz-use-text-color #000000 #000000;
+    border-image: none;
+    border-right: 1px solid #000000;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    color: black;
+    cursor: auto;
+    display: none;
+    left: -1px;
+    padding: 10px;
+    position: absolute;
+    top: 25px;
+    width: 300px;
+    z-index: 9999;
+}
+.notifs_wrapper h3 {
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 8px;
+}
+.notifs_wrapper ul {
+    margin: 0;
+    padding: 6px 0;
+}
+.notifs_wrapper ul li {
+    font-size: 12px;
+    list-style: none outside none;
+    padding: 5px 0;
+    text-decoration: none;
+}
+#header_infos .notifs_wrapper a {
+    color: black;
+    float: right;
+    font-size: 11px;
+    font-weight: bold;
+}
+.notifs_wrapper p {
+    border-top: 1px solid #E5E5E5;
+    font-size: 12px;
+    margin: 0;
+    padding-top: 8px;
+}
+.notifs_wrapper p.no_notifs {
+    border: medium none;
+}
+

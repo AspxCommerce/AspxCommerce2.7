@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layout name="layout_all">
+  <section name="sfHeader">
+    <placeholder name="headers" width="30" class="header">logo,search</placeholder>
+    <placeholder name="navigation">navigation</placeholder>
+    <placeholder name="banner">banner</placeholder>
+    <placeholder name="fixed" mode="fixed">design,developer,seo</placeholder>
+    <placeholder name="fulltopspan">getstarted</placeholder>
+  </section>
+  <section name="sfContent">
+    <placeholder name="leftA" width="21">leftA</placeholder>
+    <placeholder name="RightB" width="17">RightA</placeholder>
+    <placeholder name="middlemaintop">atagalance</placeholder>
+    <placeholder name="middlemainbottom">Whyuse</placeholder>
+  </section>
+  <section name="sfFooter">
+    <placeholder name="footerBlocks" mode="fixed">testimonials,subscribe,social,contact</placeholder>
+    <placeholder name="copyright">copyright</placeholder>
+  </section>
+  <wrappers>
+    <wrap name="footer" type="placeholder">footerBlocks,copyright</wrap>
+  </wrappers>
+</layout>

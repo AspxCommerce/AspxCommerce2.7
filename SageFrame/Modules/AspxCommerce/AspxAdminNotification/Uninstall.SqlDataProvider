@@ -1,0 +1,58 @@
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationUser]    Script Date: 3/31/2014 11:29:06 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationUser]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationUser]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationSubscription]    Script Date: 3/31/2014 11:29:06 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationSubscription]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationSubscription]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationSettings]    Script Date: 3/31/2014 11:29:06 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationSettings]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationOrders]    Script Date: 3/31/2014 11:29:06 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationOrders]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationOrders]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationItemOutOfStock]    Script Date: 3/31/2014 11:29:06 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationItemOutOfStock]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationItemOutOfStock]
+GO
+
+/****** Object:  Table [dbo].[Aspx_NotificationItemLowStock]    Script Date: 3/31/2014 11:29:06 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_NotificationItemLowStock]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_NotificationItemLowStock]
+GO
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationUsersGetAll]    Script Date: 3/31/2014 11:30:24 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationUsersGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationUsersGetAll]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationSettingsGetAll]    Script Date: 3/31/2014 11:30:24 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationSettingsGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationSettingsGetAll]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationSaveUpdateSettings]    Script Date: 3/31/2014 11:30:24 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationSaveUpdateSettings]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationSaveUpdateSettings]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_NotificationGetAll]    Script Date: 3/31/2014 11:30:24 AM ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_NotificationGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_NotificationGetAll]
+GO
+
+

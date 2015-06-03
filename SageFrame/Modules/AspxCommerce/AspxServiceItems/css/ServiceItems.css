@@ -1,0 +1,50 @@
+﻿/*services module*/
+.cssClassImgWrapper{ display:block !important}
+.cssImageWrapper,.cssItemImage{margin-right: 30px;float:left; width:25%;}
+.cssServiceDesc,.cssDesc{ float:left; width:72%;}
+.cssImageWrapper img,.cssItemImage img{ width:100%;}
+.cssClassItems h3,.cssClassItems h3 a{ font-size:20px; margin-bottom:10px;}
+.cssClassItems .sfButtonwrapper{ float:right;}
+.cssClasstimewrap{ float:left; line-height:36px;}
+.cssClassItems p{ font-size:14px; line-height:20px; margin-bottom:20px;}
+.cssClassItems .sfButtonwrapper a, .cssServiceItemDetails .sfButtonwrapper a {}
+.cssClassItems .sfButtonwrapper a:hover, .cssServiceItemDetails .sfButtonwrapper a:hover{ color:#fff;}
+.cssServiceItemDetails .sfButtonwrapper a { float:left; margin-top:15px;}
+.cssServiceItemWrapper .cssClassItems {margin: 30px 30px 0 0;float: left; background:#fff; border-bottom:solid 1px #ededed;border-right:solid 1px #ededed; padding:25px;width:48.7%;-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing:border-box;/* Firefox, other Gecko */
+	box-sizing:border-box;}
+#divFrontService li:last-child{ margin-right:0}
+.cssClassAllService li{ min-height:240px; }
+.cssClassService li{ padding:10px; float:left; padding:25px; border:solid 1px #efefef; margin-right:30px; width:218px;}
+.cssClassService li a span{ font-size:20px; margin:10px 0;}
+.cssClassService li a img{width:100%;}
+.cssClassAllService li .cssClassImgWrapper img{ width:100%}
+.cssClassAllService li .cssClassImgWrapper{ margin:0 0 10px 0}
+.cssClassService li h3{ color:#910000; padding:12px 0 0 0; }
+.cssClassService li h3 a{ display:block; text-align:center}
+.cssClassService .cssClassImgWrapper img {width:80%;margin:10%;}
+.cssClassService p{  color:#686868; text-transform:capitalize;}
+.cssClassTimeList{ background:#fff!important; border:1px solid #ccc; width:200px!Important; padding:5px;}
+.cssServiceTime{ font-weight:bold; margin:0 0 5px 0}
+.cssClassTimeFrom span,.cssClassServiceDuration ul li span{ margin:0 0 0 5px;}
+.cssClassServiceDuration{}
+.cssClassServiceDuration ul li{ margin:5px 0;}
+
+/* Services Appointment*/
+.cssClassAppointmentBody{  color:#686868;}
+.cssClassAppointmentHeading h2{margin-bottom:20px;}
+.cssClassAppointmentBody tr td{ padding:5px;}
+.cssClassAppointmentBody td span{ width:25%}
+.cssClassAppointmentBody .sfListmenu{ min-width:210px;}
+.cssClassAppointmentBody tr td label input{ margin-right:5px;}
+.cssClassAppointmentBody tr td label{ margin:5px; font-size:14px;}
+.cssClassServiceInfo,.cssClassPersonalInfo{ background:#ebeef1; font-size:18px; font-weight:bold; border-bottom:solid 3px #6fc25c;}
+tr.cssClassServiceInfo td,tr.cssClassPersonalInfo td{ padding:10px;}
+{background:#b3b3b3; display:block; color:#910000;  padding:7px 0 7px 15px; margin-bottom:10px;}
+.ssClassPaymentList b label{}
+.cssServiceName,.cssServiceItemDetails,.cssClassAppointmentBody,.cssClassPaymentList{ display:block; clear:both; overflow:hidden; background:#fff; border-bottom:solid 1px #ededed;border-right:solid 1px #ededed; padding:25px;}
+#tablePaymentDetails2Rcpt tr td,.PaymentSectionTable tr td{ border-bottom:solid 1px #ededed;padding:6px;}
+.sfEdd{ background:#f8f8f8;}
+.sfEmailSuccess{ color:#6fc25c;}
+#divClickAway a{ line-height:26px;}
+#divClickAway a:hover{ color:#fff;}

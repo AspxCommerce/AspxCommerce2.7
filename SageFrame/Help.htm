@@ -1,0 +1,233 @@
+<html>
+<head>
+    <title>ASPXCOMMERCE INSTALLATION GUIDE</title>
+
+    <script src="js/jquery-1.7.js" type="text/javascript"></script>
+
+    <script src="js/vallenato.js" type="text/javascript"></script>
+
+       
+    <link href="Install/css/install.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (parent.history.length === 1)
+                $('a.back').hide();
+            $('a.back').bind("click", function () {
+                parent.history.back();
+                return false;
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="sfInstallWrapper" class="sfInstallationGuide">
+    <div class="sfLogo">
+            <h1> </h1>
+            
+        </div>
+        
+        <div class="sfOuter">
+        <a class="back icon-close"> </a>
+        <h2>
+            AspxCommerce Installation Guide</h2>
+        <br />
+        <p>
+            <strong>The secret to successful installation</strong> is getting the prerequisites
+            right. If everything is prepared beforehand, installation is straightforward and painless!</p>
+        <p>
+            <strong>Installing AspxCommerce is easy if you follow the instructions closely</strong>, yet users have problem with installation because many of the first time installers do not get the prerequisites right
+            before they start to install.</p>
+        <p> 
+            <strong>This guide to 'AspxCommerce Installation Prerequisites' assumes that you have direct access
+                to the computer</strong>. For those using a hosted account, instead of installing
+            these prerequisites, just ask your hosting provider if these prerequisites are already
+            set up for you, and if their control panel software will install AspxCommerce for you.<br />
+            <strong>You must first</strong> install these items, in the given order:</p>
+        <ul>
+            <li>Internet Information Server (IIS) .</li>
+            <li>DotNet Framework 4.0 </li>
+            <li>SQL Server 2008 and above.</li>
+            <li>If you are using SQL server express, then you must also install SQL Server Management
+                Console for SQL Server Express (a separate download from microsoft.com).</li>
+        </ul>
+        <br /> <br />
+        <h3>
+            4 Basic Steps to Install.</h3>
+  
+           
+            <h2 class="accordion-header">
+                Create the Database, SQL Server Login, and Database User</h2>
+            <div class="accordion-content">
+                There are two things you need to do in SQL Server Management Studio.&nbsp;First,
+                create a database. Second,&nbsp;create the SQL Server login for that very same database.
+                Make sure that your database server runs in &ldquo;<strong>Mixed Authentication Mode</strong>&rdquo;
+                (SQL Server and Windows Authentication mode&rdquo; is checked.) You can find this
+                setting by right-clicking on&nbsp;your server (first node&nbsp;in the SQL Server
+                Management Studio tree on the left), then <strong>Properties | Security</strong>.<br />
+                <strong>Create the Database </strong>
+                <br />
+                <ul>
+                    <li>Open SQL Server Management Studio</li>
+                    <li>Select your desired server from the drop-down list&nbsp;and connect</li>
+                    <li>Expand the tree on the left-hand side so you can see &ldquo;<strong>Databases</strong>&rdquo;</li>
+                    <li>Right-click on &quot;<strong>Databases</strong>&quot;</li>
+                    <li>Select &ldquo;<strong>New Database</strong>&rdquo;</li>
+                    <li>In the &quot;Database Name&quot; field, enter a name for your database and click
+                        OK. For example, I have entered &ldquo;SE3&rdquo;</li>
+                    <li>You now have an empty database called SE3</li>
+                </ul>
+                <br clear="all" />
+                <strong>Creating a login for your database:</strong><br />
+                <ul>
+                    <li>Expand the Security node of your server</li>
+                    <li>Right-click on Logins</li>
+                    <li>Select &ldquo;<strong>New Login</strong>&rdquo;</li>
+                    <li>Enter your desired login name. You must remember this login name and password as
+                        we will use it later. For my purposes here, I&rsquo;ve entered &ldquo;SE30Login&rdquo;
+                        (without the quotes) as my login name.</li>
+                    <li>Select &ldquo;<strong>SQL Server Authentication</strong>&rdquo; and enter a password.
+                        I entered &ldquo;test&rdquo; as my password.</li>
+                    <li>Uncheck &ldquo;<strong>Enforce Password expiration/User must change password at
+                        next login</strong>&rdquo;</li>
+                    <li>Click &ldquo;<strong>User Mapping</strong>&rdquo; on the left</li>
+                    <li>Select/Check the new database you created in the top grid &ldquo;<strong>Users mapped
+                        to this login</strong>:&rdquo;</li>
+                    <li>Select/Check db_owner in the bottom list &ldquo;Database role membership for: &ldquo;</li>
+                    <li>Click OK</li>
+                    <li>Now look in the Security node under your database (SE3) and you will see a newly
+                        created database user listed, meaning we also created a new database user by mapping
+                        our SQL Server login to our database.</li>
+                </ul>
+                <strong><em>The database part is now complete.</em></strong>
+            </div>
+            <h2 class="accordion-header">
+                Create the website folder and unzip the downloaded .zip file</h2>
+            <div class="accordion-content">
+                <p>
+                    In this step, we create a folder and unzip the source code version AspxCommerce .zip
+                    package file to this directory. You can put it directly under C:\inetpub\wwwroot
+                    or C:\<em>foldername</em>. For this example, I used C:\SE3.<br />
+                    <ul>
+                        <li>In Windows Explorer, create a new folder called SE30 on your C: drive. This will
+                            be the folder where your website files will live.</li>
+                        <li>Extract (unzip)&nbsp;the AspxCommerceV2.5_Source.zip file that you downloaded earlier
+                            into your desired folder (C:\SE30 in our example)</li>
+                        <li>Lastly, you must change the access permissions of your folder. The Windows account
+                            that is used to access your site must have full control over your AspxCommerce root
+                            folder. To set this, right-click on the root folder of your site (C:\SE30). Click
+                            Sharing and Security. Click the Security tab. If you do not see the Security tab,
+                            you must &ldquo;<strong>turn off</strong>&rdquo; simple file sharing for the folder.
+                            To do this, select the root folder (C:\SE30) in Windows Explorer. Click Tools |
+                            Folder Options. Select the View tab. Uncheck &ldquo;<strong>Use simple file sharing</strong>.&rdquo;
+                            Click OK. You can now right-click the folder and access the Security tab.</li>
+                        <li>On the Security tab, you will see a list of users who have access to your folder.
+                            Windows XP uses the ASPNET account and Windows 2003 uses the NETWORK SERVICE account.
+                            Add the account and give it full control permissions.</li>
+                    </ul>
+                </p>
+            </div>
+            <h2 class="accordion-header">
+                IIS &ndash; Create virtual directory and set-up</h2>
+            <div class="accordion-content">
+                <p>
+                    Now that the database and file system are in place, we can create the virtual directory
+                    in IIS.<br />
+                    <ul>
+                        <li>Open IIS and expand the tree to see &ldquo;<strong>Default Web Site</strong>&rdquo;.
+                            (You can find IIS in Start | Control Panel | Administrative Tools.)</li>
+                        <li>Expand the &quot;<strong>Default Web Site</strong>&quot; node.</li>
+                        <li>If you have placed your SF root folder&nbsp;under C:\inetpub\wwwroot, you will already
+                            see your website and can bypass this step. If not, you will need to add a virtual
+                            directory.</li>
+                        <li>Right-click on &quot;<strong>Default Web Site</strong>&quot;</li>
+                        <li>Click <strong>New | Virtual Directory</strong></li>
+                        <li>Enter an alias &ndash; &quot;AspxCommerceDemo&quot;</li>
+                        <li>Click Next and enter/browse to&nbsp;the path to the root folder of your website.</li>
+                        <li>Click Next and leave access permissions as is (should be set to Read/Run Scripts.)</li>
+                        <li>Click Next and Finish</li>
+                    </ul>
+                    Now that a virtual directory is in place, you&rsquo;ll need to modify its properties.<br />
+                    <ul>
+                        <li>Click on the &quot;<strong>Documents</strong>&quot; tab</li>
+                        <li>An entry for &ldquo;<strong>Default.aspx</strong>&rdquo; needs to be added. Add
+                            default.aspx and move it to the top of the default documents list.</li>
+                        <li>Click on the &quot;<strong>Directory Security</strong>&quot; tab</li>
+                        <li>In the &ldquo;Anonymous access and authentication control&rdquo; group box, click
+                            &quot;<strong>Edit</strong>&quot;</li>
+                        <li>Make sure that &ldquo;<strong>Anonymous Access</strong>&rdquo; is checked as well
+                            as &ldquo;<strong>Integrated Windows Authentication</strong>&rdquo;</li>
+                        <li>Next, click on the &quot;<strong>ASP.NET</strong>&quot; tab and make sure that &ldquo;<strong>4.0</strong>&rdquo;
+                            is selected for the ASP.NET version</li>
+                        <li>Click OK to save your changes</li>
+                    </ul>
+                </p>
+            </div>
+            <h2 class="accordion-header">
+                Run the AspxCommerce installation</h2>
+            <div class="accordion-content">
+                <p>
+                    The very last step is to initiate the SF installation via web browser. In this case, the install
+                    wizard takes over. In doing so, it creates tables and stores procedures in your
+                    database and adds the needed data rows to these tables to house your site. You will
+                    be prompted to test your folder&rsquo;s permissions, to test the database connection
+                    and lastly, to enter your desired user name and password for your host and admin user.
+                    Note these down!<br />
+                    <ul>
+                        <li>Open your web browser of choice and navigate to <u>http://localhost/AspxCommerceDemo</u> (replace
+                            AspxCommerceDemo with the name of your IIS virtual directory)</li>
+                        <li>If everything has been configured properly, you will be guided through an installation
+                            wizard i.e. http://localhost/AspxCommerceDemo/Install/InstallWizard.aspx.</li>
+                        <li>Choose the custom install setting.&nbsp; not the choose auto option,
+                            because the custom install allows us to specify the database information.&nbsp;
+                            Even though, the auto option will be disabled if it is your first and fresh AspxCommerce
+                            installation.</li>
+                        <li>&nbsp;If you are upgrading your previous version of AspxCommerce then the auto option
+                            will be enabled.</li>
+                        <li>Test your folder permissions when requested.</li>
+                        <li>Verify your database connection when asked.</li>
+                        <li>You will see the wizard running the script for each version after you click &quot;<strong>Next</strong>&quot;.</li>
+                        <li>On successful completion, click on &ldquo;<strong>Finish (Access your Portal</strong>)&rdquo;
+                            and your new AspxCommerce-based website appears.</li>
+                    </ul>
+                </p>
+            </div>
+        
+        <br />
+        <p>
+            <strong>Note: </strong><em>During the installation, if anything goes wrong from missing any
+                of the settings above, then delete the database and create a new empty database
+                and start the AspxCommerce installation process again.&nbsp; The reason for this is that half
+                completed install will result in a half created database, and it is quicker to start
+                again than it is to fix a half installed database. Otherwise if all settings are
+                configured correctly as mentioned above, you should check for sqldataprovider
+                .sql scripts files under folder</em> http://localhost/AspxCommerceDemo/. <em>Install/Providers/DataProviders/SqlDataProvider/</em><em>
+                    and rerun the .sql scripts by clicking &ldquo;Return&rdquo; button. </em>
+        </p><br />
+        <h3>
+            Default Username and Password</h3>
+        <p>
+            After&nbsp; the successful installation of AspxCommerce, you can access the default
+            login page of AspxCommerce as&nbsp; http://localhost/AspxCommerceDemo/sf/sflogin.aspx(replace AspxCommerceDemo
+            with the name of your IIS virtual directory). Default username and password
+            for the system are:</p>
+        <p>
+            <strong>Role: </strong>SuperUser<br />
+            <strong>Username: </strong>superuser<br />
+            <strong>Password: </strong>superuser
+        </p>
+        <p>
+            <strong>Role: </strong>Admin<br />
+            <strong>Username: </strong>admin<br />
+            <strong>Password: </strong>admin</p>
+              
+        <h2 style="text-align: right; color: orange;">
+            Enjoy AspxCommerce!</h2>
+    </div></div>
+
+     </div>
+</div>
+</div>
+
+</body>
+</html>

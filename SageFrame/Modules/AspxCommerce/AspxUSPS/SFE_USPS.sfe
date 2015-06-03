@@ -1,0 +1,98 @@
+﻿<sageframe version="1.00.00" type="shippingprovider">
+  <folders>
+    <folder>
+      <name>SFE_USPS</name>
+      <providername>USPS</providername>
+      <provideraliashelp>United State Postal Service</provideraliashelp>   	
+      <servicecode>usps</servicecode>	  
+      <namespace>AspxCommerce.USPS</namespace>
+	  <class>USPS</class>
+	  <assemblyname>AspxCommerce.USPS</assemblyname>
+	  <foldername>AspxCommerce/AspxUSPS</foldername>
+      <culturename>en-US</culturename>
+      <version>1.00.00</version>
+	  <dynamicmethods>
+	  <method type="rate">
+	     <name>GetRateFromUsps</name>
+		 <params>
+		 <param type="WareHouseAddress" objectType="class" order="1">		 
+		 </param>
+		  <param type="DestinationAddress"  objectType="class" order="2">	
+		 </param>
+		  <param type="USPSPackage" objectType="list" order="3">	
+		 </param>
+		  <param type="providerId"  objectType="int" order="4">	
+		 </param>
+		  <param type="storeId" objectType="int"  order="5">	
+		 </param>
+		  <param type="portalId" objectType="int" order="6">	
+		 </param>
+		 </params>
+	  </method>	
+	  </dynamicmethods>
+      <settings>	  
+        <setting>
+          <key>UspsMinWeight</key>
+          <value>0.1</value>
+        </setting>
+		 <setting>
+          <key>UspsMaxWeight</key>
+          <value>70</value>
+        </setting>
+		 <setting>
+          <key>UspsWeightUnit</key>
+          <value>Lbs</value>
+        </setting>
+		 <setting>
+          <key>UspsUserId</key>
+          <value>713BRAIN1876</value>
+        </setting>
+		 <setting>
+          <key>UspsRateApiUrl</key>
+          <value>http://production.shippingapis.com/ShippingAPI.dll</value>
+        </setting>
+		 <setting>
+          <key>UspsShipmentApiUrl</key>
+          <value>https://secure.shippingapis.com/ShippingAPI.dll</value>
+        </setting>
+		 <setting>
+          <key>UspsTrackApiUrl</key>
+          <value>http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do?origTrackNum={0}</value>
+        </setting>	
+<setting>
+<key>UspsTestMode</key>
+<value>true</value>
+</setting>	
+      </settings>
+	 <modules>
+        <module>
+          <controls>
+            <control>
+              <name>setting</name>
+              <src>Modules/AspxCommerce/AspxUSPS/setting_usps.ascx</src>            
+			       </control>
+            <control>
+              <name>label</name>
+              <src>Modules/AspxCommerce/AspxUSPS/shipment_usps.ascx</src>
+            </control>
+            <control>
+              <name>track</name>
+              <src>Modules/AspxCommerce/AspxUSPS/track_usps.ascx</src>
+            </control>
+          </controls>
+        </module>
+      </modules>	 
+      <files>    
+ <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>     	  
+        <file>
+          <name>AspxCommerce.USPS.dll</name>
+        </file>   
+ <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>     		
+      </files>
+    </folder>
+  </folders>
+</sageframe>

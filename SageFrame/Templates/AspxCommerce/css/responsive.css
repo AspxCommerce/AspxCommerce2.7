@@ -1,0 +1,352 @@
+@media only screen and ( max-width: 1169px ) {
+ .sfInnerwrapper > .sfMoreblocks, .sfInnerwrapper > .sfMoreblocks .sfColswrap{ margin:0;}	
+}
+@media only screen and ( max-width: 1024px ) {
+.cssLatestItemInfo{ padding-top:15px;}
+#sfHeadertop .sfLogo a img, #sfHeadertop .sfLogo a span{width:80%;}
+.cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{ width:30.67%;}
+#sfTopheaderlink .sfInnerwrapper .sfCol_20{ padding-top:2px;}	
+.cssLatestItemContainer,.cssClassSpecialBoxInfo{width:100.57%; margin-left:-0.25%;}	
+.cssClassMyAddressInformation .cssClassCommonWrapper,.cssClasMyAddressInformation .cssClassCommonWrapper{ margin:0;}
+.cssClassCheckOutMethodLeft{width:75%;}
+.cssClassMyDashBoard .cssClassCommonSideBox{ padding:20px;}
+.welcome-msg, .cssCustomerRecentActivity{ width:94.47%; margin-right:0; padding:20px; float:none;}
+.sfImageholder{ width:300px; top:15%;}
+#sfBanner{ height:340px; overflow:hidden;}
+.cssClassService, .sfModuleAspxLatestItemsCarousel, .cssClassBrandWrapper, #divSeasonalItemsContainer{ margin:20px 10px;}
+#sfAds{ padding:5% 1%;}
+.targetarea{ width:70%;}
+.cssClasspBalance, .cssClasspExchangeRate, .cssClasspBalanceLimitations{width:187px;}
+.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel, .PageOuter,.cssClassRightAccordainMenuInfo, .cssClassRightAccordainMenuInfoSelected{ padding:20px;}
+.divDetailsItemList .classInfo{ width:43.35%;}
+.popupbox{ width:86%; height:50%; padding:15px 8px 15px 15px;}
+#alert-Box{ height:24%;}
+#alert-Buttons{ margin-top:10px;}
+.cssClassCartInfo{ display:none;}
+.cssClassLeftSide label input{ padding:5px;}
+.fixed{ width:25%;}
+.LanguageSwitch{ width:auto; margin-right:5px;}
+.LanguageSwitch .sfLanguageContainer span{ display:none;}
+.cssClassSageSearchWrapper{ margin-left:7px; padding:7px 0;}
+.popupbox li, .cssClassCheckoutLeftBox li,.cssClassAIMChildContent li{margin-right:27px;}
+.cssClasMyAccountInformation{ width:calc(100% - 282px);}
+.cssClassCol1 .cssClassAddressBook{ margin-right:28px;}
+#divEmailSubsCribe input.sfInputbox{ width:92%;}
+.bx-wrapper .bx-controls-direction a{ top:33%;}
+.bx-wrapper .bx-prev{ left:0;}
+.bx-wrapper .bx-next{ right:0;}
+.sfLogininfo{ width:151px;}
+.cssClassOutOfStock{ font-size:14px;}
+.cssClassAddtoCard .cssClassOutOfStock button{ padding:0;}
+.cssClassSageSearchWrapper input.cssClassSageSearchBox{ padding:7px 7px 8px;}
+#divShiipingInfo #tblShippingInfo div{ float:none; margin-right:0; width:auto;}
+.cssClassCheckoutInformationContent ul li select{ width:97%;}
+.popupbox li, .cssClassCheckoutLeftBox li, .cssClassAIMChildContent li{ width:48.88%;}
+#mega-menuH li a{ padding:8px 14px;}
+
+
+}
+@media only screen and ( max-width: 960px ) {
+.cssLatestItemContainer,.cssClassSpecialBoxInfo{width:100.8%; margin-left:-0.25%;}
+.cssClassProductsBox,.cssLatestItemContainer .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{ width:30.75%;}
+.welcome-msg, .cssCustomerRecentActivity{ width:93.85%;}
+.cssClassCol1 .cssClassAddressBook{ margin-right:25px;}	
+.targetarea{ width:68.75%;}
+#sfAspxmenubar{ width:70%;}
+#sfAspxshoppingbag{ width:10%}
+#sfToplinks{ width:78%;}
+#sfLogin{ width:22%;}
+.cssClassProductsBox,.cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox,.cssClassProductsBox, .cssLatestItemContainer .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{margin:0 1.25% 2.5% 1.25% !important;}
+}
+@media only screen and ( max-width: 800px ) {
+.cssLatestItemContainer,.cssClassSpecialBoxInfo{width:100.9%; margin-left:-0.25%;}
+.cssClassProductsBox,.cssLatestItemContainer .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{ width:30.75%;}
+.cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox{ width:47.2%;}
+.cssClassPages{ display:none;}
+.cssClasMyAccountInformation{ width:calc(100% - 232px);}	
+.cssClassCol1 .cssClassAddressBook,.cssClassCol2 .cssClassAddressBook,.cssClassCol1 .cssClassAddressBook1,.cssClasspBalance, .cssClasspExchangeRate, .cssClasspBalanceLimitations{ width:auto; float:none; margin-right:0;}	
+.cssClassCommonCenterBoxTable,.sfGridwrapper{ overflow:auto;}
+.cssClassMyDashBoard .cssClassCommonSideBox{ width:160px;}
+#sfBanner{ height:310px; overflow:hidden;}
+.sfImageholder{ width:275px; top:15%;}
+.sfBannerDesc{right:0;top:18%;}
+.sfBannerDesc h1{ font-size:40px;color:#fff; line-height:52px;}
+.sfBannerDesc h2{
+	color:#fff;
+	margin-bottom:0;
+	font-size:60px;
+	line-height:60px;
+}
+.popupbox li, .cssClassCheckoutLeftBox li, .cssClassAIMChildContent li{ margin-right:20px;}
+.bx-wrapper .bx-prev {left: 10px;}
+.bx-wrapper .bx-next {right: 10px;}
+.sfBannerDesc p{font:24px/24px 'source_sans_prosemibold',Helvetica, Arial, sans-serif;}			
+.sffooterbtn .sfInnerwrapper .sfCol_33{ width:49%; margin-bottom:30px;}	
+.cssClassProductRealPrice span, .cssClassProductsGridRealPrice span{ font-size:22px;}
+.cssClassProductsBox a, .cssClassProductsGridBox h2 a{ font-size:16px;}
+.jcarousel-skin .jcarousel-clip-vertical{ width:230px !important; height:80px !important;}
+.targetarea{ width:100%;}
+.responsive-tabs__panel{ margin-bottom:0; padding:20px;}
+.cssClasspBalance, .cssClasspExchangeRate, .cssClasspBalanceLimitations{height:auto;}
+.welcome-msg, .cssCustomerRecentActivity{ width:92.6%;}
+.cssClassBlueBtnWrapper a{ font-size:inherit; padding:0; padding:10px;}
+.divDetailsItemList .classInfo{ width:316px;}
+.divDetailsItemList .itemImageClass{ margin-right:15px;}
+#sfAspxmenubar{  clear:both; width:100%;}
+#sfAspxshoppingbag{ position:absolute; right:0; top:0px; clear:both; float:none;}
+#sfHeadertop .sfInnerwrapper .sfMoreblocks{ position:relative;}
+.cssClassMegaCategoryWrapper{ border:solid 1px #ededed;cursor:pointer; background:url(../images/responsive_arrow.png) no-repeat right 18px; padding:12px;}
+#divCatHeader span{text-transform:uppercase; font-family:'source_sans_prosemibold',Helvetica, Arial, sans-serif; font-size:18px;}
+#mega-menuH li { float:none;}
+#mega-menuH li a{ padding:0;}
+.cssClassCartPictureInformation{ width:auto;}
+#sf-CatMenu{ text-transform:uppercase;font-family:'source_sans_prosemibold',Helvetica, Arial, sans-serif; font-size:20px;} 
+.sf-CatContainer{ margin-top:10px; position:absolute; background:#fff;border:solid 1px #dfe5e8; border-radius:0 0 3px 3px; -webkit-border-radius:0 0 3px 3px; -o-border-radius:0 0 3px 3px; width:96.05%; left:15px; z-index:9999; border-top:none;}
+.sf-CatContainer li{ position:relative;}
+.sf-CatContainer li strong{ position:absolute; right:12px; top:10px; background:#78b04b; border-radius:50%; -webkit-border-radius:50%; -o-border-radius:50%; width:20px; height:20px; color:#fff;overflow:hidden; line-height:18px;}
+.sf-CatContainer li strong i{ font-size:11px; padding:5px;}
+ul.sf-CatContainer li{ padding:8px 12px; font-family:'source_sans_prosemibold',Helvetica, Arial, sans-serif; font-size:18px;}
+ul.sf-CatContainer li ul li{ font-size:16px; border-top:solid 1px #efefef; list-style:inside disc;}
+ul.sf-CatContainer li ul li:first-child{border-top:none;}
+ul.sf-CatContainer li ul li ul li{ font-family:'source_sans_proregular',Helvetica, Arial, sans-serif;background:url(../images/submenu_bullets.gif) no-repeat left 10px;padding:5px 0 5px 15px; font-size:16px;list-style:none;}
+ul.sf-CatContainer li ul li strong{ background:#3b3b3b; right:0; }
+.cssClassShoppingCart i{ font-size:30px;}
+/*Responsive Menu Nav Sectoion*/
+#responsiveIcon{ width:30px; overflow:hidden;}
+#responsiveIcon a{ color:#FFF;}
+#responsiveIcon a i{ font-size:27px;}
+#sfToplinks{ position:absolute; height:100%; overflow:auto; width:280px; left:0;background:#333333; z-index:9999; padding:0; transform:translateX(-100%);-webkit-transform:translateX(-100%);-o-transform:translateX(-100%); top:0;}
+.ResponsiveHtml{ width:32px; float:left;margin-right:10px;}
+.tzSelect{ height:auto; background-position:right 12px;}
+.tzSelect,.tzSelect .selectBox{ width:100%; float:none; position:relative;}
+.tzSelect .selectBox{ padding:7px 0;} 
+.tzSelect .dropDown li,.tzSelect .dropDown li:hover{ background:none; color:#c4ced4; padding:10px 5px; border-top:solid 1px #4d5e68; border-bottom:none;}
+.tzSelect .dropDown li img{ float:none; margin:0; margin-right:5px;}
+.dropDown li span{ display:inline-block;}
+.cssClassCurrencySelect .selectBox span,.cssClassCurrencySelect span,.cssClassCurrencySelect .selectBox img{ padding:0; margin:0; float:none;}
+.cssClassCurrencySelect .selectBox img{ margin-right:5px;}
+.sfHeaderDropdown dd ul, .tzSelect .dropDown{ border:none; background:none; box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none; padding:0; position:relative; left:0; top:auto;}
+.sfLanguageContainer select{ width:100%;}
+.LanguageSwitch{ padding:10px 15px; border-bottom:solid 1px #474747; background:#2d2c2c; margin:0; width:auto; height:auto;}
+.CurrencyConverter{ padding:7px 15px; border-bottom:solid 1px #474747; font-size:14px; margin:0;}
+.HeaderControl{ margin:0; width:auto; height:auto;}
+.HeaderControl .cssClassLoginStatusInfo ul li{ float:none; margin:0;padding:9px 15px; border-bottom:solid 1px #474747; background:#2d2c2c;}
+.HeaderControl ul li:nth-child(even){ background:none;}
+/*end*/
+#sfLogin,.sfModuleSimpleSearch{ width:auto; float:none;}
+.CurrencyConverter,.LanguageSwitch,.HeaderControl{ float:none;}
+.LoginStatus{ width:91.5%;}
+#ddlBilling div, #ddlShipping div{ width:42.9%;}
+.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel,.PageOuter{ width:89.75%;}
+.cssClassLoginLeftBox{ padding:0 30px;}
+.cssClassShippingMethodInfo .cssClassCartPictureInformation{ width:96%;}
+.fixed{ width:30%;}
+body { transform:translateX(0px);-webkit-transform:translateX(0px);-o-transform:translateX(0px); transition:all 0.3s ease-in-out 0s;-webkit-transition:all 0.3s ease-in-out 0s;-o-transition:all 0.3s ease-in-out 0s;}
+.cssClassResTab{overflow:hidden; transform:translateX(280px);-webkit-transform:translateX(280px);-o-transform:translateX(280px);}
+.ShoppingBagHeader{ padding:3px 0;}
+.cssClassApplyWrap, .cssClassCartbtmwrapper .cssClassSubTotal, .cssClassCartbtmwrapper .sfFormwrapper .toogleWrapper{ float:left; width:100%; display:block;}
+.cssClassCheckOutMethodLeft,.cssClassRightAccordainMenu{ float:none; width:auto;}
+.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel, .PageOuter{width:94.45%;}
+.cssClassRightAccordainMenuInfo, .cssClassRightAccordainMenuInfoSelected{ width:auto; margin-bottom:30px;}
+.thumbs li{ float:left;margin-right:10px; display:block; height:60px !important; border:1px solid #dce2e6; background:#fff;width: 60px !important;
+text-align:center;
+padding:5px;}
+.cssItemCategories .cssClassCategoriesName li{ line-height:30px;}
+#alert-Box{ height:20%;}
+.thumbs{ width:300px !important;}
+.jcarousel-skin .jcarousel-next-vertical,.jcarousel-skin .jcarousel-prev-vertical{ transform:rotate(-90deg); left:180px; top:10px;}
+.jcarousel-skin .jcarousel-prev-vertical{ top:58px;}
+	}		
+@media only screen and ( max-width: 768px ) {
+.cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{ width:30.57%;}
+.sfButtonwrapper button,.cssClassWishListButton button,.sfButtonwrapper button,.cssClassdivProceed button,.cssClassdvRPBalance button{padding:0; width:1px; display:none;}
+.detailButtonWrapper .sfButtonwrapper button,.detailButtonWrapper .cssClassWishListButton button,.detailButtonWrapper .sfButtonwrapper button{display:inline-block; width:auto;}
+h2{ font-size:20px;}
+h3{ font-size:16px;}
+.welcome-msg, .cssCustomerRecentActivity{ width:92.35%;}
+.divDetailsItemList .classInfo{ width:300px;}
+.sf-CatContainer{ width:95.85%;}
+.LoginStatus{ width:91.1%;}
+#ddlBilling div, #ddlShipping div{ width:42.68%;}
+.cssClassAddtoCard .cssClassOutOfStock button,.cssLatestItemInfo .cssClassOutOfStock button{display:block; width:auto; padding:0; margin-right:10px;}
+.jcarousel-skin .jcarousel-container-horizontal{ width:225px !important; padding:0 20px;}
+.jcarousel-skin .jcarousel-clip-horizontal{ width:190px !important;}
+}
+@media only screen and ( max-width: 640px ) 
+{
+#sfHeadertop .sfLogo a img, #sfHeadertop .sfLogo a span{width:100%;}
+.cssClassProductsBox,.cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{ width:30.67%;}
+.cssLatestItemInfo{ padding-top:15px;}
+.cssClassMyDashBoard .cssClassCommonSideBox{width:93.1%; margin-right:0;}
+.cssClassFilter{ width:91.5%;}
+.cssCategoryWrapper,.cssClasMyAccountInformation{ width:100%;}
+.welcome-msg, .cssCustomerRecentActivity{ width:93.45%;}
+.sf-CatContainer{ width:95%;}	
+.ShoppingBagHeader{ padding:0;}	
+.cssProfileImage{ float:left; margin-right:30px;}
+.LoginStatus{ width:89.30%;}
+.divDetailsItemList .classInfo{width:236px;}
+.divDetailsItemList .itemImageClass{ width:40%;}
+.divDetailsItemList .itemImageClass img{ width:100%;}
+.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel, .PageOuter{width:93%;}
+span.showingPags{ display:none;}
+#ddlBilling div, #ddlShipping div{width:92%;}
+.sfPopupclose, .cssClassClose{ top:-7px;}
+.popupbox .sfFormwrapper input[type="text"], .popupbox .sfFormwrapper textarea{ width:95%;}
+#alert-Box{ height:20%; width:80%;}
+.cssClassPages,.detailButtonWrapper label.cssCompareLabel,.jcarousel-skin{ display:none;}
+#sfBanner{ height:310px; overflow:hidden;}
+.sfImageholder{ width:200px; top:15%;}
+.sfBannerDesc{right:0;top:18%; width:300px;}
+.sfBannerDesc h1{ font-size:30px;color:#fff; line-height:52px;}
+.sfBannerDesc h2{
+	color:#fff;
+	margin-bottom:0;
+	font-size:50px;
+	line-height:50px;
+}
+#divWishListSort { float:none;}
+
+		
+}
+@media only screen and ( max-width: 600px ) 
+{
+	#sfBanner,.showingPags,.cssClassCompareButton{ display:none;}
+	.popupbox{ width:85%; height:85%}
+	.welcome-msg, .cssCustomerRecentActivity{ width:93%; margin-bottom:30px;}
+	.cssClassMyDashBoard .cssClassCommonSideBox{width:92.8%;}
+	.cssClassFilter{width:90.8%;}
+	.sf-CatContainer{ width:94.65%;}	
+
+		.divDetailsItemList .classInfo{width:216px;}
+		.divDetailsItemList .itemImageClass{ width:40%;}
+		.divDetailsItemList .itemImageClass img{ width:100%;}
+		.sfButtonwrapper button, .cssClassWishListButton button, .sfButtonwrapper button{display:none;}
+		.LoginStatus{ width:88.55%;}
+		.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel, .PageOuter{width:92.55%; margin-bottom:30px;}
+		.sfPopupclose, .cssClassClose{ width:20px; height:20px; top:-9px;}
+		.cssClassClose span i{font-size:11px;}
+		.sffooterbtn .sfInnerwrapper .sfCol_33{ width:auto; float:none;}
+		.sfModuleCopyrightHtml{ text-align:left;}
+		
+	
+	
+}
+@media only screen and ( max-width: 568px ) 
+{
+	.cssClassProductsBox,.cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox{ width:32%;}
+	.cssClassProductsBox, .cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{width:30.67%;}
+	.cssClassFilter{ width:90.5%;}
+	.cssClassMyDashBoard .cssClassCommonSideBox{ width:92.2%;}
+	.sf-CatContainer{ width:94.4%;}
+	.LoginStatus{ width:87.9%;}
+	.welcome-msg, .cssCustomerRecentActivity{ width:92.65%;}
+	.popupbox .sfFormwrapper select{ width:95%;}
+	.popupbox li, .cssClassCheckoutLeftBox li, .cssClassAIMChildContent li{ width:47.9%;}
+	.cssClassCol1 .cssClassAddressBook1,.cssClassAddWrapper{ float:none; width:100%;}
+		.cssClassAddWrapper{ margin-bottom:30px;}
+	}
+@media only screen and ( max-width: 540px ) 
+{
+.welcome-msg, .cssCustomerRecentActivity{ width:92.25%;}
+.cssClassFilter{ width:89.9%;}
+	.cssClassMyDashBoard .cssClassCommonSideBox{ width:91.8%;}	
+	.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel, .PageOuter{width:91.75%;}
+}	
+@media screen and ( max-width: 480px )
+{
+	.ResponsiveHtml{ width:19px;}
+	.cssClassSageSearchWrapper{ padding:0; padding-top:2px;}
+	#sfTopheaderlink #sfLogin{ margin-top:3px;}
+	.sf-CatContainer{ width:93.25%;}
+	#responsiveIcon a i{ font-size:19px;}
+	#responsiveIcon{ width:24px;}
+	#sfAspxshoppingbag{ right:0;}
+	.cssClassShoppingCart{ margin-top:3px;}
+	.cssitemdetailwrap .sfCol_45,.cssitemdetailwrap .sfCol_55{ float:none; width:100%; }
+	#sfBanner,.showingPags,#divViewAs,.cssClassViewPerPage,.stwrapper,.cssDlinks{display:none;}
+		.cssClassProductsBox,.cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox,.cssClassProductsBox, .cssLatestItemContainer .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{ width:47.2%; margin:0 1.25% 2.5% 1.25% !important;}
+/*	.cssLatestItemContainer,.cssProductGridWrapper,.cssClassFilter, .cssClassCommonSideBox,.cssCategoryWrapper,#sfFooterbtn .sfCol_25{ margin:0 auto;}*/
+	.cssClassFilter{width:88.5%;margin:0 0 30px 0;}
+	.cssClassMyDashBoard .cssClassCommonSideBox{width:90.7%;margin-bottom:30px;}
+	.cssLatestItemInfo{ padding-top:10px;}
+.cssClassAddtoCard .sfButtonwrapper{ margin-right:0;}
+/*.cssClassAddtoCard .cssClassOutOfStock button{ text-indent:inherit; width:auto;}*/	
+.LoginStatus{ width:86.2%;}
+.cssClassProductImagewrap,.cssClassProductPictureDetails,.cssDlinks{ width:100%; float:none; margin:5px 0; padding:0;}
+.cssClassProductDetailInformation h2{ font-size:18px;}
+.cssClassTabPanelTable{margin-top:10px;}
+.sffooterbtn .sfInnerwrapper .sfCol_33{ float:none; width:auto;}
+.cssClassProductImagewrap{ margin:0 0 30px 0;}
+.cssSearchContainer div,.cssSearchContainer li#sfFrontCategory,.cssSearchContainer .cssClassTopSearch{ display:none;}
+.jcarousel-skin .jcarousel-container-horizontal{ padding:20px 40px 0;}
+.cssProfileImage{ float:none; margin:0 auto;}
+.welcome-msg, .cssCustomerRecentActivity{ width:91%;}
+.popupbox li, .cssClassCheckoutLeftBox li, .cssClassAIMChildContent li{ width:95%; margin-right:0;}
+.ui-tabs .ui-tabs-nav li a{ padding:8px 14px;}
+.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel, .PageOuter{width:90.8%;}
+.sfSignlecheckoutleft,.cssClassCheckOutMethodRight{ float:none; width:auto;}
+.cssClassLoginLeftBox{ border-left:none; padding:0;}
+.cssClassLoginRighttBox{ text-align:left; margin:0;}
+.cssClassCartInformationDetails{ width:100%; overflow:auto;}
+.cssClassCartInformationDetails table{ width:150%;}
+.sfDashBoard .icon-dashboard{ width:20px; overflow:hidden;}
+.cssPriceDetailwrap{margin:10px 0 20px;}
+.popupbox .sfFormwrapper input[type="text"],.popupbox .sfFormwrapper .cssClassTextarea{ width:90%;}
+.LoginStatus .sfLogininfo ul li{ width:20px; overflow:hidden;}
+.LoginStatus .sfLogininfo ul li.sfWelcomeMsg{ width:auto;}
+.LoginStatus .sfLogininfo ul li a i{ font-size:20px;}
+.divDetailsItemList .classInfo{ width:88%; float:none;}
+.targetarea{ margin-top:20px;}
+.cssClassSageSearchWrapper li, .cssClassSageSearchBox{ float:none;}
+.cssClassSageSearchWrapper input.cssClassSageSearchBox{ width:86%; float:left;}
+.popupbox .sfFormwrapper select{ width:93%;}
+.cssClassAdvenceSearch [class*="sfCol_"]{ float:none; width:100%;}
+select#ddlCategory{ width:100%;}
+#olAddtionalEntries .cssClassAddWrapper .cssClassChange a{ right:50px;}
+#olAddtionalEntries .cssClassAddWrapper .cssClassChange a.cssDeleteBtn{ right:20px;}
+
+}
+
+@media only screen and ( max-width: 360px )
+{
+	#sfHeadertop .sfLogo a img, #sfHeadertop .sfLogo a span{width:180%;}
+	.sf-CatContainer{ width:91%;}
+	.loggedin{ display:none;}
+	.cssClassFilter{width:84.2%;}
+	.cssClassMyDashBoard .cssClassCommonSideBox{width:87.2%;}
+	.welcome-msg, .cssCustomerRecentActivity{ width:88%;}
+	.LoginStatus{ width:84.2%;}
+	.divDetailsItemList .classInfo{ width:84%;}
+	.sfPopupclose, .cssClassClose{ right:-7px;}
+	.cssSearchContainer{ width:300px;}
+	.cssClassSageSearchWrapper input.cssClassSageSearchBox{ width:85%;}
+	.cssClassShoppingCart i{ font-size:26px;}
+	.detailButtonWrapper .sfButtonwrapper label{ float:none; width:92.65%; margin-right:0; margin-top:10px; text-align:center; padding:6px 12px;}
+	#alert-Box{ height:36%;}
+	.cssNoBodyScroll{ overflow:hidden; width:100%; height:100% !important;}
+	
+	}
+	
+@media only screen and ( max-width: 320px )
+{
+#sfBanner{ display:none;}
+
+#sfHeadertop .sfLogo a img, #sfHeadertop .sfLogo a span{width:217%;}
+.sf-CatContainer{ width:90%;}
+		.cssClassProductsBox, .cssLatestItemContainer .cssClassProductsBox,.cssClassProductsBox, .cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox,.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox{ width:97.27%;}
+		
+		.cssClassFilter{ width:82%; margin-bottom:30px;margin-top:0;}
+		.cssClassMyDashBoard .cssClassCommonSideBox{ width:85.55%; margin-bottom:30px;margin-top:0;}
+		.cssSearchContainer{ width:258px;}
+		.welcome-msg, .cssCustomerRecentActivity{ width:86.2%;}
+		.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel, .PageOuter{width:86%;}	
+		.cssClassCartInformationDetails table{ width:150%;}
+		.LoginStatus{ width:82%;}
+		.divDetailsItemList .classInfo{ width:81.85%;}
+		.cssClassSageSearchWrapper input.cssClassSageSearchBox{ width:77%;}	
+		.popupbox .sfFormwrapper select{ width:94.55%}
+		.detailButtonWrapper .sfButtonwrapper label{ width:91.65%;}
+		
+		
+		}

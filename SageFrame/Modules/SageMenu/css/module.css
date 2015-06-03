@@ -1,0 +1,119 @@
+﻿.sfNavigation {
+	background:#f5f5f5;
+}
+.sf-menu, .sf-menu li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.sf-menu li span.sfPageicon {
+	margin: 0 5px 0 0;
+	float: left;
+}
+.sf-menu a {
+	display:inline-block;
+	color: #555;
+	padding:6px 20px;
+}
+.sf-menu a:hover {
+	text-decoration:none;
+	color:#333;
+}
+.sf-menu a em {
+    display: block;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.sf-menu li {
+	float: left;
+	position: relative;
+}
+.sf-menu li.sfActive a {
+	color:#333;
+	background:#e5e5e5;
+}
+.sf-menu li.sfActive li a {
+	background:#fff;
+}
+/* 1st level Dropdown */
+.sf-menu li ul {
+	position: absolute;
+	left: 0px;
+	top:100%;
+	width: 200px;
+	margin: 0;
+	padding:5px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	background:#fff;
+	border:1px solid rgba(0, 0, 0, 0.15);
+	z-index:1000;
+	padding:5px 0;
+}
+.sf-menu li li {
+	float:none;
+}
+.sf-menu li li a {
+	padding:3px 20px;
+	display: block;
+}
+.sf-menu > li ul li a:hover  {
+	background:#f1f1f1;
+}
+/* 2nd Level Dropdown */
+.sf-menu li.sfParent li.sfParent ul {
+	position:absolute;
+	left:195px;
+	top: 0;
+}
+/*** dropdown arrow **/
+.sf-sub-indicator {
+	display:inline-block;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	pointer-events: none;
+	border-color:transparent;
+	border-top-color: #999;
+	border-width: 4px;
+	margin-left:4px;
+	position: absolute; top:50%;
+}
+.sf-menu li li.sfParent span.sf-sub-indicator {
+	position:absolute;
+	right:5px;
+	top:9px;
+	border-top-color:transparent;
+	border-left-color:#999;
+}
+
+
+/* CSS MENU */
+.sfCssmenu li { position: relative;}
+.sfCssmenu li.sfParent:hover ul  { display: block !important; visibility: visible !important;}
+.sfCssmenu li.sfParent ul li { float: none;}
+
+
+
+/* Side Menu  */
+.sfSidemenu li { list-style:none;}
+.sfSidemenu li a{ background-color:#f7f7f7; padding:8px 12px; border:1px solid #ddd; border-top-width:0; display:block;}
+.sfSidemenu li:first-child a { border-top-width:1px; }
+.sfSidemenu li a:hover { background-color:#fff; text-decoration:none;}
+.sfSidemenu li ul {	display: none;}
+ul.sfSidemenu li a span.sfPageicon {
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+/* Footer Menu */
+.sfFootermenu li {
+	float:left; list-style:none;
+	margin-right: 15px;
+}
+
+
+/* MegaMenu*/
+.megawrapper { padding:15px;}
+

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layout name="layout_all">
+  <section name="sfContent">
+    <placeholder name="middlemaincurrent">middlemaincurrents</placeholder>
+    <placeholder name="leftA" width="20">leftA</placeholder>
+  </section>
+</layout>

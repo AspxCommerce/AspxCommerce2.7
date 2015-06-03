@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CONFIG>
+
+<SAGEFRAME VERSION="02.25"></SAGEFRAME>  
+
+  <FILES>  
+    	<FILE path="Modules\Logo\css\testupgrade.css"></FILE>
+  </FILES> 
+  
+</CONFIG>

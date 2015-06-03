@@ -1,0 +1,55 @@
+﻿<sageframe version="2.5.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_YouMayAlsoLike</name>
+      <friendlyname>AspxYouMayAlsoLike</friendlyname>
+      <foldername>AspxCommerce/AspxYouMayAlsoLike</foldername>
+      <modulename>AspxYouMayAlsoLike</modulename>
+      <description>You May Also Like.</description>
+      <version>02.50.00</version>
+      <businesscontrollerclass>SageFrame.Modules.AspxYouMayAlsoLike.YouMayAlsoLikeController, SageFrame.Modules.YouMayAlsoLikeProvider</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>AspxCommerce Pvt. Ltd.</owner>
+      <organization>AspxCommerce Pvt. Ltd.</organization>
+      <url>www.aspxcommerce.com</url>
+      <email>info@aspxcommerce.com</email>
+      <releasenotes>This is  release notes for You May Also Like List</releasenotes>
+      <license>This is  license copy for  You May Also Like List Control Application</license>
+      <modules>
+        <module>
+          <friendlyname>AspxYouMayAlsoLike</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+              <key>AspxYouMayAlsoLike</key>
+              <title>AspxYouMayAlsoLike</title>
+              <src>Modules/AspxCommerce/AspxYouMayAlsoLike/YouMayAlsoLike.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>           
+            <control>
+              <key>AspxYouMayAlsoLikeSetting</key>
+              <title>AspxYouMayAlsoLikeSetting</title>
+              <src>Modules/AspxCommerce/AspxYouMayAlsoLike/YouMayAlsoLikeSetting.ascx</src>
+              <type>Setting</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>02.50.00.SqlDataProvider</name>
+        </file>
+        <file>
+          <name>AspxCommerce.YouMayAlsoLike.dll</name>         
+        </file>
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>
+      </files>
+    </folder>
+  </folders>
+</sageframe>

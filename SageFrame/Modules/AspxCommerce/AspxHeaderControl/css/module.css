@@ -1,0 +1,5 @@
+﻿.sfLogininfo{ width:174px;}
+.LoginStatus{float:left; color:#fff;}
+.HeaderControl{ float:left; margin:0; width:61%; height:30px;}
+.cssClassLoginStatusInfo ul {overflow: hidden;padding:0px;}
+.cssClassLoginStatusInfo ul li,.sfLogininfo ul li{float: left; margin-right:10px; font-size:14px; line-height:30px;}

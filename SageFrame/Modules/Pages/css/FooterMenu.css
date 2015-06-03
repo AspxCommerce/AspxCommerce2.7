@@ -1,0 +1,8 @@
+﻿.cssClassFooterMenu { overflow:hidden; }
+ul.sagemenu-footer { margin: 0px; padding: 0px; }
+.cssClassFooterMenu ul li { width: 170px; float: left; margin:0 0 0 5px; }
+.cssClassFooterMenu ul li a { color: #5E5E5E; font: bold 14px/36px 'Cuprum', serif; text-shadow: 1px 1px 0 #EFEFEF; }
+.cssClassFooterMenu ul li ul li{ margin:0; }
+.cssClassFooterMenu ul li ul li a { margin-top: 1px; color: #5E5E5E; font-size:11px; line-height:20px;  }
+.cssClassFooterMenu ul li ul li a:hover{ color:#000; }
+.cssClassInvisible { display: none;}

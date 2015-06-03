@@ -1,0 +1,89 @@
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_GetDataByEmail]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_GetDataByEmail]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_GetDataByEmail]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_GetMessageInfoByID]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_GetMessageInfoByID]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_GetMessageInfoByID]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_GetMessageTemplateByTypeID]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_GetMessageTemplateByTypeID]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_GetMessageTemplateByTypeID]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_GetMessageTemplateList]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_GetMessageTemplateList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_GetMessageTemplateList]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_GetNewsLetter]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_GetNewsLetter]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_GetNewsLetter]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_GetNLSettingForUnSubscribe]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_GetNLSettingForUnSubscribe]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_GetNLSettingForUnSubscribe]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_GetSubscriberEmailList]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_GetSubscriberEmailList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_GetSubscriberEmailList]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_GetSubscriberList]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_GetSubscriberList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_GetSubscriberList]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_SaveEmailSubscriber]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_SaveEmailSubscriber]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_SaveEmailSubscriber]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_SaveMobileSubscriber]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_SaveMobileSubscriber]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_SaveMobileSubscriber]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_SaveNewsLetter]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_SaveNewsLetter]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_SaveNewsLetter]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_SaveNLSetting]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_SaveNLSetting]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_SaveNLSetting]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_UnSubscribeByEmailLink]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_UnSubscribeByEmailLink]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_UnSubscribeByEmailLink]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_UnSubscribeUserByEmail]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_UnSubscribeUserByEmail]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_UnSubscribeUserByEmail]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_UnSubscribeUserByPhone]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_UnSubscribeUserByPhone]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_UnSubscribeUserByPhone]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NL_UpdateNewsLetter]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NL_UpdateNewsLetter]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NL_UpdateNewsLetter]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_NLGetSetting]    Script Date: 12/16/2012 14:34:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_NLGetSetting]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_NLGetSetting]
+GO
+/****** Object:  Table [dbo].[NL_EmailSubscriber]    Script Date: 12/16/2012 14:34:52 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NL_EmailSubscriber]') AND type in (N'U'))
+DROP TABLE [dbo].[NL_EmailSubscriber]
+GO
+/****** Object:  Table [dbo].[NL_MobileSubsciber]    Script Date: 12/16/2012 14:34:52 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NL_MobileSubsciber]') AND type in (N'U'))
+DROP TABLE [dbo].[NL_MobileSubsciber]
+GO
+/****** Object:  Table [dbo].[NL_NewsLetter]    Script Date: 12/16/2012 14:34:52 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NL_NewsLetter]') AND type in (N'U'))
+DROP TABLE [dbo].[NL_NewsLetter]
+GO
+/****** Object:  Table [dbo].[NL_SettingKey]    Script Date: 12/16/2012 14:34:52 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NL_SettingKey]') AND type in (N'U'))
+DROP TABLE [dbo].[NL_SettingKey]
+GO
+/****** Object:  Table [dbo].[NL_SettingValue]    Script Date: 12/16/2012 14:34:53 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NL_SettingValue]') AND type in (N'U'))
+DROP TABLE [dbo].[NL_SettingValue]
+GO

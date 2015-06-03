@@ -1,0 +1,47 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>AspxStoreBranchesManagement</name>
+      <friendlyname>AspxStoreBranchesManagement</friendlyname>
+      <foldername>AspxCommerce/AspxStoreBranchesManagement</foldername>
+      <modulename>AspxStoreBranchesManagement</modulename>
+      <description>Store Branches Management</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.AspxCommerce.AspxStoreBranchesManagement.EventController, SageFrame.Modules.AspxCommerce.AspxStoreBranchesManagement</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>Sageframe Pvt. Ltd.</owner>
+      <organization>Sageframe Pvt. Ltd</organization>
+      <url>www.sageframe.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This is test release notes for SageFrame Store Branches Management</releasenotes>
+      <license>This is test license copy for SageFrame Store Branches Management</license>
+      <modules>
+        <module>
+          <friendlyname>AspxStoreBranchesManagement</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+              <key>AspxStoreBranchesManagementEdit</key>
+              <title>AspxStoreBranchesManagementEdit</title>
+              <src>Modules/AspxCommerce/AspxStoreBranchesManagement/StoreBranchManage.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>false</supportspartialrendering>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>
+        <file>
+          <name>AspxCommerce.AspxStoreBranchManage.dll</name>
+        </file>
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>
+      </files>
+    </folder>
+  </folders>
+</sageframe>

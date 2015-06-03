@@ -1,0 +1,9 @@
+﻿@media print  { .cssClassTopWrapper, .cssClassAdminControlPanel, .cssClassAdminBreadCrum, .cssClassHeaderRight, .sfButtonwrapper, .stickFooterWrapper  { display:none !important;}
+.cssClassCommonBox { border:none;}
+#divInvoiceForm { width:100%;}
+.adminLogo h1 { text-indent:-9999px;}
+.cssClassHeader, .sfFormwrapper, .cssClassHeaderWrapper { background:#fff; }
+.cssClassHeader h2 span, .version { color:#444;}
+.cssClassHeaderWrapper { border-bottom:1px solid #444;}
+.sfGridwrapper table td {border:1px solid #444 !important; color:#333 !important; text-shadow:none !important; }
+ }

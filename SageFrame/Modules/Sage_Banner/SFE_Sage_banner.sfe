@@ -1,0 +1,63 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>Sage_Banner</name>
+      <friendlyname>Sage_Banner</friendlyname>
+      <foldername>Sage_Banner</foldername>
+      <modulename>Sage_Banner</modulename>
+      <description>For Help SageFrame User</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.Sage_Banner.EventController, SageFrame.Modules.Sage_Banner</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>Sageframe Pvt. Ltd.</owner>
+      <organization>Sageframe Pvt. Ltd</organization>
+      <url>www.sageframe.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This is test release notes for SageFrame Sage_Banner Application</releasenotes>
+      <license>This is test license copy for SageFrame Sage_Banner Application</license>
+      <modules>
+        <module>
+          <friendlyname>Sage_Banner</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			  <key>Sage_Banner</key>
+              <title>Sage_Banner</title>
+              <src>Modules/Sage_Banner/ViewBanner.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>True</supportspartialrendering>
+            </control>  
+			  <control>
+			  <key>Sage_Banner</key>
+              <title>Sage_Banner</title>
+              <src>Modules/Sage_Banner/SettingBanner.ascx</src>
+              <type>Setting</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>True</supportspartialrendering>
+            </control> 
+               <control>
+			  <key>Sage_Banner</key>
+              <title>Sage_Banner</title>
+              <src>Modules/Sage_Banner/EditBanner.ascx</src>
+              <type>Edit</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>True</supportspartialrendering>
+            </control> 			
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>   
+        <file>
+          <name>SageFrame.SageBanner.dll</name>
+        </file>        
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file> 
+      </files>
+    </folder>
+  </folders>
+</sageframe>

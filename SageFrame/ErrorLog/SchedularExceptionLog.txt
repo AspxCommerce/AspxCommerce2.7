@@ -1,0 +1,66 @@
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/26/2014 1:38:01 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/26/2014 1:50:02 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/26/2014 2:21:15 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/27/2014 11:33:05 AM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/27/2014 11:33:56 AM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/27/2014 11:44:49 AM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/27/2014 1:09:43 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/27/2014 4:45:32 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/27/2014 5:01:18 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/28/2014 10:47:35 AM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/28/2014 10:58:59 AM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/28/2014 3:00:15 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/28/2014 6:27:23 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/29/2014 9:49:39 AM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:8/29/2014 12:16:19 PM-----EndDate8/31/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:9/8/2014 1:46:40 PM-----EndDate9/30/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:9/9/2014 1:37:56 PM-----EndDate9/30/2014
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:9/9/2014 4:19:59 PM-----EndDate9/30/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:9/9/2014 4:25:40 PM-----EndDate9/30/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:9/9/2014 4:38:10 PM-----EndDate9/30/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:9/9/2014 4:45:40 PM-----EndDate9/30/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------
+AspxCommerce.ApplyCatalogPriceRules.ApplyCategoryPriceRules, AspxCommerce.ApplyCatalogPriceRules----- CurrentDate:9/9/2014 4:59:50 PM-----EndDate9/30/2014 12:00:00 AM
+Error MessageThread was being aborted.-----Error Sourcemscorlib-----Target SiteVoid SleepInternal(Int32)
+Method Name :-AddQueueUserWorkItem----------------------------------------------------------------------------------

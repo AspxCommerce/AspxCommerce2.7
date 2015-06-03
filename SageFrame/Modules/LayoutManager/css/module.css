@@ -1,0 +1,486 @@
+﻿/* basic theme */
+#templateList {
+	margin:0px;
+	background:#fff;
+	padding:30px 3px;
+	box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box;
+}
+.sfTemplateinfo span.sfLabel {
+	font-weight:bold;
+}
+.sfCreatetemplate span.sfFormlabel, .sfCreatetemplate input.sfBtn, .sfCreatetemplate input.sfInputbox, .sfCreatetemplate .uploader {
+	float:left;
+	margin:0 10px 0 0;
+}
+.sfCreatetemplate span.sfFormlabel {
+	padding:5px 0 0;
+}
+.sfCreatetemplate { color:#fff;
+}
+.sfUploadTemplate{ float:left; width:auto;}
+.sfTemplatemanger h3 { margin:30px 0px 10px;}
+
+
+/* template list */
+
+#templateList .sfTemplateholder {
+	width: 250px;
+	float:left;
+	margin:0 30px 30px 30px;
+	position:relative;
+}
+#templateList .sfTemplateholder
+
+#templateList .sfTemplatethumb {
+	float:left;
+	height: 100px;
+	width: 100px;
+	text-align:center;
+	background:#d7d7d7;
+	overflow:hidden;
+	border:1px solid #e5e5e5;
+	background:#fff;
+	padding:2px;
+	margin:0 20px 0 0;
+	overflow:hidden;
+}
+
+.sfTemplateholder a.sfTemplatethumb { width:250px; height:250px; overflow:hidden; display:block; position:relative; cursor:auto; 
+border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px; }
+#templateList .sfTemplatethumb img {
+	height:250px; width:250px;
+	border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px;
+}
+.sfTemplateholder.sfActivetemplate a.sfTemplatethumb:after { content:""; background:rgba(11,75,131,0.5); width:250px; height:250px; position:absolute; top:0px; left:0px;}
+
+.sfTemplateholder:hover a.sfTemplatethumb:after { content:""; background:rgba(0,0,0,0.5); width:250px; height:250px; position:absolute; top:0px; left:0px;}
+
+
+
+/*template detail*/ 
+.sfTemplatedetail {
+	padding: 5px 0;
+	min-height: 33px;
+	cursor: pointer;
+	overflow:hidden;
+	margin-top:7px;
+}
+.sfTemplatedetail ul {
+	margin: 0;
+	padding: 0;
+}
+.sfTemplatedetail ul li {
+	list-style: none;
+	color:#515357;
+	border:none;
+	background:none;
+}
+.sfTemplatedetail ul li.author span, .sfTemplatedetail ul li.author span a {
+	font-size: 13px;
+
+}
+.sfTemplatedetail ul li.title span {
+ font-size:16px; color:#000; text-transform:capitalize;
+	padding: 0 0 5px;
+}
+/*button*/
+.sfTemplateholder .sfButtonwrapper { overflow:visible; position:absolute; top:21px; left:65px;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting {}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li { height:34px; line-height:34px; font-size:14px; margin-bottom:10px; text-align:center; background:#f2f2f2; color:#515357;
+border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; }
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li a { height:34px; line-height:34px; font-size:14px; text-align:center; background:#f2f2f2; color:#515357; display:block; padding:0px 22px;
+border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px;
+}
+.sfTemplateholder .sfButtonwrapper ul li a:hover {	text-decoration:none;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li:hover, .sfTemplateholder .sfButtonwrapper ul li a:hover { background:#505F7C; color:#fff;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.activate a{ background:#3d67ad; color:#fff;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.activate a { color:#fff;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.activate a:hover { background:#61B416;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize { position:relative;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize ul.sfTemplateEdit { background:#505F7C; position:absolute; top:0px; left:110px; z-index:2; width:135px; padding:5px; display:none; opacity:0;  filter:alpha(opacity=0);
+border-radius:0px 3px 3px 3px; -webkit-border-radius:0px 3px 3px 3px; -ms-border-radius:0px 3px 3px 3px; -o-border-radius:0px 3px 3px 3px;
+}
+
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize ul.sfTemplateEdit li { padding:5px 15px;  background:none; height:auto; line-height:18px; margin-bottom:1px; text-align:left; cursor:pointer; color:#ccc;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize ul.sfTemplateEdit li a {text-align:left; background:none; display:block; height:auto; line-height:18px; text-align:left; padding:0px; color:#ccc;}
+
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize:hover ul.sfTemplateEdit {opacity:1;  filter:alpha(opacity=100); display:block; }
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize ul.sfTemplateEdit li:hover { background:#3B4D65; color:#fff;}
+
+
+.sfTemplateholder .sfButtonwrapper ul li, .sfTemplateholder .icon-close {opacity:0;  filter:alpha(opacity=0); /* For IE8 and earlier */
+
+}
+.sfTemplateholder:hover .sfButtonwrapper ul li, .sfTemplateholder:hover .icon-close{ opacity:1;  filter:alpha(opacity=100); /* For IE8 and earlier */}
+
+.sfTemplateholder i.icon-close { position:absolute; top:-13px; right:-13px; background:#242424; height:32px; line-height:32px; text-align:center; width:32px; color:#fff; cursor:pointer;
+border-radius:50%; -webkit-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%;}
+.sfTemplateholder i.icon-close:before { position:inherit; top:8px; left:10px;}
+.sfTemplateholder i.icon-close:hover { background:#505F7C;}
+
+.sfTemplateholder.sfActivetemplate .sfButtonwrapper li.activate { opacity:1; filter:alpha(opacity=100);}
+.sfTemplateholder.sfActivetemplate .sfButtonwrapper ul.sfTemplateSetting li { visibility:hidden;}
+.sfTemplateholder.sfActivetemplate:hover .sfButtonwrapper ul.sfTemplateSetting li { visibility:visible;}
+.sfTemplateholder.sfActivetemplate .sfButtonwrapper ul.sfTemplateSetting li.activate { visibility:visible; background:#61b416; height:42px; line-height:42px; font-size:16px;}
+.sfTemplateholder.sfActivetemplate .sfButtonwrapper ul.sfTemplateSetting li.activate a{ visibility:visible; background:#61b416; height:42px; line-height:42px; font-size:16px;}
+.sfTemplateholder.sfActivetemplate .sfButtonwrapper ul.sfTemplateSetting li.activate a { color:#fff;}
+
+
+/* template preview pop up */ 
+#imagePreview {
+	text-align:center;
+	overflow:hidden;
+}
+#imageThumbs {
+	overflow:hidden;
+	margin:10px 0;
+}
+#imageThumbs a {
+	float:left;
+	margin:0 10px 0 0;
+}
+#imageThumbs a img {
+	width:100px;
+	background:#fff;
+	padding:4px;
+	border:1px solid #ccc;
+}
+/* preset (layout) */
+#presetsDiv {
+	background:#fff;
+}
+#presetsDiv #activeLayoutList ul li {
+	margin:5px;
+	margin:0 0 10px 0;
+	border-bottom:1px solid #eaeaea;
+	padding-bottom:10px;
+}
+#presetsDiv #activeLayoutList ul li label {
+	float:left;
+	min-width:130px;
+	margin:0 10px 0 0;
+	text-align:center;
+}
+#presetsDiv #activeLayoutList ul li select {
+	float:left;
+	width:150px;
+}
+#presetsDiv #activeLayoutList ul li span.customize {
+	float:left; width:18px; display:block; height:18px;
+	margin:0 5px;
+	padding:7px 0 0;
+	cursor: pointer;
+	font-size:18px; color:#F27337;
+}
+
+#presetsDiv #activeLayoutList ul li .sfPresetpages {
+	float:left; width:calc(100% - 360px);
+}
+#presetsDiv #activeLayoutList ul li .sfPresetpages ul li span { float:left; width:auto;}
+#presetsDiv #activeLayoutList ul li .sfPresetpages ul li span.sfDelete { margin-left:5px; margin-top:4px; color:#F27337; cursor:pointer; }
+#presetsDiv #activeLayoutList ul li .sfPresetpages ul li span.sfDelete:hover, #presetsDiv #activeLayoutList ul li span.customize:hover { color:#c43e00;}
+#presetsDiv #activeLayoutList ul li .sfPresetpages ul li {
+	float:left;
+	margin:0 5px 5px;
+	background:#fff;
+	padding:0 5px;
+	border:1px solid #e8e8e8;
+}
+#presetsDiv #activeLayoutList ul li .sfPresetpages ul li span img {
+	vertical-align:middle;
+	cursor:pointer;
+	margin-left:3px;
+}
+#presetPages span.sfDelete {
+	float: right;
+	margin:0 5px;
+	cursor:pointer;
+}
+#divPagePresets ul#pageTree li span {
+	font:bold 12px Tahoma, Geneva, sans-serif;
+	text-shadow:1px 1px 0 #fff;
+	color:#1193c5;
+	border-bottom:1px dotted #d4d4d4;
+	display:block;
+	padding:5px 10px;
+	cursor:pointer;
+}
+#divPagePresets ul#pageTree li ul li span {
+	font-weight:normal;
+}
+#divPagePresets ul#pageTree li span.sfActivepage {
+	background:#b5e3f5;
+	border:none;
+	border-bottom:1px solid #fff;
+	color:#333;
+}
+#divPagePresets ul#pageTree li span.sfAssigned {
+	background:#c0c0c0;
+	border:none;
+	border-bottom:1px solid #fff;
+	color:#666;
+	text-shadow:none;
+}
+.sfPopup .controls {
+	background:#fff;
+	padding:5px;
+	min-width:250px;
+}
+.sfPopup .controls .sftype1 {
+	overflow:hidden;
+	padding:5px;
+	background:#f2f2f2;
+}
+/* preset (thame) +  preset (width) */
+#activeThemeList, #activeWidthList {
+	margin:0 0 15px 0;
+}
+#activeThemeList ul li, #activeWidthList ul li, #presetsDiv #activeLayoutList ul li label {
+	float:left;
+	padding:6px;
+	background:#f2f2f2;
+	margin:0 10px 0 0;
+	font-weight:bold;
+	cursor:pointer;
+	font-size:12px;
+	border:1px solid #e5e5e5;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	color:#444;
+}
+#presetsDiv  #activeLayoutList ul li label {
+	cursor:default;
+}
+#activeThemeList ul li:hover, #activeWidthList ul li:hover {
+	background:#fff;
+	color:#000;
+}
+#activeThemeList ul li.sfActive, #activeWidthList ul li.sfActive, #activeLayoutList ul li label.sfActive {
+	background:#cae0fb !important;
+	color:#22527d !important;
+	border:1px solid #7e9ec6 !important;
+}
+/* new css */
+.sflayoutbuilderhead {
+	font:bold 12px Tahoma, Geneva, sans-serif;
+	padding:6px;
+	cursor:pointer;
+	color:#00719C;
+}
+.sflayoutbuilderhead:hover {
+	color:#0094DE;
+}
+.sfBuilder, .sflayoutbuilderhead {
+	background:#ddd;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+.sfFormwrapper input.sfInputlm, .sfFormwrapper select.sfInputlm {
+	width:94px;
+}
+.sfFormwrapper .sfBuilder td {
+	padding:2px 5px;
+}
+.sfFormwrapper .sfBuilder td td {
+	padding-left:0;
+}
+.sfCodepreview {
+	background:#fff;
+	padding:10px;
+	margin:0 0 10px 0
+}
+#divControls {
+	margin:0 0 15px 0;
+	overflow:hidden;
+}
+#divControls .sftype1 {
+	float:left;
+	margin:4px 0 0 20px
+}
+#divControls .sftype1 label{
+	margin-right:10px;
+}
+
+#divControls select {
+	float:left
+}
+/* ---------------------------------- template wireframe -----------------------------------*/
+.sfOuterwrapper, #divFloat {
+	 background: #f7f7f7;
+    border: 1px solid #d4d4d4;
+    padding: 0px;
+    margin:5px 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 0 #fff inset;
+    -webkit-box-shadow: 0 1px 0 #fff inset;
+    box-shadow: 0 1px 0 #fff inset;
+}
+.sfWrapper {
+	 border: 1px solid #c6dff1;
+    padding: 5px;
+    margin: 5px;
+    background: #e4effa;
+}
+.sfPosition {
+	font-weight:bold;
+    color: #515357;
+    text-align: center;
+    padding: 0 0 5px 0;
+    text-transform: capitalize;
+}
+#visualLayoutMgr {
+	background:#fff;
+}
+#sfLeft, #sfRight, #sfMainWrapper {
+	float:left;
+}
+.sfColswrap .sfLefta, .sfColswrap .sfRighta {
+	float:left;
+}
+.sfColswrap .sfLeftb, .sfColswrap .sfRightb {
+	float:right;
+}
+.sfLayoutmanager .ui-tabs-nav {
+	margin-bottom:10px;
+}
+.layoutEditor .sflayoutbuilderhead {
+}
+#sfMainWrapper .sfWrapper {
+	margin:5px 5px 10px;
+}
+.sfHolder {
+	margin:30px 0 0 0;
+}
+.sfHolder .sfTheme {
+	float:left;
+	width:48%;
+}
+.sfHolder .sfScreen {
+	float:right;
+	width:48%;
+}
+.sfPchpreview {
+	background:#fff;
+	padding:10px;
+}
+
+.sfLayOut
+{
+    background: #DEEFFB;
+    float: left;
+    margin-left: 8px;
+}
+
+TH .sfWrapper
+{ cursor:default; -webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
+
+TH .sfWrapper:hover
+{
+     background:#d0e7f7;
+}
+TH.sfActive { background:none !important;}
+
+TH.sfActive .sfWrapper {border:1px solid #219ddb;  background:#d0e7f7;  -webkit-box-shadow:none; box-shadow:none;}
+
+TH.sfActive .sfWrapper { cursor:default;}
+TH.sfActive .sfWrapper .sfPosition:focus, .sfOuterwrapper, #divFloat { cursor:move;}
+
+.srt-draghandle.dragged
+{
+    border-left: 1px solid #333;
+}
+
+
+.srt-draghandle
+{
+    position: absolute;
+    z-index: 5;
+    width: 5px;
+    cursor: e-resize;
+}
+
+
+.srt-draghandle.dragged
+{
+    border-left: 1px solid #333;
+}
+
+
+.srt-draghandle
+{
+    position: absolute;
+    z-index: 5;
+    width: 5px;
+    cursor: e-resize;
+}
+#divColsInfo span
+{
+    background-color: Red;
+    margin-left: 8px;
+    float: left;
+}
+#divColsInfo span.active
+{
+    background-color: blue;
+    cursor: pointer;
+}
+.sfFullWidth
+{
+     width:100%;
+}
+
+.sfMerge , .sfSplit { position:absolute; right:-20px; height:100%; top:0; width:25px; background:#219DDB; z-index:9;
+	 -webkit-transition: all 0.3s ease; display:inline-block; cursor:default; overflow:hidden;
+		-moz-transition: all 0.3s ease; -webkit-border-radius: 0px 3px 3px 0px;
+        border-radius: 0px 3px 3px 0px;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+		transition: all 0.3s ease;}
+	
+.sfMerge img, .sfSplit img { padding:88% 5px; cursor:pointer;}	/*	
+.sfMerge:hover, .sfSplit:hover{ width:30px;}*/
+.sfOuterwrapper:hover span.sfSplit, .sfOuterwrapper:hover span.sfMerge { position:absolute; right:0px;}
+
+.sfLabeling  { float:right;}
+.sfLabeling li { float:left;margin-left:20px;}
+.sfLabeling img { display:inline-block; margin-right:5px; position:relative; top:3px;}
+
+.sfResetCore 
+{ color:#333; padding:3px 5px; border:1px solid #fff;
+background: #f5f5f5;
+background: -moz-linear-gradient(top,  #f5f5f5 0%, #d9d9d9 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#d9d9d9));
+background: -webkit-linear-gradient(top,  #f5f5f5 0%,#d9d9d9 100%);
+background: -o-linear-gradient(top,  #f5f5f5 0%,#d9d9d9 100%);
+background: -ms-linear-gradient(top,  #f5f5f5 0%,#d9d9d9 100%);
+background: linear-gradient(to bottom,  #f5f5f5 0%,#d9d9d9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#d9d9d9',GradientType=0 );
+-webkit-border-radius:5px; border-radius:5px;
+float:right; cursor:pointer;
+}
+     
+.sfResetCore:hover {background: #d9d9d9;
+background: -moz-linear-gradient(top,  #d9d9d9 0%, #f5f5f5 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d9d9d9), color-stop(100%,#f5f5f5));
+background: -webkit-linear-gradient(top,  #d9d9d9 0%,#f5f5f5 100%);
+background: -o-linear-gradient(top,  #d9d9d9 0%,#f5f5f5 100%);
+background: -ms-linear-gradient(top,  #d9d9d9 0%,#f5f5f5 100%);
+background: linear-gradient(to bottom,  #d9d9d9 0%,#f5f5f5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d9d9', endColorstr='#f5f5f5',GradientType=0 );
+}
+
+#divLayoutWireframe .sfErrormsg { color:#fff !important;-webkit-border-radius:5px; border-radius:5px;}
+.sfUploadError { color:orange !important;}
+
+#divLayoutWireframe .sfInnerwrapper, #divLayoutWireframe .sfOuterwrapper  { position:relative; overflow:hidden;}
+#divLayoutWireframe .sfOuterwrapper .sfMoreblocks.sfFullWidth { margin:0 !important; }
+#divLayoutWireframe  [class*="sfCol_"] { padding:0 5px; margin:5px 0;}

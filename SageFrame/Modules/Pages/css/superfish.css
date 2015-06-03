@@ -1,0 +1,45 @@
+
+/*** ESSENTIAL STYLES ***/
+
+.menu ul {
+	
+	top:			-999em;
+	/*width:			100%; /* left offset of submenus need to match (see below) */
+	
+}
+
+
+.menu li {	
+	position:		relative;
+}
+.menu li.parent
+{
+	/*background:url("../../../Administrator/Templates/Default/images/down-arrow.png") no-repeat scroll 96% 50% transparent;*/
+}
+
+.menu li.parent a.active
+{
+	/*background:url("../../../Administrator/Templates/Default/images/up-arrow.png") no-repeat scroll 96% 50% transparent;*/
+}
+
+.sfCollapsed
+{
+	width:150px !important;
+	position:absolute;
+	
+}
+
+.fullwidth
+{
+	width:100%;
+	position:static;
+}
+
+.sf-sub-indicator
+{
+	display:none !important;
+}
+
+
+
+

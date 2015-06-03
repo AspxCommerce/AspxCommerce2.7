@@ -1,0 +1,22 @@
+.cssClassStoreSearch{ background:#eef1f3; padding:15px;}
+.cssClassStoreSearch label,
+.cssClassStoreSearch select,
+.cssClassStoreSearch .cssStoreinput{ float:left;}
+.cssClassStoreSearch .cssStoreinput{width:44%; margin:0 20px 0 10px;}
+.cssClassStoreSearch select{ margin:0 10px;}
+.gbox{background:#fff;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;}
+.cssClassStoreSearch .cssClassLabel{ line-height:30px;}
+#sidebarstore .sidebar{border:1px solid #ededed; padding:15px; font-size:14px; color:#858585;}
+#sidebarstore .sidebar b{ font-size:14px; color:#3b3b3b;}
+#sidebarstore .sidebar:hover,#sidebarstore .selected{ background:#f8f8f8;cursor:pointer}
+#divMap label b{ font-size:16px; color:#686868; line-height:40px;}
+.navwrap{ width:40%; float:left; -webkit-box-shadow: 0 0 10px rgba(0,0,0,.23);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.23);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1); height:600px; position:relative; z-index:99; overflow:auto;}
+#map_canvas{ height:600px; width:100%;}
+.navMap { width:60%; float:right;}
+.navBar,.navRoute{ padding:10px 25px 0;}
+.sidebarstore{ height:600px; overflow:auto;}
+.cssClassMapTxt{ position:absolute; top:107px; right:22px; background:#fff; padding:1px 5px; font-size:12px; box-shadow:0 1px 4px -1px rgba(0, 0, 0, 0.3); color:#000; border:solid 1px #b9b8b4; border-radius:2px; z-index:999;}	

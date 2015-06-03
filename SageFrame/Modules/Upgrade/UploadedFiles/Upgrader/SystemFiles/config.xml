@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CONFIG>
+
+<SAGEFRAME VERSION="5.0"></SAGEFRAME>  
+  <FILES>  
+	<FILE path="SageFrame\Modules\NewsLetter\css\module.css"></FILE> 
+	
+	<FILE path="SageFrame\Modules\ContactUs\css\module.css"></FILE> 
+	<FILE path="SageFrame\Modules\ContactUs\js\ContactUs.js"></FILE> 
+	<FILE path="SageFrame\Modules\ContactUs\ContactUs.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\ContactUs\ContactUsEdit.ascx"></FILE> 
+	
+	<FILE path="SageFrame\Modules\HTML\HTMLEdit.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\HTML\HTMLEdit.ascx.cs"></FILE> 
+	<FILE path="SageFrame\Modules\HTML\HTMLView.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\HTML\HTMLView.ascx.cs"></FILE> 
+	
+	<FILE path="SageFrame\Modules\LayoutManager\CodeMirror\codemirror.css"></FILE> 
+	<FILE path="SageFrame\Modules\LayoutManager\CodeMirror\xml.js"></FILE> 
+	<FILE path="SageFrame\Modules\LayoutManager\WebMethod.aspx"></FILE> 
+	
+	<FILE path="SageFrame\Modules\Logo\css\module.css"></FILE> 
+	<FILE path="SageFrame\Modules\Logo\js\setting.js"></FILE> 
+	<FILE path="SageFrame\Modules\Logo\LogoHandler.ashx"></FILE> 
+	<FILE path="SageFrame\Modules\Logo\LogoView.ascx"></FILE> 	
+	<FILE path="SageFrame\Modules\Logo\LogoView.ascx.cs"></FILE> 
+	<FILE path="SageFrame\Modules\Logo\LogoWebService.asmx"></FILE> 
+	
+	<FILE path="SageFrame\Modules\SageMenu\css\module.css"></FILE> 
+	<FILE path="SageFrame\Modules\SageMenu\js\hoverIntent.js"></FILE> 
+	<FILE path="SageFrame\Modules\SageMenu\js\supersubs.js"></FILE> 
+	<FILE path="SageFrame\Modules\SageMenu\MenuWebService.asmx"></FILE> 
+	<FILE path="SageFrame\Modules\SageMenu\SageMenuEdit.ascx"></FILE> 
+	
+	<FILE path="SageFrame\Modules\SiteMap\css\slickmap.css"></FILE> 
+	<FILE path="SageFrame\Modules\SiteMap\js\sitemap.js"></FILE> 
+	<FILE path="SageFrame\Modules\SiteMap\Services\SiteMapWebService.asmx"></FILE> 
+	<FILE path="SageFrame\Modules\SiteMap\SiteMap.ascx.cs"></FILE> 
+	
+	<FILE path="SageFrame\Modules\SystemEvent\Bottom.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\SystemEvent\Bottom.ascx.cs"></FILE> 
+	<FILE path="SageFrame\Modules\SystemEvent\middle.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\SystemEvent\middle.ascx.cs"></FILE> 
+	<FILE path="SageFrame\Modules\SystemEvent\SystemEvent.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\SystemEvent\SystemEvent.ascx.cs"></FILE> 
+	
+	<FILE path="SageFrame\Modules\TwitterDeck\css\module.css"></FILE> 
+	<FILE path="SageFrame\Modules\TwitterDeck\ModuleLocalText\SageModuleLocalText.en-US.xml"></FILE> 
+	<FILE path="SageFrame\Modules\TwitterDeck\TwitterSettings.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\TwitterDeck\TwitterSettings.ascx.cs"></FILE> 
+	<FILE path="SageFrame\Modules\TwitterDeck\TwittsViewer.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\TwitterDeck\TwittsViewer.ascx.cs"></FILE> 
+	
+	<FILE path="SageFrame\Modules\Admin\Adsense\AddAdsense.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\Admin\Adsense\AddAdsense.ascx.cs"></FILE> 
+	
+	<FILE path="SageFrame\Modules\Admin\CacheMaintenance\JS\CacheMaintenance.js"></FILE> 
+	<FILE path="SageFrame\Modules\Admin\CacheMaintenance\CacheMaintenance.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\Admin\CacheMaintenance\CacheMaintenance.ascx.cs"></FILE> 
+	<FILE path="SageFrame\Modules\Admin\CacheMaintenance\WebService.asmx"></FILE> 
+	
+	<FILE path="SageFrame\Modules\Admin\LoginControl\LoginStatus.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\Admin\LoginControl\LoginStatus.ascx.cs"></FILE> 
+	
+	<FILE path="SageFrame\Modules\Admin\MessageManagement\ctl_MessageTemplateManagement.ascx"></FILE> 
+	<FILE path="SageFrame\Modules\Admin\MessageManagement\ctl_MessageTemplateManagement.ascx.cs"></FILE> 
+	
+  </FILES>   
+</CONFIG>

@@ -1,0 +1,64 @@
+﻿<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>NewsLetter</name>
+      <friendlyname>NewsLetter</friendlyname>
+      <foldername>NewsLetter</foldername>
+      <modulename>NewsLetter</modulename>
+      <description>News Letter.</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.NewsLetter.NewsLetterController, SageFrame.Modules.NewsLetterDataProvider</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>Sageframe Pvt. Ltd.</owner>
+      <organization>Sageframe Pvt. Ltd.</organization>
+      <url>www.sageframe.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This is  release notes for NewsLetter</releasenotes>
+      <license>This is  license copy for NewsLetter Control Application</license>
+      <modules>
+        <module>
+          <friendlyname>NewsLetter</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			  <key>NewsLetterView</key>
+              <title>NewsLetterView</title>
+              <src>Modules/NewsLetter/NewsLetterView.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>			
+            <control>
+              <key>NewsLetterControlEdit</key>
+              <title>NewsLetterEdit</title>
+              <src>Modules/NewsLetter/NewsLetterEdit.ascx</src>
+              <type>Edit</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl> 
+              <supportspartialrendering>true</supportspartialrendering>
+            </control> 
+            <control>
+              <key>NewsLetterControlSetting</key>
+              <title>NewsLetterSetting</title>
+              <src>Modules/NewsLetter/NewsLetterSetting.ascx</src>
+              <type>Setting</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl> 
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>  			
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>01.00.00.SqlDataProvider</name>
+        </file>   
+		<file>
+          <name>SageFrame.NewsLetter.dll</name>
+		  <name>System.Web.DataVisualization.Design.dll</name>
+        </file>            
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file> 
+      </files>
+    </folder>
+  </folders>
+</sageframe>

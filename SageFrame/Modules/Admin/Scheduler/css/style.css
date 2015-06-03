@@ -1,0 +1,120 @@
+body
+{
+	background: #F1FFCA none repeat scroll 0 0;
+	color: #333333;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 20px;
+	padding: 0;	
+	font-size: 14px;
+}
+a
+{
+	color: #377605;
+	font-size: 14px;
+}
+a:hover
+{
+	color: #FF7200;
+	font-size: 14px;
+}
+body, h1, h2, p, a
+{
+	
+}
+b, strong
+{
+	font-weight: bold;
+	color: #000;
+}
+#header
+{
+	border-bottom: 1px dotted #000000;
+	margin: 0 0 20px;
+	padding: 20px 0;
+}
+#header h1
+{
+	font-size: 36px;
+	margin: 0;
+}
+#header h4
+{
+	font-weight: normal;
+	margin: 7px 0 0;
+}
+#header h4 a
+{
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: normal;
+}
+#alert-Box
+{
+	padding-bottom: 24px;
+	background: #fff;
+}
+#alert-InBox
+{
+	padding-top: 15px;
+	--background: url('../images/bg-box-top.png') top left no-repeat !important;
+	background: url('../images/bg-box-top.gif') top left no-repeat;
+}
+#alert-BoxContent
+{
+	--background: url('../images/bg-box-body.png') top left repeat-y !important;
+	background: url('../images/bg-box-body.gif') top left repeat-y;
+	padding: 0px 20px;
+}
+#alert-BoxContenedor
+{
+	padding: 0px 0px 5px 55px;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 12px;
+	color: #000;
+}
+#alert-BoxContenedor h1, #alert-BoxContenedor h2, #alert-BoxContenedor h3, #alert-BoxContenedor b, #alert-BoxContenedor strong
+{
+	text-align: left;
+	font-family: Verdana;
+	font-size: 12px;
+	color: #000;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+#alert-Buttons
+{
+	text-align: right;
+}
+#alert-Buttons input
+{
+	margin: 10px 10px;
+}
+#alert-BoxContenedor #BoxPromptInput
+{
+	margin-top: 5px;
+}
+#alert-Box .BoxAlert
+{
+	background: url('../images/dialog-warning.png') top left no-repeat;
+}
+#alert-Box .BoxConfirm
+{
+	background: url('../images/delete.gif') top left no-repeat;
+}
+#alert-Box .BoxPrompt
+{
+	background: url('../images/dialog-help.png') top left no-repeat;
+}
+#alert-Box .BoxInfo
+{
+	background: url('../images/info.gif') top left no-repeat;
+}
+#alert-Box .BoxError
+{
+	background: url('../images/dialog-error.png') top left no-repeat;
+}

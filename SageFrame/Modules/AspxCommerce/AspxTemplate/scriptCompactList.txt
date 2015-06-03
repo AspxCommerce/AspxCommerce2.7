@@ -1,0 +1,32 @@
+﻿          
+            <tr>
+                <td class="cssClassCLPicture">
+                    <a href="${aspxRedirectPath}item/${sku}${pageExtension}">
+                        <img class="lazy" data-original='${imagePath}' src='${loaderpath}' alt='${alternateText}' title='${name}' /></a>
+                </td>
+                <td class="cssClassCLProduct">
+                    <p class="cssClassCLProductInfo">
+                        <a href="${aspxRedirectPath}item/${sku}.${pageExtension}">${name}</a></p>
+                </td>
+                <td class="cssClassCLProductCode">
+                    <p>${sku}</p>
+                </td>
+                <td class="cssClassCLPrice">
+                    <p>
+                        <span class="cssClassFormatCurrency">${(price*rate).toFixed(2)}</span></p>
+                </td>
+                <td class="cssClassCLAddtoCart">
+                    <div class="cssClassAddtoCard_${itemID}">
+                        <div class="sfButtonwrapper">
+                            <a href="#" onclick="AspxCommerce.RootFunction.AddToCartToJSFromTemplate(${itemID},${price},${JSON2.stringify(sku)},${1});">
+                                <span class="sfLocale">Add to Cart</span></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <script type="text/javascript">
+				$(".sfLocale").localize({
+					moduleKey: AspxTemplateLocale
+				}); 
+			</script>	
+            

@@ -1,0 +1,9 @@
+﻿ <system.web>
+     
+      <webServices>
+        <protocols>
+          <add name="HttpGet"/>
+          <add name="HttpPost"/>
+        </protocols>
+      </webServices>      
+    </system.web>

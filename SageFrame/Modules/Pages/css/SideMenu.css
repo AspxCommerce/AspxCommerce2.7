@@ -1,0 +1,24 @@
+﻿.cssClassSideMenu{background: url(../images/left-navi-heading-bg.jpg) no-repeat 0 0;}
+.cssClassSideMenu ul{ margin:0; padding:0;}
+.cssClassSideMenu ul li{ margin:0; padding:0; }
+.cssClassSideMenu ul li a { font: 20px/30px 'Cuprum', serif; color:#000; padding:0 0 0 15px; display:block;}
+.cssClassSideMenu ul li a:hover, .cssClassSideMenu ul li.cssClassActive a{ background:none;}
+
+.cssClassSideMenu ul li ul li{padding: 0 0 0 15px;}
+.cssClassSideMenu ul li ul li a{font: 11px/26px Verdana,Geneva,sans-serif; border-bottom: 1px dotted #E5E5E5; color:#868686; }
+.cssClassSideMenu ul li ul li a:hover, .cssClassSideMenu ul li ul li.cssClassActive a{background:url(../images/sageframe-leftlink-icon.png) no-repeat 0px 8px; color:#000;}
+.cssClassSideMenu ul li ul li.cssClassActive ul li a{background:none; color:#868686; }
+.cssClassSideMenu ul li ul li a ul li.cssClassActive a{background:url(../images/sageframe-leftlink-icon.png) no-repeat 0px 8px; color:#000;}
+
+
+
+
+
+
+
+
+
+
+
+
+

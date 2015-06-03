@@ -1,0 +1,60 @@
+/* Responsive iFrame */
+
+.sfIframeHolder { padding-bottom: 75%; position: relative;}
+
+.sfIframeHolder iframe,  
+.sfIframeHolder object,  
+.sfIframeHolder embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Responsive Table*/
+.table-container {  
+width: 100%;
+overflow-y: auto;
+_overflow: auto;
+margin: 0 0 1em;}
+
+/* Responsive Button */
+.sfResponsiveNavBtn { height:24px; width:28px; background:url(../images/responsive-nav.png) no-repeat 0 -24px;; border:none; text-indent:-9999px; cursor:pointer; 
+position:absolute; top:-60px; right:3px; z-index:88; display:none;
+-webkit-border-radius: 3px;
+border-radius: 3px; }
+.sfResponsiveNavBtn.active { background-position: 0 0;}
+
+@media screen and (max-width: 1000px) { 
+.sfInnerwrapper, .bx-wrapper {width:96%; }
+img { max-width: 100%; height: auto;}
+ .bx-pager, .bx-controls-direction { display:none;}
+#sfFooterblocks .sfMoreblocks  > div { width:49%; margin-bottom: 30px;}
+}
+
+@media screen and (max-width:768px) {
+[class*="sfCol_"], .sf-menu, #sfFixed [class*="sfFixed"] { width: 100%; padding-left:0; float: none;}
+.sfResponsiveNavBtn { display: block;}
+.sf-menu, .sfSearchwrapper, .sfLogininfo, .cssClassFlagButtonHor span { display: none;}
+.sf-menu li { float: none;}
+} 
+
+@media screen and (max-width:600px) {
+ [class*="sfFixed"] { width: 100%; padding-left: 0;}
+} 
+
+@media screen and (max-width:480px) {
+#sfFooterblocks .sfMoreblocks  > div  { width:100%;}
+} 
+
+@media screen and (max-width : 320px) {
+  #sfLogo { width: 100%;}
+	
+}
+
+/* Retina Display */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+
+}
+

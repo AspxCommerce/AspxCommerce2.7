@@ -1,0 +1,15 @@
+.popupbox {
+
+	min-width:300px;
+	min-height:80px;
+    padding: 0;
+}
+.popupbox .ui-widget-header {overflow:hidden; height:35px; line-height:35px; padding:0 10px; position: relative;}
+.popupbox .ui-widget-header a.ui-corner-all{ float:right;}
+
+
+.popupbox.sfFormwrapper table { margin: 10px;}
+
+.cssClassFileManagerPopUP { margin-top: 10px; font-weight: bold;}
+
+.sfConfirmmsg { margin-top: 15px; display: block;}

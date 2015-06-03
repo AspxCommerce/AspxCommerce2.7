@@ -1,0 +1,27 @@
+﻿@charset "utf-8";
+.clear{ clear:both;}
+.maindivbg{background:none;}/*#006296*/
+.spritimg{ background-image:url(../images/notification-icon.png);}
+.aspxnotifyview{width:240px; margin:0px auto; padding:40px; }
+.aspxnotifyview ul{ margin:0px; padding:0px;}
+.aspxnotifyview ul li{margin:0px 30px 0px 0px; padding:0px; float:left; list-style:none; width:36px;}
+.aspxnotifyview ul li a{ display:block; text-indent:-9999px; height:32px; width:36px; cursor:pointer;}
+.aspxnotifyview ul li a:hover{opacity:1;}
+
+/* Icon Normal state*/
+.friendnormal{background-position:-10px -6px;}
+.messagenormal{background-position:-66px -118px;}
+.nottifinormal{background-position:-116px -116px;}
+
+/* Icon highlight state*/
+.notifriend{ background-position:-10px -66px;}
+.notimesg{ background-position:-66px -180px;}
+.notinotg{ background-position:-116px -180px;}
+
+.notifriendhover{background-position:-87px -101px;}
+.notireqsch{ background-position:-86px -124px;}
+.notireqschhover{background-position:-108px -124px;}
+.notimesghover{background-position:-112px -102px;}
+.notired{}
+
+

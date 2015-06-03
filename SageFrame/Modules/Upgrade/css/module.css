@@ -1,0 +1,13 @@
+/* CSS Document */
+body { font:14px/20px Tahoma, sans-serif; background:#AAA;
+}
+.sfUpgradeWrap { background:url(../Image/upgrading-bg.gif) no-repeat left 83px #fff; padding:84px 178px; position:absolute; width:980px; left:0px; right:0px; bottom:0px; top:50%; margin:auto; margin-top:-275px; height:550px;
+box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box;
+border-radius:10px; -webkit-border-radius:10px; -ms-border-radius:10px; -o-border-radius:10px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.sfUpgradeWrap h1 { font-size:32px; margin-bottom:20px;}
+.sfUpgradeWrap p { font-size:16px; margin:0px; margin-bottom:46px;}
+.sfUpgPreloader { float:left; width:160px;}
+.sfUpgProcessStatus { float:left; width:320px; font-size:16px; line-height:28px;}
+.sfUpgLogo { position:absolute; bottom:25px; right:25px;}

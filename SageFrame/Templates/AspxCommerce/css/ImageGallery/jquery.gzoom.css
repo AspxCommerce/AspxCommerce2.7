@@ -1,0 +1,9 @@
+.magnifyarea{ /* CSS to add shadow to magnified image. Optional */
+box-shadow: 5px 5px 7px #818181;
+-webkit-box-shadow: 5px 5px 7px #818181;
+-moz-box-shadow: 5px 5px 7px #818181;
+filter: progid:DXImageTransform.Microsoft.dropShadow(color=#818181, offX=5, offY=5, positive=true);
+background: white;
+z-index:555;
+top:150px !important;
+}

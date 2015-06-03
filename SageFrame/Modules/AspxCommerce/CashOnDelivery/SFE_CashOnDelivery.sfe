@@ -1,0 +1,48 @@
+﻿<sageframe version="2.5.0.0" type="PaymentGateway">
+  <folders>
+    <folder>
+      <name>SFE_CashOnDelivery</name>
+      <paymentgatewayname>Cash On Delivery</paymentgatewayname>
+      <friendlyname>CashOnDelivery</friendlyname>
+      <foldername>AspxCommerce/CashOnDelivery</foldername>
+      <description>CashOnDelivery</description>
+      <culturename>en-US</culturename>
+      <version>02.50.00</version>
+      <settings>
+      </settings>
+      <modules>
+        <module>
+          <controls>
+            <control>
+              <key>CashOnDeliveryView</key>
+              <title>AspxCommerce Payment Through CashOnDelivery</title>
+              <src>Modules/AspxCommerce/CashOnDelivery/CashOnDelivery.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>false</supportspartialrendering>
+            </control>
+            <control type="Page">
+              <key>Cash-On-Delivery-Success</key>
+              <title>CashOnDeliverySuccess</title>
+              <src>Modules/AspxCommerce/CashOnDelivery/CashOnDeliverySuccess.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>false</supportspartialrendering>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>02.50.00.SqlDataProvider</name>
+        </file>
+        <file>
+          <name>AspxCommerce.CashOnDelivery.dll</name>
+        </file>
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>
+      </files>
+    </folder>
+  </folders>
+</sageframe>

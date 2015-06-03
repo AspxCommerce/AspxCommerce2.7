@@ -1,0 +1,70 @@
+﻿.sfTabLeftDiv .sfAddQuickLink, .sfAddSidebar {
+	width:40%;
+	float:left;
+}
+.sfTabLeftDiv .sfQuicklinklist, .sfTabLeftDiv .sfSidebarItems {
+	float:right;
+	width:60%
+}
+.sfQuicklinklist ul {
+	float:right;
+}
+.sfQuicklinklist li, ul.ui-sortable li {
+	text-shadow:1px 1px 0 #EFF9FF;
+	margin:;
+	font-weight:bold;
+	border:1px solid #a6d0e7;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding:6px;
+	cursor:move;
+	line-height:20px;
+	float:left;
+	width:44%;
+	background: #ffffff; /* Old browsers */
+	border:1px solid #cccccc;
+	list-style:decimal inside;
+}
+.sfQuicklinklist li:hover, ul.ui-sortable li:hover {
+	background: #ffffff; /* Old browsers */
+}
+.sfQuicklinklist li i.icon-edit,.sfQuicklinklist li i.icon-delete, ul.ui-sortable li i.icon-edit, ul.ui-sortable li i.icon-delete { font-size:14px; margin-top:3px;
+	display:none;
+}
+.sfQuicklinklist li:hover i, ul.ui-sortable li:hover i {
+	display:block;
+}
+.sfQuicklinklist li i, ul.ui-sortable li i {
+	float:right;
+	margin-left:10px;
+	cursor:pointer;
+}
+.sfSidebarItems ul.ui-sortable li {
+	width:97%;
+	display:block;
+}
+.sfSidebarItems ul.ui-sortable li ul {
+	display:none;
+}
+.sfSidebarItems ul.ui-sortable li ul.ui-sortable li {
+	width:95%;
+	margin:10px 0 0;
+	background-color:#f1f1f1;
+}
+.sfSidebarItems ul.ui-sortable li ul.ui-sortable li:hover { background-color:#f6f6f6;}
+.sfHighlight {
+	background:#fff !important;
+	height:30px;
+	display:block;
+	border:1px dashed #ccc !important;
+}
+.sfSidebarItems li span {
+
+}
+img.sfIcon {
+	max-height:40px;
+}
+.sfUploadedFilesSidebar { float:left; width:auto; margin-right:6px;}
+.sfUploadedFilesSidebar img{ border:1px solid #ccc; padding:4px; float:left;}
+.sfUploadedFilesSidebar i { margin-left:5px; cursor:pointer;}

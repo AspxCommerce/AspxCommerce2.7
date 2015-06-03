@@ -1,0 +1,24 @@
+﻿#divLogoIcon img {
+	max-height:150px;
+	border:none;
+	padding:4px;
+}
+#divLogoIcon img.sfDelete {
+	cursor:pointer;
+	margin:0 0 0 20px;
+}
+/*front logo view*/
+.sfLogo a {
+	overflow:hidden;
+	clear:both;
+}
+.sfLogo a img, .sfLogo a span {
+	float:left;
+}
+.sfLogo a span {
+	margin:0 0 0 5px;
+}
+.sfLogo span.sfSlogan {
+	font:normal 11px Tahoma, Geneva, sans-serif;
+	display:block;
+}

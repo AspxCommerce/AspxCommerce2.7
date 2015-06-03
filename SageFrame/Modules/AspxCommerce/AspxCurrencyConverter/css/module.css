@@ -1,0 +1,15 @@
+﻿.tzSelect {height: 27px; width:100px;background:url(../images/select_arrow-white.png) no-repeat 95% center; float:left;position:relative; color:#FFF; padding-top:3px;}
+.tzSelect .selectBox {position: absolute;line-height:15px;padding-left: 5px;cursor: pointer; text-shadow:none;width:90px;}
+.tzSelect .dropDown {position: absolute;top:30px;height: auto;z-index: 9999;list-style: none; left:-1px;}
+.tzSelect .dropDown li {background:#fff; clear:both; overflow:hidden;}
+.tzSelect .dropDown li:hover{ background:#f2f7fa; cursor:pointer;}
+.tzSelect .dropDown li img{ float: left;margin:7px 5px;}
+.tzSelect .dropDown li span{ line-height:15px;}
+.tzSelect .dropDown li span:hover{ text-decoration:underline;}
+.dropDown li {float: none;}
+.dropDown li span{ display:block}
+.cssClassCurrencySelect {color: white;font-size: 13px;}
+.cssClassCurrencySelect span{  float:left; margin:3px 10px 0 0px; padding:2px 0 0 0;}
+.selectBox img{ float:left; margin:7px 7px 0 0;}
+.CurrencyConverter{ float:left; margin-right:10px;}
+.cssClassCurrencySelect select {border: 1px solid #ddd ;font-size: 12px;background-color: transparent;margin-left:5px;}

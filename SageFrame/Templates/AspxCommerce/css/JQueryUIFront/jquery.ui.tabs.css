@@ -1,0 +1,104 @@
+.ui-tabs {
+	position: relative;
+	zoom: 1;
+}
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding:0;
+	background:none;
+	height:30px;
+	position:absolute; left:0; top:-31px;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 5px;
+	margin: 0 3px 0 5px;
+	border-bottom: 0 !important;
+	padding: 0;
+	white-space: nowrap;
+	height:25px;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+	float: left;
+	text-decoration: none;
+	height:25px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.ui-tabs ul.ui-tabs-nav li.ui-state-default a {
+	float:left;
+	padding:0 0 0 10px;
+	height:25px;
+	font:bold 11px/25px Arial, Helvetica, sans-serif;
+	color:#666;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a span, .ui-tabs .ui-tabs-nav li.ui-state-disabled a span, .ui-tabs .ui-tabs-nav li.ui-state-processing a span {
+	cursor: text;
+	float:left;
+	padding:0 10px 0 0;
+	height:25px;
+}
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	background: none;
+	padding:10px;
+}
+.ui-tabs .ui-tabs-hide {
+	display: none !important;
+}
+.ui-tabs ul.ui-tabs-nav li.ui-state-default a {
+	background:url(../../images/tabpanel-default-left.png) no-repeat left top;
+	float:left;
+	padding:0 0 0 9px;
+	height:25px;
+	font:bold 11px/25px Arial, Helvetica, sans-serif;
+	color:#666;
+}
+.ui-tabs ul.ui-tabs-nav li.ui-state-default a span {
+	background:url(../../images/tabpanel-default-right.png) no-repeat right top;
+	float:left;
+	padding:0 9px 0 0;
+	height:25px;
+	font:bold 11px/25px Arial, Helvetica, sans-serif;
+	color:#666;
+}
+.ui-tabs ul.ui-tabs-nav li.ui-tabs-selected a, .ui-tabs ul.ui-tabs-nav li.ui-state-active a, .ui-tabs ul.ui-tabs-nav li.ui-state-default a:hover {
+	background:url(../../images/tabpanel-active-left.png) no-repeat left top;
+	float:left;
+	padding:0 0 0 9px;
+	height:25px;
+	font:bold 11px/25px Arial, Helvetica, sans-serif;
+	color:#666;
+}
+.ui-tabs ul.ui-tabs-nav li.ui-tabs-selected a span, .ui-tabs ul.ui-tabs-nav li.ui-state-active a span, .ui-tabs ul.ui-tabs-nav li.ui-state-default a:hover span {
+	background:url(../../images/tabpanel-active-right.png) no-repeat right top;
+	float:left;
+	padding:0 9px 0 0;
+	height:25px;
+	font:bold 11px/25px Arial, Helvetica, sans-serif;
+	color:#fff;
+}
+
+/*---------------TAB PANEL WRAPPER START HERE---------------*/
+.cssClassTabPanelTable .ui-widget-content{ margin:0;}
+.cssClassTabPanelTable table td{padding:3px 0; }
+.cssClassTabPanelTable h2{ height:28px; font:bold 12px/28px Arial, Helvetica, sans-serif; color:#fff; padding:0 0 0 10px; }
+.cssClassTabPanelTable table{}
+tr.cssClassHeading{ background-color:#cbbba5; border-bottom:1px solid #968266; text-shadow:1px 1px 0 #d0d1c7; font:bold 11px/28px Arial, Helvetica, sans-serif; color:#6a4008;}
+tr.cssClassHeading b{ padding:0 0 0 5px; }
+.cssClassTabPanelTable table tr.cssClassHeading th{ border-right:1px solid #968266; padding:0 0 0 5px; }
+.cssClassTabPanelAlternativeOdd{ background-color:#f1e7d9; color:#101010; }
+.cssClassTabPanelAlternativeEven{ background-color:#fff; color:#101010; }
+tr.cssClassTabPanelAlternativeOdd td, tr.cssClassTabPanelAlternativeEven td{ padding:5px 5px 5px 5px; }
+.cssClassTabpanelTotalAmount{ font:bold 12px Arial, Helvetica, sans-serif; color:#000;}
+.cssClassDashboardTotal{ margin:15px 0 0 0;}
+.cssClassTabPanelTable .sfGridwrapper table{ border-right:none;}

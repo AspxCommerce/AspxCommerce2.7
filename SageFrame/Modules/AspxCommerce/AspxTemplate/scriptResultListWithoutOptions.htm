@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+    $(".sfLocale").localize({
+        moduleKey: AspxTemplateLocale
+    });    
+    </script>
+    <title>scriptResultListWithoutOptions</title>
+</head>
+<body>
+    <div>
+        <div class="cssClassListViewWithOutOptions">
+            <div class="cssClassListViewWithOutOptionsLeft">
+                <p class="cssClassProductPicture">
+                    <a href="${aspxRedirectPath}item/${sku}${pageExtension}">
+                        <img alt='${alternateText}' class="lazy" data-original='${imagePath}' src='${loaderpath}' title='${name}' /></a></p>
+            </div>
+            <div class="cssClassListViewWithOutOptionsRight">
+                <h2>
+                    <a href="${aspxRedirectPath}item/${sku}${pageExtension}">${name}</a></h2>
+                <p class="cssClassProductCode">
+                    ${sku}</p>
+                <p>
+                    {{html shortDescription}}</p>
+                <p class="cssClassListViewWithOutOptionsPrice">
+                    <span class="sfLocale">Price : </span><span class="cssClassFormatCurrency">${(price*rate).toFixed(2)}</span>
+                    <span class="cssRegularPrice_${itemID} cssClassListViewWithOutOptionsOffPrice"><span class="cssRegularPrice_${itemID} cssClassFormatCurrency">
+                        ${(listPrice*rate).toFixed(2)}</span></span> <span class="cssClassInstock_${itemID} sfLocale">
+                            In stock</span></p>
+                <div class="cssClassAddtoCard_${itemID} cssClassAddtoCard">
+                    <div class="sfButtonwrapper">
+                        <a href="#" onclick="AspxCommerce.RootFunction.AddToCartToJSFromTemplate(${itemID},${price},${JSON2.stringify(sku)},${1});">
+                            <span class="sfLocale">Add to Cart</span></a>
+                    </div>
+                </div>
+                <div class="sfButtonwrapper cssClassWishListWithoutOption">
+                    <button type="button" id="addWishList" onclick="AspxCommerce.RootFunction.AddToWishList(${itemID},${JSON2.stringify(costVariantItem)},${JSON2.stringify(sku)});">
+                        <span class="sfLocale">+Add to Wishlist</span></button>
+                </div>
+            </div>
+            <div class="cssClassClear">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

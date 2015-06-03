@@ -1,0 +1,121 @@
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_ServiceItemSettings_UpdatedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_ServiceItemSettings] DROP CONSTRAINT [DF_Aspx_ServiceItemSettings_UpdatedOn]
+END
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_ServiceItemSettings]    Script Date: 01/28/2014 11:50:25 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_ServiceItemSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_ServiceItemSettings]
+GO
+
+
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddAppointment]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AddAppointment]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AddAppointment]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetAllServices]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetAllServices]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetAllServices]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetAllStoreForService]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetAllStoreForService]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetAllStoreForService]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetFrontServices]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetFrontServices]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetFrontServices]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceBookedTime]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceBookedTime]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceBookedTime]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceDates]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceDates]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceDates]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceDetails]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceDetails]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceDetails]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceItemDetails]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceItemDetails]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceItemDetails]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceItemInfo]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceItemInfo]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceItemInfo]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceProducts]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceProducts]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceProducts]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceProviderForStore]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceProviderForStore]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceProviderForStore]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetServiceTime]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetServiceTime]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetServiceTime]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ServiceItemSettingGet]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_ServiceItemSettingGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_ServiceItemSettingGet]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ServiceItemSettingsUpdate]    Script Date: 01/28/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_ServiceItemSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_ServiceItemSettingsUpdate]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRssFeedServiceTypeItem]    Script Date: 02/10/2014 17:20:27 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRssFeedServiceTypeItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRssFeedServiceTypeItem]
+GO
+
+

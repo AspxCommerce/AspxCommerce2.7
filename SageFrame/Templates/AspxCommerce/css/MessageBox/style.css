@@ -1,0 +1,62 @@
+#header {
+	border-bottom:1px dotted #000000;
+	margin:0 0 20px;
+	padding:20px 0;
+}
+#header h1 {
+	font-size:36px;
+	margin:0;
+}
+#header h4 {
+	font-weight:normal;
+	margin:7px 0 0;
+}
+#header h4 a {
+	text-decoration:none;
+}
+#alert-Box {z-index:999999;display:none; border: 1px solid fff;	-moz-border-radius: 5px;	-webkit-border-radius: 5px;	border-radius: 5px;		-moz-box-shadow: 0 0 5px #000;	-webkit--shadow: 0 0 5px #000;	box-shadow: 0 0 5px #000; padding:30px; left:0px !important; right:0px !important; top:0px !important; bottom:0px !important; margin:auto !important;  width:500px; height:175px;
+}
+#alert-InBox {}
+#alert-BoxContent {}
+#alert-BoxContenedor {
+	text-align: center;
+}
+#alert-Box{
+	background:#fff;
+	
+}
+#alert-BoxContenedor h1, #alert-BoxContenedor h2, #alert-BoxContenedor h3, #alert-BoxContenedor b, #alert-BoxContenedor strong {
+	text-align: center;
+	font-weight:bold;
+	padding:0px;
+	margin-bottom:5px; margin-top:18px;
+}
+#alert-Buttons {
+	 margin-top:20px;
+}
+#alert-BoxContenedor #BoxPromptInput {
+	margin-top:5px;
+}
+
+#alert-Box .BoxAlert:before, #alert-Box .BoxConfirm:before, #alert-Box .BoxPrompt:before, #alert-Box .BoxInfo:before, #alert-Box .BoxError:before, #alert-Box .MessageInfo:before, #alert-Box .AddToCartInfo:before {  font-size:41px; color:orange;
+	font-family: "aspx";
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;}
+	
+#alert-Box .BoxAlert:before { content:"\e714";}
+#alert-Box .BoxConfirm:before{content:"\e715"; color:green;}
+#alert-Box .BoxPrompt:before {content:"\e714";}
+#alert-Box .BoxInfo:before {content:"\e761"; color:#6badf6;}
+#alert-Box .BoxError:before {content:"\e714"; color:red;}
+#alert-Box .MessageInfo:before {content:"\e761";}
+#alert-Box .AddToCartInfo:before {content:"\e761"; color:green;}
+
+#alert-BoxContenedor.attributeBox { text-align:left;}
+.attributeBox h1 { border-bottom:none; text-align:left !important; font-size:15px;}
+

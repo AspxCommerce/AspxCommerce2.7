@@ -1,0 +1,233 @@
+﻿@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'source_sans_probold';
+    src: url('../fonts/sourcesanspro-bold-webfont.eot');
+    src: url('../fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-bold-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'source_sans_prolight';
+    src: url('../fonts/sourcesanspro-light-webfont.eot');
+    src: url('../fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-light-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('../fonts/sourcesanspro-regular-webfont.eot');
+    src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'source_sans_prosemibold';
+    src: url('../fonts/sourcesanspro-semibold-webfont.eot');
+    src: url('../fonts/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-semibold-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'aspxfrontend';
+	src:url('../fonts/aspxfrontend.eot?97cwbg');
+	src:url('../fonts/aspxfrontend.eot?#iefix97cwbg') format('embedded-opentype'),
+		url('../fonts/aspxfrontend.ttf?97cwbg') format('truetype');
+		
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="i-"], [class*=" i-"] {
+	font-family: 'aspxfrontend';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.i-notification:before {
+	content: "\e635";
+}
+.i-fax:before {
+	content: "\e634";
+}
+.i-print:before {
+	content: "\e631";
+}
+.i-estimate:before {
+	content: "\e630";
+}
+.i-download:before {
+	content: "\e622";
+}
+.i-placeorder:before {
+	content: "\e62a";
+}
+.i-user:before {
+	content: "\e613";
+}
+.i-search:before {
+	content: "\e628";
+}
+.i-send:before {
+	content: "\e611";
+}
+.i-update:before {
+	content: "\e612";
+}
+.i-save:before {
+	content: "\e614";
+}
+.i-preview:before {
+	content: "\e615";
+}
+.i-menu:before {
+	content: "\e616";
+}
+.i-img:before {
+	content: "\e617";
+}
+.i-info:before {
+	content: "\e618";
+}
+.i-email:before {
+	content: "\e619";
+}
+.i-edit:before {
+	content: "\e61a";
+}
+.i-delete:before {
+	content: "\e61b";
+}
+.i-compare:before {
+	content: "\e61c";
+}
+.i-close:before {
+	content: "\e61d";
+}
+.i-apply:before {
+	content: "\e61e";
+}
+.i-linkedin:before {
+	content: "\e600";
+}
+.i-mywishlist:before {
+	content: "\e601";
+}
+.i-wishlist:before {
+	content: "\e602";
+}
+.i-register:before {
+	content: "\e603";
+}
+.i-prev:before {
+	content: "\e604";
+}
+.i-next:before {
+	content: "\e605";
+}
+.i-mycart:before {
+	content: "\e606";
+}
+.i-login:before {
+	content: "\e607";
+}
+.i-list:before {
+	content: "\e608";
+}
+.i-grid:before {
+	content: "\e609";
+}
+.i-continue:before {
+	content: "\e60a";
+}
+.i-clear:before {
+	content: "\e60b";
+}
+.i-checkout:before {
+	content: "\e60c";
+}
+.i-cart:before {
+	content: "\e60d";
+}
+.i-home:before {
+	content: "\e61f";
+}
+.i-play:before {
+	content: "\e620";
+}
+.i-ticket:before {
+	content: "\e621";
+}
+.i-calendar:before {
+	content: "\e624";
+}
+.i-bubbles:before {
+	content: "\e625";
+}
+.i-minus:before {
+	content: "\e623";
+}
+.i-plus:before {
+	content: "\e62b";
+}
+.i-arrow-right:before {
+	content: "\e626";
+}
+.i-arrow-left:before {
+	content: "\e629";
+}
+.i-crop:before {
+	content: "\e627";
+}
+.i-share:before {
+	content: "\e62f";
+}
+.i-googleplus:before {
+	content: "\e60e";
+}
+.i-facebook:before {
+	content: "\e60f";
+}
+.i-twitter:before {
+	content: "\e610";
+}
+.i-phone:before {
+	content: "\e632";
+}
+.i-mobile:before {
+	content: "\e633";
+}
+.i-minus2:before {
+	content: "\e62c";
+}
+.i-plus2:before {
+	content: "\e62d";
+}
+.i-erase:before {
+	content: "\e62e";
+}

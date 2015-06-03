@@ -1,0 +1,188 @@
+#sfNavigation {
+	z-index:777;
+	position:relative;
+}
+.sfNavigation ul {
+	margin:0;
+	padding:0;
+	z-index:777;
+}
+.sf-menu, .sf-menu * {
+	margin:	0;
+	padding:0;
+	list-style:none;
+}
+.sf-menu {
+	line-height:1.0;
+}
+.sf-menu ul {
+	position:absolute;
+	left:0;
+	width:15.0em; /* left offset of submenus need to match (see below) */
+	margin:0;
+	padding:0;
+}
+
+.sf-menu li:hover {
+	visibility:inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:left;
+	position:relative;
+}
+.sf-menu {
+	float:left;
+	margin-bottom:	1em;
+}
+.sf-menu li em {
+	font:italic 12px Georgia, "Times New Roman";
+	color:#AFAFAF;
+	white-space:nowrap;
+}
+.sf-menu li span.sfPageicon {
+	margin:0 5px 0 0;
+	float:left;
+}
+.sf-menu li span.sfPageicon img {
+	max-height:20px;
+}
+.sf-menu li span.sfPagename {
+	overflow:hidden;
+	float:left;
+}
+.sf-menu li li span {
+	float:none;
+	color:#fff;
+}
+.sf-menu li em {
+	display:block;
+}
+.sf-menu li.sfLast {
+	border-right:none;
+}
+.sf-menu a {
+	color:#fff;
+	display:block;
+	overflow:hidden;
+	position:relative;
+	padding: 0.5em 5em !important;
+	font:14px Helvetica, Arial, sans-serif;
+	border:1px #0C3 solid;
+}
+.sf-menu li li a {
+	padding:0.5em 2em;
+}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+	z-index:777;
+}
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
+	left:15em; /* match ul width */
+	top:0;
+}
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul {
+	top:-999em;
+}
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
+	left:15em; /* match ul width */
+	top:0;
+}
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+}
+a > .sf-sub-indicator { 
+	top:			12px;
+	background-position: 0 -100px; 
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-indicator, li:hover > a > .sf-sub-indicator, li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; 
+}
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator {
+	background-position:  -10px 0;
+}
+.sf-menu ul a > .sf-sub-indicator {
+	background-position:  0 0;
+}
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator, .sf-menu ul a:hover > .sf-sub-indicator, .sf-menu ul a:active > .sf-sub-indicator, .sf-menu ul li:hover > a > .sf-sub-indicator, .sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0;
+}
+/*** alter arrow directions ***/
+.sfSidemenu .sf-sub-indicator {
+	background-position: -10px 0;
+	top:1em;
+}
+.sf-sub-indicator a span{ color:#fff;}
+.sfSidemenu a > .sf-sub-indicator {
+	background-position: 0 0;
+} 
+.sfSidemenu a:focus > .sf-sub-indicator, .sfSidemenu a:hover > .sf-sub-indicator, .sfSidemenu a:active > .sf-sub-indicator, .sfSidemenu li:hover > a > .sf-sub-indicator, .sfSidemenu li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; 
+}
+
+
+.sf-menu ul{width:220px !important; margin-bottom:0px !important}
+
+.sf-menu ul li{ border-bottom:1px solid #ddd;webkit-box-shadow: 0px 1px 1px 0px #fff;-moz-box-shadow: 0px 1px 1px 0px #fff;box-shadow: 0px 1px 1px 0px #fff; width:100%;z-index:777;color:fff;}
+.sf-menu ul li:hover{ background:#f9f8f8}
+.sf-menu li li a{ font:12px Arial, Helvetica, sans-serif; padding-left:10px!important; padding:0.5em 2em;}
+.sf-menu ul ul{ left:220px !important;}
+
+.sf-menu a:hover{background:#910000;}
+/*----------------------------------------- Side Menu ----------------------------------------- */
+.cssClassSideMenu {
+	margin:0;
+	padding:0;
+}
+.cssClassSideMenu li {
+	padding:0;
+	margin:0;
+	position:relative;
+	width:150px;
+	z-index:777;
+	border-bottom:1px solid #ccc; -webkit-box-shadow:0 1px 0 #fff; box-shadow:0 1px 0 #fff;
+}
+.cssClassSideMenu li a {
+	font:normal 16px Arial, Helvetica, sans-serif;
+	display:block;
+	overflow:hidden;
+	padding:10px 0;
+}
+.cssClassSideMenu li a em {
+	display:block;
+	font:italic 12px Georgia, "Times New Roman";
+	color:#AFAFAF;
+}
+.cssClassSideMenu li ul {
+	position:absolute;
+	left:150px;
+	top:0;
+	z-index:777; display:none;
+}
+.cssClassSideMenu li:hover ul { display:block;}
+
+.cssClassSideMenu li a span.sfPageicon {
+	float:left;
+	margin:0 5px 0 0;
+}
+.cssClassSideMenu li a span.sfPagename {
+	float:left;
+}
+/*----------------------------------------- Footer Menu ----------------------------------------- */
+.cssClassFooterMenu { overflow:hidden; }
+ul.sagemenu-footer { margin: 0px; padding: 0px; }
+.cssClassFooterMenu ul li { width: 170px; margin:0 0 0 5px; }
+.cssClassFooterMenu ul li a { color: #5E5E5E; font:bold 12px/22px Arial, Helvetica, sans-serif;}
+.cssClassFooterMenu ul li a:hover { color: #000; }
+.cssClassFooterMenu ul li ul li{ margin:0; }
+.cssClassFooterMenu ul li ul li a { margin-top: 1px; color: #5E5E5E; font: 11px/20px Arial, Helvetica, sans-serif;}
+.cssClassFooterMenu ul li ul li a:hover{ color:#000; }
+.cssClassInvisible { display: none;}

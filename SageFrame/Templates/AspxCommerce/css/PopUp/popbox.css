@@ -1,0 +1,53 @@
+.popbox {
+  margin:0px auto;
+	margin:5px 0 0 0;
+	float:left;
+}
+
+  .collapse { position:absolute; width:200px; }
+
+  .open {
+
+  }
+
+    .box {
+      display:block;
+      display:none;
+      background:#FFF;
+      border:solid 1px #BBBBBB;
+      border-radius:5px;
+      box-shadow:0px 0px 15px #999;
+	  -webkit-box-shadow:0px 0px 15px #999;
+	  -o-box-shadow:0px 0px 15px #999;
+      position:absolute; padding:8px;	
+    }
+
+      .box a.close {
+       color:red;
+       font-size:12px;
+       font-family:arial;
+       text-decoration:underline;
+      }
+
+      .arrow {
+      	width: 0;
+      	height: 0;
+      	border-left: 11px solid transparent;
+      	border-right: 11px solid transparent;
+      	border-bottom: 11px solid #FFF;
+      	position:absolute;
+      	left:1px;
+      	top:-10px;
+      	z-index:1001;
+      }
+
+      .arrow-border {
+      	width: 0;
+      	height: 0;
+      	border-left: 11px solid transparent;
+      	border-right: 11px solid transparent;
+      	border-bottom: 11px solid #BBBBBB;
+      	position:absolute;
+      	top:-12px;
+      	z-index:1000;
+      }

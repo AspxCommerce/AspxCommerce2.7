@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* slider layout */
+.lof-slidecontent { position:relative;	overflow:hidden;	border:#ccc solid 1px; background:#f1f1f1; float:left; width:980px;}
+.lof-slidecontent .preload{	height:100%;	width:100%;	position:absolute;	top:0;	left:0;	z-index:100000;	text-align:center;	background:#FFF}
+.lof-slidecontent .preload div{	height:100%;	width:100%;	background:transparent url(../images/load-indicator.gif) no-repeat scroll 50% 50%;}
+
+.lof-slidecontent  .sliders-wrapper{	position:relative;	height:100%;	width:900px;	z-index:3px;	overflow:hidden; }
+.lof-slidecontent  ul.sliders-wrap-inner{overflow:hidden;	background:transparent url(../images/load-indicator.gif) no-repeat scroll 50% 50%;	padding:0px;	margin:0;	position:absolute;	overflow:hidden;}
+.lof-slidecontent  ul.sliders-wrap-inner li{overflow:hidden;	padding:0px;margin:0px;	float:left;	position:relative;}
+.lof-slidecontent  .lof-opacity  li{position:absolute;	top:0;	left:0;	float:inherit; }
+
+
+.lof-slidecontent  .navigator-content {position:absolute;
+	right:0;
+	top:00px;
+	z-index:9;
+	height:300px;
+	width:310px;
+	overflow:hidden;
+	color:#FFF
+}
+.lof-slidecontent  .navigator-wrapper{	position:relative;	z-index:10;
+	height:180px;
+	width:310px;
+	overflow:hidden;
+	color:#FFF;
+	float:left
+}
+.lof-slidecontent  ul.navigator-wrap-inner{	top:0;	padding:0;	margin:0;	position:absolute;	width:100%; }
+.lof-slidecontent  ul.navigator-wrap-inner li{	cursor:pointer;	list-style:none;	padding:0;	margin-left:0px;	overflow:hidden;	float:left;	display:block;	text-align:center;}
+
+/*******************************************************/
+ 
+ul.sliders-wrap-inner li img{	padding:0px;	}
+
+.lof-slidecontent .slider-description a.readmore{color:#58B1EA; font-size:95%; }
+.lof-slidecontent .slider-description a{ color:#FFF; }
+.lof-slidecontent .slider-description{
+	z-index:100px;
+	position:absolute;
+	bottom:66px;
+	left:0px;
+	width:350px;
+	background:url(../images/bg_trans.png);
+	height:100px;
+	padding:10px;
+	color:#FFF;
+}
+.lof-slidecontent .slider-description h4 {    font-size: 14px;    margin: 10px 0;    padding: 0; }
+.lof-slidecontent .slider-description .slider-meta a{	
+	margin:0;
+	background:#C01F25;
+	font-size:75%;
+	padding:2px 3px;
+	font-family:"Trebuchet MS",Trebuchet,Arial,Verdana,sans-serif;
+	text-transform:uppercase;
+	text-decoration:none
+}
+.lof-slidecontent  .item-meta a:hover{	text-decoration:underline;}
+.lof-slidecontent  .item-meta i {	font-size:70%; }
+
+/* item navigator */
+.lof-slidecontent ul.navigator-wrap-inner  li.active{
+	background:url(../images/arrow-bg.png) no-repeat scroll 6px center; 
+	color:#FFF
+}
+.lof-slidecontent ul.navigator-wrap-inner  li >  div{
+	background:#ADABAB;
+	color:#FFF;
+	height:100%;
+	position:relative;
+	margin-left:15px;
+	padding-left:15px;
+	border-top:1px solid #CDCCCC;
+	text-align:left
+}
+
+.lof-slidecontent ul.navigator-wrap-inner li.active div{
+	background:#900;
+	color:#FFF;
+}
+.lof-slidecontent ul.navigator-wrap-inner li img{
+	height:60px;
+	width:60px;
+	background:#fff;
+	margin:15px 15px 10px 0px;
+	float:left;
+	padding:3px;
+	border:#C5C5C5 solid 1px;
+}
+.lof-slidecontent ul.navigator-wrap-inner li.active img, 
+.lof-slidecontent ul.navigator-wrap-inner li:hover img {
+	border:#fff solid 1px;
+}
+.lof-slidecontent  .button-next, 
+.lof-slidecontent .button-previous{
+	display:block;
+	width:40px;
+	color:#FFF;
+	cursor:pointer;
+	position:absolute;
+	height:100%;
+	z-index:40;
+	top:0;
+	text-indent:-999px;
+
+}
+.lof-slidecontent   .button-next {
+	right:0px;
+	background:url(../images/next.png) no-repeat right center;
+}
+.lof-slidecontent  .button-previous {
+	left:0px;
+	background:url(../images/previous.png) no-repeat left center;
+}
+
+
+.lof-slidecontent .button-control {
+   position:absolute;
+   top:10px;
+   right:48%;
+    height: 20px;
+    width: 20px;
+	cursor:hand; cursor:pointer;
+	background:url(../images/transparent_bg.png) repeat;
+}
+
+.lof-slidecontent .button-control span { display:block;  width:100%; height:100%;}
+.lof-slidecontent .action-start span  {
+	background:url(../images/play.png) no-repeat center center;
+}
+.lof-slidecontent .action-stop span {
+	background:url(../images/pause.png) no-repeat center center;
+}

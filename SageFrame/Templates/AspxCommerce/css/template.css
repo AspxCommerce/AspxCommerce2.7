@@ -1,0 +1,5531 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+strong, b, mark {
+    font-weight: bold;
+    font-style: inherit;
+}
+
+em, i, cite, q, address, dfn, var {
+    font-style: italic;
+    font-weight: inherit;
+}
+
+    abbr[title], dfn[title] {
+        cursor: help;
+        border-bottom: 1px dotted;
+    }
+
+ins {
+    border-bottom: 1px solid;
+}
+
+a, u, ins {
+    text-decoration: none;
+}
+
+del, s {
+    text-decoration: line-through;
+}
+
+pre, code, samp, kbd {
+    font-family: monospace;
+}
+
+small {
+    font-size: 0.75em;
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    border: none;
+    font-style: italic;
+}
+
+button:hover, button {
+    cursor: pointer;
+}
+
+input, select, textarea {
+    font: inherit;
+}
+/* new clearfix */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html .clearfix {
+    zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+    zoom: 1;
+}
+/* IE7 */
+body {
+    background: #f2f5f7;
+    font-family: 'source_sans_proregular', Arial,sans-serif;
+    color: #3b3b3b;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+html, body, form {
+    height: 100%;
+}
+
+a, a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'aspx';
+    src: url('../fonts/aspx.eot');
+    src: url('../fonts/aspx.eot') format('embedded-opentype'), url('../fonts/aspx.ttf') format('truetype'), url('../fonts/aspx.svg#aspx') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cssClassCommonWrapper .cssClassChange a i, .cssClassBillAdd .cssClassChange a i, .cssClassAddWrapper .cssClassChange a i {
+    margin-right: 0;
+}
+
+:focus {
+    outline: none;
+}
+
+textarea {
+    border: 1px solid #ddd;
+}
+
+input[type=submit], input[type=reset], input[type=button] {
+}
+
+input[type=checkbox], input[type=radio] {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea, select {
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 1px rgba(0,0,0,.1);
+    -moz-box-shadow: inset 0 1px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px rgba(0,0,0,.1);
+    border: solid 1px #d9d9d9;
+    padding: 5px;
+    line-height: 20px;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+    width: 100%;
+}
+
+    input[type=text]:focus,
+    input[type=email]:focus,
+    input[type=url]:focus,
+    input[type=password]:focus,
+    textarea:focus {
+        outline: 0;
+        border-color: #6fc25c;
+    }
+/*Css For Padding*/
+.cssClassPad5 {
+    padding: 5px;
+}
+
+.cssClassPad10 {
+    padding: 10px;
+}
+
+.cssClassPad15 {
+    padding: 15px;
+}
+
+.cssClassPad20 {
+    padding: 20px;
+}
+
+.cssClassPad25 {
+    padding: 25px;
+}
+
+.cssClassPad30 {
+    padding: 30px;
+}
+
+.cssClassRPad5 {
+    padding-right: 5px;
+}
+
+.cssClassRPad10 {
+    padding-right: 10px;
+}
+
+.cssClassRPad15 {
+    padding-right: 15px;
+}
+
+.cssClassRPad20 {
+    padding-right: 20px;
+}
+
+.cssClassRPad25 {
+    padding-right: 25px;
+}
+
+.cssClassRPad30 {
+    padding-right: 30px;
+}
+
+.cssClassTPad5 {
+    padding-top: 5px;
+}
+
+.cssClassTPad10 {
+    padding-top: 10px;
+}
+
+.cssClassTPad15 {
+    padding-top: 15px;
+}
+
+.cssClassTPad20 {
+    padding-top: 20px;
+}
+
+.cssClassTPad25 {
+    padding-top: 25px;
+}
+
+.cssClassTPad30 {
+    padding-top: 30px;
+}
+
+.cssClassLPad5 {
+    padding-left: 5px;
+}
+
+.cssClassLPad10 {
+    padding-left: 10px;
+}
+
+.cssClassLPad15 {
+    padding-left: 15px;
+}
+
+.cssClassLPad20 {
+    padding-left: 20px;
+}
+
+.cssClassLPad25 {
+    padding-left: 25px;
+}
+
+.cssClassLPad30 {
+    padding-left: 30px;
+}
+
+.cssClassBPad5 {
+    padding-bottom: 5px;
+}
+
+.cssClassBPad10 {
+    padding-bottom: 10px;
+}
+
+.cssClassBPad15 {
+    padding-bottom: 15px;
+}
+
+.cssClassBPad20 {
+    padding-bottom: 20px;
+}
+
+.cssClassBPad25 {
+    padding-bottom: 25px;
+}
+
+.cssClassBPad30 {
+    padding-bottom: 30px;
+}
+
+/*Css For margin*/
+.cssClassMar5 {
+    margin: 5px;
+}
+
+.cssClassMar10 {
+    margin: 10px;
+}
+
+.cssClassMar15 {
+    margin: 15px;
+}
+
+.cssClassMar20 {
+    margin: 20px;
+}
+
+.cssClassMar25 {
+    margin: 25px;
+}
+
+.cssClassMar30 {
+    margin: 30px;
+}
+
+.cssClassRMar0 {
+    margin-right: 0px !important;
+}
+
+.cssClassRMar5 {
+    margin-right: 5px;
+}
+
+.cssClassRMar10 {
+    margin-right: 10px;
+}
+
+.cssClassRMar15 {
+    margin-right: 15px;
+}
+
+.cssClassRMar20 {
+    margin-right: 20px;
+}
+
+.cssClassRMar25 {
+    margin-right: 25px;
+}
+
+.cssClassRMar30 {
+    margin-right: 30px;
+}
+
+.cssClassTMar5 {
+    margin-top: 5px;
+}
+
+.cssClassTMar10 {
+    margin-top: 10px;
+}
+
+.cssClassTMar15 {
+    margin-top: 15px;
+}
+
+.cssClassTMar20 {
+    margin-top: 20px;
+}
+
+.cssClassTMar22 {
+    margin-top: 22px;
+}
+
+.cssClassTMar25 {
+    margin-top: 25px;
+}
+
+.cssClassTMar30 {
+    margin-top: 30px;
+}
+
+.cssClassLMar5 {
+    margin-left: 5px;
+}
+
+.cssClassLMar10 {
+    margin-left: 10px;
+}
+
+.cssClassLMar15 {
+    margin-left: 15px;
+}
+
+.cssClassLMar20 {
+    margin-left: 20px;
+}
+
+.cssClassLMar25 {
+    margin-left: 25px;
+}
+
+.cssClassLMar30 {
+    margin-left: 30px;
+}
+
+.cssClassBMar5 {
+    margin-bottom: 5px;
+}
+
+.cssClassBMar10 {
+    margin-bottom: 10px;
+}
+
+.cssClassBMar15 {
+    margin-bottom: 15px;
+}
+
+.cssClassBMar20 {
+    margin-bottom: 20px;
+}
+
+.cssClassBMar25 {
+    margin-bottom: 25px;
+}
+
+.cssClassBMar30 {
+    margin-bottom: 30px;
+}
+/*Css For Font-size*/
+.cssClassF22 {
+    font-size: 22px;
+}
+
+.cssClassF20 {
+    font-size: 20px;
+}
+
+.cssClassF18 {
+    font-size: 18px;
+}
+
+.cssClassF16 {
+    font-size: 16px;
+}
+
+.cssClassF14 {
+    font-size: 14px;
+}
+
+.lightgrey {
+    color: #747474;
+}
+
+.cssClassNoMargin {
+    margin-right: 0 !important;
+}
+/*Css For Icon fonts*/
+.cssBox {
+    border: solid 1px #ededed;
+    background: #fff;
+}
+
+.cssGreenBorderBtm {
+    border-bottom: solid 5px#6fc25c;
+}
+
+.popupbox li, .cssClassCheckoutLeftBox li, .cssClassAIMChildContent li {
+    float: left;
+    width: 48%;
+    position: relative;
+    margin-right: 15px;
+}
+
+    .popupbox li.NoRmargin, .cssClassAIMChildContent li.NoRmargin, .cssClassPersonalInfo li.NoRmargin, .cssClassAppointmentSer li.NoRmargin {
+        margin-right: 0;
+    }
+
+    .cssClassAIMChildContent li input, .cssClassAIMChildContent li select {
+        width: 97%;
+    }
+
+.cssClassPad25 {
+    padding: 25px;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.cssClassCommonCenterBox .sfButtonwrapper {
+    margin-top: 20px;
+}
+
+button, input {
+    font-family: 'source_sans_proregular';
+}
+
+select {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+}
+
+    select#lstBrands {
+        width: 100%;
+        padding: 5px;
+    }
+
+    select#ddlCategory {
+        width: 105%;
+        padding: 5px;
+    }
+
+ul, li, ol {
+    list-style: none outside none;
+}
+
+a, input {
+    color: #3b3b3b;
+    transition: all 0.25s ease 0s;
+    -webkit-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+}
+
+    a:hover {
+        color: #6fc25c;
+        text-decoration: none;
+    }
+
+.cssClassGreenBtn, .cssClassGreyBtn, .cssClassDarkBtn, .cssClassOrangeBtn,
+.cssClassViewDetailsAddtoCart .cssClassAddtoCard label,
+.cssClassViewDetailsAddtoCart .cssClassWishListButton label,
+.classButtons .cssClassWishListButton label, .sfShoppingBagButton .cssClassWishListButton label {
+    padding: 8px 15px;
+    display: inline-block;
+    border: none;
+    transition: all 0.25s ease 0s;
+    -webkit-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    color: #fff;
+    width: auto;
+}
+
+.cssClassAddtoCard label, .cssClassWishListButton label {
+    padding: 8px 0;
+    width: 100%;
+}
+
+#compareAddToWishlist label {
+    padding: 5px 9px;
+}
+
+.cssClassGreenBtn {
+    background: #6fc25c;
+}
+
+.cssClassDarkBtn {
+    background: #2b3f4d;
+}
+
+.cssClassGreyBtn {
+    background: #979797;
+}
+
+.cssClassOrangeBtn {
+    background: #ff2b01;
+}
+
+.cssClassclear {
+    clear: both;
+    height: 1px;
+    line-height: 1px;
+}
+
+.sfLogo {
+    margin: 0px 0 3px;
+    padding: 5px 0 0 0;
+}
+
+#sfHeadertop .sfLogo a img, #sfHeadertop .sfLogo a span {
+    float: none;
+}
+
+.sfFloatRight {
+    float: right;
+    margin: 0 !important;
+}
+
+.cssClassFloatLeft {
+    float: left;
+}
+
+#sfAspxcommercemenu .sfWrapper {
+    margin: 0 20px 20px 0px;
+}
+
+.cssClassLeftSideBox {
+    margin: 0 0 20px 0;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+html, body, .sfFluid, form, .narrow {
+    height: 100%;
+}
+/*Top links*/
+.cssWelcome h2 {
+    color: #fff;
+}
+
+#sfTopheaderlink {
+    background: #2b3f4d;
+    padding: 9px 0;
+    border-top: solid 1px #344a5a;
+}
+
+.sfInnerwrapper #sfTopheaderlink {
+    padding: 0;
+}
+
+#sfTopheaderlink ul li a {
+    color: #fff;
+}
+
+    #sfTopheaderlink ul li a:hover {
+        color: #6fc25c;
+    }
+
+#sfAspxlogo .sfModule {
+    margin: 0;
+}
+
+#divPopularTag {
+    background: none;
+    border: none;
+}
+
+.FlagButtonWrapper {
+    min-width: auto !important;
+}
+/*Shopping cart popup*/
+.cssClassShoppingCart {
+    float: right;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+
+    .cssClassShoppingCart i {
+        font-size: 24px;
+    }
+
+    .cssClassShoppingCart img {
+        cursor: pointer;
+        margin-top: -5px;
+    }
+
+#ShoppingCartPopUp .cssClassCommonSideBoxTable > a {
+    background: url(../images/black-btn.png) repeat-x;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #545454;
+    color: #fff;
+    margin: 0 0 10px 0 !important;
+}
+
+    #ShoppingCartPopUp .cssClassCommonSideBoxTable > a:hover {
+        background: #232222;
+    }
+
+.cssClassCommonSideBoxTable img:hover {
+    cursor: pointer;
+}
+
+#ShoppingCartPopUp h2 {
+    font-size: 18px;
+}
+
+#ShoppingCartPopUp table {
+    margin: 10px 0;
+    border-top: solid 1px #ededed;
+    border-bottom: solid 1px #ededed;
+}
+
+    #ShoppingCartPopUp table td {
+        padding: 5px 10px;
+    }
+
+#ShoppingCartPopUp {
+    position: absolute;
+    right: 1px;
+    margin-top: 42px;
+    background: white;
+    z-index: 999;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.11);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.11);
+    box-shadow: 0 0 5px rgba(0,0,0,.11);
+    padding: 15px;
+    font-size: 14px;
+    border: solid 1px #dce2e6;
+    width: 400px;
+}
+
+    #ShoppingCartPopUp table tr {
+        background: none repeat scroll 0 0 #f6f6f6;
+        top: 0;
+    }
+
+        #ShoppingCartPopUp table tr:nth-child(2n+1) {
+            background: none repeat scroll 0 0 #fff !important;
+        }
+
+.cssClassShoppingCart p {
+    color: #dad9d9;
+    display: block;
+    font-size: 12px;
+}
+/*Product box*/
+#sfBodyContent {
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.cssLatestItemContainer,
+.cssProductGridWrapper,
+.cssClassSpecialBoxInfo,
+.cssCatProductGridWrapper {
+    width: 103.125%; /* 990px */
+    overflow: hidden;
+    margin-left: -1.25%; /* 15px */
+}
+
+.cssClassProductsBox {
+    background-color: #FFFFFF;
+    position: relative;
+    border-right: solid 1px #ededed;
+    border-bottom: solid 1px #ededed;
+    text-align: center;
+    width: 22.4%; /* 300px */
+    float: left;
+    margin: 0 1.25%;
+    margin-bottom: 2.5% !important; /* 15px 30px */
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: transform 0.3s;
+    -o-transition: 0.3s;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+    column-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    text-align: center;
+}
+
+.cssClassSpecialBox .cssClassProductsBox {
+    border: solid 1px #ededed;
+}
+
+.cssLatestItemContainer .cssClassProductsBox {
+    width: 22.5%;
+}
+
+.cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox {
+    width: 30.7%;
+}
+
+.cssClassProductsBox a, .cssClassProductsGridBox h2 a {
+    font-family: 'source_sans_prosemibold',Arial;
+}
+
+.cssClassProductsBox img {
+    width: 100%;
+}
+
+.cssClassProductsBox:hover {
+    background: #fff;
+    cursor: pointer;
+}
+
+.cssClassgdvRewardPointsSettings_grid .cssClassSearchPanel .sfButtonwrapper button {
+    float: none;
+}
+
+.sfButtonwrapper button.cssClassOutOfStock {
+    background: none;
+    border: none;
+    float: none;
+    cursor: default;
+    margin-top: 5px;
+}
+
+.cssClassgdvRewardPointsSettings_grid .cssClassSearchPanel td {
+    float: left !important;
+    width: 230px;
+}
+
+.cssClassSearchPanel td {
+    vertical-align: top;
+}
+
+.cssClassProductPicture {
+    display: block;
+}
+
+.cssLatestItemInfo {
+    padding-top: 20px;
+}
+
+.row-total input {
+    width: auto;
+}
+
+.cssClassProducts .cssClassProductsBoxInfo h2, .cssClassProductsBox h2, .cssClassProductsGridBox h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0 10px;
+}
+
+.cssClassYouMayAlsoLikeWrapper .cssClassProductRealPrice span.cssClassFormatCurrency {
+    font-size: 22px;
+}
+
+.cssClassProductDetail {
+    margin-top: 10px;
+}
+
+    .cssClassProductDetail a {
+        color: #626262;
+    }
+
+        .cssClassProductDetail a:hover {
+            color: #900;
+        }
+
+.cssClassFooterWrapper {
+    background: url(../images/footer-bg.jpg) repeat;
+}
+
+.cssClassYouMayAlsoLikeWrapper .cssClassProductsBox .cssClassAddtoCard .sfButtonwrapper, .cssClassYouMayAlsoLikeWrapper .cssClassProductsBox .cssClassAddtoCard .sfButtonwrapper label {
+    margin-right: 0;
+}
+
+#alert-Buttons .cssClassSubmitBtn,
+#alert-Buttons input {
+    padding: 10px;
+    color: #fff;
+    width: auto !important;
+    background: #6fc25c;
+    border: none;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+    #alert-Buttons input#BoxCheckOutBtn, #alert-Buttons input#BoxConfirmBtnCancel, #alert-Buttons input#BoxMessageInfoBtnCancel, #alert-Buttons input#BoxMessageInfoBtnCancel {
+        background: #424242;
+    }
+
+        #alert-Buttons input#BoxCheckOutBtn:hover, #alert-Buttons input#BoxConfirmBtnCancel:hover, #alert-Buttons input#BoxMessageInfoBtnCancel:hover, #alert-Buttons input#BoxMessageInfoBtnCancel:hover {
+            background: #292929;
+        }
+/*Cart & wishlist*/
+.cssClassCartInformationDetails .cssClassHeadeTitle, .estimate_shipping table .cssClassHeadeTitle td, .cssClassCommonCenterBox table tr.cssClassCommonCenterBoxTableHeading, tr.cssClassHeading, .cssClassShippingMethodInfo .cssClassHeadeTitle, .toogleWrapper .sfFormwrapper .cssClassHeadeTitle, .tblGroupedItem thead tr {
+    background: #ebeef1;
+    border-bottom: 3px solid#6fc25c;
+}
+
+    tr.cssClassHeading th, .cssClassCommonCenterBoxTableHeading th, .cssClassHeadeTitle th {
+        padding: 10px;
+        text-shadow: 0 1px 0 #fff;
+        text-align: left;
+    }
+
+.cssClassCommonCenterBoxTable .cssClassPageNumber {
+    margin: 15px;
+}
+
+#gdvItems tr.cssClassHeading th {
+    text-align: center;
+}
+
+.cssClassCommonCenterBox h2 {
+    margin: 10px 0 10px 0;
+}
+
+.cssClassImage img, .cssClassCartPicture img, .cssClassGridImage img {
+    border: solid 1px #ededed;
+    width: 60%;
+}
+
+.cssClassitemDetailPicture img {
+    border: solid 2px #ededed;
+    width: 60px;
+}
+
+.cssClassWishItemImg .cssClassImage img {
+    width: auto;
+}
+
+.cssClassYouMayAlsoLikeBox img {
+    width: 100%;
+}
+
+.cssClassCartInformationDetails td, .cssClasMyAccountInformation .sfGridwrapper td, .cssClassMyWishItemTable td, .sfFormwrapper td {
+    padding: 15px;
+    border-bottom: solid 1px #edeff1;
+}
+
+.popupbox .cssClassCommonCenterBoxTable {
+    box-shadow: none;
+    border: none;
+}
+
+.toogleSwitch {
+    clear: both;
+}
+
+    .toogleSwitch a {
+        color: #fff;
+    }
+
+    .toogleSwitch:hover, .classPromoList .classViewItems:hover {
+        background: #000;
+    }
+
+.cssClassCartbtmwrapper, .cssClassRatingEst .sfButtonwrapper, .cssClassapplycoupon .sfButtonwrapper, .cssClassCartbtn .sfButtonwrapper, .cssClassHeader {
+    margin-top: 20px;
+}
+
+.cssClassBlueBtnWrapper .sfButtonwrapper .sfBtn Button {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.cssClassSubTotalAmountWidth, .cssClassGrandTotalAmountWidth {
+}
+
+#divMyCart .cssClassSubTotalAmountWidth strong, #divMyCart .cssClassGrandTotalAmountWidth input {
+    color: #930101 !important;
+}
+
+#wishitemBottom button span, .cssClassBlueBtnWrapper button span, .cssClassBlueBtn a {
+    text-shadow: none;
+}
+
+.cssClassBlueBtn a {
+    float: none;
+}
+
+.cssClassHeader h2 {
+    background: none;
+    margin: 0 0 20px;
+}
+
+.cssClassBlueBtn a {
+    margin: 0px 0 0 0;
+}
+
+.cssClassMasterCenter input.cssClassFormatCurrency, .cssClassMasterCenter .cssClassPreviewQTY input {
+    color: #069;
+    border: none !important;
+    background: none !important;
+    box-shadow: none;
+    width: 111px;
+    margin: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    border-radius: 0px;
+}
+
+.cssClassQTYInput input {
+    width: 50px;
+    text-align: center;
+    background: none;
+    box-shadow: none;
+}
+
+.cssClassBlueBtnWrapper .sfButtonwrapper {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cssClassBlueBtnWrapper a {
+    padding: 15px 40px;
+    color: #fff;
+    font-size: 22px;
+    margin-right: 0;
+}
+
+.cssClassCouponHelp {
+    left: 0;
+    position: absolute;
+    top: -30px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: normal;
+    background: #f4f9ef;
+    padding: 25px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    -o-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.cssClasscarttotal {
+    position: relative;
+}
+
+.cssClassCouponHelp h3 {
+    width: 210px;
+    text-align: left;
+    color: #000;
+}
+
+.cssClassapplycoupon, .cssClassRewardWrap, .cssClassTwrap, .cssClassRatingEst {
+    background: #fff;
+    padding: 25px;
+    border-right: solid 1px #edeff1;
+    border-bottom: solid 1px #edeff1;
+}
+
+    .cssClassRatingEst label {
+        line-height: 26px;
+    }
+
+    .cssClassRatingEst select {
+        width: 100%;
+    }
+
+    .cssClassRatingEst input, #divCouponDiscountBox input {
+        width: 96.25%;
+    }
+
+    .cssClassRatingEst p, .cssClassapplycoupon p, .sfGridwrapper p {
+        font-size: 14px;
+    }
+
+    .cssClassapplycoupon p {
+        margin-bottom: 10px;
+    }
+
+    .cssClassapplycoupon a span {
+        color: #FFF;
+    }
+
+.cssClasscarttotal .sfButtonwrapper .sfBtn {
+}
+
+    .cssClasscarttotal .sfButtonwrapper .sfBtn:hover {
+    }
+
+    .cssClasscarttotal .sfButtonwrapper .sfBtn span {
+        color: #fff;
+        text-shadow: none;
+    }
+
+.estimate_shipping tr td {
+    padding: 10px;
+}
+
+.cssClassSearchPanel, .cssClassAdvenceSearch .sfFormwrapper {
+    background: #fff;
+    padding: 25px 10px;
+    border-right: solid 1px #ededed;
+    border-bottom: solid 1px #ededed;
+    margin-bottom: 30px;
+}
+
+.cssClassSearchPanel {
+    margin-bottom: 30px;
+}
+
+.sfGridwrapper .cssClassSearchPanel {
+    margin-top: 0;
+}
+
+.cssClassSearchPanel .cssClasstopdiv {
+    width: 67%;
+    margin-right: 10px;
+}
+
+.cssClassSearchPanel div {
+    line-height: 34px;
+}
+
+.sfGridwrapper, .cssClassCommonCenterBoxTable, .cssClassCartInformationDetails, .toogleWrapper .cssClassCommonBox {
+    background: #fff;
+    border: solid 1px #ededed;
+}
+
+    .sfGridwrapper .cssClassSearchPanel {
+        background: none;
+        border: none;
+    }
+
+.sfGridWrapperContent td {
+    padding: 10px;
+}
+
+.sfGridwrapper {
+    margin-bottom: 30px;
+}
+
+    .sfGridwrapper .cssClassPageNumber {
+        margin: 15px;
+    }
+
+.cssClassSubTotalAmount {
+    width: 100%;
+}
+
+    .cssClassSubTotalAmount td {
+        padding: 5px;
+    }
+
+.cssClasMyAccountInformation .sfGridwrapper td {
+    padding: 10px;
+    text-align: left !Important;
+    font-size: 14px;
+}
+
+.cssClassRatingEst .sfGridTableWrapper select {
+    padding: 6px;
+}
+
+.estimate_shipping .cssClassCommonBox {
+    background: #e9e9e9;
+    border: 1px solid #b3b3b3;
+    border-bottom: none;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.toogleWrapper table td span {
+    font-weight: bold;
+}
+
+.toogleWrapper #result {
+    margin: 30px 0 0 0;
+}
+
+.cssClassCartbtmwrapper .cssClassHeader h2 {
+    margin: 0 0 20px;
+}
+
+.toogleWrapper table {
+    position: relative;
+}
+
+.cssClassLeftRightBtn {
+    margin-bottom: 30px;
+}
+
+#divMyCart .cssClassSubTotalAmount input, input.cssClassFormatCurrency {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    font-weight: bold;
+}
+/*My account*/
+.cssClassMyDashBoard .cssClassCommonSideBox {
+    float: left;
+    width: 210px;
+}
+
+.cssClasMyAccount ul li a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    border-left: solid 3px #fff;
+}
+
+    .cssClasMyAccount ul li a:hover, .cssClasMyAccount ul li a.cssClassmyAccountActive {
+        text-decoration: none;
+        color: #6fc25c;
+        border-left: solid 3px#6fc25c;
+    }
+
+.cssClasMyAccountInformation, .cssCategoryWrapper {
+    float: left;
+    width: calc(100% - 292px);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .cssClasMyAccountInformation, .cssCategoryWrapper {
+        width: 75%;
+        float: left;
+    }
+
+    .cssClassDisplayResult .cssCatProductGridWrapper .cssClassProductsBox {
+        width: 30%;
+    }
+
+    .cssClassProductsBox {
+        margin: 0 15px 30px 15px !important;
+    }
+}
+
+.cssClassHeading td {
+    color: #3b3b3b;
+    text-shadow: none;
+}
+
+.cssClasMyAccountInformation tr td input {
+    margin: 0 0 10px 0;
+}
+
+.sfGridWrapperTable .itemsHeaderChkbox {
+    margin-left: 5px;
+}
+
+.sfFormwrapper td {
+    padding: 10px 5px;
+}
+
+.sfGridwrapper td a {
+    color: #686868;
+}
+
+    .sfGridwrapper td a span.cssAClassDownload:hover {
+        text-decoration: underline;
+    }
+
+.ui-accordion .ui-state-active {
+    background: #3b5998 !important;
+    border-radius: 0px !important;
+}
+
+    .ui-accordion .ui-state-active h2 {
+        color: #fff !important;
+    }
+
+    .ui-accordion .ui-state-default .ui-icon, .ui-accordion .ui-state-active .ui-icon {
+        display: none;
+    }
+
+.cssClassFooterWrapper a {
+    color: #fff;
+}
+
+.cssClassAccordionWrapper .cssClassQTY input, .cssClassAccordionWrapper .cssClassPreviewQTY input {
+    width: 15px !important;
+}
+
+.cssClassAccordionWrapper .cssClassSubTotalAmount td, .cssClassSubTotalAmount td {
+    text-align: right;
+    border: solid 1px #edeff1;
+}
+
+.cssClassdvRPCurrent table td {
+    border: solid 1px #ededed;
+    padding: 5px !important;
+}
+
+.cssClassAccordionWrapper td {
+    vertical-align: middle;
+}
+
+.cssGrandTotal {
+    text-align: right;
+    font-size: 22px;
+    padding: 15px 0;
+}
+
+.cssClasMyAccountInformation .cssClassCommonBox .cssClassHeader {
+    margin-top: 0;
+}
+
+.cssClassAddressBook, .cssClassAddressBook1 {
+    background-color: #FFFFFF;
+    border-right: solid 1px #ededed;
+    border-bottom: solid 1px #ededed;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.cssClassCol1 h3, .cssClassCol2 h3, .cssClassCol3 h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: #e7ebee;
+    padding: 15px;
+}
+
+.cssClassCol1 .cssClassAddressBook {
+    margin-right: 30px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#liDefaultShippingAddress div, #liDefaultBillingAddress div, .cssClassAddAddress div {
+    padding: 0 20px;
+}
+
+.cssClassCol1 .cssClassAddressBook1, .cssClassCol2 .cssClassAddressBook {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.cssClassCol3 .cssClassAddressBook {
+    float: none;
+}
+
+.cssClassButtonSubmit {
+    float: none !important;
+}
+
+#btnUnSubscribe {
+    margin: 0 !important;
+}
+/*Detail page*/
+.cssClassProductPictureDetails a b u span {
+    background: url(../images/red-btn.jpg) repeat-x;
+    border: 1px solid #860101;
+    padding: 10px 10px 12px 10px;
+    color: #fff;
+}
+
+    .cssClassProductPictureDetails a b u span:hover {
+        background: #910000;
+    }
+
+.cssClassProductImagewrap {
+    float: left;
+    width: 40%;
+}
+
+    .cssClassProductImagewrap .cssSocialrating .cssClassItemRating {
+        float: none;
+        width: auto;
+    }
+
+.cssClassProductImage {
+    background-color: #FFFFFF;
+    border-right: solid 1px #ededed;
+    border-bottom: solid 1px #ededed;
+    position: relative;
+}
+
+.cssClassProductPictureDetails {
+    margin: 0 0 10px 0;
+}
+
+.cssClassTabPanelTable {
+    margin-top: 30px;
+}
+
+.cssClassYouMayAlsoLike {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+cssClassProductDetailInformation {
+    margin: 40px 0 0;
+}
+
+li span.cssClssQTY input {
+    width: 20px;
+}
+
+
+.cssClassBulkDiscount {
+    color: #000;
+}
+
+.popupbox .cssClassLeftSide h2 {
+    margin-left: 0 !important;
+}
+
+.sfButtonwrapper label, .cssClassWishListButton label {
+    cursor: pointer;
+    color: #fff;
+}
+
+.cssClassRightSide li {
+    padding: 0 0 10px 0;
+}
+
+.cssClassLeftSide .cssClssQTY {
+    float: left;
+    position: relative;
+}
+
+.cssClassRightSide .cssClassProductRealPrice {
+    color: #900;
+}
+
+#spanSaving {
+    font: 18px;
+}
+
+.cssClassItemRating a {
+    color: #6fc25c;
+}
+
+.cssClassLinkShare {
+    float: right;
+}
+
+.jcarousel-skin-pika {
+    margin: 15px 0 0 0 !important;
+}
+
+.cssClassRightSide .sfButtonwrapper button span {
+}
+
+#ItemDetails_TabContainer h2 {
+    padding: 7px !important;
+}
+
+    #ItemDetails_TabContainer h2.ui-state-active span {
+        color: #fff !important;
+    }
+
+#ItemDetails_TabContainer.ui-icon-triangle-1-s {
+    background: url(../images/minus-icon.png) no-repeat !important;
+    display: inline-block !important;
+    vertical-align: text-top;
+    height: 20px;
+    margin-right: 15px;
+    width: 20px;
+}
+
+#divReturnInfo td {
+    vertical-align: top;
+}
+
+#divProductInfo .sfGridWrapperTable .cssClasschkSelectAll {
+    margin-left: 12px;
+}
+
+/*Css For Tags*/
+.tag_content {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #e3e7e9;
+    padding: 2px 7px;
+    font-size: 14px;
+}
+
+    .tag_content:hover {
+        border: solid 1px#6fc25c;
+    }
+
+        .tag_content:hover .cssClassCross span i {
+            color: #6fc25c;
+        }
+
+.cssClassCross span i {
+    margin-right: 0;
+    margin-top: 3px;
+}
+
+.tag_content button {
+    color: #5f6a6f;
+    font-size: 12px;
+}
+
+.cssClassPopularItemTags strong {
+    color: #910000;
+}
+
+.cssClassPopular-Itemstags {
+    margin: 0 0 15px 0;
+    padding: 10px;
+}
+
+    .cssClassPopular-Itemstags a {
+        color: #6F6F6F;
+        text-decoration: none;
+    }
+
+        .cssClassPopular-Itemstags a:hover, .cssClassMyTags a:hover {
+            color: #3C92CF;
+        }
+
+.cssClassPopularItemTags button.cssClassIncrease span, .cssClassPopularItemTags button.cssClassDecrease span {
+    background: none repeat scroll 0 0 transparent;
+    color: #fff;
+    float: none;
+    padding: 0;
+    text-align: center;
+}
+
+.cssClassMyTags {
+    overflow: hidden;
+}
+
+    .cssClassMyTags a {
+        color: #6F6F6F;
+        float: left;
+    }
+
+.cssClassWishToCart .sfButtonwrapper {
+    margin-top: 15px;
+}
+
+.cssClassWishToCart .cssClassPrice {
+    font-size: 22px;
+}
+
+.cssClassWishToCart label {
+    float: none;
+    width: 70px;
+}
+/*Sucess page*/
+.LabelColInfo1R {
+    width: 200px;
+}
+
+.cssClassCheckOutMethodLeft {
+    float: left;
+    width: 75%;
+}
+
+.popupbox li span.sfError, .cssClassCheckoutLeftBox .sfError {
+    font-size: 12px;
+    color: #F00;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sfError {
+    color: #F00;
+}
+
+.cssClassCheckoutLeftBox li input {
+    width: 97%;
+    font-size: 14px;
+}
+
+.cssClassCheckoutLeftBox .cssClassLabel {
+    width: 28%;
+}
+
+#trBillingAddress li, #trShippingAddress li, #trBillingAddress li span.cssClassLabel, #trShippingAddress li span.cssClassLabel {
+    width: auto !important;
+}
+
+    #trShippingAddress li input {
+        float: left;
+    }
+
+#trBillingAddress {
+    clear: both !important;
+    overflow: hidden !important;
+    margin-bottom: 20px;
+}
+
+    #trBillingAddress input, #trBillingAddress input {
+        width: auto;
+    }
+
+.popupbox .sfFormwrapper input[type="text"], .popupbox .sfFormwrapper textarea {
+    width: 97%;
+}
+
+.popupbox .sfFormwrapper select {
+    width: 100%;
+}
+
+.popupbox .sfFormwrapper select {
+    margin: 0 0 5px 0 !important;
+    padding: 4px !important;
+}
+
+.popupbox .sfFormwrapper input {
+    margin: 0 0 5px 0;
+}
+
+.cssClassAccordionWrapper .sfFormwrapper td {
+    margin: 0 !important;
+}
+
+.cssClassForgetPass {
+    padding-bottom: 10px;
+}
+/*you may also like*/
+.cssClassYouMayAlsoLikeWrapper {
+    margin: 30px 0 0 0;
+}
+
+    .cssClassYouMayAlsoLikeWrapper h2 {
+        margin-bottom: 30px;
+    }
+
+    .cssClassYouMayAlsoLikeWrapper .cssClassProductsBox {
+        width: 18%;
+        margin-bottom: 0;
+    }
+
+        .cssClassYouMayAlsoLikeWrapper .cssClassProductsBox .cssClassAddtoCard {
+            float: none;
+            width: auto;
+        }
+
+.cssClassYouMayAlsoLike h2 {
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.cssClassYouMayAlsoLike .cssLatestItemInfo h2 {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.cssClassYouMayAlsoLike .cssClassProductPriceBox {
+    margin-bottom: 20px;
+}
+
+.cssClassYouMayAlsoLikeWrapper .cssClassFormatCurrency {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.cssClassYouMayAlsoLikeBox {
+    background: #fff;
+    float: left;
+    text-align: center;
+    margin: 0px 16px 20px 0px;
+    border: 1px solid #DCE2E6;
+    border-top: solid 3px #6fc25c;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+    width: 18%;
+}
+
+.cssClassMyAccountInformation {
+    clear: both;
+    margin: 20px 0 30px 0;
+}
+
+.popupbox .cssClassYouSave {
+}
+
+/*Pagination*/
+.pagination {
+    float: left;
+}
+
+    .pagination span, .pagination a {
+        display: inline-block;
+        padding: 2px 10px;
+        margin-right: 4px;
+        background: #fff;
+        text-decoration: none;
+        color: #3b3b3b;
+        border: solid 1px #DCE2E6;
+    }
+
+        .pagination a:hover, .pagination span.current, span.cssClassPaginationActive {
+            border: none;
+            background: #6fc25c;
+            color: #fff;
+            display: inline-block;
+            padding: 2px 10px;
+            border: solid 1px#6fc25c;
+        }
+
+.cssClassPages {
+    float: left;
+    margin-right: 10px;
+}
+
+.cssClassViewPerPage {
+    float: right;
+    position: relative;
+    top: 0;
+    right: 0px;
+    color: #000;
+}
+
+.cssClassPageNumberLeftBg {
+    display: block;
+}
+
+#Pagination {
+    float: left;
+}
+
+.cssClassPageNumber {
+    font-size: 14px;
+}
+
+.cssCategoryWrapper .cssClassPageNumber {
+    margin: 0;
+}
+
+    .cssCategoryWrapper .cssClassPageNumber .pagination {
+        margin: 0;
+    }
+
+.cssClassPageNumber .cssClassPages input {
+    width: 30px;
+    padding: 3px 5px;
+    height: 29px;
+}
+
+.cssClassViewPerPage span {
+    background: none !important;
+    color: #222121;
+    border: none !important;
+}
+
+.cssClassViewPerPage select {
+    padding: 2px;
+}
+/*List view*/
+.cssClassProductListView {
+    background-color: #FFFFFF;
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.cssClassProductListViewLeft {
+    float: left;
+    width: 30%;
+}
+
+.cssClassProductListViewRight {
+    float: right;
+    width: 66%;
+}
+
+    .cssClassProductListViewRight .cssClassListViewProductPrice span b {
+        color: #686868 !important;
+        text-decoration: line-through;
+        font: 18px !important;
+    }
+
+.cssClassProductListViewLeft .cssClassProductPicture img {
+    background: #fff;
+    width: 100%;
+}
+
+.cssClassViewDetailsAddtoCart a {
+    float: left;
+    margin-right: 10px;
+}
+
+a.cssClassGrid, a.cssClassList {
+    display: inline-block;
+    height: 20px;
+    margin: 10px 0 5px 5px;
+    width: 20px;
+    font-size: 19px;
+    color: #ccc;
+}
+
+a.cssClassList {
+    width: 16px;
+}
+
+    a.cssClassList.sfactive, a.cssClassList:hover, a.cssClassGrid.sfactive, a.cssClassGrid:hover {
+        color: #6fc25c;
+    }
+
+.cssClassFeaturedBg span:hover {
+    background: url("../images/featured-bg-hover.jpg") no-repeat scroll 0 0 transparent;
+}
+
+.cssClassFeaturedBg span {
+    background: url("../images/featured-bg.jpg") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    display: block;
+    height: 17px;
+    margin: 6px 0 0;
+    text-align: center;
+    width: 136px;
+}
+
+.view select {
+    margin-right: 20px;
+}
+
+.viewWrapper select {
+    padding: 3px;
+}
+/*Top login control css*/
+#sfAspxloginstatusbar .sfModule {
+    margin: 10px 0 0 0;
+}
+
+.cssClassTopSearch {
+    clear: both;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+#sfTopheaderlink .cssClassTopSearch ul li a {
+    color: inherit;
+    background: #f8f8f8;
+    border: solid 1px #f2f2f2;
+    padding: 1px 5px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+    #sfTopheaderlink .cssClassTopSearch ul li a:hover {
+        color: #6fc25c;
+    }
+
+#sfHeadertop {
+    background: #fff;
+    padding: 15px 0 12px;
+    border-bottom: solid 1px #eaeaea;
+}
+
+#sfCatmenu {
+    background: #fff;
+    border-bottom: solid 1px #eaeaea;
+}
+
+.sffooterbtn {
+    padding: 60px 0 80px;
+    background: #2b3f4d;
+}
+
+    .sffooterbtn h2, .sfModuleCopyrightHtml h2, #divEmailSubsCribe #divEmailtext {
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 30px;
+        color: #c2ddf0;
+    }
+
+    .sffooterbtn a {
+        color: #fff;
+        text-shadow: 0px 1px rgba(0,0,0,0.2);
+        -webkit-text-shadow: 0px 1px rgba(0,0,0,0.2);
+        -o-text-shadow: 0px 1px rgba(0,0,0,0.2);
+    }
+
+        .sffooterbtn a:hover {
+            color: #6fc25c;
+        }
+
+    .sffooterbtn ul li {
+        margin-bottom: 10px;
+    }
+
+.cssClassTopSearch span, .cssClassTopSearch ul li {
+    float: left;
+    color: #686868;
+}
+
+    .cssClassTopSearch ul li a {
+        float: left;
+    }
+
+#sfCategorybar {
+    background: url("../images/nava_bg.gif") repeat-x #161616;
+    width: 100%;
+    min-height: 40px;
+    position: relative;
+}
+
+#sfBanner {
+    background: #6fc25c;
+    height: 480px;
+    overflow: hidden;
+}
+
+.AspxCurrencyConverter {
+    float: right;
+    margin: -20px 0 10px;
+}
+
+.sfLogininfo ul li:last-child {
+    padding-right: 0 !important;
+}
+
+/*Css For Header Drop Down*/
+.sfHeaderDropdown {
+    width: 104px;
+    position: relative;
+    font-size: 14px;
+}
+
+    .sfHeaderDropdown dt a {
+        color: #fff;
+    }
+
+    .sfHeaderDropdown dt {
+        color: #fff;
+        width: 75px;
+        padding: 2px 20px 4px 5px;
+        position: absolute;
+        background: url(../images/select_arrow-white.png) no-repeat 90% center;
+    }
+
+        .sfHeaderDropdown dt:hover {
+            cursor: pointer;
+        }
+
+    .sfHeaderDropdown dd {
+        position: absolute;
+        top: 30px;
+        z-index: 9999;
+        width: 150px;
+    }
+
+        .sfHeaderDropdown dd ul, .tzSelect .dropDown {
+            border: 1px solid #dce2e6;
+            border-top: solid 3px#6fc25c;
+            background: #fff;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -o-border-radius: 3px;
+            -webkit-box-shadow: 0 0 5px rgba(0,0,0,.11);
+            -moz-box-shadow: 0 0 5px rgba(0,0,0,.11);
+            box-shadow: 0 0 5px rgba(0,0,0,.11);
+        }
+
+#sfTopheaderlink .sfHeaderDropdown dd ul li {
+    padding: 5px !important;
+    border-bottom: 1px solid #ccc;
+    border-top: none !important;
+}
+
+    #sfTopheaderlink .sfHeaderDropdown dd ul li:hover {
+        background: #fff;
+        text-decoration: underline;
+    }
+
+    #sfTopheaderlink .sfHeaderDropdown dd ul li a {
+        color: #535353;
+    }
+
+.ShoppingBagHeader {
+    float: right;
+    padding: 17px 0;
+}
+
+.sfRegister {
+    padding-left: 5px !important;
+}
+
+.sfModuleCurrencyConverter {
+    float: right;
+    margin: 0 0px 0 0;
+    width: 35%;
+}
+
+#sfAspxloginstatusbar {
+    float: right;
+}
+
+.Grabnow h1 {
+    font: 36px Gautami;
+    color: #fff;
+    padding: 9px 0 0 185px;
+}
+
+#sfBanner1 {
+    background: url(../images/bg1.png) repeat-x;
+    height: 67px;
+    margin: 0 0 0px 0;
+    width: 100%;
+}
+
+.sfModuleGrabNowHtml {
+    position: relative;
+}
+
+#sfBanner .sfModule, #sfBanner1 .sfModule {
+    margin: 0px !important;
+}
+
+.cssClassSageSearchWrapper input.cssClassSageSearchBox {
+    padding: 7px;
+    margin: 10px 0;
+    font-size: 14px;
+    width: 94%;
+}
+
+.Grabnow p.Grab {
+    background: url(../images/grabnowbg.png) no-repeat 0 center !important;
+    height: 64px;
+    width: 214px;
+    float: left;
+    position: absolute;
+    top: -12px;
+    right: 7%;
+}
+
+.cssClassAdvanceSearchLink {
+    display: block;
+    font-size: 14px;
+}
+
+.cssClassAdvanceSearchLink {
+    float: right;
+    margin-top: 10px;
+}
+
+.cssClassTopSearch ul li {
+    float: left;
+    margin: 0 5px 5px 0;
+}
+
+    .cssClassTopSearch ul li a {
+        padding: 0px 0px 0 5px;
+    }
+
+.cssClassSageSearchWrapper input.cssClassSageSearchButton {
+    color: #fff;
+    float: left;
+    margin: 0;
+    padding: 6px 12px 5px;
+    background: #6fc25c;
+    border: solid 1px#6fc25c;
+}
+
+    .cssClassSageSearchWrapper input.cssClassSageSearchButton:hover {
+        cursor: pointer;
+        background: #3b3b3b;
+    }
+
+.cssClassTopSearch ul li a span {
+    margin: 0px;
+    color: #686868;
+}
+
+.Grabnow p.Grab a {
+    color: #000;
+    padding-left: 32px;
+    text-shadow: 0px 1px 0px #f27058;
+}
+
+.cssClassProducts h1, .cssClassMiddleHeader, .cssClassCompareBox .cssClassHeader h2 {
+    margin: 0 0 2.5% 0;
+    text-align: center;
+}
+
+    .cssClassProducts h1 span, .cssClassMiddleHeader span, .cssClassCompareBox .cssClassHeader h2 span {
+        color: #3b3b3b;
+        font-size: 34px;
+        padding: 20px 40px;
+        font-weight: normal;
+        display: inline-block;
+    }
+
+.sfBannerslide {
+    height: 309px !important;
+    color: #990000;
+    overflow: hidden;
+}
+
+.cssClassProductsGridBox {
+    text-align: center;
+    margin: 20px;
+}
+
+.cssClassCompareAttributeClass {
+    padding: 10px;
+    text-align: center;
+}
+
+    .cssClassCompareAttributeClass .cssClassLabel, .cssClassCompareBox .cssClassFormatCurrency .cssClassLabel {
+        font-weight: bold;
+    }
+
+.cssClassAddtoCard, .cssClassWishListButton, .cssClassOutOfStock {
+    float: left;
+}
+
+.cssLatestItemInfo .cssClassAddtoCard, .cssLatestItemInfo .cssClassWishListButton, #divShowCategoryItemsList .cssClassOutOfStock {
+    width: 50%;
+}
+
+#compareAddToWishlist {
+    width: 235px;
+    margin: 10px auto 0;
+}
+
+.cssClassOutOfStock span {
+    width: 100%;
+    background: none;
+    border: none;
+    color: red;
+    float: none;
+    line-height: 35px;
+    padding: 0 4px;
+    text-align: center;
+    font-family: 'source_sans_proregular',Arial,sans-serif;
+}
+
+.cssClassCompareButton {
+    display: block;
+    background: #e8ebee;
+    padding: 10px;
+}
+
+.cssClassProductListView .cssClassViewDetailsAddtoCart .cssClassOutOfStock .sfButtonwrapper a {
+    background: none !important;
+    cursor: default;
+}
+
+.cssClassAddtoCard .cssClassOutOfStock button:hover, .cssClassAddtoCard .cssClassOutOfStock button:hover span {
+    cursor: default;
+    color: #F00 !important;
+}
+
+.sfButtonwrapper input {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.cssClassDelete img:hover {
+    cursor: pointer;
+}
+
+/*Recntly compared*/
+.cssClassCompareItemInfo a {
+    color: #6e6d6d;
+    margin: 0 0 10px 0;
+    display: block;
+    background: url(../images/bullet1.png) no-repeat left;
+    padding-left: 20px;
+}
+
+
+/*Display none css*/
+.cssClassProductsBox .cssClassProductDetail, .cssClassProductsBoxInfo h3, #tblHeavyDiscountItems .cssClassProductsBox .cssClassWishListButton, #tblHeavyDiscountItems .cssClassProductsBox .cssClassCompareButton {
+    display: none;
+}
+
+.cssClassCompareButton span {
+    margin: 0 0 0 5px;
+    font-size: 14px;
+    color: #3b3b3b;
+}
+
+    .cssClassCompareButton span:hover {
+        cursor: pointer;
+    }
+/*Footer Menu*/
+.sfModuleServiceHtml ul li a:hover, .sfModuleCopyrightHtml ul li a:hover, .sfModuleHelpHtml ul li a:hover, .sfModuleSocialHtml ul li a:hover {
+    color: #fff;
+}
+
+.sfModuleCopyrightHtml h3, .sfModuleHelpHtml h3 {
+    color: #aaaaaa;
+}
+
+.sfSocial {
+    margin-top: 10px;
+}
+
+.sfpayment {
+    margin-right: 25px;
+}
+
+    .sfSocial p, .sfpayment p {
+        margin: 8px 0 0 0;
+    }
+
+.sfSocial ul li a {
+    margin: 0px 15px 0 0;
+}
+
+.sffacebook, .sftwitter, .sfpintrest, .sfyoutube {
+    background: url(../images/facebook.png)no-repeat;
+    height: 32px;
+    width: 32px;
+    text-indent: -9999px;
+    float: left;
+    opacity: 0.9;
+}
+
+.sftwitter {
+    background: url(../images/twitter.png);
+}
+
+.sfpintrest {
+    background: url(../images/pintrest.png);
+}
+
+.sfyoutube {
+    background: url(../images/youtube.png);
+}
+
+    .sffacebook:hover, .sftwitter:hover, .sfpintrest:hover, .sfyoutube:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+/* special item front view*/
+.cssClassSpecial span {
+    color: #920101;
+    margin: 0 0px 0 0;
+    color: #000;
+    text-shadow: 0px 1px 0px #DADADA;
+}
+
+.cssClassSpecialBox ul li:last-child {
+    margin-right: 0;
+}
+
+.cssClassViewMore a, .cssClassReadMore, .cssViewMore a {
+    padding-right: 10px;
+    float: right;
+    background: url(../images/view-morearrow.png) no-repeat right;
+    margin: 0px 5px 0 0 !important;
+}
+
+.cssClassViewMore {
+    margin: 5px 0 0 0 !important;
+    float: right;
+}
+
+.cssClassTestimonialList a:hover {
+    text-decoration: underline;
+    color: #686868;
+}
+/*best seller items front view*/
+.cssClassBestSellerBox ul li, .cssClassrecentlyviewed ul li, .cssClassSpecialBox ul li {
+    background: none repeat scroll 0 0 #E9E9E9;
+    border: 1px solid #B3B3B3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    float: left;
+    margin: 2% 2% 0px 0;
+    padding: 10px 10px 10px;
+    text-align: center;
+    transition: transform 0.5s ease 0s;
+    width: 46%;
+    min-height: 156px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+    .cssClassBestSellerBox ul li:hover, .cssClassrecentlyviewed ul li:hover, .cssClassSpecialBox ul li:hover {
+        background: #fff;
+    }
+
+    .cssClassBestSellerBox ul li:last-child, .cssClassrecentlyviewed ul li:last-child {
+        margin-left: 0 !important;
+    }
+
+.cssClassItemHeader .sort h4 {
+    margin-top: 27px;
+}
+
+.classInfo .cssClassWishListButton {
+    float: right;
+}
+
+.classViewDetails span {
+    margin-top: 10px;
+}
+
+.divDetailsItemList table {
+    width: 100%;
+}
+
+.divDetailsItemList .classInfo {
+    background-color: #FFFFFF;
+    padding: 25px 26px;
+    border-right: solid 1px #ededed;
+    margin-bottom: 30px;
+    width: 44.1%;
+    margin-right: 30px;
+    float: left;
+    border-bottom: solid 1px #ededed;
+}
+
+.divDetailsItemList div:nth-child(2n).classInfo {
+    margin-right: 0;
+}
+
+.divDetailsItemList .itemImageClass {
+    float: left;
+    background: #fff;
+    margin-right: 30px;
+}
+
+    .divDetailsItemList .itemImageClass img {
+        width: 150px;
+    }
+
+.divDetailsItemList .cssClassHalfColtwo {
+    margin: 34px 0 0 20px;
+    float: left;
+}
+
+.divDetailsItemList .itemInfoClass .sfButtonwrapper {
+    padding: 0;
+    float: left;
+}
+
+.divDetailsItemList .cssClassHalfColumn {
+    float: left;
+    margin-left: 20px;
+}
+
+.divDetailsItemList .classQuantity {
+    float: left;
+}
+
+    .divDetailsItemList .classQuantity span {
+    }
+
+    .divDetailsItemList .classQuantity input {
+        width: 20px;
+    }
+
+.itemInfoClass ul li {
+    color: #202020;
+    color: #101010;
+    text-transform: capitalize;
+    text-shadow: 0 1px 1px white;
+    margin-bottom: 10px;
+}
+
+.itemInfoClass .classButtons {
+    float: left;
+}
+
+.itemInfoClass .cssClassAddtoCard .sfButtonwrapper button span, .classInfo .sfButtonwrapper button span {
+    line-height: 36px;
+    color: #fff;
+    text-shadow: none;
+}
+
+.itemInfoClass .cssClassOutOfStock button span {
+    color: #FF0000;
+}
+
+.itemInfoClass .classViewDetails {
+    float: left;
+    clear: both;
+}
+/* Popular Tags*/
+.cssClassPopularTags {
+    color: #000;
+}
+
+    .cssClassPopularTags ul li {
+        margin: 10px;
+        float: left;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border: 1px #b1b0b0 solid;
+        padding: 5px 6px;
+    }
+
+        .cssClassPopularTags ul li a {
+            background: url(../images/tag_bg.png) no-repeat 0 8px;
+            padding: 2px 0 0 15px;
+            text-transform: none;
+            color: #686868;
+        }
+
+        .cssClassPopularTags ul li:hover {
+            background: #e4e3e3;
+        }
+
+            .cssClassPopularTags ul li:hover a {
+                color: #000;
+            }
+
+    .cssClassPopularTags .cssClassViewMore {
+        margin-right: 5px;
+    }
+
+.poll-box {
+    background: #fff;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.tagcloud h2 span, #sfAspxcommercemenu h2 span {
+    background: none;
+    color: #fff;
+}
+
+/*Advanced Search*/
+.cssClassAdvenceSearch .cssClassHeader {
+    background: none;
+}
+
+.cssClassAdvenceSearch li {
+    float: left;
+    margin: 6px 10px 0 0;
+}
+
+.pricebox span {
+    line-height: 22px !important;
+}
+
+.estimate_shipping .sfBtn {
+    margin: 0px;
+    box-shadow: none;
+}
+
+.sfModuleAspxLatestItemsDisplay {
+    margin: 0 0 40px 0;
+}
+/*Detail testimonials*/
+.cssClassTestDetail h1 {
+    margin-bottom: 20px;
+}
+
+.cssClassTestDetail ul li a {
+    color: #0180F4;
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+    .cssClassTestDetail ul li a:hover {
+        text-decoration: none;
+    }
+
+.cssClassTestimonial li {
+    padding: 5px 5px 5px 5px;
+    display: block;
+    border-bottom: 1px solid #bfbfbf;
+    box-shadow: 0px 1px 0px #f2f0f0;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+    .cssClassTestimonial li:last-child {
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    .cssClassTestimonial li p {
+        color: #6e6d6d;
+        color: #6e6d6d;
+        margin-bottom: 20px;
+    }
+
+.cssClassImageHolder {
+    float: left;
+    overflow: hidden;
+    border: 1px solid #999;
+    background: #fff;
+    margin: 0 10px 10px 0;
+}
+
+    .cssClassImageHolder img {
+        width: 50px;
+    }
+
+.cssClassDate {
+    display: block;
+    font-style: italic;
+}
+
+cssClassTestmonialDetails span {
+    float: right;
+    color: #920101;
+}
+
+.cssClassAuthorDate {
+    float: right;
+    color: #920101;
+}
+
+.cssClassUser em {
+    color: #910000;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.cssClassTestimonial .cssClassDate {
+    width: auto !important;
+    margin-bottom: 10px;
+    color: #910000;
+    font-style: italic;
+}
+
+#ulTestimonialDetails li {
+    border: 1px solid #bcbcbc;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/*Cart page*/
+.ClassDeleteCartItems {
+    cursor: pointer;
+}
+/*List view*/
+.cssClassProductListViewRight h2 {
+    font-size: 18px;
+    color: #000000;
+    font-family: 'source_sans_prosemibold',Arial;
+    margin-bottom: 10px;
+}
+
+.cssClassProductListViewRight p {
+    color: #585858;
+}
+
+.cssClassListViewProductPrice span {
+    color: #910000;
+    margin: 15px 0;
+}
+
+.viewWrapper .sort {
+    float: right;
+}
+
+.viewWrapper {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-right: solid 1px #edeff1;
+    border-bottom: solid 3px#6fc25c;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+    .viewWrapper .view {
+        float: left;
+    }
+
+        .viewWrapper .view h4, .viewWrapper .sort h4, .sort span {
+            line-height: 35px !important;
+            margin: 0 5px 0 0;
+            display: inline-block;
+            font-weight: normal;
+            color: #3b3b3b;
+        }
+/* product list view*/
+.cssClassProductListView .cssClassAddtoCard .sfButtonwrapper {
+    position: relative;
+    right: 0;
+}
+
+.cssClassProductListView .cssClassOutOfStock .sfButtonwrapper a, .cssClassViewDetailsAddtoCart .cssClassOutOfStock .sfButtonwrapper a {
+    padding: 0 !important;
+}
+
+.cssClassProductListView .cssClassOutOfStock .sfButtonwrapper:hover, .cssClassViewDetailsAddtoCart .cssClassOutOfStock .sfButtonwrapper:hover {
+    background: none !important;
+    padding: 0 !important;
+}
+
+.cssClassProductListView .cssClassAddtoCard .sfButtonwrapper a, .cssClassViewDetailsAddtoCart .sfButtonwrapper a {
+    padding: 0px 56px 0px 15px !important;
+    border-radius: 0 !important;
+    margin-right: 40px;
+    text-transform: uppercase;
+}
+
+    .cssClassProductListView .cssClassAddtoCard .sfButtonwrapper a span, .cssClassViewDetailsAddtoCart .sfButtonwrapper a span {
+        line-height: 36px;
+        color: #414141;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+.cssClassProductListView .cssClassAddtoCard .sfButtonwrapper:hover span, .cssClassViewDetailsAddtoCart .sfButtonwrapper:hover span {
+    color: #fff;
+    text-shadow: none;
+}
+
+.cssClassProductListView p {
+    color: #585858;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.cssClassViewDetailsAddtoCart {
+    overflow: hidden;
+    margin: 10px 0 10px 0;
+}
+/* Detail view */
+.cssClassLeftSide .cssClassHalfColumn {
+    float: left;
+    margin-right: 15px;
+}
+
+    .cssClassLeftSide .cssClassHalfColumn span b {
+        text-transform: capitalize;
+        color: #686868;
+    }
+
+.cssClassViewPerPage h4 {
+    line-height: 30px;
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+.cssClssQTY input {
+    width: 35px;
+}
+
+.cssClassYouSave {
+    margin-right: 10px;
+    float: left;
+    color: #686868;
+    text-transform: capitalize;
+    padding: 5px 0 0 0;
+}
+
+.cssClassYouSave {
+    color: #ff3c00;
+}
+
+    .cssClassYouSave #spanSaving b {
+        background: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+
+.cssClassProducts .cssClassYouSave, .cssClassProductsBox .cssClassYouSave {
+    float: left;
+    margin-bottom: 20px;
+    margin-left: -11px;
+}
+
+.cssClassLeftSide .sfButtonwrapper .cssClassCompareButton input {
+    border: 1px solid #000 !Important;
+    margin: 0 0 0 5px;
+}
+
+.cssClassLeftSide .sfButtonwrapper .sfBtn1 {
+    float: none;
+}
+
+.cssClassPopularItemTags .sfButtonwrapper button {
+    margin: 15px 0 0 0;
+}
+
+#Notify .sfButtonwrapper {
+}
+
+    #Notify .sfButtonwrapper #txtNotifiy {
+        border-right: none;
+        padding: 5px 10px;
+        font-size: 14px;
+        background-color: #fff;
+        -webkit-box-shadow: inset 0 1px rgba(0,0,0,.1);
+        -moz-box-shadow: inset 0 1px rgba(0,0,0,.1);
+        box-shadow: inset 0 1px rgba(0,0,0,.1);
+        border: solid 1px #d9d9d9;
+        color: #2B404C;
+    }
+
+.cssClassLeftSide .sfButtonwrapper .sfBtn, .cssClassLeftSide .sfButtonwrapper .sfBtn1 {
+    float: left;
+    cursor: pointer;
+}
+
+.cssClassNotifyMeTxt {
+    width: 200px !important;
+}
+
+.cssClassAvailiability b {
+    color: #ff3c00;
+    font-weight: normal;
+}
+
+.cssClassRatingTitle {
+    margin-top: 0px;
+}
+
+.cssClassTotalReviews, .cssClassAddYourReview {
+    font-size: 14px;
+}
+
+.cssClassProductDetailInformation .ui-widget-header, #slider-range .ui-widget-header {
+    background: none;
+}
+
+.cssClassProductDetailInformation .cssClassTabpanelContent {
+    border: none;
+}
+
+.cssClassProductDetailInformation .ajax__tab_default, .cssClassProductDetailInformation .ui-widget-content {
+    background: none;
+}
+
+.cssClassProductDetailInformation .ajax__tab_default, .cssClassProductDetailInformation .ui-widget-content {
+    border-radius: 0 0 0 0;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+}
+
+.cssClassProductDetailInformation .ui-tabs .ui-tabs-nav li {
+    background: #CCC;
+}
+
+.ui-state-default span {
+    color: #686868;
+}
+
+.ui-tabs .ui-tabs-panel {
+    margin-top: -1px;
+}
+
+.cssClassTableLeftCol .cssClassLabe table {
+    border: 1px #093 solid;
+}
+
+.cssClassPopularItemTags .sfButtonwrapper button {
+    background: #6fc25c;
+    color: #FFF;
+    padding: 3px 10px;
+    margin-left: 10px;
+}
+
+.cssClassDecrease, .cssClassIncrease {
+    background: #424242;
+    padding: 0px 10px;
+    color: #FFF;
+    font-size: 18px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+    .cssClassDecrease button span, .cssClassIncrease span {
+        color: #fff;
+    }
+
+.cssClassRatingReviewDate strong {
+    font-weight: bold;
+}
+
+.cssClassRatingdesc p {
+    color: #686868;
+}
+
+.cssClassYouMayAlsoLikeBoxFourth {
+    margin-right: 0px;
+}
+
+.cssClassCategoryWrapper {
+}
+
+    .cssClassCategoryWrapper h2, .cssClassLeftHeader {
+    }
+
+        .cssClassCategoryWrapper h2:hover, .cssClassLeftHeader:hover {
+            cursor: pointer;
+        }
+
+.divCategoryVertical .mega-menu {
+    margin-top: 50px;
+}
+
+.cssClassYouMayAlsoLikeBox p span {
+    font-size: 18px;
+}
+
+.cssClassYouMayAlsoLikeBox .sfButtonwrapper a {
+    background: url("../images/red-btn.jpg") repeat-x scroll 0 0 transparent;
+    border: 1px solid #860101;
+    color: #FFFFFF;
+    padding: 10px 15px;
+}
+
+.cssClassYouMayAlsoLikeBox .sfButtonwrapper {
+    margin-top: 18px;
+}
+
+    .cssClassYouMayAlsoLikeBox .sfButtonwrapper a:hover {
+        background: #910000;
+        text-decoration: none;
+    }
+
+.cssClassProductPictureDetails ul li p {
+    color: #910000;
+    margin: 20px 0 5px 0;
+}
+
+.cssClassQtyDiscount th {
+    background: #E9E8E8;
+    padding: 6px;
+    border: 1px solid #B3B3B3;
+}
+
+.cssClassQtyDiscount td {
+    border: 1px solid #B3B3B3;
+    padding: 6px;
+    text-align: center;
+    width: 65%;
+}
+/*Back to top*/
+.back-top {
+    -moz-transition: bottom 250ms ease-in-out 0s;
+    top: 35%;
+    padding: 10px 10px 20px;
+    right: 1%;
+    width: 110px;
+}
+
+    .back-top.Button.Indicator {
+        border-width: 0;
+        box-shadow: 0 0 #FFFFFF, 0 1px 3px rgba(34, 25, 25, 0.5);
+        display: block;
+        position: fixed;
+        text-align: center;
+        z-index: 4;
+    }
+
+    .back-top.Button.WhiteButton {
+        background: url("../images/arrow.png") repeat-x scroll 0 0 #1D1C1C;
+        color: #524D4D;
+        text-shadow: 0 1px rgba(255, 255, 255, 0.9);
+        height: 51px;
+        width: 51px;
+        border: 1px solid #000 !important;
+        border-radius: 10px;
+    }
+
+        .back-top.Button.WhiteButton:hover {
+            opacity: 0.5;
+            -moz-transition: all 0.8s ease-out;
+        }
+
+    .back-top.Button {
+        cursor: pointer;
+        font-weight: bold;
+        line-height: 1em;
+        margin: 0;
+    }
+/*category dropdown*/
+dl.sfCategoryDropdown {
+    position: relative;
+    padding: 6px 30px 6px 3px;
+    background: url("../images/search_bg.gif") repeat-x scroll 0 0 #1D1C1C;
+    border: 1px solid #000;
+    border-right: none !important;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.sfCategoryDropdown dd ul li {
+    width: 130px;
+    display: block;
+    padding: 6px 10px 6px 10px;
+    border-bottom: 1px dotted #ccc;
+}
+
+    .sfCategoryDropdown dd ul li:hover, .sfCategoryDropdown dd ul li.sfSelected {
+        background: #900;
+        color: #fff;
+        cursor: pointer;
+    }
+
+        .sfCategoryDropdown dd ul li:hover a, .sfCategoryDropdown dd ul li.sfSelected a {
+            color: #fff;
+        }
+
+.sfCategoryDropdown a, .sfCategoryDropdown a:visited {
+    color: #838383;
+    text-decoration: none;
+    outline: none;
+}
+
+.sfCategoryDropdown dt a span {
+    cursor: pointer;
+    display: block;
+    background: url(../images/search_dropdown.png) no-repeat right;
+    padding: 1px 5px;
+    width: 95px;
+}
+
+.sfCategoryDropdown dd ul {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    color: #C5C0B0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    top: 28px;
+    width: auto;
+    min-width: 150px;
+    list-style: none;
+    padding: 5px 0;
+}
+
+.sfQuickLook {
+    left: 25%;
+    position: absolute;
+    top: 45%;
+}
+/*Brand detail view*/
+.cssBrandHeader {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ededed;
+    padding: 20px 40px;
+}
+
+    .cssBrandHeader h1 {
+        color: #f70169;
+    }
+
+.brandTopHeader {
+    border-bottom: 1px solid #D6D6D6;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.slider1 li, .sfFeaturedBrands li {
+    float: left;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+    margin: 0px 10px 10px 0;
+}
+
+    .sfFeaturedBrands li:last-child, .slider1 li:last-child {
+        margin-right: 0;
+    }
+
+    .slider1 li h3 {
+        line-height: 30px;
+        margin: 0;
+    }
+
+.slider1, .sfFeaturedBrands {
+    margin: 30px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+    .sfFeaturedBrands li img, .cssClassAllBrand li img {
+        width: 100%;
+    }
+/*Filter */
+
+.cssClasscategorgy ul li {
+    padding: 10px 0 0 0;
+}
+
+    .cssClasscategorgy ul li input {
+        margin: 0 5px 0 0;
+    }
+
+.cssClasscategorgy, .cssClassbrowseprice {
+}
+
+    .filter .divTitle b label, .cssClasscategorgy .divTitle b label {
+        color: #3b3b3b !important;
+        text-align: left;
+    }
+
+.divTitle img {
+    margin-top: 9px;
+}
+
+.filter .divTitle, .cssClasscategorgy .divTitle {
+    display: block;
+    border-bottom: 1px solid #efefef;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.cssClassFilter, .cssClassCommonSideBox {
+    background-color: #FFFFFF;
+    border-right: solid 1px #edeff1;
+    border-bottom: solid 3px#6fc25c;
+    width: 210px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding: 25px;
+}
+
+.cssClassProductRealPrice span,
+.cssClassProductsGridRealPrice span, .cssClassItems .cssClassFormatCurrency, .cssServiceItemDetails .cssClassFormatCurrency {
+    color: #6fc25c;
+    font-size: 24px;
+    font-family: 'source_sans_prosemibold';
+}
+
+.cssClassCommonSideBox {
+    margin-top: 0;
+}
+
+.cssClassRightAccordainMenuInfo, .cssClassRightAccordainMenuInfoSelected {
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    padding: 25px;
+    background-color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.cssClassFilter h2 {
+    margin-bottom: 20px;
+}
+
+.cssClassbrowseprice ul li {
+    padding: 5px 0 0 0;
+    font-size: 14px;
+}
+
+.divRange .ui-slider-horizontal {
+    height: 3px !important;
+    padding: 0 !important;
+    margin: 10px 10px 10px 0;
+    background: #ccc;
+}
+
+#slider-range .ui-slider {
+    height: 1px !important;
+}
+
+#slider-range .ui-slider-handle {
+    background: #6fc25c !important;
+    padding: 0px !important;
+    width: 5px;
+    margin: 0 !important;
+    border: none !important;
+    top: -6px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.divRange p {
+    margin: 10px 0 10px 0;
+}
+
+    .divRange p b {
+        color: #6e6e6e !important;
+    }
+/*For Latest Item Quick View/Quick Look */
+.cssClassQuickView .cssClassProductPictureDetails {
+    padding-left: 0px;
+    width: 50%;
+}
+
+.cssClassQuickView .sfButtonwrapper {
+    float: left;
+}
+
+.cssClassQuickView .cssClassProductPictureDetails {
+    padding-top: 0px;
+}
+
+.cssClassQuickView {
+    width: 70%;
+    padding: 10px;
+}
+
+    .cssClassQuickView .cssClassProductPictureDetails .cssClassRightSide .sfButtonwrapper {
+        width: 187px;
+    }
+
+    .cssClassQuickView .cssClassProductPictureDetails li {
+        width: auto;
+    }
+
+    .cssClassQuickView #pikame {
+        width: 322px;
+    }
+
+    .cssClassQuickView .jcarousel-skin-pika {
+        background-color: #FFFFFF;
+        border-radius: 5px 5px 5px 5px;
+        margin: 27px 0;
+    }
+
+        .cssClassQuickView .jcarousel-skin-pika .jcarousel-clip-horizontal {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 100px;
+            margin-top: 0px !important;
+            overflow: hidden;
+            float: left;
+        }
+/* Cost varient css*/
+.cssClassRadio {
+    overflow: auto;
+    position: relative;
+    background: #fff;
+    border: solid 1px #DCE2E6;
+    padding: 2px;
+}
+
+    .cssClassRadio label {
+        display: inline-block;
+        width: 30px;
+    }
+
+    .cssClassRadio span {
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: #6fc25c;
+    }
+
+        .cssClassRadio span:hover, .cssClassRadio input.cssRadioChecked + span {
+            color: #ff6140;
+        }
+
+    .cssClassRadio input {
+        background: none;
+        position: absolute;
+        top: -20px;
+        opacity: 0;
+    }
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+    background: none repeat scroll 0 0 #FFFFFF !important;
+}
+
+.cssClassLeftSide .imgDelete {
+    margin: 0 10px 0 0;
+}
+/*Newsletter Subscribe*/
+#divRecentlyViewedItems a:hover {
+    color: #686868;
+}
+
+.cssClassQuickView .popbox {
+    margin-left: 0px;
+}
+
+.cssClassQuickView .pika-imgnav a {
+    margin: 0px;
+}
+
+.cssClassQuickView #viewMore {
+    margin: 10px 0 0 0;
+}
+
+.cssClassOrderReview button {
+    margin: 0px 0 0 0px;
+}
+
+#divbUnsubscribe {
+    clear: both;
+}
+
+#divSubscribe #header {
+    margin: 0 0 10px 0;
+}
+
+.telephone {
+    float: right;
+    color: #fff;
+}
+
+.cssClassCompareItem h2 span {
+    color: #910000;
+}
+
+.cssClassSlider ul li {
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-bottom: 25px;
+}
+
+.cssRegularPrice .cssClassFormatCurrency span b {
+    color: #686868;
+}
+
+.sfMainFeaturedBrands h2 {
+    color: #910000;
+}
+/*Gift Card*/
+.cssClassLeftSide table td {
+    padding: 7px 10px 7px 0px;
+}
+
+.cssClassRatingStar table td {
+    padding: 0;
+}
+
+.cssClassLeftSide table td span {
+    color: #686868;
+}
+
+.tblGroupedItem table tr td {
+    vertical-align: top;
+}
+
+.cssClassGrandTotalAmountWidth .cssClassFormatCurrency.input {
+}
+
+#sfBreadcrumb .sfInnerwrapper {
+    padding-bottom: 0 !important;
+}
+
+.cssClassRequired {
+    color: #F00;
+}
+/*Checkout page*/
+.cssClassAccordionWrapper .ui-state-default {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.cssClassAccordionWrapper .ui-tabs .ui-tabs-panel, .PageOuter {
+    border-right: 1px solid #ededed;
+    border-top: solid 3px#6fc25c;
+    border-bottom: 1px solid #ededed;
+    z-index: 3;
+    background-color: #fff;
+    text-align: left;
+    overflow: hidden;
+    width: 91.25%;
+    padding: 25px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.cssClassRightAccordainMenu {
+    float: left;
+    width: 25%;
+}
+
+.cssClassRightAccordainMenuInfo h2, .cssClassRightAccordainMenuInfoSelected h2 {
+    margin: 0;
+    color: #686868;
+}
+
+.cssClassAccordionWrapper .ui-widget-content {
+    border: none;
+    background: none;
+}
+
+.cssClassRightAccordainTab ul {
+    background: #fff;
+    margin-top: 10px;
+    border-top: solid 1px #dce2e6;
+    padding: 10px 0;
+}
+
+.sfSignlecheckoutleft {
+    float: left;
+    width: 44%;
+}
+
+.cssClassAccordionWrapper .ui-tabs .ui-tabs-nav {
+    position: static;
+}
+
+    .cssClassAccordionWrapper .ui-tabs .ui-tabs-nav li {
+        background: none !important;
+        border: none !important;
+        border-radius: 0;
+    }
+
+        .cssClassAccordionWrapper .ui-tabs .ui-tabs-nav li a {
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cssClassAccordionWrapper .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+            background-color: #f7f8f8 !important;
+            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#f5f5f5),color-stop(100%,#f7f8f8)) !important;
+            border: 1px solid #fff !important;
+            border-bottom: 0;
+            padding: 15px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            box-shadow: 0 1px 3px #c3c4c5 !important;
+            box-shadow: 0 0px 1px rgba(0,0,0,.25) !important;
+        }
+
+            .cssClassAccordionWrapper .ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+                background: #900 !important;
+                color: #fff !important;
+            }
+
+.cssClassAccordionWrapper .ui-tabs ul.ui-tabs-nav li.ui-tabs-selected a, .cssClassAccordionWrapper .ui-tabs ul.ui-tabs-nav li.ui-state-active a, .cssClassAccordionWrapper .ui-tabs ul.ui-tabs-nav li.ui-state-default a:hover {
+}
+
+.cssClassLoginLeftBox {
+    border-left: 1px solid #efefef;
+    webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+    padding: 0 45px;
+}
+
+.cssClassGrandTotalAmountWidth {
+    padding: 0 !important;
+    width: 150px;
+}
+
+.cssClassCheckoutLeftBox input {
+    margin: 0 0 10px 0;
+}
+
+.cssClassCheckOutMethodRight {
+    float: right;
+    width: 50%;
+}
+
+    .cssClassCheckOutMethodRight .cssClassTextBox {
+        margin: 0 0 10px 0;
+    }
+
+.cssClassLoginLeftBox .sfButtonwrapper {
+    float: right;
+    margin-right: 7px;
+}
+
+.cssClassLoginRighttBox {
+    margin: 20px 45px 0;
+    text-align: center;
+}
+
+.cssClassCheck-Info {
+    border-top: solid 1px #efefef;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #959595;
+}
+
+    .cssClassCheck-Info ul li {
+        font-size: 14px;
+        list-style: inside disc;
+    }
+
+#ddlBilling, #ddlShipping {
+    margin: 20px 0;
+}
+
+    #ddlBilling div, #ddlShipping div {
+        width: 44.75%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        padding: 15px;
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 rgba(197,213,222,.75), inset 0 0 18px rgba(198,214,223,.08);
+        -moz-box-shadow: 0 0 rgba(197,213,222,.75), inset 0 0 18px rgba(198,214,223,.08);
+        box-shadow: 0 0 rgba(197,213,222,.75), inset 0 0 18px rgba(198,214,223,.08);
+        border: solid 1px #dce2e6;
+    }
+
+        #ddlBilling div:nth-child(even), #ddlShipping div:nth-child(even) {
+            margin-right: 0;
+        }
+
+        #ddlBilling div input, #ddlShipping div input {
+            margin-right: 10px;
+        }
+
+.sfFormwrapper .cssClassPadding div {
+    padding: 0;
+}
+
+.cssClassPadding div {
+    padding: 3px 5px;
+}
+
+.cssClassPaymentMethods #dvPGList label {
+    width: 200px !important;
+    height: 40px;
+    padding: 10px;
+}
+
+.ui-widget {
+    font-size: 16px;
+}
+
+.cssClassLoginLeftBox .sfButtonwrapper input {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.cssClassCheckOutMethodRight .cssClassTextBox input {
+    width: 92%;
+}
+
+.cssClassAccordionWrapper .ui-widget-content a {
+}
+
+.cssClassCheckBox input {
+    margin: 0 10px 0 0;
+    width: auto;
+}
+
+.cssClassRadioBtn {
+    width: auto;
+}
+
+.accordionHeading h2, .cssClassadminloginHeading h1, .cssClassLoginRighttBox h2 {
+}
+
+.cssClassCartPictureInformation {
+    width: 65%;
+    float: left;
+}
+
+    .cssClassCartPictureInformation a {
+        font-weight: bold;
+    }
+
+ul.kitInfo li {
+    list-style: disc inside;
+    font-size: 14px;
+    padding: 3px 0;
+    border-bottom: 1px solid #ededed;
+}
+
+.cssClassShippingMethodInfo table td {
+    padding: 5px;
+}
+
+#Fshipping {
+    color: #F30;
+    font-size: 14px;
+    padding-left: 24px;
+}
+
+.cssClassShippingMethodInfo table td input {
+    float: left;
+    margin: 5px 5px 0 0;
+}
+
+.cssClassCartPictureInformation b {
+    color: #000;
+}
+
+.cssClassPaymentMethods label input, .cssClassAIMChildContent input, .cssClassAIMChildContent select {
+    margin: 0 10px 10px 0;
+}
+
+.cssClassPaymentMethods .sfGiftWrapperTable td {
+    padding: 10px !Important;
+}
+
+.cssClassAIMChildContent b label {
+    float: left;
+    min-width: 120px;
+}
+
+.sfBtnChange button {
+    background: url(../images/change.png) no-repeat;
+    height: 16px;
+    margin: 0 0 0 15px;
+    text-indent: -9999px;
+    width: 16px;
+    border: none;
+}
+
+.cssClassAIMChildContent select {
+    width: auto !important;
+}
+
+.cssClassAccordionWrapper .cssClassSubTotalAmount {
+    float: none;
+}
+
+.classDetailTaxRateValue {
+    text-align: left;
+    color: #000;
+    margin: 0 0 0 11px;
+}
+
+.cssClassTextarea {
+    margin: 10px 0 0 0;
+    width: 98%;
+}
+
+.cssClassActionOnClickShowInfo p a {
+    color: #FFFFFF;
+    padding: 5px 10px 0;
+}
+
+.cssClassActionOnClickShowInfo a {
+    display: block;
+    height: 22px;
+}
+
+.cssClassShippingMethodInfo .cssClassCartPictureInformation {
+    float: left;
+    width: 97%;
+}
+
+    .cssClassShippingMethodInfo .cssClassCartPictureInformation h3 {
+        float: left;
+        margin: 0 10px 0 0;
+    }
+
+.cssClassNotFound, #compareErrorText {
+    margin: 30px;
+    font-size: 18px;
+}
+/*Reward points*/
+.cssClasspBalance, .cssClasspExchangeRate, .cssClasspBalanceLimitations {
+    width: 230px;
+    float: left;
+    background: #fff;
+    margin-right: 30px;
+    padding: 20px;
+    border-right: solid 1px #ededed;
+    border-bottom: solid 3px#6fc25c;
+    height: 200px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.cssClasspBalanceLimitations {
+    margin-right: 0;
+}
+
+.cssClasspBalance table tr td {
+    padding: 0;
+}
+
+.cssClasspExchangeRate ul li, .cssClasspBalanceLimitations ul li {
+    list-style: inside disc;
+}
+/*Compare popup css*/
+
+:disabled {
+    text-shadow: none;
+    color: #333;
+}
+
+.cssClassCommonSideBox .sfBannerslide sfHorizontalbx-wrapper a {
+}
+
+.sfWelcomeMsg {
+    min-width: 164px;
+}
+
+    .sfWelcomeMsg span {
+        color: #b4d2e6;
+    }
+
+    .sfWelcomeMsg h2 {
+        color: #fff;
+        margin: 0 0 10px 0;
+    }
+
+.cssClassAdvanceSearch {
+    float: right;
+    margin-top: 10px;
+}
+
+.sfTelTitle h2 {
+    color: #e5e4e3;
+}
+
+    .sfTelTitle h2 span {
+        color: #fff;
+    }
+
+.sfTelTitle h3.sfSupportEmail {
+    background: url(../images/email.png) no-repeat 0 2px;
+    padding: 4px 0px 0 0px;
+}
+
+.sfSupportEmail a {
+    color: #ccc;
+    padding: 0px 0 0 40px;
+}
+
+    .sfSupportEmail a:hover {
+        text-decoration: underline;
+    }
+
+.sfModuleTelephoneHtml {
+    float: right;
+    margin: 10px 0 0;
+}
+
+.search {
+    float: left;
+}
+
+.sfTelTitle h2 {
+    margin: 0px;
+    margin-bottom: 6px;
+}
+
+.sfTelTitle h3 {
+    font-size: 15px;
+    margin: 0px;
+    color: #dddcdc;
+    background: url(../images/tel.png) no-repeat 0 -2px;
+    padding: 0px 0 0 40px;
+    height: 26px;
+}
+
+    .sfTelTitle h3 span {
+        font-size: 16px;
+        padding: 10px 0 0 0;
+    }
+
+.AspxHeaderControl {
+    float: left;
+    margin-left: 50px;
+}
+
+.cssClassService, .sfModuleAspxLatestItemsCarousel, .cssClassBrandWrapper, #divSeasonalItemsContainer {
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.sfModuleAspxCommerceMenu {
+    margin-bottom: 35px;
+}
+
+.cssRssImage {
+    float: right;
+    margin: 3px 0px 0 0;
+}
+
+.cssClassProducts h1 img {
+    margin-top: 7px;
+}
+
+.cssClassProductLists ul li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cssClassProductLists ul a {
+    text-transform: capitalize;
+    color: #000;
+}
+
+    .cssClassProductLists ul a:hover {
+        color: #910000;
+        text-decoration: underline;
+    }
+
+.cssClassWishItemDetails span {
+    color: #910000;
+}
+
+td.cssClassWishItemDetails a {
+    font-size: 20px;
+}
+
+.gowishlist {
+    float: left;
+    margin: 0 !important;
+}
+
+.cssClassMyWishItemTable td {
+    padding: 10px;
+}
+
+.cssClassMyShoppingCart img {
+    margin: 0px 5px 5px 5px;
+}
+
+.overview a span {
+    padding: 5px 0;
+}
+
+.cssClassCommonSideBoxCartTable table td {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cssClassCommonSideBoxCartTable {
+    background: #fff;
+}
+
+    .cssClassCommonSideBoxCartTable .cssClassTotalPrice {
+        font-size: 16px;
+        color: #910000;
+    }
+
+#Product_total .cssClassFormatCurrency {
+    float: right;
+    font-size: 16px;
+    color: #910000;
+}
+
+.poll-box input.cssClassSubmitBtn {
+    margin: 10px 0 0 4px !important;
+}
+
+.poll-box p input.cssClassSubmitBtn {
+    float: right !important;
+}
+
+.overview td {
+    padding: 7px;
+    text-decoration: underline;
+    color: #000;
+}
+
+    .overview td a {
+        color: #000;
+    }
+
+.overview .sfOdd {
+    background: none;
+}
+
+.cssShoppingCartLink {
+    padding: 10px 0px 10px 78px;
+}
+
+    .cssShoppingCartLink a {
+        margin-right: 10px;
+    }
+
+.cssClassWishLink {
+    float: right;
+    background: #fff;
+    padding: 10px 17px 10px 117px;
+    border-top: none;
+}
+
+    .cssClassWishLink a {
+        color: #101010;
+    }
+
+        .cssClassWishLink a:hover {
+            color: #910000;
+        }
+
+.cssClassRecentlycompared {
+    background: #fff;
+}
+
+    .cssClassRecentlycompared td {
+        padding: 8px 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+.cssClassCommonSideBoxCartTable .cssClassQty, .cssClassCommonSideBoxCartTable .cssClassFormatCurrency {
+    color: #000;
+}
+
+.cssClassCommonSideBox .cssClassProductName h2 a span {
+    background: none;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.Shopingcartpopup .cssClassCommonSideBoxTable .sfBtn1 {
+    margin: 10px 0 0 275px !important;
+}
+
+    .Shopingcartpopup .cssClassCommonSideBoxTable .sfBtn:hover, .Shopingcartpopup .cssClassCommonSideBoxTable .sfBtn1:hover {
+        background: #000;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+.cssClassProductsBoxNoMargin, .cssClassProductsBoxNoMargin {
+    margin-right: 0 !important;
+}
+
+.cssClassimgwrapper {
+    margin: 0 0 10px 0;
+}
+
+.CssClassLanguageWrapper {
+    margin: 0 0 0 10px !important;
+    float: left;
+}
+
+.cssClassBrowseByCategory ul li {
+    float: left;
+    width: 46%;
+    margin: 0 10px 10px 0;
+}
+
+.cssClassImageWrapper {
+    margin: 0 0 10px 0;
+}
+
+.sfBenefits .sfHeader {
+    float: left;
+    margin: 0 20px 0 0px;
+}
+
+.sfAlsoAvailable {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 0 0 20px 0;
+}
+
+    .sfAlsoAvailable .sfHeader {
+        margin: 10px 0 10px 0;
+        text-align: center;
+    }
+
+    .sfAlsoAvailable .windowsphone {
+        width: 200px;
+        height: 57px;
+        background: url(../images/windowsphoneapp.png)no-repeat;
+        display: block;
+        margin-left: 11px;
+    }
+
+        .sfAlsoAvailable .windowsphone:hover {
+            width: 200px;
+            height: 57px;
+            background: url(../images/windowsphoneapp_hover.png)no-repeat;
+        }
+
+    .sfAlsoAvailable .andriod {
+        width: 200px;
+        height: 57px;
+        background: url(../images/andriod.png)no-repeat;
+        display: block;
+        margin-left: 11px;
+    }
+
+        .sfAlsoAvailable .andriod:hover {
+            width: 200px;
+            height: 57px;
+            background: url(../images/andriod_hover.png)no-repeat;
+        }
+
+    .sfAlsoAvailable a {
+        text-indent: -999em;
+    }
+
+.cssCategoryBlock {
+    clear: both;
+    margin: 0 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.classCategoryName h2 {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    color: #990000;
+    font-weight: normal;
+}
+
+.cssCategoryBlock .cssClassProductsBox img {
+    width: 53%;
+}
+
+.nivo-caption p a {
+    color: #fff;
+    text-shadow: none;
+}
+
+.cssProductWrapper .cssClassViewMore, .cssClassPopularTagWrapper .cssClassViewMore {
+    margin: 10px 0 10px 0 !important;
+}
+
+.cssViewAllPromos ul li {
+    float: left;
+    border: 1px solid #fff;
+    margin: 0 20px 20px 0;
+    background: #fff;
+    text-align: center;
+    width: 20%;
+}
+
+    .cssViewAllPromos ul li img {
+        width: 97%;
+        padding: 3px 3px 0px 3px;
+    }
+
+.cssClassItemBrands {
+    margin-top: 10px;
+}
+
+    .cssClassItemBrands h2 span {
+        color: #686868 !important;
+    }
+
+    .cssClassItemBrands a {
+        margin-left: 5px;
+    }
+
+.cssClassLeftSide .cssClassProductOffPrice {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+.cssClassProductOffPrice {
+    text-decoration: line-through;
+}
+
+.classPriceHistoryList th {
+    text-align: left;
+    color: #6fc25c;
+}
+
+.cssClassToolTip {
+    position: relative;
+    width: 200px;
+}
+
+    .cssClassToolTip img {
+        cursor: pointer;
+    }
+
+    .cssClassToolTip .cssClassToolTipInfo {
+        display: none;
+        left: 0;
+        position: absolute;
+        top: 20px;
+        z-index: 9999;
+        padding: 25px;
+        border: 1px solid #dce2e6;
+        border-top: solid 3px#6fc25c;
+        background: #fff;
+        -webkit-box-shadow: 0 0 5px rgba(0,0,0,.11);
+        -moz-box-shadow: 0 0 5px rgba(0,0,0,.11);
+        box-shadow: 0 0 5px rgba(0,0,0,.11);
+    }
+
+    .cssClassToolTip:hover .cssClassToolTipInfo {
+        padding: 15px;
+        border: 1px solid #dce2e6;
+        border-top: solid 3px#6fc25c;
+        background: #fff;
+        -webkit-box-shadow: 0 0 5px rgba(0,0,0,.11);
+        -moz-box-shadow: 0 0 5px rgba(0,0,0,.11);
+        box-shadow: 0 0 5px rgba(0,0,0,.11);
+        display: block;
+    }
+
+.cssClassCriteriaTitle {
+    color: #555555;
+    float: left;
+    padding: 2px 10px;
+}
+
+.cssClassToolTip:hover .cssClassToolTipInfo img {
+    cursor: default;
+}
+
+.cssClassToolTipDetailInfo {
+    width: 180px;
+}
+
+#itemQtyDiscount {
+    width: 100%;
+}
+
+    #itemQtyDiscount thead {
+        background: #f9f9f9;
+        border-bottom: solid 3px#6fc25c;
+    }
+
+    #itemQtyDiscount td, #itemQtyDiscount th {
+        padding: 5px;
+        text-align: center;
+    }
+
+.sfBrandLogo {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.sfBrandDescription {
+    margin: 0 0 10px 0;
+}
+
+.cssClassCompareBox .cssClassHeaderRight .sfButtonwrapper {
+    float: right;
+}
+
+.cssClassCompareBox table {
+    border: 1px solid #686868;
+}
+
+.cssClassCompareBox td {
+    width: 200px;
+}
+
+.fb_iframe_widget {
+    background: #fff;
+}
+
+.sfSectionwrap {
+    min-height: 100%;
+}
+
+/*.sfLoggedTopBar {
+    padding-top: 45px;
+}*/
+
+.sfLogininfo ul {
+    float: right;
+}
+
+    .sfLogininfo ul li {
+        float: left;
+    }
+
+        .sfLogininfo ul li:first-child {
+            margin-right: 0;
+        }
+
+        .sfLogininfo ul li a {
+            color: #fff;
+            display: inline-block;
+        }
+
+        .sfLogininfo ul li.sfLogin a {
+            color: #fff;
+        }
+
+        .sfLogininfo ul li.sfLoginCredInfo a {
+            background: url("../images/login-cred-info.png") no-repeat center center;
+            text-indent: -9999px;
+            width: 35px;
+        }
+
+            .sfLogininfo ul li.sfLoginCredInfo a:hover {
+                cursor: help;
+            }
+
+.sfLoginCredInfo .sfLoginCredInfoBox::before {
+    content: "";
+    display: block;
+    height: 16px;
+    margin-top: -32px;
+    width: 100%;
+}
+
+.sfLogininfo ul li.sfWelcomeMsg {
+    border: medium none;
+    display: none;
+}
+
+.sfLoginCredInfo {
+    position: relative;
+}
+
+    .sfLoginCredInfo .sfLoginCredInfoBox {
+        border: 1px solid #dce2e6;
+        border-top: solid 3px#6fc25c;
+        background: #fff;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -o-border-radius: 3px;
+        -webkit-box-shadow: 0 0 5px rgba(0,0,0,.11);
+        -moz-box-shadow: 0 0 5px rgba(0,0,0,.11);
+        box-shadow: 0 0 5px rgba(0,0,0,.11);
+        display: none;
+        padding: 15px;
+        position: absolute;
+        right: -65px;
+        top: 41px;
+        width: 245px;
+        z-index: 99;
+        color: #3b3b3b;
+    }
+
+    .sfLoginCredInfo:hover .sfLoginCredInfoBox {
+        display: block;
+    }
+
+    .sfLoginCredInfo .sfLoginCredInfoBox h6 {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+.sfSuperUserInfo {
+    border-bottom: 1px solid #c2c2c2;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.sfAdminInfo {
+    margin-bottom: 8px;
+}
+
+    .sfSuperUserInfo p, .sfAdminInfo p {
+        font-size: 13px;
+        margin: 0;
+        line-height: 22px;
+    }
+
+.sfLoginCredInfo span {
+    font-weight: bold;
+}
+
+.triangle {
+    border-color: transparent transparent #6fc25c;
+    border-style: solid;
+    border-width: 10px;
+    position: absolute;
+    right: 74px;
+    top: -20px;
+}
+
+.sfFullbottomspan {
+    padding: 0 0 20px 0;
+}
+
+.cssClassActionOnClickShowInfo {
+    background-color: #6fc25c;
+}
+
+    .cssClassActionOnClickShowInfo p a {
+        color: #FFFFFF;
+        text-align: left;
+        padding: 5px 10px 0;
+    }
+
+.cssClassActionOnClickShow {
+    padding: 0;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    z-index: 10;
+}
+
+.cssClassActionOnClick {
+    position: relative;
+}
+
+.cssClassHeavyDiscountHeader {
+    margin-top: 20px;
+}
+
+@media print {
+    #sfHeadertop, #sfCategorybar, #sfFooterbtn, #sfBreadcrumb, #sfTopheaderlink, .cssClassCompareBox .cssClassHeaderRight .sfButtonwrapper, .back-top, .cssClassAddtoCard, .fixed, #sfBreadcrumb, #compareAddToWishlist, .sfTopbar {
+        display: none !important;
+    }
+
+    body {
+        color: #000;
+    }
+}
+
+.uiBoxLightblue {
+    background-color: none !important;
+}
+
+.sfHtmlview .fblike span {
+    width: 223px !important;
+}
+
+.Shopingcartpopup .cssClassCommonSideBoxTable table tbody tr {
+    padding: 10px 0px;
+}
+
+.feedback-panel {
+    height: 320px !important;
+}
+
+#ddlLatestSort h4 {
+    margin: 0px !important;
+    display: inline;
+}
+
+#ddlLatestSort {
+    float: right;
+}
+
+#latestItemHeader {
+    float: left;
+}
+
+#divLatestItemsHeader {
+    padding-bottom: 50px;
+}
+
+.cssClassLatestItemWrapper table {
+    width: 100%;
+}
+
+.cssClassLatestItemWrapper .classInfo {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    position: relative;
+    background: #fff;
+}
+
+    .cssClassLatestItemWrapper .classInfo .itemImageClass {
+        border: 1px solid #ccc;
+        margin: 10px;
+        width: 18%;
+        float: left;
+    }
+
+    .cssClassLatestItemWrapper .classInfo .itemInfoClass {
+        margin-top: 10px;
+    }
+
+    .cssClassLatestItemWrapper .classInfo .cssClassAddToCart {
+        position: absolute;
+        right: 150px;
+    }
+
+    .cssClassLatestItemWrapper .classInfo .classButtons {
+        position: absolute;
+        right: 15px;
+    }
+
+    .cssClassLatestItemWrapper .classInfo .classViewDetails {
+        margin: 0 0 20px 152px;
+    }
+
+        .cssClassLatestItemWrapper .classInfo .classViewDetails span:hover {
+            text-decoration: none;
+        }
+
+    .cssClassLatestItemWrapper .classInfo .classQuantity input {
+        width: 30px;
+    }
+
+    .cssClassLatestItemWrapper .classInfo .cssClassOutOfStock {
+        float: left;
+    }
+
+        .cssClassLatestItemWrapper .classInfo .cssClassOutOfStock button {
+            padding: 0px !important;
+        }
+
+.featured-products-footer-ads {
+    float: left;
+    margin: 0 0 0 33px;
+    padding: 15px 0;
+}
+
+.fst {
+    margin-left: 0;
+}
+
+.featured-products-footer-ads h1 {
+    color: #FF8A00;
+    font-size: 19px;
+    padding-right: 50px;
+}
+
+.featured-products-footer-ads a {
+    float: left;
+    height: 40px;
+    overflow: hidden;
+}
+
+.featured-products-footer-ads img {
+    border: medium none;
+    margin: 0;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.featured-products-footer-ads a:hover img {
+    margin-top: -40px;
+}
+
+.sfBenefits img {
+    opacity: 0.8;
+}
+
+    .sfBenefits img:hover {
+        opacity: 1;
+    }
+
+td.cssClassMyAccQuantity {
+    width: 25px;
+}
+
+select.cssClassddlReturnReason {
+    width: 75px;
+}
+
+select.cssClassddlShipping {
+    width: 100px;
+    word-wrap: break-word;
+}
+
+.magnifyarea {
+    position: absolute;
+    top: 300px !important;
+    z-index: 1 !important;
+    width: 656px !important;
+    height: 320px !important;
+    box-shadow: none !important;
+    border: 1px solid #b3b3b3 !important;
+}
+
+.cssClassApplyWrap,
+.cssClassCartbtmwrapper .cssClassSubTotal,
+.cssClassCartbtmwrapper .sfFormwrapper .toogleWrapper {
+    width: 31.58%;
+    margin-right: 30px;
+    float: left;
+}
+
+.cssClassCartbtmwrapper .cssClassSubTotal {
+    margin-right: 0;
+}
+
+.cssClassTDPGList img {
+    width: 100px;
+    height: 90px;
+}
+
+#hrOrderDetails {
+    margin: 0 0 20px 0 !important;
+}
+
+.cssClassAlignRight {
+    text-align: right;
+}
+
+.sfGridWrapperContent .cssClassHeadeTitle td {
+    color: #757575;
+}
+
+#brandSlider li a img {
+    max-width: 100%;
+}
+
+#brandSlider li a {
+    margin: 0;
+}
+
+.cssClassBrandSlider {
+    border: 1px solid #dce2e6;
+    padding: 25px;
+    background: #fff;
+    border-top: 3px solid#6fc25c;
+    margin-bottom: 30px;
+}
+
+    .cssClassBrandSlider h1 {
+        margin-bottom: 10px;
+    }
+
+#slide .sfBannerslide {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+#slide .bx-window {
+    margin-left: 30px;
+    width: 94%;
+    margin-right: 30px;
+}
+
+/*--------------reward point--------------*/
+.cssClassdvRPMainHeading b {
+    font-size: 16px;
+}
+
+.cssClassdvRPBalance table td, .cssClassdvRPCurrent table td {
+    padding: 3px 0;
+}
+
+.cssClassdvRPCurrent table td {
+    font-size: 14px;
+}
+
+#ulRewardDetails li b {
+    margin-right: 3px;
+}
+
+.cssClassdvPointsTotal {
+    font-size: 16px;
+}
+/*--------------reward point--------------*/
+.popupbox .star-rating {
+    width: 26px;
+}
+
+.popupbox span.star-rating-control {
+    width: 138px;
+}
+
+.cmxform .popupbox .sfFormwrapper td {
+    width: 100px;
+}
+
+.Page #divThankYou {
+    font-size: 22px;
+    color: #ff470e;
+}
+
+.cssClassCompareBox .sfFormwrapper table {
+    border: none;
+}
+
+.cssClassContactWrapper td {
+    vertical-align: middle;
+}
+
+.sfGridWrapperTable tbody {
+    background: #fff;
+}
+
+.cssClassMyDashBoard td {
+    vertical-align: middle;
+}
+
+.cssClassMyDashBoard #divProductInfo .sfGridWrapperTable td input {
+    width: 30px;
+}
+
+.sfMessage {
+    padding: 0px;
+}
+
+.classPromoList {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+    float: left;
+    width: 48%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+    .classPromoList span {
+        font-weight: bold;
+    }
+
+    .classPromoList h2 label {
+        font-size: 20px;
+        color: #C00;
+    }
+
+.cssClassTableLeftCol #CategoryTree_Container {
+    width: auto;
+}
+
+.nomargin {
+    margin: 0px !important;
+}
+
+.cssClassSlider {
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+.cssClassTabPanelTable .sfButtonwrapper p {
+    float: left;
+}
+
+#sliderObj div.cat-slide-container-inner {
+    position: relative;
+}
+
+.cssCatDesc {
+    background: #000;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0.7;
+    padding: 10px;
+}
+
+    .cssCatDesc span {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .cssCatDesc span, .cssCatDesc p {
+        color: #fff;
+    }
+
+.cropBox .cssClassHeader {
+    margin-bottom: 20px;
+}
+
+#ajaxBusy, .sfLoadingdiv {
+    bottom: 0;
+    display: block;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    color: #fff;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#8000000, endColorstr=#80000000);
+    zoom: 1;
+}
+
+.uiBoxLightblue {
+    background: none !important;
+}
+
+.pluginSkinLight {
+    border: none !important;
+}
+
+.fb_ltr {
+    width: 224px !Important;
+}
+
+/* Uploader */
+#divCenterContent {
+    overflow: hidden;
+}
+
+div.selector, div.selector span, div.checker span, div.radio span, div.uploader, div.uploader span.action, div.button, div.button span {
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+}
+
+div.uploader {
+    background-position: 0px -297px;
+    height: 28px;
+}
+
+    div.uploader span.action {
+        background-position: right -409px;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    div.uploader span.filename {
+        height: 24px;
+        margin: 2px 0px 2px 2px;
+        line-height: 24px;
+    }
+
+    div.uploader.focus, div.uploader.hover, div.uploader:hover {
+        background-position: 0px -353px;
+    }
+
+        div.uploader.focus span.action, div.uploader.hover span.action, div.uploader:hover span.action {
+            background-position: right -437px;
+        }
+
+    div.uploader.active span.action, div.uploader:active span.action {
+        background-position: right -465px;
+    }
+
+    div.uploader.focus.active span.action, div.uploader:focus.active span.action, div.uploader.focus:active span.action, div.uploader:focus:active span.action {
+        background-position: right -493px;
+    }
+
+    div.uploader.disabled {
+        background-position: 0px -325px;
+    }
+
+        div.uploader.disabled span.action {
+            background-position: right -381px;
+        }
+
+div.button {
+    background-position: 0px -523px;
+}
+
+    div.button span {
+        background-position: right -643px;
+    }
+
+div.uploader {
+    width: 190px;
+    cursor: pointer;
+}
+
+    div.uploader span.action {
+        width: 85px;
+        text-align: center;
+        text-shadow: #fff 0px 1px 0px;
+        background-color: #f2f2f2;
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+.cssClassTabPanelTable div.uploader span.action {
+    background-color: #fff;
+}
+
+div.uploader span.filename {
+    color: #777;
+    width: 82px;
+    border-right: solid 1px #bbb;
+    font-size: 11px;
+}
+
+div.uploader input {
+    width: 190px;
+}
+
+div.uploader.disabled span.action {
+    color: #aaa;
+}
+
+div.uploader.disabled span.filename {
+    border-color: #ddd;
+    color: #aaa;
+}
+
+div.uploader {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+    div.uploader span.action {
+        float: left;
+        display: inline;
+        padding: 2px 0px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    div.uploader span.filename {
+        padding: 0px 10px;
+        float: left;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: default;
+    }
+
+    div.uploader input {
+        opacity: 0;
+        filter: alpha(opacity:0);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        float: right;
+        height: 25px;
+        border: none;
+        cursor: default;
+    }
+
+.cssClassNegative {
+    color: #000;
+    line-height: 24px;
+    margin-right: 3px;
+}
+
+.cssClassAccordionWrapper .cssClassCheckoutLeftBox td select {
+    width: 46%;
+}
+
+.cropBox .sfButtonwrapper {
+    float: none !important;
+}
+
+.cropBox .sfGridWrapperContent {
+    float: left;
+    margin: 0 0 10px 20px;
+}
+
+.cssClassWishComment {
+    margin-top: 10px;
+}
+
+    .cssClassWishComment textarea {
+        width: 100%;
+    }
+
+.chart-wrapper {
+    width: 50% !important;
+}
+
+.cssClassMyDashBoard .cssClassRight a#lnkNewAddress, .cssClassMyDashBoard .sfButtonwrapper button.cssClassButtonSubmit, .cssClassMyDashBoard .cssClassHeaderRight button#btnDeleteSelected, button#btnDeleteCustDownloadableItem, button#btnDeleteItems, button#btnDeleteMyViewed, button#btnBalanceCheck {
+    margin-left: 0px;
+}
+
+.cssClassHeaderRight {
+    line-height: 30px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+    .cssClassHeaderRight .sfButtonwrapper p button.cssClassAddCategory {
+        margin-bottom: 10px;
+    }
+
+.cssClassTabPanelTable .sfButtonwrapper p button, .cssClassTabPanelTable .sfButtonwrapper p input, #gdvItems_form .sfButtonwrapper button {
+    margin-left: 10px;
+}
+
+#gdvItems_form .sfFormwrapper table {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+    #gdvItems_form .sfFormwrapper table td {
+        width: 30px;
+    }
+
+#gdvItems_form h2 {
+    color: #686868;
+}
+
+.cssClassTableRightCol select.sfListmenu {
+    width: 150px !important;
+}
+
+.cssClassTabPanelTable .sfButtonwrapper p input {
+    border: 1px solid #000 !important;
+}
+
+    .cssClassTabPanelTable .sfButtonwrapper p input:hover {
+        border: 1px solid #910000 !important;
+    }
+
+.cssCropValueWrapper {
+    margin: 10px 0 0 0;
+}
+
+    .cssCropValueWrapper input {
+        width: auto !important;
+        box-shadow: none;
+        margin-left: 5px;
+    }
+
+.cropBox .cssClassCommonBox {
+    width: 450px !important;
+}
+
+#btnSearchItems {
+    margin: 5px;
+}
+
+/*-------------my addeditems-------------*/
+.cssClassAccordionWrapper {
+    padding: 0px;
+}
+
+div.st_vertical {
+    float: none;
+}
+
+    div.st_vertical div.st_tabs_container {
+        width: 20%;
+    }
+
+    div.st_vertical ul.st_tabs {
+        width: 100%;
+    }
+
+    div.st_vertical div.st_view_container {
+        width: 75.8%;
+        float: left;
+    }
+
+    div.st_vertical ul.st_tabs li a {
+        width: 177px;
+    }
+
+    div.st_vertical ul.st_tabs a.st_tab_active {
+        background: #ccc;
+        color: #910000;
+        padding-right: 1px;
+        position: relative;
+        z-index: 10;
+    }
+
+.st_view_container h3 a {
+    color: #910000;
+}
+
+div.st_vertical div.st_view_container {
+    border: 1px solid #ccc;
+}
+
+.st_vertical .st_view_container table {
+    border: 1px solid #CCCCCC;
+    margin-top: 5px;
+}
+
+.field input {
+    margin-right: 5px !important;
+}
+
+.st_view label {
+    font-weight: bold;
+}
+
+#multipleUpload .sfGridWrapperContent td input {
+    width: 47px;
+}
+
+#multipleUpload .sfGridWrapperContent td .uploadImage {
+    width: 50px;
+}
+
+.iferror {
+    color: #FF0000;
+    display: none;
+    margin: 0;
+}
+
+.cssClassImgwrapper {
+    float: left;
+    margin-right: 20px;
+}
+
+    .cssClassImgwrapper img {
+        width: 200px;
+        height: 150px;
+    }
+
+.sfShoppingBagButton {
+    float: right;
+}
+
+    .sfShoppingBagButton .cssClassViewCart label {
+        margin-right: 5px;
+    }
+
+    .sfShoppingBagButton .cssClassViewCart {
+        float: left;
+    }
+
+.sfInnerwrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+#slider-wrapper {
+    overflow: hidden;
+}
+
+#divSubscribe {
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.sfWrapper {
+    width: 100%;
+}
+
+.feedback-panel a.feedback-tab {
+    opacity: 0.8;
+}
+
+.cssPopUpContainer:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.targetarea img {
+}
+
+.targetarea {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+.sf-menu li span.sfPagename {
+    width: auto;
+}
+
+#BoxOverlay, #fade {
+    height: 100% !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.popupbox .cssPopUpBody {
+    height: 100%;
+    overflow: auto;
+}
+
+#alert-Box {
+    position: fixed;
+    z-index: 99999;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 35%;
+    height: 30%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.cssCategoryWrapper .cssClassCommonBox {
+    float: right;
+    width: 78%;
+}
+
+.responsive-tabs-wrapper .cssClassCommonBox {
+    float: none;
+    width: 100%;
+}
+
+.cssClassSearchPanel td {
+    height: auto;
+}
+
+.cssClassSearchPanel .sfButtonwrapper .cssClassOrangeBtn {
+    padding: 4px 15px;
+    width: auto;
+}
+
+#AddTagTable, #AddTagTable tbody tr td {
+    border: none;
+}
+
+    #AddTagTable tbody tr td {
+        padding: 5px 10px;
+    }
+
+    #AddTagTable input {
+        width: auto;
+    }
+
+.sfSocialShare {
+    float: left;
+}
+
+#sfBanner .bx-viewport {
+    overflow: hidden;
+    height: 460px !important;
+}
+
+.cssClassQuickView {
+    bottom: 0px !important;
+}
+
+.pika-image {
+    width: auto !important;
+}
+
+.cssClassShareList {
+    clear: both;
+}
+
+    .cssClassShareList ul li {
+        height: auto;
+    }
+
+#divShareWishList .sfButtonwrapper {
+    margin-top: 30px;
+}
+
+#divShareWishList .cssClassCommonCenterBoxTable {
+    border: none;
+}
+
+.cssClassQuickView .cssClassProductImage {
+    width: auto;
+}
+
+.cssClassViewOf {
+    margin: 10px 0 0 10px;
+    float: left;
+    color: #acacac;
+}
+/*CSS FOR BOX*/
+
+.box {
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    border: solid 1px #dce2e6;
+    border-bottom: solid 3px#6fc25c;
+    padding: 20px;
+    z-index: 1;
+}
+
+button {
+    background: none;
+    border: none;
+    line-height: 26px;
+    padding: 0;
+    padding-left: 7px;
+    color: #fff;
+}
+
+#sfSpecialitem {
+    background: #fff;
+    padding: 30px 0;
+}
+
+#sfAds {
+    background: #405e72;
+    padding: 40px 0;
+}
+
+.sf-advertisement {
+    color: #bcd5e6;
+    font-size: 18px;
+    text-align: center;
+}
+
+    .sf-advertisement a {
+        color: #6fc25c;
+    }
+
+        .sf-advertisement a:hover {
+            color: #fff;
+        }
+
+    .sf-advertisement h1 {
+        font-size: 42px;
+        line-height: 60px;
+        font-family: 'source_sans_prolight';
+        font-weight: normal;
+        color: #fff;
+    }
+
+    .sf-advertisement .ph-no {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        padding: 25px 50px;
+        font-size: 36px;
+        color: #fff;
+        width: 200px;
+        margin: 0 auto;
+        border: solid 1px #fff;
+    }
+
+.cssItemSociallink {
+    background: #ebeef1;
+    padding: 25px;
+}
+
+.cssClassCostVariant {
+    margin: 10px 0;
+}
+
+    .cssClassCostVariant select {
+        padding: 2px;
+    }
+
+.cssSearchContainer {
+    position: absolute;
+    right: 10px;
+    padding: 20px;
+    border: 1px solid #dce2e6;
+    border-top: solid 3px#6fc25c;
+    background: #fff;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.08);
+    -o-box-shadow: 0 3px 3px rgba(0,0,0,0.08);
+    z-index: 999;
+    top: 39px;
+    width: auto;
+}
+
+    .cssSearchContainer ul {
+        width: 100%;
+    }
+
+/*My Ac section*/
+.welcome-msg, .cssCustomerRecentActivity {
+    padding: 25px;
+    color: #fff;
+    width: 42.18%;
+    float: left;
+}
+
+    .welcome-msg, .cssCustomerRecentActivity a {
+        color: #6fc25c;
+    }
+
+        .welcome-msg, .cssCustomerRecentActivity a:hover {
+            color: #fff;
+        }
+
+.welcome-msg {
+    background: #6fc25c;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+    .welcome-msg p {
+        line-height: 24px;
+    }
+
+    .welcome-msg h2 {
+        font-size: 22px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+.cssProfileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid 8px #e7e7e7;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .cssProfileImage img {
+        width: 100%;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+.cssCustomerRecentActivity {
+    background: #2b3f4d;
+    border-bottom: solid 3px #6fc25c;
+    width: 43%;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+    .cssCustomerRecentActivity h2 {
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+thead {
+    margin-top: 1px;
+}
+
+span.showingPags {
+    background: none;
+}
+
+.cssClassAddWrapper {
+    position: relative;
+    float: left;
+    width: 49%;
+    margin-bottom: 30px;
+}
+
+.cssClassCommonWrapper {
+    overflow: hidden;
+}
+
+    .cssClassCommonWrapper .cssClassChange a,
+    .cssClassBillAdd .cssClassChange a,
+    .cssClassAddWrapper .cssClassChange a, .cssClassCol3 .cssClassAddWrapper .cssClassChange a.cssDeleteBtn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #fff;
+        border: solid 1px #d9dbdb;
+        padding: 5px;
+        font-size: 12px;
+        color: #ccc;
+        font-size: 14px;
+    }
+
+.cssClassCol3 .cssClassAddWrapper .cssClassChange a {
+    right: 45px;
+}
+
+#olAddtionalEntries .cssClassAddWrapper:first-child {
+    margin-right: 15px;
+}
+
+#olAddtionalEntries .cssClassAddWrapper .cssClassChange a {
+    right: 30px;
+    top: 0;
+}
+
+    #olAddtionalEntries .cssClassAddWrapper .cssClassChange a.cssDeleteBtn {
+        right: 3px;
+        padding: 5px 6px;
+    }
+
+.cssClassCommonWrapper .cssClassChange a:hover,
+.cssClassBillAdd .cssClassChange a:hover,
+.cssClassAddWrapper .cssClassChange a:hover, .cssClassCol3 .cssClassAddWrapper .cssClassChange a:hover.cssDeleteBtn {
+    background: #6fc25c;
+    color: #fff;
+    border: solid 1px#6fc25c;
+}
+
+.cssGreenCart {
+    color: #6fc25c;
+    font-size: 24px;
+}
+
+#divWishListSort {
+    float: right;
+}
+
+    #divWishListSort select {
+        padding: 3px;
+    }
+
+#emptyShoppingBag {
+    font-size: 24px;
+    color: #ccc;
+}
+
+.cssClassCommonGrid p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.cssClassWishListDash .cssClassHeader h2 {
+    margin: 0 0 2%;
+}
+
+.cssClassWishItemDetails .cssClassImage, .cssClassCartPictureInformation h3, .cssClassCartPicture {
+    float: left;
+    font-size: 16px;
+}
+
+.cssClassWishDate {
+    font-size: 12px;
+}
+
+.sfPopupclose, .cssClassClose {
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    overflow: hidden;
+    position: absolute;
+    right: -13px;
+    top: -13px;
+    width: 24px;
+    z-index: 9999;
+    color: #FFF;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #6fc25c;
+}
+
+    .cssClassClose span i {
+        font-size: 12px;
+    }
+
+.cssClassClosei {
+    width: 80px;
+    position: absolute;
+    right: 0;
+}
+
+.cssClassGridImage img {
+    width: 40%;
+}
+
+.cssClassWishItemImg {
+    text-align: center;
+}
+
+.cssClasspBalance .cssClassHeading b, .cssClasspExchangeRate .cssClassHeading b, .cssClasspBalanceLimitations .cssClassHeading b {
+    font-size: 18px;
+}
+
+.cssClassAIMChildContent {
+    border: solid 1px #dce2e6;
+    padding: 15px;
+}
+
+.cssClassCheckoutInformationContent ul li select {
+    width: 100%;
+}
+
+.cssClassItemQty {
+    width: 40px !important;
+}
+
+.cssClassdivCommentsList ul li b {
+    font-size: 14px;
+}
+
+.cssClassSocialMedia ul li {
+    width: 29px;
+    overflow: hidden;
+    height: 30px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+    .cssClassSocialMedia ul li i {
+        font-size: 24px;
+        text-shadow: 0px 1px rgba(0,0,0,0.2);
+        -webkit-text-shadow: 0px 1px rgba(0,0,0,0.2);
+        -o-text-shadow: 0px 1px rgba(0,0,0,0.2);
+    }
+
+    .cssClassSocialMedia ul li a {
+        color: #fff;
+    }
+
+        .cssClassSocialMedia ul li a:hover {
+            color: #6fc25c;
+        }
+
+#spanDownloadLink {
+    cursor: pointer;
+}
+
+    #spanDownloadLink:hover {
+        color: #6fc25c;
+    }
+
+.cssClassLogIn {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.icon-search {
+    margin-top: 33px;
+}
+
+.cssClasMyAccountInformation .sfButtonwrapper a:hover {
+    color: #fff;
+}
+
+.cssClassCartInfo {
+    float: right;
+}
+
+#divSimpleSearchPageNumber {
+    margin-top: 30px;
+}
+
+#divItemRatingForm .sfFormwrapper table tr td input {
+    margin: 5px 0;
+    width: 99%;
+}
+
+#divItemRatingForm .sfFormwrapper table tr td .cssClassTextArea {
+    width: 99%;
+    margin: 5px 0;
+    height: 100px;
+}
+
+table#tblRatingCriteria tr td {
+    border-bottom: none;
+    padding: 2px 0;
+}
+
+.cssClassCloseIcon .cssClassClose span {
+    line-height: 19px;
+}
+
+.cssClassCloseIcon button {
+    padding-left: 0;
+}
+
+.cssClassCloseIcon .cssClassClose span i {
+    display: inline-block;
+    margin: 5px;
+}
+
+.cssClassOrangeBtn span, .cssClassGreenBtn span, .cssClassDarkBtn span, .cssClassGreyBtn span {
+    line-height: 26px;
+}
+
+.cssClassReturnInfo, .cssClassStoreDetail {
+    background: #728087;
+    padding: 15px;
+    color: #FFF;
+}
+
+    .cssClassReturnInfo ul li, .cssClassStoreDetail ul li {
+        float: left;
+        margin-right: 30px;
+    }
+
+#divShiipingInfo table tr td {
+    padding: 0;
+}
+
+#divShiipingInfo #tblShippingInfo div, .cssClassBillingAddress {
+    padding: 25px;
+    border-bottom: solid 3px#6fc25c;
+    margin-right: 30px;
+    float: left;
+    margin-bottom: 30px;
+    width: 25.1%;
+    border-left: none;
+    border-top: none;
+}
+
+.cssClassBillingAddress {
+    margin-right: 0;
+    width: auto;
+    float: none;
+}
+
+    .cssClassBillingAddress li h4 {
+        font-size: 14px;
+    }
+
+#divShiipingInfo #tblShippingInfo div:last-child {
+    margin-right: 0;
+}
+
+#divShiipingInfo #tblShippingInfo div span {
+    font-size: 18px;
+}
+
+#divShiipingInfo #tblShippingInfo div ul {
+    margin-top: 10px;
+}
+
+.cssDynAttrWrapper ul li {
+    float: none;
+}
+
+.cssDynAttrWrapper .cssDyanamicAttributes {
+    float: left;
+    margin-left: 10px;
+}
+
+.cssNoBodyScroll {
+    overflow: hidden;
+    width: 100%;
+    height: 100% !important;
+}
+
+#Notify label button {
+    float: none;
+}
+
+.sfNotificationSelect {
+    color: #FFF;
+}
+
+#sfAspxshoppingbag {
+    padding-right: 10px;
+}
+
+#sfFootertop {
+    margin-bottom: 40px;
+}
+
+td.cssClassWishToCart .cssClassOutOfStock {
+    float: none;
+}
+
+.ItemImageGallery {
+    background: #fff;
+    border-right: solid 1px #ededed;
+}
+
+#divViewShareWihsList .cssClassCommonBox {
+    background: #fff;
+    padding: 25px;
+    border-bottom: solid 1px #ededed;
+    border-right: solid 1px #ededed;
+}
+
+.remarks {
+    font-size: 14px;
+    margin: 10px;
+    color: #666;
+}
+
+.cssClassEven {
+    background: #f8f8f8;
+}
+
+table.PaymentSectionTable tr td {
+    padding: 5px;
+}
+
+.colorgreen {
+    color: #6fc25c;
+    font-weight: bold;
+}
+
+#sfBrand {
+    background: #fff;
+    border: solid 1px #efefef;
+}
+
+.error {
+    color: red;
+}
+
+.ItemSocialLinks {
+    border-bottom: solid 1px #ededed;
+    border-right: solid 1px #ededed;
+}
+
+.cssClassCheckOutMethodLeft ul {
+    height:auto;
+    border-bottom:none;
+}
+
+    .cssClassCheckOutMethodLeft ul li a {
+        color:#fff;
+    }

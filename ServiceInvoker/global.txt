@@ -1,0 +1,19 @@
+﻿  
+  
+   void Application_Start(object sender, EventArgs e)
+    {
+        RegisterRoutes(System.Web.Routing.RouteTable.Routes);
+    }
+
+    public static void RegisterRoutes(System.Web.Routing.RouteCollection routes)
+    {
+       routes.Add(new System.Web.Routing.Route("{service}/{*pathInfo}", new ServiceRouteHandler("~/MyWebService.asmx")));
+
+          
+		 
+		 //for routing handler
+		  System.Web.Routing.RouteTable.Routes.Add(new System.Web.Routing.Route("handler/{*methodName}", new ServiceInvoker.HttpHandlerRoute("~/handler.ashx")));
+      
+
+        routes.MapPageRoute("", "{*catchall}", "~/Test.aspx");
+    }

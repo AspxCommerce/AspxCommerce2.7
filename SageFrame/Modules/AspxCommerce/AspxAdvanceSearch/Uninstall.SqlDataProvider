@@ -1,0 +1,116 @@
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_AdvanceSearchSetting_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_AdvanceSearchSetting] DROP CONSTRAINT [DF_Aspx_AdvanceSearchSetting_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_AdvanceSearchSetting_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_AdvanceSearchSetting] DROP CONSTRAINT [DF_Aspx_AdvanceSearchSetting_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_AdvanceSearchSetting_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_AdvanceSearchSetting] DROP CONSTRAINT [DF_Aspx_AdvanceSearchSetting_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_AdvanceSearchSetting_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_AdvanceSearchSetting] DROP CONSTRAINT [DF_Aspx_AdvanceSearchSetting_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_AdvanceSearchSetting_UpdatedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_AdvanceSearchSetting] DROP CONSTRAINT [DF_Aspx_AdvanceSearchSetting_UpdatedOn]
+END
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_AdvanceSearchSetting]    Script Date: 02/19/2014 12:19:05 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_AdvanceSearchSetting]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_AdvanceSearchSetting]
+GO
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSettingsGet]    Script Date: 02/24/2014 12:47:32 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSettingsGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSettingsGet]
+GO
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSettingsUpdate]    Script Date: 02/24/2014 12:47:42 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSettingsUpdate]
+GO
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByDiscount]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByDiscount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByDiscount]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByIsFeatured]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByIsFeatured]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByIsFeatured]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByIsSpecial]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByIsSpecial]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByIsSpecial]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByItemID]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByItemID]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByItemID]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByItemIDDesc]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByItemIDDesc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByItemIDDesc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByName]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByName]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByName]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByPrice]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByPrice]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByPrice]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByPriceDesc]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByPriceDesc]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByPriceDesc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByRatedValue]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByRatedValue]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByRatedValue]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortBySoldItem]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortBySoldItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortBySoldItem]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AdvanceSearchSortByViewCount]    Script Date: 02/19/2014 12:30:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AdvanceSearchSortByViewCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AdvanceSearchSortByViewCount]
+GO

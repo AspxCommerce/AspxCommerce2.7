@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E01DB85D-70F0-4A32-AD9D-9D5CA1771D85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SageFrame.Core</RootNamespace>
+    <AssemblyName>SageFrame.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\SageFrame\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\SageFrame\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.1.271, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\SageFrame\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\SageFrame\bin\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\BaseAdministrationUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\IConfigurePaymentMethodModule.cs" />
+    <Compile Include="Controls\SageFrameStartUpControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SageUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreCss.cs" />
+    <Compile Include="CoreJs.cs" />
+    <Compile Include="Framework\AppErazer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Framework\ApplicationController.cs" />
+    <Compile Include="Framework\ApplicationKeys.cs" />
+    <Compile Include="Framework\AuthenticateService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Framework\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Framework\SecurityPolicy.cs" />
+    <Compile Include="Framework\ServerController.cs" />
+    <Compile Include="Global.asax.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Localization\Localization.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SageFrame.GoogleAdsense\GoogleAdsenseController.cs" />
+    <Compile Include="SageFrame.GoogleAdsense\GoogleAdsenseInfo.cs" />
+    <Compile Include="SageFrame.GoogleAdsense\GoogleAdsenseProvider.cs" />
+    <Compile Include="SageFrame.HTMLText\HTMLContentInfo.cs" />
+    <Compile Include="SageFrame.HTMLText\HTMLController.cs" />
+    <Compile Include="SageFrame.HTMLText\HTMLDataProvider.cs" />
+    <Compile Include="SageFrame.ListManagement\Controller\ListManagementController.cs" />
+    <Compile Include="SageFrame.ListManagement\Entities\FeedbackSettingInfo.cs" />
+    <Compile Include="SageFrame.ListManagement\Entities\ListManagementInfo.cs" />
+    <Compile Include="SageFrame.ListManagement\Entities\ListInfo.cs" />
+    <Compile Include="SageFrame.ListManagement\Provider\ListManagementProvider.cs" />
+    <Compile Include="SageFrame.LogView\LogController.cs" />
+    <Compile Include="SageFrame.LogView\LogInfo.cs" />
+    <Compile Include="SageFrame.LogView\LogProvider.cs" />
+    <Compile Include="SageFrame.Message\MessageManagementController.cs" />
+    <Compile Include="SageFrame.Message\MessageManagementInfo.cs" />
+    <Compile Include="SageFrame.Message\MessageManagementProvider.cs" />
+    <Compile Include="SageFrame.Message\MessageManagement\MailHelper.cs" />
+    <Compile Include="SageFrame.Message\MessageManagement\MessageToken.cs" />
+    <Compile Include="SageFrame.ModuleLoader\ModuleLoaderController.cs" />
+    <Compile Include="SageFrame.ModuleLoader\ModuleLoaderInfo.cs" />
+    <Compile Include="SageFrame.ModuleLoader\ModuleLoaderProvider.cs" />
+    <Compile Include="SageFrame.Modules\ModuleController.cs" />
+    <Compile Include="SageFrame.Modules\ModuleEntities.cs" />
+    <Compile Include="SageFrame.Modules\ModuleHelper.cs" />
+    <Compile Include="SageFrame.Modules\ModuleProvider.cs" />
+    <Compile Include="SageFrame.NewLetterSubscriber\NewLetterSubscriberController.cs" />
+    <Compile Include="SageFrame.NewLetterSubscriber\NewLetterSubscriberProvider.cs" />
+    <Compile Include="SageFrame.NewLetterSubscriber\NewsLetterSettingsInfo.cs" />
+    <Compile Include="SageFrame.Packages\PackagesController.cs" />
+    <Compile Include="SageFrame.Packages\PackagesInfo.cs" />
+    <Compile Include="SageFrame.Packages\PackagesProvider.cs" />
+    <Compile Include="SageFrame.PortalSetting\PortalController.cs" />
+    <Compile Include="SageFrame.PortalSetting\PortalInfo.cs" />
+    <Compile Include="SageFrame.PortalSetting\PortalProvider.cs" />
+    <Compile Include="SageFrame.ProfileManagement\ProfileManagementController.cs" />
+    <Compile Include="SageFrame.ProfileManagement\ProfileManagementInfo.cs" />
+    <Compile Include="SageFrame.ProfileManagement\ProfileManagementProvider.cs" />
+    <Compile Include="SageFrame.ProfileManagement\Profile\ProfilePropertyDefinitionCollection.cs" />
+    <Compile Include="SageFrame.ProfileManagement\Profile\ProfilePropertyDefinitionComparer.cs" />
+    <Compile Include="SageFrame.RolesManagement\RolesManagementController.cs" />
+    <Compile Include="SageFrame.RolesManagement\RolesManagementInfo.cs" />
+    <Compile Include="SageFrame.RolesManagement\RolesManagementProvider.cs" />
+    <Compile Include="SageFrame.Search\SageFrameSearch.cs" />
+    <Compile Include="SageFrame.Search\SageFrameSearchInfo.cs" />
+    <Compile Include="SageFrame.Search\SageFrameSearchProcedureInfo.cs" />
+    <Compile Include="SageFrame.Search\SageFrameSearchSettingInfo.cs" />
+    <Compile Include="SageFrame.SessionTracking\SessionLog.cs" />
+    <Compile Include="SageFrame.SessionTracking\SessionTracker.cs" />
+    <Compile Include="SageFrame.SessionTracking\SessionTrackerController.cs" />
+    <Compile Include="SageFrame.SessionTracking\SessionTrackerPage.cs" />
+    <Compile Include="SageFrame.UserAgent\UserAgentController.cs" />
+    <Compile Include="SageFrame.UserAgent\UserAgentInfo.cs" />
+    <Compile Include="SageFrame.UserAgent\UserAgentProvider.cs" />
+    <Compile Include="SageFrame.UserManagement\ForgotPasswordInfo.cs" />
+    <Compile Include="SageFrame.UserManagement\UserManagementController.cs" />
+    <Compile Include="SageFrame.UserManagement\UserManagementInfo.cs" />
+    <Compile Include="SageFrame.UserManagement\UserManagementProvider.cs" />
+    <Compile Include="SageFrameAJaxEditor.cs" />
+    <Compile Include="SageFrameClass\CaptchaImage.cs" />
+    <Compile Include="SageFrameClass\EncryptDecryptQueryString.cs" />
+    <Compile Include="SageFrameClass\ErrorHandling.cs" />
+    <Compile Include="SageFrameClass\ImageFile.cs" />
+    <Compile Include="SageFrameClass\PictureManager.cs" />
+    <Compile Include="SageFrameClass\SageFrameLists.cs" />
+    <Compile Include="SageFrameClass\SageFrameRoute.cs" />
+    <Compile Include="SageFrameClass\SageFrameRouteHandler.cs" />
+    <Compile Include="SageFrameClass\SageFrameWebService.asmx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SecurePage.cs" />
+    <Compile Include="ServiceSecurity.cs" />
+    <Compile Include="Services\Installer\Component.cs" />
+    <Compile Include="Services\Installer\CompositeModule.cs" />
+    <Compile Include="Services\Installer\ControlInfo.cs" />
+    <Compile Include="Services\Installer\IModuleExtraCodeExecute.cs" />
+    <Compile Include="Services\Installer\Installer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\Installer\ModuleElement.cs" />
+    <Compile Include="Services\Installer\ModuleInfoPackage.cs" />
+    <Compile Include="Services\Installer\ModuleSfeWriter.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\Installer\PackageWriterBase.cs" />
+    <Compile Include="Services\Installer\SfeWriter.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\Installer\ZipUtil.cs" />
+    <Compile Include="Services\Minifiers\CssMinifier.cs" />
+    <Compile Include="Services\Minifiers\JsMinifier.cs" />
+    <Compile Include="ShortUrl\ShortUrlController.cs" />
+    <Compile Include="ShortUrl\ShortUrlProvider.cs" />
+    <Compile Include="SystemEventStartUp\SystemEventLocationInfo.cs" />
+    <Compile Include="SystemEventStartUp\SystemEventStartUpInfo.cs" />
+    <Compile Include="SystemEventStartUp\SystemStartupController.cs" />
+    <Compile Include="TemplateManagement\TemplateController.cs" />
+    <Compile Include="TemplateManagement\TemplateDataProvider.cs" />
+    <Compile Include="TemplateManagement\TemplateInfo.cs" />
+    <Compile Include="TemplateManagement\TemplateSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SageFrame.CDN\SageFrame.CDN.csproj">
+      <Project>{5FB3E456-D1CB-4E2A-819C-7DD6C8D917A4}</Project>
+      <Name>SageFrame.CDN</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SageFrame.Common\SageFrame.Common.csproj">
+      <Project>{6AF77849-4E47-4E74-8944-4BDAD509C0A3}</Project>
+      <Name>SageFrame.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SageFrame.Dashboard\SageFrame.Dashboard.csproj">
+      <Project>{CFB32E58-8BE4-4B85-9DC6-77DAB8D3825D}</Project>
+      <Name>SageFrame.Dashboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SageFrame.Scheduler\SageFrame.Scheduler.csproj">
+      <Project>{FCECD2E4-4446-4734-8791-BE40A5E16198}</Project>
+      <Name>SageFrame.Scheduler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SageFrame.Security\SageFrame.Security.csproj">
+      <Project>{8773ec29-792d-4eb1-bab3-5137e34df82c}</Project>
+      <Name>SageFrame.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SageFrame.Templating\SageFrame.Templating.csproj">
+      <Project>{0548FFEE-28AF-4A67-A41E-4783A38E952C}</Project>
+      <Name>SageFrame.Templating</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.1.4.js" />
+    <Content Include="Scripts\jquery.signalR-1.1.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

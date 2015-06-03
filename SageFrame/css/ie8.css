@@ -1,0 +1,9 @@
+
+/* CSS Document */
+.sfTutorialWrap ul li { margin-right:20px !important;}
+.icon-arrow-s:before { line-height:45px !important; }
+.sfFooterwrapper { background:#111 !important;}
+#menuList ul li span.sfMenuname { width:180px;}
+.ajax_tab_xp .ajax_tab_outer, .ajax_tab_xp .ajax_tab_active .ajax_tab_outer { background:none !important;}
+
+.sfOrgImage img { visibility:visible !important; cursor:crosshair; }

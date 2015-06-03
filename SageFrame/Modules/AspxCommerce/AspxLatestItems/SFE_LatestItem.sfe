@@ -1,0 +1,57 @@
+﻿<sageframe version="3.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_LatestItems</name>
+      <friendlyname>AspxLatestItems</friendlyname>
+      <foldername>AspxCommerce/AspxLatestItems</foldername>
+      <modulename>AspxLatestItems</modulename>
+      <description>Latest Items.</description>
+      <version>03.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.AspxLatestItems.AspxLatestItemsController, SageFrame.Modules.AspxLatestItemsProvider</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>AspxCommerce Pvt. Ltd.</owner>
+      <organization>AspxCommerce Pvt. Ltd.</organization>
+      <url>www.aspxcommerce.com</url>
+      <email>info@aspxcommerce.com</email>
+      <releasenotes>This is  release notes for AspxLatestItems</releasenotes>
+      <license>This is  license copy for AspxLatestItems Control Application</license>
+      <modules>
+        <module>
+          <friendlyname>AspxLatestItems</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			        <key>AspxLatestItems</key>
+              <title>AspxLatestItems</title>
+              <src>Modules/AspxCommerce/AspxLatestItems/LatestItems.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+            <control>
+              <key>AspxLatestItemSetting</key>
+              <title>AspxLatestItemSetting</title>
+              <src>Modules/AspxCommerce/AspxLatestItems/LatestItemSettings.ascx</src>
+              <type>Setting</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+          </controls>
+          
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>02.05.00.00.SqlDataProvider</name>
+        </file>   
+		    <file>
+          <name>AspxCommerce.LatestItems.dll</name>		  
+        </file>            
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file> 
+      </files>
+      <interfaceimplementedclass>AspxCommerce.LatestItems,LatestItemIModuleExtraCodeExecute</interfaceimplementedclass>
+    </folder>
+  </folders>
+</sageframe>

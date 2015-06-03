@@ -1,0 +1,4 @@
+﻿.cssClassSageSearchWrapper{margin:0; padding:7px 10px; display:inline-block;}
+.cssClassSageSearchWrapper label{ cursor:pointer;}
+.sfModuleSimpleSearch{ float:left;color:#fff;display:inline-block;}
+#sfSearch .sfModule{ margin-bottom:0 }

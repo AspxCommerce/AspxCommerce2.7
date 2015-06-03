@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preset name="default">
+<activelayout>default</activelayout>
+<activetheme>default</activetheme>
+<activewidth>wide</activewidth>
+<cssopt>true</cssopt>
+<jsopt>true</jsopt>
+<cpanel>true</cpanel>
+<handheld>true</handheld>
+<handheldlayout>default</handheldlayout>
+</preset>

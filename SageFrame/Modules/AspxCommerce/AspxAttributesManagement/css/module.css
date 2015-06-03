@@ -1,0 +1,27 @@
+/* CSS Document */
+
+.ui-tree li { padding:2px 2px 2px 20px; margin-bottom:1px;}
+.ui-tree .ui-tree-node > span.ui-tree-title { background:#f2f2f2; padding:5px; display:block;}
+.ui-tree li span.ui-tree-title { padding:0px;}
+.ui-tree .ui-tree-node > span.ui-tree-title:before, .ui-tree .ui-tree-node.ui-tree-expanded > span.ui-tree-title:before, .ui-tree .ui-tree-list > span.ui-tree-title:before {font-family:'aspx'; margin-right:5px;
+font-style: normal !important;
+font-weight: normal !important;
+font-variant: normal !important;
+text-transform: none !important;
+speak: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;}
+.ui-tree .ui-tree-node.ui-tree-expanded > span.ui-tree-title:before {content: "\e740";}
+.ui-tree .ui-tree-node > span.ui-tree-title:before {content: "\e608";}
+
+.ui-tree .ui-tree-list > span.ui-tree-title { background:none;}
+.ui-tree .ui-tree-list > span.ui-tree-title:before { content: "\e623"; color:#7a7a7a;}
+.ui-tree-droppable{ background-color: #c1e5ef !important; }
+
+#dvTree { width:100%;}
+
+
+#jqContextMenu ul { background:#3a3a3a !important; padding:5px 0px !important;
+border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px;}
+#jqContextMenu ul, #jqContextMenu ul li {  border:none !important; color:#fff !important;}

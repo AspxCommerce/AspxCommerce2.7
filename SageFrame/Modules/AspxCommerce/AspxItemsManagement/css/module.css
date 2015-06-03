@@ -1,0 +1,9 @@
+/* CSS Document */
+
+.ddlCostVariantsCollection, .ddlCostVariantValues { width:130px !important;}
+.cssClassIsActive{ width:72px !important;}
+.cssclassItemCostVariant { margin-top: 10px;}
+.cssclassItemCostVariant div { overflow:hidden; margin-bottom:3px;}
+.cssclassItemCostVariant div label { float:left; width:130px; word-wrap:break-word; margin-right:10px;}
+.cssclassItemCostVariant div input, .cssclassItemCostVariant div select { float:left; width:100px !important;}
+.cssclassItemCostVariant div select.cssClassPriceModifierType, .cssclassItemCostVariant div select.cssClassWeightModifierType { width:45px !important; margin-left:4px;}

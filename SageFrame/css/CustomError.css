@@ -1,0 +1,55 @@
+﻿body{width:100%; background:#f9f9f9; text-shadow:0 1px 0 #fff; font-family:sans-serif; overflow:hidden; margin:7% auto; border-top:1px solid #ccc; box-shadow:0 1px 0 #fff inset; overflow:hidden;}
+
+div.cssClassCustomErrorDiv
+{
+	width:800px;
+	margin:50px auto; padding-left:50px; border-left:1px solid #ccc; box-shadow:1px 0 0 #fff inset;
+}
+.cssClassLogo {	float:left; width:328px; height:67px; background:url(../images/sageframe.png) no-repeat;}
+.cssClassLogo a { height:55px; display:block; text-indent:-6000px; display:block; }
+.cssClassPageNotFound {
+    margin: 0 auto;
+    width: 980px;
+}
+.cssClassPNFDetails {
+    overflow: hidden;
+}
+h1 {
+    color: #0999D2; padding-top:40px; clear:both; text-transform:uppercase;
+    font:30px Arial,Helvetica,sans-serif; letter-spacing:-1.5px;
+}
+h1 span {
+    color: #666;
+    font: 12px Arial,Helvetica,sans-serif;
+    padding: 0 0 0 5px; display:inline-block; border-left:1px solid #7F7F7F; margin-left:20px; text-transform:capitalize; letter-spacing:0;
+}
+p {
+    color: #3B3B3B;
+    font: 12px/18px Arial,Helvetica,sans-serif;
+    margin: 0 0 10px;
+}
+.cssClassPagenotAccesiblebtn {
+    border-bottom: 1px dashed #84CCE8;
+    margin: 30px 0 0;
+    overflow: hidden;
+    padding: 0 0 18px;
+}
+.cssClassPagenotAccesiblebtn span {
+    background: url("images/btn_left.jpg") no-repeat scroll left top transparent;
+    float: left;
+    height: 24px;
+    padding: 0 0 0 13px;
+}
+.cssClassPagenotAccesiblebtn span a {
+    background: url("images/btn_right.jpg") no-repeat scroll right top transparent;
+    color: #FFFFFF;
+    float: left;
+    font: 12px/23px Arial,Helvetica,sans-serif;
+    height: 24px;
+    padding: 0 10px 0 0;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #2A8096;
+}
+
+span a { display:inline-block; color:#069; text-decoration:none; font-size:12px; text-transform:uppercase; letter-spacing:2px; border-bottom:1px solid #ccc;}
+span a:hover { border-bottom:1px solid #069;}

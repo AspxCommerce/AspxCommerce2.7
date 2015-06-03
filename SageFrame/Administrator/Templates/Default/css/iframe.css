@@ -1,0 +1,57 @@
+﻿body
+{
+    background: #fff !important;
+    padding: 20px !important;
+    font: 13px/18px Tahoma, Geneva, sans-serif;
+}
+.sfFormwrapper
+{
+    padding: 0px;
+    background: none;
+    border: none;
+}
+.ui-dialog .ui-dialog-content
+{
+    padding: 0px !important;
+}
+.ajax__tab_default, .ui-widget-content
+{
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+    border: none !important;
+}
+.ajax__tab_header
+{
+    border-bottom: none;
+}
+button.ui-button-icon-only
+{
+    width: auto !important;
+}
+.ajax__tab_container
+{
+    border: 1px solid #ccc;
+}
+.ajax__tab_panel
+{
+    padding: 0px;
+}
+/*.ajax__tab_header, #ulTabList { border:1px solid #ccc;}
+*/.ajax__tab_xp .ajax__tab_tab
+{
+    padding: 10px 16px !important;
+}
+.ajax__tab_xp .ajax__tab_inner span.ajax__tab_tab
+{
+    font-size: 12px;
+}
+.ajax__tab_xp .ajax__tab_body
+{
+    font-family: Tahoma, Geneva, sans-serif !important;
+}
+.ui-tabs .ui-tabs-nav li a
+{
+    padding: 12px 16px;
+}

@@ -1,0 +1,44 @@
+<sageframe version="1.0.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_AdvanceHtml</name>
+      <friendlyname>AdvanceHtml</friendlyname>
+      <foldername>AdvanceHtml</foldername>
+      <modulename>AdvanceHtml</modulename>
+      <description>This module is used for AdvanceHtml.</description>
+      <version>01.00.00</version>
+      <businesscontrollerclass>SageFrame.Modules.AdvanceHtml</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>BrainDigit IT Soultion Pvt. Ltd.</owner>
+      <organization>BrainDigit IT Soultion Pvt. Ltd.</organization>
+      <url>www.braindigit.com</url>
+      <email>info@sageframe.com</email>
+      <releasenotes>This is test release notes for AdvanceHtml Application</releasenotes>
+      <license>This is test license copy for AdvanceHtml Application</license>
+      <modules>
+        <module>
+          <friendlyname>AdvanceHtml</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+			  <key>AdvanceHtmlView</key>
+              <title>AdvanceHtmlView</title>
+              <src>Modules/AdvanceHtml/HtmlView.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+			<control>
+			  <key>AdvanceHtmlEdit</key>
+              <title>AdvanceHtmlEdit</title>
+              <src>Modules/AdvanceHtml/HtmlEdit.ascx</src>
+              <type>Edit</type>
+              <helpurl>http://www.sageframe.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>			
+          </controls>
+        </module>
+      </modules>      
+    </folder>
+  </folders>
+</sageframe>

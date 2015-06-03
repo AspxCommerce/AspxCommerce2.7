@@ -1,0 +1,50 @@
+﻿.fixed {position: fixed;bottom:0;z-index:999999;right:0;width:20%;}
+.cssClassCompareContainer{ background-color: #FFFFFF;
+    border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	-o-border-radius: 3px 3px 0 0;
+	border:solid 1px #dce2e6;  padding:10px 0;border-bottom:none;padding:15px; box-shadow:0 0 5px rgba(0, 0, 0, 0.11);}
+.cssCompareBtnWrapper{ text-align:right;}
+.fixed .cssCompareBtnWrapper a{ padding:0 10px; background:#FFF;border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	-o-border-radius: 3px 3px 0 0; padding:10px;border:solid 1px #dce2e6;}		
+.compareProductsBoxTitle h2{ color:inherit; margin:0; font-size:16px; margin-bottom:10px;}	
+
+.compareProduct{ 
+	border: 1px solid #F0F0F0;
+	border-top:solid 2px#6fc25c;
+    min-height: 50px;
+    padding: 2px;
+	box-shadow:none;
+	background:#fff;
+	position:relative;
+	padding:10px;
+	margin-bottom:5px;
+	}
+.cssCompareProductsBox .empty{background: url("../images/noimg.jpg") no-repeat scroll center center transparent;
+    border: 1px solid #F0F0F0;
+	border-top:solid 2px #efefef;
+    float: left;
+    height: 30px;
+    margin-right: 20px;
+    padding: 2px; width:90.63%; padding:10px;margin-bottom:5px;}	
+.compareProduct .productImage{ 
+	 border: 1px solid #F0F0F0;
+    float: left;
+    height: 40px;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    width: 40px;}
+.compareProduct .productImage img{ width:100%;}	
+.cssCompareProductsBox .sfButtonwrapper, .sfButtonwrapperclear{ float:left; margin:5px 5px 0 0}
+.cssClassCompareContainer .cssClassClose{border:none;cursor: pointer;height:20px;width:20px;position:absolute; right:15px; top:15px;line-height:18px;}
+.cssClassCompareContainer .cssClassClose i{font-size:10px;padding:5px; }
+.compareClose:hover{cursor:pointer}
+.compareProductClose i{margin-left:5px;width:8px;border:none;right:0;top:10px;position:absolute; height:10px; overflow:hidden;cursor:pointer;}
+.compareProductClose i{color:#2B404C; font-size:8px; margin-right:10px;}
+.cssCompareBtnWrappe{ text-align:center;}
+.cssCompareProductsBox .sfButtonwrapper input.sfBtn{background:#6fc25c; padding:5px 10px; border:none; font-size:14px; color:#fff;}
+.sfButtonwrapperclear input.sfBtn{background:#424242; padding:5px 10px; border:none; font-size:14px; color:#fff;}
+.productName{ font-size:14px; line-height:18px; color:#3b3b3b;}
+.productImage img{width: 90%;}
+.cssProductPrice { color:#686868 !important; text-shadow:none}

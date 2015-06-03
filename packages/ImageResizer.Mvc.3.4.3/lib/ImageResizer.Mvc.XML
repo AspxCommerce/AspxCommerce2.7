@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImageResizer.Mvc</name>
+    </assembly>
+    <members>
+        <member name="M:ImageResizer.Plugins.MvcRoutingShim.StopRoutingRoute.#ctor(System.String)">
+            <summary>
+            Creates a route that matches any request where context.Items[contextItemsFlag] is (non-null).
+            </summary>
+            <param name="contextItemsFlag"></param>
+        </member>
+    </members>
+</doc>

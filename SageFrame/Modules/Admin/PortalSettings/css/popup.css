@@ -1,0 +1,311 @@
+#trigger {
+	text-align:center;
+}
+.popupbox {
+	background-color: #B0B0B0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	box-shadow: 0 0 20px #000000;
+	display: none;
+	left: 50%;
+	padding: 10px;
+	position: fixed;
+	top: 50%;
+	width: 430px;
+	z-index: 400;
+}
+.popupbox2 {
+	width:454px;
+	height:307px;
+	background-image:url(images/pu_03.png);
+	background-repeat:no-repeat;
+	display: none;
+	float: left;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 400;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+}
+.popupbox3 {
+	width:502px;
+	height:302px;
+	background-image:url(images/3_03.png);
+	background-repeat:no-repeat;
+	display: none;
+	float: left;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 400;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+}
+#fade {
+	display: none;
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .80;
+	z-index: 399;
+}
+#divIndicatorBackground
+{
+    display: none;
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .80;
+	z-index: 400;
+}
+}
+#intabdiv {
+	text-align:center;
+}
+#close img {
+	text-decoration:none;
+}
+#close {
+	width:50px;
+	height:50px;
+	position: absolute;
+	float:right;
+}
+#intabdiv2 {
+	padding:70px;
+}
+#intabdiv2 h2 {
+	font-size:24px;
+	color:#696868;
+}
+#intabdiv2 p {
+	font-size:12px;
+	color:#696868;
+	line-height:20px;
+}
+#intabdiv3 {
+	padding:70px;
+}
+#intabdiv3 h2 {
+	font-size:24px;
+	color:#fff;
+	}
+#intabdiv3 p {
+	font-size:12px;
+	color:#fff;
+	line-height:20px;
+}
+span.cssClassMessage {
+	text-align:center;
+}
+select.cssClassListMenu {
+	background-color: #FFFFFF;
+	border: 1px solid #97CEE3;
+	font: 11px/20px Tahoma, Geneva, sans-serif;
+	height: 20px;
+	padding: 0 4px;
+	width: 161px;
+}
+.cssClassFileManagerPopUP {
+	position:relative;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	background-color:#fff;
+	padding:6px;
+}
+span.closePopUp {
+	position:absolute;
+	top:-20px;
+	right:-18px;
+	cursor:pointer;
+}
+.cssClassFileManagerPopUP h2 {
+	background-color:#f7f4f0;
+	font:bold 18px/24px Tahoma, Geneva, sans-serif;
+	color:#716f69;
+	padding:0 0 0 5px;
+}
+/*--------------------------------------CLIENT FILE MANAGER POPUP------------------------------------*/
+.cssClassClientFileManager .cssClassFileManagerPopUP {
+	position:relative;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	background-color:#fff;
+	padding:6px;
+}
+.cssClassClientFileManager span.closePopUp {
+	position:absolute;
+	top:-20px;
+	right:-18px;
+	cursor:pointer;
+}
+.cssClassClientFileManager .cssClassFileManagerPopUP h2 {
+	background-color:#f2ebe3;
+	font:bold 18px/24px Tahoma, Geneva, sans-serif;
+	color:#716f69;
+	padding:0 0 0 5px;
+}
+.cssClassClientFileManager .cssClassFileManagerPopUP span.cssClassLabel {
+	font:bold 11px/30px Tahoma, Geneva, sans-serif;
+	color:#8c7431;
+	text-shadow:1px 1px 0 #fff;
+}
+.cssClassClientFileManager .cssClassFileManagerPopUP input.cssClassNormalTextBox {
+	width:150px;
+	border:1px solid #e4d8b9;
+	background-color:#fff;
+	font:normal 11px/20px Tahoma, Geneva, sans-serif;
+	height:20px;
+	padding:0 4px;
+}
+.cssClassClientFileManager .cssClassFileManagerPopUP .cssClassButtonWrapper input {
+	background-color:#a59362;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border:none;
+	padding:3px !important;
+	font:bold 11px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	cursor:pointer;
+	float:none;
+	border:1px solid #fff;
+}
+.cssClassClientFileManager .cssClassFileManagerPopUP .cssClassButtonWrapper input:hover {
+	background-color:#c5a95d;
+}
+.cssClassFileManagerPopUP span.cssClassLabel {
+	font:bold 11px/30px Tahoma, Geneva, sans-serif;
+	color:#8c7431;
+	text-shadow:1px 1px 0 #fff;
+}
+.cssClassFileManagerPopUP input.cssClassNormalTextBox {
+	width:150px;
+	border:1px solid #e4d8b9;
+	background-color:#fff;
+	font:normal 11px/20px Tahoma, Geneva, sans-serif;
+	height:20px;
+	padding:0 4px;
+}
+.cssClassFileManagerPopUP .cssClassButtonWrapper input {
+	background-color:#a59362;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border:none;
+	padding:3px !important;
+	font:bold 11px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	cursor:pointer;
+	float:none;
+	border:1px solid #fff;
+}
+.cssClassFileManagerPopUP .cssClassButtonWrapper input:hover {
+	background-color:#c5a95d;
+}
+.cssClassClientFileManager select.cssClassListMenu {
+	background-color: #FFFFFF;
+	border: 1px solid #E4D8B9;
+	font: 11px/20px Tahoma, Geneva, sans-serif;
+	height: 20px;
+	padding: 0 4px;
+	width: 161px;
+}
+/*--------------------------------------ADMIN POPUP FILE MANAGER------------------------------------*/
+.cssClassAdminFileManager .cssClassFileManagerPopUP h2 {
+	background-color:#e2eef2;
+	font:bold 18px/24px Tahoma, Geneva, sans-serif;
+	color:#716f69;
+	padding:0 0 0 5px;
+}
+.cssClassAdminFileManager .cssClassFileManagerPopUP span.cssClassLabel {
+	font:bold 11px/30px Tahoma, Geneva, sans-serif;
+	color:#666;
+	text-shadow:1px 1px 0 #fff;
+}
+.cssClassAdminFileManager .cssClassFileManagerPopUP input.cssClassNormalTextBox {
+	width:150px;
+	border:1px solid #97cee3;
+	background-color:#fff;
+	font:normal 11px/20px Tahoma, Geneva, sans-serif;
+	height:20px;
+	padding:0 4px;
+}
+.cssClassAdminFileManager .cssClassFileManagerPopUP .cssClassButtonWrapper input {
+	background-color:#2CA3D2;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border:none;
+	padding:3px !important;
+	font:normal 11px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	cursor:pointer;
+	float:none;
+	border:1px solid #fff;
+}
+.cssClassAdminFileManager .cssClassFileManagerPopUP .cssClassButtonWrapper input:hover {
+	background-color:#5491a8;
+}
+
+.cssClassErrorMessage
+{
+    color:Red;
+}
+/*====================pop up style for settings============*/
+
+
+  .cssClassDirList
+{	position:relative;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	background-color:#fff;
+	padding:6px;
+	border:10px solid #c0c0c0;
+	width:400px;
+}
+#divDirList
+{
+	height:250px;
+	width:100%;
+	overflow:auto;
+}
+.modalBackground
+{
+	background-color:#000;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	
+width:100%;
+}
+
+.cssClassButtonWrapper .cssClassBtn {
+	background-color: #2CA3D2;
+	border-radius: 3px 3px 3px 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: 12px Tahoma, Geneva, sans-serif;
+	padding: 2px 8px !important;
+	text-align: center;
+}
+
+.cssClassPageSize
+{
+	float:right !important;
+	font:bold 12px/18px Arial, Helvetica
+}

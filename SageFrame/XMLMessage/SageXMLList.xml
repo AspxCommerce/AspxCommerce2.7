@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SageFrameMessage>
+  <SageFrameLists>
+    <Before>Before</Before>
+    <After>After</After>
+    <AddtoEnd>Add to End</AddtoEnd>
+    <None>None</None>
+    <URLALinkToAnExternalResource>URL ( A Link To An External Resource )</URLALinkToAnExternalResource>
+    <String>String</String>
+    <Integer>Integer</Integer>
+    <Decimal>Decimal</Decimal>
+    <DateTime>DateTime</DateTime>
+    <Anonymous>Anonymous</Anonymous>
+    <Basic>Basic</Basic>
+    <NTLM>NTLM</NTLM>
+    <Private>Private</Private>
+    <Public>Public</Public>
+    <Verified>Verified</Verified>
+    <Google>Google</Google>
+    <Yahoo>Yahoo</Yahoo>
+    <Microsoft>Microsoft</Microsoft>
+    <No>No</No>
+    <Yes>Yes</Yes>
+    <Top>Top</Top>
+    <Above>Above</Above>
+    <Below>Below</Below>
+    <Bottom>Bottom</Bottom>
+    <View>View</View>
+    <Edit>Edit</Edit>
+    <Setting>Setting</Setting>
+    <Admin>Admin</Admin>
+    <Sunday>Sunday</Sunday>
+    <Monday>Monday</Monday>
+    <Tuesday>Tuesday</Tuesday>
+    <Wednesday>Wednesday</Wednesday>
+    <Thursday>Thursday</Thursday>
+    <Friday>Friday</Friday>
+    <Saturday>Saturday</Saturday>
+    <DateNew>Date New</DateNew>
+    <DateOld>Date Old</DateOld>
+    <PopularityHigh>Popularity High</PopularityHigh>
+    <PopularityLow>Popularity Low</PopularityLow>
+    <QUESTION>[QUESTION]</QUESTION>
+    <ANSWER>[ANSWER]</ANSWER>
+    <USER>[USER]</USER>
+    <VIEWCOUNT>[VIEWCOUNT]</VIEWCOUNT>
+    <CATEGORYNAME>[CATEGORYNAME]</CATEGORYNAME>
+    <CATEGORYDESC>[CATEGORYDESC]</CATEGORYDESC>
+    <DATECREATED>[DATECREATED]</DATECREATED>
+    <DATEMODIFIED>[DATEMODIFIED]</DATEMODIFIED>
+    <INDEX>[INDEX]</INDEX>
+    <NameDescending>Name Descending</NameDescending>
+    <NameAscending>Name Ascending</NameAscending>
+    <DateNewNameDescending>Date New, Name Descending</DateNewNameDescending>
+    <DateNewNameAscending>Date New, Name Ascending</DateNewNameAscending>
+    <DateOldNameDescending>Date Old, Name Descending</DateOldNameDescending>
+    <DateOldNameAscending>Date Old, Name Ascending</DateOldNameAscending>
+    <NameDescendingDateNew>Name Descending, Date New</NameDescendingDateNew>
+    <NameDescendingDateOld>Name Descending, Date Old</NameDescendingDateOld>
+    <NameAscendingDateNew>Name Ascending, Date New</NameAscendingDateNew>
+    <NameAscendingDateOld>Name Ascending, Date Old</NameAscendingDateOld>
+    <Shortdatepattern>Short date pattern</Shortdatepattern>
+    <Longdatepattern>Long date pattern</Longdatepattern>
+    <Fulldatetimepatternshorttime>Full date/time pattern (short time)</Fulldatetimepatternshorttime>
+    <Fulldatetimepatternlongtime>Full date/time pattern (long time)</Fulldatetimepatternlongtime>
+    <Generaldatetimepatternshorttime>General date/time pattern (short time)</Generaldatetimepatternshorttime>
+    <Generaldatetimepatternlongtime>General date/time pattern (long time)</Generaldatetimepatternlongtime>
+    <Monthdaypattern>Month/day pattern</Monthdaypattern>
+    <RFC1123pattern>RFC1123 pattern</RFC1123pattern>
+    <Shorttimepattern>Short time pattern</Shorttimepattern>
+    <Longtimepattern>Long time pattern</Longtimepattern>
+    <Universalfulldatetimepattern>Universal full date/time pattern</Universalfulldatetimepattern>
+    <Yearmonthpattern>Year month pattern</Yearmonthpattern>
+    <Year-Month-Day>Year-Month-Day</Year-Month-Day>
+    <Day-Month-Year>Day-Month-Year</Day-Month-Year>
+    <MonthNameDayYearDayName>Month Name Day, Year(Day Name)</MonthNameDayYearDayName>
+    <Simple>Simple</Simple>
+    <Modalbox>Modalbox</Modalbox>
+    <All>--All--</All>
+	
+	<Button>Button</Button>
+      <Image>Image</Image>
+      <Link>Link</Link>
+
+      <NewFirst>New First</NewFirst>
+      <OldFirst>Old First</OldFirst>
+      <AlphaBaticallyASC>Alphabeticaly ASC</AlphaBaticallyASC>
+      <AlphaBaticallyDESC>Alphabeticaly DESC</AlphaBaticallyDESC>
+  </SageFrameLists>
+  <ModulesPanes>
+    <navigationsdf>navigatisfdsdon</navigationsdf>
+  </ModulesPanes>
+  <UserStatisticShortBy>
+    <UserName>Username</UserName>
+    <LoginTime>Login Time</LoginTime>
+  </UserStatisticShortBy>
+</SageFrameMessage>
+

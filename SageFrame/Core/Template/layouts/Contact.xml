@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><layout name="layout_all">
+  <section name="sfHeader">
+    <placeholder name="headers" width="20,50" class="header">logo,navigation,loginstatus</placeholder>
+    <placeholder name="banner" wrapinner="0">banner</placeholder>
+  </section>
+  <section name="sfContent">
+    <placeholder name="middlemaincurrent" mode="fixed">contact,map</placeholder>
+  </section>
+  <section name="sfFooter">
+    <placeholder name="copyright">copyright</placeholder>
+  </section>
+</layout>

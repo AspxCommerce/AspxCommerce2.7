@@ -1,0 +1,17 @@
+﻿<sageframe type="Package" version="1.0.0.1">
+  <packages>
+    <package name="Module.1.0.0.1" type="Core" version="1.0.0.1">
+      <friendlyname>Module</friendlyname>
+      <description>SageFrame® - http://www.sageframe.com  Copyright (c) 2010-2011 by SageFrame</description>
+      <owner>
+        <name></name>
+        <organization>SageFrame</organization>
+        <url />
+        <email />
+      </owner>
+      <license>SageFrame® - http://www.sageframe.com  Copyright (c) 2010-2011 by SageFrame</license>
+      <releasenotes>This is test release notes for Language Package Installer</releasenotes>
+    </package>
+  </packages>
+</sageframe>
+    

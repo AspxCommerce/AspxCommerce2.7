@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+        $(".sfLocale").localize({
+            moduleKey: AspxTemplateLocale
+        }); 
+    </script>
+    <title>scriptResultGrid3</title>
+</head>
+<body>
+    <div>
+        <div class="cssClassGrid3Box">
+            <div class="cssClassGrid3BoxInfo">
+                <h2>
+                    <a href="${aspxRedirectPath}item/${sku}${pageExtension}">${name}</a></h2>
+                <div class="cssClassGrid3Picture">
+                    <a href="${aspxRedirectPath}item/${sku}${pageExtension}">
+                        <img alt='${alternateText}' class="lazy" data-original='${imagePath}' src='${loaderpath}' title='${name}' />
+                    </a>
+                </div>
+                <div class="cssClassGrid3PriceBox">
+                    <div class="cssClassGrid3Price">
+                        <p class="cssClassGrid3OffPrice">
+                            <span class="cssRegularPrice_${itemID} sfLocale">Price : </span><span class="cssRegularPrice_${itemID} cssClassFormatCurrency">${(listPrice*rate).toFixed(2)}</span><br/><span
+                                class="cssClassGrid3RealPrice"> <span class="cssClassFormatCurrency">${(price*rate).toFixed(2)}</span></span>
+                        </p>
+                    </div>
+                    <div class="cssClassclear">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

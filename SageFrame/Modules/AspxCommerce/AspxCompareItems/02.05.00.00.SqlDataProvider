@@ -1,0 +1,1945 @@
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_IsActive_1]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_IsActive_1]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItems_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] DROP CONSTRAINT [DF_Aspx_CompareItems_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_AddedOn]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_CompareItemSettings_UpdatedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] DROP CONSTRAINT [DF_Aspx_CompareItemSettings_UpdatedOn]
+END
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItemDetails]    Script Date: 03/10/2014 11:16:59 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_CompareItemDetails]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_CompareItemDetails]
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItems]    Script Date: 03/10/2014 11:16:59 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_CompareItems]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_CompareItems]
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItemSettings]    Script Date: 03/10/2014 11:16:59 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_CompareItemSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_CompareItemSettings]
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItemDetails]    Script Date: 03/10/2014 11:16:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_CompareItemDetails](
+	[CompareItemDetailsID] [int] IDENTITY(1,1) NOT NULL,
+	[CompareItemID] [int] NOT NULL,
+	[CostVariantValueIDs] [nvarchar](256) NULL,
+	[Username] [nvarchar](256) NULL,
+	[CompareFromIP] [nvarchar](50) NULL,
+	[CompareFromCountry] [nvarchar](50) NULL,
+	[CompareDate] [datetime] NULL,
+	[SessionCode] [nvarchar](256) NULL,
+	[StoreID] [int] NOT NULL,
+	[PortalID] [int] NOT NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_CompareItemDetails_1] PRIMARY KEY CLUSTERED 
+(
+	[CompareItemDetailsID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItems]    Script Date: 03/10/2014 11:16:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_CompareItems](
+	[CompareItemID] [int] IDENTITY(1,1) NOT NULL,
+	[CostVariantValueIDs] [nvarchar](250) NULL,
+	[ItemID] [int] NULL,
+ CONSTRAINT [PK_Aspx_CompareItemDetails] PRIMARY KEY CLUSTERED 
+(
+	[CompareItemID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_CompareItemSettings]    Script Date: 03/10/2014 11:16:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_CompareItemSettings](
+	[SettingID] [int] IDENTITY(1,1) NOT NULL,
+	[SettingKeys] [nvarchar](256) NOT NULL,
+	[SettingValues] [nvarchar](256) NOT NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL
+) ON [PRIMARY]
+
+GO
+
+SET IDENTITY_INSERT [dbo].[Aspx_CompareItemSettings] ON
+INSERT [dbo].[Aspx_CompareItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (1, N'IsEnableCompareItem', N'true', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500B69D40 AS DateTime), CAST(0x0000A2B500B69D40 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_CompareItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (2, N'CompareItemCount', N'3', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500B6C2C0 AS DateTime), CAST(0x0000A2B500B6C2C0 AS DateTime), NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_CompareItemSettings] ([SettingID], [SettingKeys], [SettingValues], [CultureName], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (3, N'CompareDetailsPage', N'Compare Item List', N'en-US', 0, 1, 1, 0, 0, CAST(0x0000A2B500C56622 AS DateTime), CAST(0x0000A2B500C56622 AS DateTime), NULL, NULL, NULL, NULL)
+SET IDENTITY_INSERT [dbo].[Aspx_CompareItemSettings] OFF
+
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] ADD  CONSTRAINT [DF_Aspx_CompareItems_IsActive]  DEFAULT ((1)) FOR [SessionCode]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] ADD  CONSTRAINT [DF_Aspx_CompareItems_IsActive_1]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] ADD  CONSTRAINT [DF_Aspx_CompareItems_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] ADD  CONSTRAINT [DF_Aspx_CompareItems_IsModified]  DEFAULT ((0)) FOR [IsModified]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemDetails] ADD  CONSTRAINT [DF_Aspx_CompareItems_AddedOn]  DEFAULT (getdate()) FOR [AddedOn]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] ADD  CONSTRAINT [DF_Aspx_CompareItemSettings_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] ADD  CONSTRAINT [DF_Aspx_CompareItemSettings_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] ADD  CONSTRAINT [DF_Aspx_CompareItemSettings_IsModified]  DEFAULT ((0)) FOR [IsModified]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] ADD  CONSTRAINT [DF_Aspx_CompareItemSettings_AddedOn]  DEFAULT (getdate()) FOR [AddedOn]
+GO
+
+ALTER TABLE [dbo].[Aspx_CompareItemSettings] ADD  CONSTRAINT [DF_Aspx_CompareItemSettings_UpdatedOn]  DEFAULT (getdate()) FOR [UpdatedOn]
+GO
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CompareItemSettingGet]    Script Date: 03/10/2014 16:20:07 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_CompareItemSettingGet]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_CompareItemSettingGet]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CompareItemSettingsUpdate]    Script Date: 03/10/2014 16:20:07 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_CompareItemSettingsUpdate]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_CompareItemSettingsUpdate]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CompareItemSettingGet]    Script Date: 03/10/2014 16:20:07 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		<Rajkumar Gupta>
+-- =============================================
+--[usp_Aspx_CompareItemSettingGet] 0,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_CompareItemSettingGet] (
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (
+			NOT EXISTS (
+				SELECT SettingID
+				FROM [dbo].[Aspx_CompareItemSettings]
+				WHERE StoreID = @StoreID
+					AND PortalID = @PortalID
+				)
+			)
+	BEGIN
+		INSERT INTO [Aspx_CompareItemSettings] (
+			SettingKeys
+			,SettingValues
+			,StoreID
+			,PortalID
+			,CultureName
+			)
+		SELECT SettingKeys
+			,SettingValues
+			,@StoreID
+			,@PortalID
+			,@CultureName
+		FROM [dbo].[Aspx_CompareItemSettings]
+		WHERE PortalID = 1
+			AND StoreID = 0
+	END;
+
+	WITH SettingCTE
+	AS (
+		SELECT SettingKeys
+			,SettingValues
+		FROM [dbo].[Aspx_CompareItemSettings]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		)
+		,CompareItemSettings
+	AS (
+		SELECT *
+		FROM (
+			SELECT SettingValues
+				,CASE [SettingKeys]
+				    WHEN 'IsEnableCompareItem'
+						THEN 'IsEnableCompareItem'	
+					WHEN 'CompareItemCount'
+						THEN 'CompareItemCount'				
+					WHEN 'CompareDetailsPage'
+						THEN 'CompareDetailsPage'								
+					END AS SKey
+			FROM SettingCTE
+			) DataTable
+		pivot(max(SettingValues) FOR Skey IN (IsEnableCompareItem,CompareItemCount
+		,CompareDetailsPage)) PivotTable
+		)
+	SELECT *
+	FROM CompareItemSettings
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CompareItemSettingsUpdate]    Script Date: 03/10/2014 16:20:07 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Rajkumar Gupta>
+-- =============================================
+--[dbo].[usp_Aspx_CompareItemSettingsUpdate]1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_CompareItemSettingsUpdate] (
+	@StoreID INT
+	,@PortalID INT
+	,@SettingKeys NVARCHAR(max)
+	,@SettingValues NVARCHAR(max)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @tblKey TABLE (
+		RowNum INT identity(1, 1)
+		,SettingKey NVARCHAR(500)
+		)
+	DECLARE @tblValue TABLE (
+		RowNum INT identity(1, 1)
+		,SettingValue NVARCHAR(500)
+		)
+
+	INSERT INTO @tblKey
+	SELECT rtrim(ltrim(items))
+	FROM split(@SettingKeys, '*')
+
+	INSERT INTO @tblValue
+	SELECT rtrim(ltrim(items))
+	FROM split(@SettingValues, '*')
+
+	DECLARE @counter INT
+		,@RowCount INT
+
+	SELECT @RowCount = count(RowNum)
+	FROM @tblKey
+
+	SET @counter = 1
+
+	WHILE (
+			@counter <= @RowCount
+			OR @counter = 1
+			)
+	BEGIN
+		DECLARE @key NVARCHAR(2000)
+			,@value NVARCHAR(2000)
+
+		SELECT @key = SettingKey
+		FROM @tblKey
+		WHERE RowNum = @counter
+
+		SELECT @value = SettingValue
+		FROM @tblValue
+		WHERE RowNum = @counter
+
+		UPDATE [dbo].[Aspx_CompareItemSettings]
+		SET SettingValues = @value
+		WHERE SettingKeys = @key
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+
+		SET @counter = @counter + 1
+	END
+END
+
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddComparedItems]    Script Date: 03/13/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AddComparedItems]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AddComparedItems]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddItemsToCompare]    Script Date: 03/13/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_AddItemsToCompare]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_AddItemsToCompare]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CheckCompareItems]    Script Date: 03/13/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_CheckCompareItems]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_CheckCompareItems]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ClearCompareItems]    Script Date: 03/13/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_ClearCompareItems]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_ClearCompareItems]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_DeleteCompareItem]    Script Date: 03/13/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_DeleteCompareItem]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_DeleteCompareItem]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareItemsCount]    Script Date: 03/13/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetCompareItemsCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetCompareItemsCount]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareItemsList]    Script Date: 03/13/2014 11:45:34 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetCompareItemsList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetCompareItemsList]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareList]    Script Date: 03/13/2014 11:45:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetCompareList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetCompareList]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemCompareList]    Script Date: 03/13/2014 11:45:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemCompareList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemCompareList]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemDetailsForCompare]    Script Date: 03/13/2014 11:45:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetItemDetailsForCompare]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetItemDetailsForCompare]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRecentlyComparedItemList]    Script Date: 03/13/2014 11:45:35 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetRecentlyComparedItemList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetRecentlyComparedItemList]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddComparedItems]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		niranjan humagain
+-- Modified By: Kamal Khanal	
+-- Create date: 28-feb,2011
+-- Description:	Recently compare items
+-- usp_Aspx_AddComparedItems  38,'5@12@8',1,1,'rajkumar'
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_AddComparedItems]
+	-- Add the parameters for the stored procedure here
+	(
+	@ItemIDs NVARCHAR(1000)
+	,@CostVarinatIds NVARCHAR(256)
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @tblIDs TABLE (
+		RowNum INT identity(1, 1)
+		,IDs NVARCHAR(1000)
+		)
+	DECLARE @tblVariants TABLE (
+		RowNum INT identity(1, 1)
+		,CostVariantID NVARCHAR(1000)
+		)
+
+	INSERT INTO @tblIDs (IDs)
+	SELECT rtrim(ltrim(items))
+	FROM split(@ItemIDs, '#')
+
+	INSERT INTO @tblVariants (CostVariantID)
+	SELECT rtrim(ltrim(items))
+	FROM split(@CostVarinatIds, '#')
+
+	DECLARE @KeyCount INT
+		,@ValueCount INT
+		,@counterID INT
+
+	SELECT @KeyCount = count(RowNum)
+	FROM @tblIDs
+
+	SET @counterID = 1
+
+	WHILE (
+			@counterID <= @KeyCount
+			OR @counterID = 1
+			)
+	BEGIN
+		DECLARE @key NVARCHAR(1000)
+		DECLARE @variantKey NVARCHAR(1000)
+
+		SELECT @Key = IDs
+		FROM @tblIDs
+		WHERE RowNum = @counterID
+
+		SELECT @variantKey = CostVariantID
+		FROM @tblVariants
+		WHERE RowNum = @counterID
+
+		IF (
+				@variantKey = '0'
+				OR @variantKey = ''
+				)
+			SET @variantKey = NULL
+		ELSE
+			SET @variantKey = (
+					SELECT [dbo].[ufn_CheckVariantValues](@Key, @variantKey, @StoreID, @PortalID, 0)
+					)
+
+		IF (
+				NOT EXISTS (
+					SELECT RecentlyComparedItemID
+					FROM Aspx_RecentlyComparedItems
+					WHERE ItemID = @Key
+						AND(CostVariantItemID = @variantKey OR CostVariantItemID IS NULL)
+						AND StoreID = @StoreID
+						AND PortalID = @PortalID
+						AND AddedBy = @UserName
+					)
+				)
+		BEGIN
+			INSERT INTO Aspx_RecentlyComparedItems (
+				ItemID
+				,CostVariantItemID
+				,ComparedDate
+				,StoreID
+				,PortalID
+				,AddedBy
+				,AddedOn
+				)
+			VALUES (
+				@Key
+				,@variantKey
+				,getdate()
+				,@StoreID
+				,@PortalID
+				,@UserName
+				,getdate()
+				)
+		END
+		ELSE
+		BEGIN
+			UPDATE Aspx_RecentlyComparedItems
+			SET ComparedDate = getdate()
+				,IsModified = 1
+				,UpdatedOn = getdate()
+			WHERE ItemID = @Key
+				AND CostVariantItemID = @variantKey
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+		END
+		SET @counterID = @counterID + 1
+	END
+END
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_AddItemsToCompare]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Niranjan Humagain, Kamal Khanal	
+-- Create date: 2011-02-19
+-- Modified by: <Jainul Khan>
+-- Modified date: <2013-02-24>
+-- Description:	Add Items to compare
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_AddItemsToCompare]
+	-- Add the parameters for the stored procedure here
+	@CompareItemID INT OUTPUT
+	,@ItemID INT
+	,@CostVariantValueIDs NVARCHAR(250) = NULL
+	,@UserName NVARCHAR(256)
+	,@IP NVARCHAR(200)
+	,@CountryName NVARCHAR(100)
+	,@SessionCode NVARCHAR(256)
+	,@StoreID INT
+	,@PortalID INT
+	,@CompareAddedItemID INT OUTPUT
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@CompareItemID = 0)
+	BEGIN
+		IF (
+				@CostVariantValueIDs = '0'
+				OR @CostVariantValueIDs = ''
+				)
+			SET @CostVariantValueIDs = '0'
+		ELSE
+			SET @CostVariantValueIDs = (
+					SELECT [dbo].[ufn_CheckVariantValues](@ItemID, @CostVariantValueIDs, @StoreID, @PortalID, 0)
+					)
+
+		INSERT INTO Aspx_CompareItems (
+			ItemID
+			,CostVariantValueIDs
+			)
+		VALUES (
+			@ItemID
+			,@CostVariantValueIDs
+			)
+
+		SET @CompareItemID = scope_identity()
+		SET @CompareAddedItemID = @CompareItemID
+
+		INSERT INTO [dbo].[Aspx_CompareItemDetails] (
+			CompareItemID
+			,UserName
+			,CostVariantValueIDs
+			,CompareFromIP
+			,CompareFromCountry
+			,CompareDate
+			,SessionCode
+			,StoreID
+			,PortalID
+			)
+		VALUES (
+			@CompareItemID
+			,@UserName
+			,@CostVariantValueIDs
+			,@IP
+			,@CountryName
+			,getdate()
+			,@SessionCode
+			,@StoreID
+			,@PortalID
+			)
+	END
+END
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_CheckCompareItems]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Niranjan Humagain
+-- Modified By: Kamal Khanal
+-- Create date: <Create Date,,>
+-- Description: 
+-- =============================================
+-- [dbo].[usp_Aspx_CheckCompareItems] 100,'5@1',1, 1, 'sujpsinm34gpkobgsvh5m3i5', 'superuser', 0
+CREATE PROCEDURE [dbo].[usp_Aspx_CheckCompareItems]
+	-- Add the parameters for the stored procedure here
+	@ItemID INT
+	,@CostVariantValueIDs NVARCHAR(256)
+	,@StoreID INT
+	,@PortalID INT
+	,@SessionCode NVARCHAR(256)
+	,@UserName NVARCHAR(256)
+	,@IsExist BIT OUTPUT
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (
+			EXISTS (
+				SELECT ItemID
+				FROM [dbo].[Aspx_CompareItems] ci
+				INNER JOIN [dbo].[Aspx_CompareItemDetails] cid ON ci.CompareItemID = cid.CompareItemID
+				WHERE ci.ItemID = @ItemID
+					AND cid.StoreID = @StoreID
+					AND cid.PortalID = @PortalID
+					AND cid.SessionCode = @SessionCode
+					AND cid.Username = @UserName
+					AND cid.CostVariantValueIDs =[dbo].[ufn_CheckVariantValues](@ItemID,@CostVariantValueIDs,@StoreID,@PortalID,0) --@CostVariantValueIDs
+				)
+			)
+		SET @IsExist = 1
+	ELSE
+		SET @IsExist = 0
+
+	PRINT @IsExist
+END
+
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_ClearCompareItems]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		niranjan humagain
+-- Create date: <Create Date,,>
+-- Modified by: <Jainul Khan>
+-- Modified date: <2013-02-24>
+-- Description:	clear all compare items
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_ClearCompareItems]
+	-- Add the parameters for the stored procedure here
+	@StoreID INT
+	,@PortalID INT
+	,@SessionCode NVARCHAR(256)
+	,@UserName NVARCHAR(256)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DELETE
+	FROM [dbo].[Aspx_CompareItems]
+	WHERE CompareItemID IN (
+			SELECT CompareItemID
+			FROM [dbo].[Aspx_CompareItemDetails]
+			WHERE StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND SessionCode = @SessionCode
+				AND UserName = @UserName
+			)
+
+	DELETE [dbo].[Aspx_CompareItemDetails]
+	WHERE StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND SessionCode = @SessionCode
+		AND UserName = @UserName
+END
+
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_DeleteCompareItem]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		niranjan humagain, Kamal Khanal
+-- Create date: <Create Date,,>
+-- Description:	delete compare items
+-- =============================================
+--[dbo].[usp_Aspx_DeleteCompareItem]4,2,1,1,'admin'
+CREATE PROCEDURE [dbo].[usp_Aspx_DeleteCompareItem]
+	-- Add the parameters for the stored procedure here
+	@CompareItemID INT
+	,@SessionCode NVARCHAR(256)
+	,@PortalID INT
+	,@StoreID INT
+	,@UserName NVARCHAR(256)
+AS
+BEGIN
+	SET NOCOUNT ON
+
+	DELETE
+	FROM [dbo].[Aspx_CompareItems]
+	WHERE CompareItemID = @CompareItemID
+
+	DELETE
+	FROM [dbo].[Aspx_CompareItemDetails]
+	WHERE CompareItemID = @CompareItemID
+		AND SessionCode = @SessionCode
+		AND PortalID = @PortalID
+		AND StoreID = @StoreID
+		AND UserName = @UserName
+END
+
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareItemsCount]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Modified by: <Jainul Khan>
+-- Modified date: <2013-02-24>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_GetCompareItemsCount] @StoreID INT
+	,@PortalID INT
+	,@SessionCode NVARCHAR(256)
+	,@UserName NVARCHAR(256)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT COUNT(CompareItemID)
+	FROM [dbo].[Aspx_CompareItemDetails]
+	WHERE StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND SessionCode = @SessionCode
+		AND UserName = @UserName
+END
+
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareItemsList]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:  Nirajan Humagain,Kamal Khanal
+-- Create date: 2011-02-21
+-- Modified by: <Jainul Khan>
+-- Modified date: <2013-02-25>
+-- Description: Compare Items Management
+-- =============================================
+--[dbo].[usp_Aspx_GetCompareItemsList] 'lvc2iqmiabscee451pp3fsuw',1,1,'superuser','en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetCompareItemsList]
+	-- Add the parameters for the stored procedure here
+	@SessionCode NVARCHAR(256)
+	,@PortalID INT
+	,@StoreID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	-- Insert statements for procedure here
+	SELECT *
+	FROM (
+		SELECT ci.CompareItemID
+			,i.ItemID
+			,cid.CostVariantValueIDs AS CostVariantValueID
+			,ISNULL(dbo.ufn_CostVariantValue(cid.CostVariantValueIDs, i.ItemID, @StoreID, @PortalID, @CultureName), '') AS ItemCostVariantValue
+			,iid.NAME AS ItemName
+			,i.SKU
+			,[dbo].[ufn_GetCostVariantItemImagePath](@StoreID, @PortalID, i.ItemID, cid.CostVariantValueIDs) AS ImagePath
+		FROM [dbo].[Aspx_CompareItems] ci
+		INNER JOIN [dbo].[Aspx_CompareItemDetails] cid ON cid.CompareItemID = ci.CompareItemID
+		INNER JOIN [dbo].[Aspx_Items] i ON i.ItemID = ci.ItemID
+		INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON i.ItemID = iid.ItemID
+			AND iid.CultureName = @CultureName
+			AND i.Visibility = 1
+		WHERE cid.SessionCode = @SessionCode
+			AND cid.StoreID = @StoreID
+			AND cid.PortalID = @PortalID
+			AND cid.UserName = @UserName
+			AND i.IsActive = 1
+			AND i.IsDeleted = 0
+			AND (
+				(
+					i.HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+		) AS CompareList
+	WHERE (
+			CostVariantValueID = '0'
+			AND ItemCostVariantValue = ''
+			)
+		OR (
+			CostVariantValueID != '0'
+			AND ItemCostVariantValue != ''
+			)
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetCompareList]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		Kamal Khanal, Bhuvan 
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+--usp_Aspx_GetCompareList  '38#41#30','5@12@8#0#0',1,1,'superuser','en-US'
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_GetCompareList]
+	-- Add the parameters for the stored procedure here
+	(
+	@ItemIDs NVARCHAR(500)
+	,@CostVariantaValueIDS NVARCHAR(256)
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	CREATE TABLE #tblFinally (
+		ItemID INT
+		,CostVariantItemID NVARCHAR(256)
+		,NAME NVARCHAR(256)
+		,SKU NVARCHAR(256)
+		,AttributeSetID INT
+		,ItemTypeID INT
+		,HidePrice BIT
+		,HideInRSSFeed BIT
+		,HideToAnonymous BIT
+		,IsOutOfStock BIT
+		,BaseImage NVARCHAR(2000)
+		,[AlternateText] NVARCHAR(256)
+		,[Price] DECIMAL(16, 4)
+		,[ListPrice] DECIMAL(16, 4)
+		)
+
+	CREATE TABLE #tbltemp1 (
+		RowNum INT identity(1, 1)
+		,costVariantaValueID NVARCHAR(256)
+		)
+
+	INSERT INTO #tbltemp1
+	SELECT RTRIM(ltrim(items))
+	FROM Split(@CostVariantaValueIDS, '#')
+
+	CREATE TABLE #tbltemp2 (
+		RowNum INT identity(1, 1)
+		,ItemID INT
+		)
+
+	INSERT INTO #tbltemp2
+	SELECT RTRIM(ltrim(items))
+	FROM Split(@ItemIDs, '#')
+
+	DECLARE @counter INT
+		,@rowTotal INT
+
+	SELECT @rowTotal = COUNT(RowNum)
+	FROM #tbltemp1
+
+	--CREATE TABLE #tbltemp (
+	--	RowNum INT identity(1, 1)
+	--	,ItemID INT
+	--	,AttributeID INT
+	--	,AttributeValue NVARCHAR(max)
+	--	)
+	DECLARE @pos INT
+		,@nextpos INT
+		,@valuelen INT
+		,@ID INT
+
+	SELECT @pos = 0
+		,@nextpos = 1
+
+	WHILE @nextpos > 0
+	BEGIN
+		SELECT @nextpos = charindex('#', @ItemIDs, @pos + 1)
+
+		SELECT @valuelen = CASE 
+				WHEN @nextpos > 0
+					THEN @nextpos
+				ELSE len(@ItemIDs) + 1
+				END - @pos - 1
+
+		SET @ID = substring(@ItemIDs, @pos + 1, @valuelen)
+
+		SELECT @pos = @nextpos
+	END
+
+	--------------------------------------------------
+	SET @counter = 1
+
+	WHILE (
+			@counter <= @rowTotal
+			OR @counter = 1
+			)
+	BEGIN
+		DECLARE @checkvariant NVARCHAR(256)
+			,@itemID INT
+		DECLARE @costVariantPrice DECIMAL(16, 4)
+		DECLARE @newPrice DECIMAL(16, 4)
+
+		SELECT @checkvariant = costVariantaValueID
+		FROM #tbltemp1
+		WHERE RowNum = @counter
+
+		SELECT @itemID = ItemID
+		FROM #tbltemp2
+		WHERE RowNum = @counter
+
+		DECLARE @IsOutOfStock BIT
+		DECLARE @costVariantQty INT
+
+		IF (
+				@checkvariant = '0'
+				OR @checkvariant = ''
+				)
+			SET @checkvariant = '0'
+		ELSE
+			SET @checkvariant = (
+					SELECT [dbo].[ufn_CheckVariantValues](@ItemID, @checkvariant, @StoreID, @PortalID, 0)
+					)
+
+		SELECT @newPrice = dbo.[ufn_CatalogPriceRule](@ItemID, @StoreID, @PortalID, @UserName, @CultureName)
+
+		IF (@checkvariant != '')
+		BEGIN
+			SELECT @costVariantPrice = [dbo].[ufn_CalculateCostVariantValuePrice](@checkvariant, @ItemID, @StoreID, @PortalID, @newPrice);
+				--SELECT @costVariantPrice
+		END
+		ELSE
+		BEGIN
+			SET @costVariantPrice = @newPrice
+		END
+
+		INSERT INTO #tblFinally
+		SELECT i.ItemID
+			,@checkvariant AS CostVariantItemID
+			,iid.NAME
+			,i.SKU
+			,i.AttributeSetID
+			,i.ItemTypeID
+			,i.HidePrice
+			,i.HideInRSSFeed
+			,i.HideToAnonymous
+			,Isnull(@IsOutOfStock, dbo.ufn_CheckOutOfStock(i.ItemID, @StoreID, @PortalID)) AS IsOutOfStock
+			,[dbo].[ufn_GetCostVariantItemImagePath](@StoreID, @PortalID, i.ItemID, @checkvariant) AS BaseImage
+			,iia.[AlternateText]
+			,@costVariantPrice AS Price
+			,CAST((i.ListPrice / ISNULL(c.ConversionRate, 1)) AS DECIMAL(16, 4)) AS ListPrice
+		FROM Aspx_items i
+		INNER JOIN dbo.Aspx_Currency c ON i.CurrencyCode = c.CurrencyCode
+			AND c.StoreID = @StoreID
+			AND c.PortalID = @PortalID
+			AND c.IsDeleted = 0
+			AND c.IsActive = 1
+		INNER JOIN dbo.Aspx_ItemInformationDetails iid ON iid.ItemID = i.ItemID
+			AND iid.CultureName = @CultureName
+		INNER JOIN Aspx_ItemType it ON i.ItemTypeID = it.ItemTypeID
+		JOIN Aspx_AttributeSet ias ON i.AttributeSetID = ias.AttributeSetID
+		LEFT JOIN [dbo].[Aspx_ItemImages] ii ON i.ItemID = ii.ItemID
+			AND ii.ImageTypeID = 1
+			AND ii.IsActive = 1
+		LEFT JOIN [dbo].[Aspx_ItemImagesAlias] iia ON ii.ItemImageID = iia.ItemImageID
+			AND iia.CultureName = @CultureName
+		WHERE i.StoreID = @StoreID
+			AND i.PortalID = @PortalID
+			AND i.IsDeleted = 0
+			AND i.IsActive = 1
+			AND (
+				(
+					i.HideToAnonymous = 0
+					AND @UserName = 'anonymoususer'
+					)
+				OR @UserName != 'anonymoususer'
+				)
+			AND i.ItemID = @itemID
+
+		SET @counter = @counter + 1
+	END
+
+	SELECT *
+	FROM #tblFinally
+
+	-----------------------------------------------------	
+	DROP TABLE #tblFinally
+
+	DROP TABLE #tbltemp1
+
+	DROP TABLE #tbltemp2
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemCompareList]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		Bhuwan, Kamal Khanal
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+--  [dbo].[usp_Aspx_GetItemCompareList] '14#14#14',1,'1@4@7#2@5@8#3@6@9',1,'superuser','en-US'
+-- =============================================
+--SELECT [dbo].[ufn_Aspx_GetCostVariantQuantity] ('1',19,1,1)
+CREATE PROCEDURE [dbo].[usp_Aspx_GetItemCompareList]
+	-- Add the parameters for the stored procedure here
+	(
+	@ItemIDs NVARCHAR(500)
+	,@StoreID NVARCHAR(50)
+	,@CostVariantValueIDs NVARCHAR(250) = NULL
+	,@PortalID NVARCHAR(50)
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	CREATE TABLE #tt3 (
+		rownum INT identity(1, 1)
+		,ItemID INT
+		,AttributeID INT
+		,Value NVARCHAR(max)
+		)
+
+	CREATE TABLE #tt4 (
+		ItemID INT
+		,AttributeID INT
+		,Value NVARCHAR(max)
+		)
+
+	CREATE TABLE #finalTable (
+		ItemID INT
+		,AttributeID INT
+		,InputTypeID INT
+		,IsOutOfStock BIT
+		,AttributeName NVARCHAR(256)
+		,AttributeValue NVARCHAR(max)
+		)
+
+	CREATE TABLE #tbltempitem (
+		RowNum INT identity(1, 1)
+		,ItemID INT
+		,AttributeID INT
+		,AttributeValue NVARCHAR(max)
+		)
+
+	CREATE TABLE #tbltempVarName (
+		RowNum INT identity(1, 1)
+		,CostVariantValueID INT
+		)
+
+	CREATE TABLE #tbltemp2 (
+		RowNum INT identity(1, 1)
+		,AttributeID INT
+		,InputTypeID INT
+		,ItemID INT
+		,AttributeName NVARCHAR(200)
+		)
+
+	CREATE TABLE #tbltemp (
+		RowNum INT identity(1, 1)
+		,ItemID INT
+		)
+
+	INSERT INTO #tbltemp
+	SELECT RTRIM(LTRIM(items))
+	FROM Split(@ItemIDs, '#')
+
+	CREATE TABLE #tbltemp1 (
+		RowNum INT identity(1, 1)
+		,CostVarinatValurID NVARCHAR(256)
+		)
+
+	INSERT INTO #tbltemp1
+	SELECT RTRIM(LTRIM(items))
+	FROM Split(@CostVariantValueIDs, '#')
+
+	DECLARE @rowTotal INT
+		,@rowTotalCV INT
+		,@counter INT
+
+	SELECT @rowTotal = COUNT(RowNum)
+	FROM #tbltemp
+
+	SELECT @rowTotalCV = COUNT(RowNum)
+	FROM #tbltemp1
+
+	SET @counter = 1
+
+	WHILE (
+			@counter <= @rowTotal
+			OR @counter = 1
+			)
+	BEGIN
+		DECLARE @ID INT
+		DECLARE @costVariantPrice DECIMAL(16, 4)
+		DECLARE @newPrice DECIMAL(16, 4)
+
+		SELECT @ID = ItemID
+		FROM #tbltemp
+		WHERE RowNum = @counter
+
+		DECLARE @cvID NVARCHAR(256)
+
+		SELECT @cvID = CostVarinatValurID
+		FROM #tbltemp1
+		WHERE RowNum = @counter
+
+		SET @cvID = (
+				SELECT [dbo].[ufn_CheckVariantValues](@ID, @cvID, @StoreID, @PortalID, 0)
+				)
+
+		SELECT @newPrice = dbo.[ufn_CatalogPriceRule](@ID, @StoreID, @PortalID, @UserName, @CultureName)
+
+		IF (
+				@cvID != ''
+				OR @cvID IS NOT NULL
+				OR @cvID != 0
+				)
+		BEGIN
+			DECLARE @qty1 NVARCHAR(50)
+
+			SELECT @costVariantPrice = [dbo].[ufn_CalculateCostVariantValuePrice](@cvID, @ID, @StoreID, @PortalID, @newPrice);
+
+			SET @qty1 = (
+					SELECT i.Quantity
+					FROM dbo.Aspx_ItemInformationDetails tt
+					INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+					WHERE i.ItemID = @ID
+						AND tt.StoreID = @StoreID
+						AND tt.PortalID = @PortalID
+						AND tt.CultureName = @CultureName
+					)
+
+			IF (@qty1 > 0)
+			BEGIN
+				SET @qty1 = 'Yes'
+			END
+			ELSE
+			BEGIN
+				SET @qty1 = 'No'
+			END
+
+			INSERT INTO #tbltemp2
+			SELECT a.AttributeID
+				,a.InputTypeID
+				,@ID
+				,aas.AliasName AS AttributeName
+			FROM dbo.Aspx_attributes a
+			INNER JOIN dbo.Aspx_AttributeAlias aas ON aas.AttributeID = a.AttributeID
+				AND aas.CultureName = @CultureName
+			WHERE a.IsDeleted = 0
+				AND a.ShowInComparison = 1
+				AND (
+					(
+						a.StoreID = @StoreID
+						AND a.PortalID = @PortalID
+						)
+					OR a.IsSystemUsed = 1
+					)
+				AND a.IsActive = 1
+			
+			UNION ALL
+			
+			SELECT 0 AS AttributeID
+				,0 AS InputTypeID
+				,@ID
+				,'Variants' AS AttributeName
+
+			INSERT INTO #tbltempitem
+			SELECT COALESCE(iavnvarchar.ItemID, tt.ItemID) AS ItemID
+				,ISNULL(iavnvarchar.AttributeID, 1) AS AttributeID
+				,COALESCE(iavnvarchar.AttributeValue, tt.NAME) AS AttributeValue
+			FROM dbo.Aspx_itemAttributesValue_Nvarchar iavnvarchar
+			RIGHT JOIN dbo.Aspx_ItemInformationDetails tt ON tt.ItemID = iavnvarchar.ItemID
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE iavnvarchar.ItemID = @ID
+				AND iavnvarchar.StoreID = @StoreID
+				AND iavnvarchar.PortalID = @PortalID
+				AND iavnvarchar.CultureName = @CultureName
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT tt.ItemID
+				,2 AS AttributeID
+				,tt.[Description] AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE tt.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT tt.ItemID
+				,3 AS AttributeID
+				,tt.[ShortDescription] AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE tt.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+
+			--  [dbo].[usp_Aspx_GetItemCompareList] '15#2',1,'0',1,'superuser','en-US'
+			INSERT INTO #tbltempitem
+			SELECT i.ItemID
+				,8 AS AttributeID
+				,@costVariantPrice
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT i.ItemID
+				,13 AS AttributeID
+				,i.ListPrice AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+
+			INSERT INTO #tbltempitem
+			SELECT i.ItemID
+				,4 AS AttributeID
+				,i.SKU AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT i.ItemID
+				,15 AS AttributeID
+				,@qty1
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT i.ItemID
+				,26 AS AttributeID
+				,CASE i.IsFeatured
+					WHEN 0
+						THEN 'No'
+					WHEN 1
+						THEN 'Yes'
+					END AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT i.ItemID
+				,29 AS AttributeID
+				,CASE i.IsSpecial
+					WHEN 0
+						THEN 'No'
+					WHEN 1
+						THEN 'Yes'
+					END AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+
+			INSERT INTO #tbltempVarName
+			SELECT RTRIM(LTRIM(items))
+			FROM dbo.Split(@cvID, '@')
+
+			DECLARE @costVariantValue NVARCHAR(256)
+
+			SET @costVariantValue = NULL
+
+			DECLARE @rowTotalCVId INT
+			DECLARE @counter2 INT
+
+			SELECT @rowTotalCVId = COUNT(RowNum)
+			FROM #tbltempVarName
+
+			SET @counter2 = 1
+
+			WHILE (
+					@counter2 <= @rowTotalCVId
+					OR @counter2 = 1
+					)
+			BEGIN
+				PRINT @costVariantValue
+
+				SELECT @costVariantValue = COALESCE(@costVariantValue + ',', '') + CostVariantsValueName
+				FROM dbo.Aspx_CostVariantsValueAlias cvva
+				INNER JOIN dbo.Aspx_CostVariantsValue cvv ON cvv.CostVariantsValueID = cvva.CostVariantsValueID
+				WHERE cvva.CostVariantsValueID IN (
+						SELECT CostVariantValueID
+						FROM #tbltempVarName
+						WHERE RowNum = @counter2
+						)
+					AND CultureName = @CultureName
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+
+				PRINT @costVariantValue
+
+				SET @counter2 = @counter2 + 1
+			END
+
+			TRUNCATE TABLE #tbltempVarName
+
+			INSERT INTO #tbltempitem
+			SELECT @ID AS ItemID
+				,0 AS AttributeID
+				,@costVariantValue AS AttributeValue
+
+			SET @counter = @counter + 1
+
+			INSERT INTO #finalTable
+			SELECT DISTINCT ta.ItemID
+				,ta.AttributeID
+				,ta.InputTypeID
+				,dbo.ufn_CheckOutOfStock(ta.ItemID, @StoreID, @PortalID) AS IsOutOfStock
+				,CASE ta.AttributeName
+					WHEN 'Quantity'
+						THEN 'Is In Stock'
+					WHEN ta.AttributeName
+						THEN ta.AttributeName
+					END AS [AttributeName]
+				,ISNULL(ti.AttributeValue, '') AS AttributeValue
+			FROM #tbltemp2 ta
+			LEFT JOIN #tbltempitem ti ON ta.AttributeID = ti.AttributeID
+				AND ta.ItemID = ti.ItemID
+			ORDER BY ta.ItemID
+				,ta.AttributeID ASC
+
+			TRUNCATE TABLE #tbltempitem
+
+			TRUNCATE TABLE #tbltemp2
+		END
+		ELSE
+		BEGIN
+			DECLARE @qty NVARCHAR(50)
+
+			SET @costVariantPrice = @newPrice
+			SET @qty = (
+					SELECT i.Quantity
+					FROM dbo.Aspx_ItemInformationDetails tt
+					INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+					WHERE i.ItemID = @ID
+						AND tt.StoreID = @StoreID
+						AND tt.PortalID = @PortalID
+						AND tt.CultureName = @CultureName
+					)
+
+			IF (@qty > 0)
+			BEGIN
+				SET @qty = 'Yes'
+			END
+			ELSE
+			BEGIN
+				SET @qty = 'No'
+			END
+
+			INSERT INTO #tbltemp2
+			SELECT a.AttributeID
+				,a.InputTypeID
+				,@ID
+				,aas.AliasName AS AttributeName
+			FROM dbo.Aspx_attributes a
+			INNER JOIN dbo.Aspx_AttributeAlias aas ON aas.AttributeID = a.AttributeID
+				AND aas.CultureName = @CultureName
+			WHERE a.IsDeleted = 0
+				AND a.ShowInComparison = 1
+				AND (
+					(
+						a.StoreID = @StoreID
+						AND a.PortalID = @PortalID
+						)
+					OR a.IsSystemUsed = 1
+					)
+				AND a.IsActive = 1
+			
+			UNION ALL
+			
+			SELECT 0 AS AttributeID
+				,0 AS InputTypeID
+				,@ID
+				,'Variants' AS AttributeName
+
+			INSERT INTO #tbltempitem
+			SELECT COALESCE(iavnvarchar.ItemID, tt.ItemID) AS ItemID
+				,ISNULL(iavnvarchar.AttributeID, 1) AS AttributeID
+				,COALESCE(iavnvarchar.AttributeValue, tt.NAME) AS AttributeValue
+			FROM dbo.Aspx_itemAttributesValue_Nvarchar iavnvarchar
+			RIGHT JOIN dbo.Aspx_ItemInformationDetails tt ON tt.ItemID = iavnvarchar.ItemID
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE iavnvarchar.ItemID = @ID
+				AND iavnvarchar.StoreID = @StoreID
+				AND iavnvarchar.PortalID = @PortalID
+				AND iavnvarchar.CultureName = @CultureName
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT tt.ItemID
+				,2 AS AttributeID
+				,tt.[Description] AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE tt.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT tt.ItemID
+				,3 AS AttributeID
+				,tt.[ShortDescription] AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE tt.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+
+			--  [dbo].[usp_Aspx_GetItemCompareList] '15#2',1,'0',1,'superuser','en-US'
+			INSERT INTO #tbltempitem
+			SELECT i.ItemID
+				,8 AS AttributeID
+				,@costVariantPrice
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT i.ItemID
+				,13 AS AttributeID
+				,i.ListPrice AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+
+			INSERT INTO #tbltempitem
+			SELECT i.ItemID
+				,4 AS AttributeID
+				,i.SKU AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT i.ItemID
+				,15 AS AttributeID
+				,@qty
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT i.ItemID
+				,26 AS AttributeID
+				,CASE i.IsFeatured
+					WHEN 0
+						THEN 'No'
+					WHEN 1
+						THEN 'Yes'
+					END AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+			
+			UNION ALL
+			
+			SELECT i.ItemID
+				,29 AS AttributeID
+				,CASE i.IsSpecial
+					WHEN 0
+						THEN 'No'
+					WHEN 1
+						THEN 'Yes'
+					END AS AttributeValue
+			FROM dbo.Aspx_ItemInformationDetails tt
+			INNER JOIN dbo.Aspx_Items i ON i.ItemID = tt.ItemID
+			WHERE i.ItemID = @ID
+				AND tt.StoreID = @StoreID
+				AND tt.PortalID = @PortalID
+				AND tt.CultureName = @CultureName
+
+			SET @counter = @counter + 1
+
+			INSERT INTO #finalTable
+			SELECT DISTINCT ta.ItemID
+				,ta.AttributeID
+				,ta.InputTypeID
+				,dbo.ufn_CheckOutOfStock(ta.ItemID, @StoreID, @PortalID) AS IsOutOfStock
+				,CASE ta.AttributeName
+					WHEN 'Quantity'
+						THEN 'Is In Stock'
+					WHEN ta.AttributeName
+						THEN ta.AttributeName
+					END AS [AttributeName]
+				,ISNULL(ti.AttributeValue, '') AS AttributeValue
+			FROM #tbltemp2 ta
+			LEFT JOIN #tbltempitem ti ON ta.AttributeID = ti.AttributeID
+				AND ta.ItemID = ti.ItemID
+			ORDER BY ta.ItemID
+				,ta.AttributeID ASC
+
+			TRUNCATE TABLE #tbltempitem
+
+			TRUNCATE TABLE #tbltemp2
+		END
+	END
+
+	SELECT ItemID
+		,AttributeID
+		,InputTypeID
+		,IsOutOfStock
+		,Attributename
+		,AttributeValue
+	FROM #finalTable
+
+	DROP TABLE #finalTable
+
+	DROP TABLE #tbltemp
+
+	DROP TABLE #tbltemp1
+
+	DROP TABLE #tbltempitem
+
+	DROP TABLE #tbltemp2
+
+	DROP TABLE #tbltempVarName
+END
+	--  [dbo].[usp_Aspx_GetItemCompareList] '15',1,'0',1,'superuser','en-US'
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetItemDetailsForCompare]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		Raj Kumar Gupta
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- Modified by:  haripds
+-- Modified date: Feb 27 2013
+-- =============================================
+-- EXEC [dbo].[usp_Aspx_GetItemDetailsForCompare] 38,'5@12@8',1,1,'rajkumar','zh-CN'
+CREATE PROCEDURE [dbo].[usp_Aspx_GetItemDetailsForCompare] (
+	@ItemID INT
+	,@CostVariantValueIDs NVARCHAR(256)
+	,@PortalID INT
+	,@StoreID INT
+	,@UserName NVARCHAR(256)
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (
+			@CostVariantValueIDs = '0'
+			OR @CostVariantValueIDs = ''
+			)
+		SET @CostVariantValueIDs = NULL
+	ELSE
+		SET @CostVariantValueIDs = (
+				SELECT [dbo].[ufn_CheckVariantValues](@ItemID, @CostVariantValueIDs, @StoreID, @PortalID, 0)
+				)
+
+	SELECT iid.NAME AS ItemName
+		,i.SKU
+		,[dbo].[ufn_GetCostVariantItemImagePath](@StoreID, @PortalID, i.ItemID, @CostVariantValueIDs) AS ImagePath
+		,ISNULL(dbo.ufn_CostVariantValue(@CostVariantValueIDs, i.ItemID, @StoreID, @PortalID, @CultureName), '') AS ItemCostVariantValue
+	FROM dbo.Aspx_Items i
+	INNER JOIN dbo.Aspx_ItemInformationDetails iid ON iid.ItemID = i.ItemID
+	WHERE i.ItemID = @ItemID
+		AND i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND iid.CultureName = @CultureName
+		AND i.IsActive = 1
+		AND i.IsDeleted = 0
+		AND (
+			(
+				i.HideToAnonymous = 0
+				AND @UserName = 'anonymoususer'
+				)
+			OR @UserName != 'anonymoususer'
+			)
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetRecentlyComparedItemList]    Script Date: 03/13/2014 11:45:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+-- =============================================
+-- Author:		Niranjan Humagain, KAMAL KHANAL
+-- Create date: <Create Date,,>
+-- Description:	Get Recently compared items
+-- Modified By: bhuvan,Kamal
+-- [dbo].[usp_Aspx_GetRecentlyComparedItemList] 20,1,1,'en-US','superuser'
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_Aspx_GetRecentlyComparedItemList]
+	-- Add the parameters for the stored procedure here
+	@Count INT
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@UserName NVARCHAR(256)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	CREATE TABLE #tblItems (
+		ItemID INT
+		,CostVariantItemID NVARCHAR(1000)
+		,ComparedDate DATETIME
+		)
+
+	INSERT INTO #tblItems
+	SELECT ItemID
+		,CostVariantItemID
+		,ComparedDate
+	FROM (
+		SELECT ItemID
+			,CostVariantItemID
+			,ComparedDate
+			,max(ComparedDate) OVER (PARTITION BY ItemID) max_my_date
+		FROM [dbo].[Aspx_RecentlyComparedItems]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		) AS x
+	WHERE ComparedDate = max_my_date
+
+	SELECT TOP (@Count) rci.ItemID
+		,rci.CostVariantItemID
+	,ISNULL(dbo.ufn_CostVariantValue(rci.CostVariantItemID, i.ItemID, @StoreID, @PortalID, @CultureName), '') AS ItemCostVariantValue
+		,([dbo].[ufn_GetCostVariantItemImagePath](@StoreID, @PortalID, i.ItemID, rci.CostVariantItemID)) AS ImagePath
+		,i.SKU
+		,iid.[Name] AS ItemName
+		,i.HideToAnonymous
+	FROM [dbo].[Aspx_Items] i
+	INNER JOIN [dbo].[Aspx_ItemInformationDetails] iid ON iid.ItemID = i.ItemID
+		AND i.Visibility = 1
+		AND iid.CultureName = @CultureName
+	INNER JOIN #tblItems rci ON rci.ItemID = i.ItemID
+	INNER JOIN [dbo].[Aspx_AttributeSet] ias ON i.AttributeSetID = ias.AttributeSetID
+	WHERE i.IsActive = 1
+		AND i.StoreID = @StoreID
+		AND i.PortalID = @PortalID
+		AND ias.IsActive = 1
+		AND ias.IsDeleted = 0
+		AND i.IsActive = 1
+		AND i.IsDeleted = 0
+		AND (
+			i.ActiveFrom <= convert(VARCHAR(10), getdate(), 111)
+			AND i.ActiveTo >= convert(VARCHAR(10), getdate(), 111)
+			)
+		AND (
+			(
+				i.HideToAnonymous = 0
+				AND @UserName = 'anonymoususer'
+				)
+			OR @UserName != 'anonymoususer'
+			)
+	ORDER BY ComparedDate DESC
+END
+GO

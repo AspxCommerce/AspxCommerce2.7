@@ -1,0 +1,908 @@
+/* common styles */
+*
+{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+body
+{
+    background: #f2f2f2;
+    font: 14px/20px Tahoma, Geneva, sans-serif;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-family: Tahoma, Geneva, sans-serif;
+}
+h1
+{
+    font: bold 20px Tahoma, Geneva, sans-serif;
+    padding: 0 0 20px 0;
+    color: #555;
+}
+p.sfCenter
+{
+    text-align: center;
+}
+input:focus
+{
+    outline: none;
+}
+input[type="radio"], input[type="checkbox"]
+{
+    margin-right: 5px;
+}
+
+a img
+{
+    border: none;
+    outline: none;
+}
+li
+{
+    list-style: none;
+}
+
+#sfOuterwrapper a.sflogo img
+{
+    margin: 60px auto 10px;
+    border: none;
+}
+p.sfBack
+{
+    margin: 10px auto;
+    width: 300px;
+    text-align: center;
+}
+.icon-save:before
+{
+    content: "\e628";
+}
+.sfErrorA
+{
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #ed1c24;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+/*---Normal link---*/
+a
+{
+    color: #2D4C80;
+    text-decoration: none;
+    font: 14px Tahoma, Geneva, sans-serif;
+}
+a:hover, a:active, a:focus
+{
+    color: #034D68;
+    text-decoration: underline;
+}
+a img
+{
+    border: none;
+}
+.sfLogoholder
+{
+    margin: 0 auto;
+    width:auto; text-align:center;
+}
+td.sfCatpchatd
+{
+    padding: 5px 0;
+}
+td.sfCatpchatd input.sfCaptchadata
+{
+    margin: 0 0 0 5px; width:15px; float:left;
+}
+img.sfCaptcha
+{
+    margin: 0;
+    display: inline-block;
+}
+p
+{
+    font: bold 12px/18px Tahoma, Geneva, sans-serif;
+    color: #545454;
+}
+.sfLogin
+{
+    position: relative;
+}
+.sfInputbox, .sfLogininside .sfInputbox, .sfForgotPasswordPageLeft .sfInputbox, .sfUserRegistration .sfInputbox, .sfFallbackStatement .sfInputbox, .sfPagenotAccesibleInfo .sfInputbox
+{
+    height: 50px;
+    line-height: 50px !important;
+    font-size: 18px;
+    padding: 0px 15px 0px 55px;
+    border: 1px solid #ddd;
+    width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #f2f2f2;
+    color: #737373;
+	font-weight:normal;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+	box-shadow:none; -webkit-box-shadow:none; -o-box-shadow:none;
+}
+
+.sfInputbox:focus, .sfLogininside .sfInputbox:focus, .sfForgotPasswordPageLeft .sfInputbox:focus, .sfUserRegistration .sfInputbox:focus, .sfFallbackStatement .sfInputbox:focus, .sfPagenotAccesibleInfo .sfInputbox:focus
+{
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 8px rgba(0,0,0,.2);
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+    border: solid 1px #ccc;
+}
+.sfBtn, .sfLogininside .sfBtn, .sfForgotPasswordPageLeft .sfBtn, .sfUserRegistration .sfBtn, .sfFallbackStatement .sfBtn, .sfPagenotAccesibleInfo .sfBtn
+{
+    margin-right: 12px;
+    font-size: 22px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    background:/*#2d4c80*/#1c9999;
+}
+.sfBtn:hover
+{
+    background:#20afb0;
+    color: #fff;
+    text-decoration: none;
+}
+.sfBtn:active
+{
+    -moz-box-shadow: 0 3px 2px rgba(0, 82, 125, 0.3) inset;
+    -webkit-box-shadow: 0 3px 2px rgba(0, 82, 125, 0.3) inset;
+    box-shadow: 0 3px 2px rgba(0, 82, 125, 0.3) inset;
+}
+.sfFormlabel
+{
+    font: 13px Tahoma, Geneva, sans-serif;
+    color: #777;
+}
+.sfBtnlogin
+{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #none;
+    cursor: pointer;
+    border: none;
+    padding: 4px 15px;
+    font: bold 12px Tahoma, Geneva, sans-serif;
+    margin-right: 7px;
+}
+.sfBtnlogin:hover
+{
+    background: url("../images/btn-bg-hover.png") repeat-x;
+}
+h2
+{
+    font: 24px Tahoma, Geneva, sans-serif;
+    color: #515357;
+    margin-bottom: 20px;
+}
+.sfSagewrapper
+{
+    margin: 0 auto 30px;
+   /* width: 960px;*/
+}
+.sfFailure
+{
+    color: #fff;
+    background: #d05a5a;
+}
+.sfLogin, .sfForgotPasswordPage, .sfRecoverPasswordPage, .sfUserRegistrationPage, .sfFallbackHolder, .sfPagenotAccesible
+{
+}
+.sfLogininside, .sfForgotPasswordPageLeft, .sfUserRegistration, .sfFallbackStatement, .sfPagenotAccesibleInfo
+{
+    width: 350px;
+    margin: 30px auto;
+    background: #fff;
+    position: relative;
+    padding: 40px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -o-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -ms-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -moz-transition: background 0.2s linear;
+    overflow: hidden;
+}
+.sfForgotPasswordPageLeft table
+{
+    width: 100%;
+}
+.OpenID
+{
+    padding: 20px 0;
+    width: 470px;
+    margin: 40px auto 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 0 #fff;
+    box-shadow: inset 0 1px 0 #fff, 0 1px 0 #fff;
+    position: relative;
+}
+.OpenID h3
+{
+    color: #555;
+    font: normal 17px Tahoma, Geneva, sans-serif;
+    padding-bottom: 10px;
+}
+.OpenID input
+{
+    margin: 0px 10px;
+    opacity: 0.7;
+    width: 90px;
+}
+.OpenID input:hover
+{
+    opacity: 1;
+}
+.OpenID input.sfGoogle
+{
+    position: relative;
+    top: 10px;
+}
+
+.sfOr
+{
+    position: absolute;
+    left: 50%;
+    top: -12px;
+    display: inline-block;
+    background: #f2f2f2;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #9a9a9a;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    color: #555;
+}
+
+
+.sfLogininside p, .sfForgotPasswordPageLeft p, .sfUserRegistration p, .sfFallbackStatement p, .sfPagenotAccesibleInfo p
+{
+    margin-bottom: 20px;
+    border: none;
+    background: none;
+    position: relative;
+}
+.sfButtonwrapper
+{
+    margin: 10px 0 0 0;
+    overflow: hidden;
+}
+.sfButtonWrapper a
+{
+    background: #0073A0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: bold 12px Tahoma, Geneva, sans-serif;
+    padding: 4px 7px;
+    float: left;
+}
+.sfButtonWrapper a:hover
+{
+    background: #069;
+    text-decoration: none;
+}
+.sfMessagebox
+{
+    margin: 20px auto; /* 	padding:10px; 	padding-left:55px;*/
+    font: bold 12px Tahoma, Geneva, sans-serif;
+    color: #555;
+    width: 290px;
+}
+.sfErrormsg .sfMessagebox
+{
+    background: url(../images/error.png) no-repeat 15px center;
+    color: #a21d21;
+    font: bold 13px Tahoma, Geneva, sans-serif;
+    padding: 8px 44px;
+}
+.sfSuccessmsg .sfMessagebox
+{
+    background: url(../images/success.png) no-repeat 10px center;
+    padding: 8px 44px;
+    color: #090;
+}
+.sfAlertmsg .sfMessagebox
+{
+    background: #fcffe5 url(../images/error.png) no-repeat 10px 50%;
+    color: #ad3435;
+    color: #a21d21;
+    font: bold 11px/18px Tahoma, Geneva, sans-serif;
+    padding: 8px 44px;
+}
+.sfLogin p.sfError, .sfError
+{
+    color: #d41f1e;
+    font-size: 14px;
+    padding: 3px 3px 3px 25px;
+}
+input.sfError, input.sfError:focus
+{
+    border-color: Red;
+}
+
+/* login page */
+
+.sfLogin .sfFormlabel, .sfForgotPasswordInfo .sfFormlabel
+{
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.cssClassForgotPass
+{
+    padding-top: 5px;
+}
+.cssClassForgotPass a { color:#1C9999;}
+
+/* forgot password */
+/*.sfForgotPasswordPage {
+	width:350px;
+}
+.sfRecoverPasswordPage {
+	width:450px;
+}
+*/.sfRecoverPasswordPage td
+{
+    padding: 5px 0;
+}
+
+.sfAllrequired
+{
+    color: #bf6b6b !important;
+    font: bold 11px/18px Tahoma, Geneva, sans-serif;
+    display: inline-block;
+    margin-top: 5px;
+}
+.sfForgotYourPassWordTopInfo b
+{
+    font-size: 11px;
+    margin: 0;
+    color: #545454;
+    line-height: 16px;
+    padding: 0;
+}
+.sfForgotPasswordPage .sfButtonwrapper
+{
+    float: left;
+    margin-top: 15px;
+}
+.sfForgotPasswordPage .sfError
+{
+}
+/* user registration */
+.sfUserRegistrationPage
+{
+    width: 490px;
+    margin: 0px auto 10px;
+}
+.sfUserRegistrationPage .sfInputbox
+{
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px !important;
+    font-size: 13px;
+}
+
+.sfUserRegistrationPage .sfCatpchatd img { float:left; width:auto;}
+.sfUserRegistrationPage img
+{
+    border-right: 1px solid #999 !important;
+    border-bottom: 1px solid #999 !important;
+}
+.sfUserRegistrationPage .sfInputbox
+{
+    margin: 5px 0;
+}
+/* fallback */
+.sfFallback
+{
+    margin: 8% auto;
+}
+.sfFallbackHolder
+{
+    margin-top: 30px;
+    width: 60%;
+}
+.sfFallback h3
+{
+    color: #ea8905;
+    font: normal 16px Tahoma, Geneva, sans-serif;
+    letter-spacing: 0.5px;
+}
+.sfFallback h4
+{
+    color: #666;
+    font-size: 13px;
+}
+.sfStatement
+{
+}
+.sfTemplateerror
+{
+    background-color: #f6fbfd;
+    padding: 10px;
+    border: 1px dashed #aaa;
+}
+.sfTemplateerror p
+{
+    font: bold 12px/20px Tahoma, Geneva, sans-serif;
+    color: #777;
+}
+.sfFallback .sfButtonWrapper
+{
+    overflow: hidden;
+}
+.sfException
+{
+    color: #bb2804;
+    display: none;
+}
+.sfExceptionHead
+{
+    color: #0999d2;
+    font: bold 12px Tahoma, Geneva, sans-serif;
+    cursor: pointer;
+}
+.sfExceptionHead:hover
+{
+    color: #069;
+}
+.sfButtonWrapper span
+{
+    display: inline-block;
+}
+/* 404 page */
+.sfPageNotFound
+{
+    margin: 0 auto;
+    width: 330px;
+}
+.sfPageNotFound h1
+{
+    display: block;
+    background: url(../images/404.png) no-repeat;
+    width: 317px;
+    height: 187px;
+    text-indent: -9999px;
+}
+p.sfPNFArrow
+{
+    background: url(../images/Arrow1.gif) no-repeat 5px 5px;
+    padding-left: 20px;
+    font: 12px/18px Tahoma, Geneva, sans-serif;
+}
+.sfPageNotFound .sfButtonWrapper a, .sfPagenotAccesibleInfo .sfButtonWrapper a
+{
+    position: relative;
+    margin-left: 21px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.sfPageNotFound .sfButtonWrapper a:after, .sfPagenotAccesibleInfo .sfButtonWrapper a:after
+{
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #0073A0;
+    border-top: 20px solid transparent;
+    content: " ";
+    display: block;
+    height: 0;
+    right: 95%;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 2;
+}
+.sfPageNotFound .sfButtonWrapper a:hover:after, .sfPagenotAccesibleInfo .sfButtonWrapper a:hover:after
+{
+    border-right: 20px solid #069;
+}
+/* page not accesible */
+.sfPagenotAccesibleInfo
+{
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.sfPagenotAccesibleInfo h3
+{
+    background: url(../images/noaccess.png) no-repeat;
+    min-height: 193px;
+    width: 238px;
+    margin: 0 auto;
+    text-indent: -9999px;
+}
+.sfPagenotAccesibleInfo p
+{
+    margin-bottom: 15px;
+}
+/* loading */
+#ajaxBusy, .sfLoadingdiv
+{
+    bottom: 0;
+    display: block;
+    font: bold 17px/30px Tahoma, Geneva, sans-serif;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    color: #fff;
+    padding: 5px 0;
+    background: rgba(0,0,0,0.8);
+}
+#ajaxBusy img
+{
+    margin-right: 5px;
+}
+.sfModulecontent a.sfBtnlogin
+{
+    margin: 0 auto;
+    width: 40px;
+    display: block;
+}
+.pstrength-minchar
+{
+    font: 12px Tahoma, Geneva, sans-serif;
+    color: #777777;
+}
+.cssClassUserActivation
+{
+    text-align: center;
+}
+.pstrength-info span
+{
+    font-size: 12px !important;
+}
+/*---- user profile---*/
+.sfEditprofile
+{
+    margin: 30px auto;
+    background: #fff;
+    position: relative;
+    padding: 40px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -o-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -ms-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -moz-transition: background 0.2s linear;
+    overflow: hidden;
+	width:60%;
+}
+.sfEditprofile .sfInputbox
+{
+    padding: 0px 15px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 13px;
+}
+.sfEditprofile .sfBtn
+{
+    font-size: 18px;
+}
+.sfUserprofile .sfProfileimage
+{
+    text-align: left;
+    height: 8px;
+}
+.sfUserBasic .sfProfileimage
+{
+    float: right;
+    width: auto;
+    text-align: right;
+}
+
+.sfUserprofile .sfViewprofile
+{
+    float: left;
+    width: auto;
+}
+.sfUserprofile .sfViewprofile td
+{
+    padding: 10px;
+    color: #555;
+    font: bold 13px Tahoma, Geneva, sans-serif;
+}
+.sfUserprofile .sfViewprofile span.sfFormlabel
+{
+    font: bold 13px Tahoma, Geneva, sans-serif;
+    white-space: nowrap;
+}
+.sfUserprofile .sfViewprofile textarea.sfTextarea
+{
+    background: #fff;
+    border: 1px solid #6FB2D0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #999;
+    font: 12px Tahoma, Geneva, sans-serif;
+    padding: 7px 5px;
+    margin: 3px 0 0 0;
+    width: 200px;
+    outline: none;
+}
+.sfUserprofile .sfViewprofile textarea.sfTextarea:focus
+{
+    -moz-transition: all 0.3s ease-in-out;
+    -moz-box-shadow: 0 0 2px 1px #84B3CB;
+    -webkit-box-shadow: 0 0 2px 1px #84B3CB;
+    box-shadow: 0 0 2px 1px #84B3CB;
+}
+.clearfix:after
+{
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.sfTopmargin20
+{
+    margin-top: 20px;
+}
+
+
+
+
+/*************************font-icon*******************************************/
+@font-face
+{
+    font-family: "aspx";
+    src: url("fonts/aspx.eot");
+    src: url("fonts/aspx.eot?#iefix") format("embedded-opentype"), url("fonts/aspx.woff") format("woff"), url("fonts/aspx.ttf") format("truetype"), url("fonts/sageframe.svg#aspx") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before
+{
+    font-family: "aspx" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sfUserName:before, .sfPassword:before, .sfEmail:before
+{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    font-size: 28px;
+    color: #b5b5b5;
+    font-family: "aspx" !important;
+    display: block;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.sfUserName:before
+{
+    content: "\e690";
+}
+.sfPassword:before
+{
+    content: "\e689";
+}
+.sfEmail:before
+{
+    content: "\e691";
+}
+.icon-arrow-slim-w:before
+{
+    content: "\e618";
+}
+.icon-close:before
+{
+    content: "\e614";
+    font-family: "aspx" !important;
+    display: block;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sfEditprofile .sfPassword:before
+{
+    content: "";
+}
+
+input:-webkit-autofill, input:-webkit-autofill:focus
+{
+    -webkit-box-shadow: 0 0 0px 1000px #F2F2F2 inset;
+}
+
+p.sfDisplayName
+{
+}
+p.sfDisplayName span.sfFormlabel
+{
+    font-size: 13px;
+    margin-right: 8px;
+}
+p.sfDisplayName span.sfFormlabel.sfDefaultName
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sfDefaultImage
+{
+    background: url(../images/default-avatar.jpg) no-repeat center center;
+    width: 120px;
+    min-height: 90px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    width: 120px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.sfProfileimage label
+{
+    position: absolute;
+    left: 138px;
+    top: 44px;
+    background: #2a2a2a;
+    padding: 6px;
+    color: #fff;
+    text-align: center;
+    font-size: 9px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.sfProfileimage label input
+{
+    display: none;
+}
+.sfProfileimage label:hover
+{
+    background: #6a6a6a;
+}
+
+.sfEditprofile table tr td
+{
+    padding: 6px;
+}
+.sfEditprofile textarea.sfInputbox
+{
+    height: 100px;
+}
+.sfUserRegistrationInfoLeft .sfError { float:left; width:5px; padding:0px; text-align:center;}
+.sfUserRegistrationInfoLeft .sfError.sfErrorBlock { display:block; float:none; text-align:left; width:auto; font-size:11px;}
+.sfUserRegistrationInfoLeft input { width:95%; float:left;}
+.sfUserRegistrationInfoLeft .sfButtonwrapper input { width:auto;}
+#ProfileSetting .sfProfilewrapper { width:450px;}
+#ProfileSetting .sfProfilewrapper a.icon-close:before{ display: inherit; margin-right:5px;}
+#ProfileSetting .sfImagewrapper{ margin:0;}
+#ProfileSetting .sfImagewrapper span{ font-size:12px;}
+.sfProfilewrapper .sfButtonwrapper { margin-left:146px;}
+.sfImagewrapper
+{
+    position: relative;
+    border: 1px solid #d9d9d9;
+    float: right;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    width: 290px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.sfProfilewraper
+{
+    float: left;
+    width: 60%;
+}
+
+.sfEditprofile .Changepswd input
+{
+    width: 20%;
+}
+.sfButtonwrapper label input
+{
+    display: none;
+}
+
+
+table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td
+
+
+{ border-bottom: none !important; padding: 0;}
+
+
+.sfLogininside .sfCaptcha input, .sfForgotPasswordPageLeft .sfCaptcha input, .sfUserRegistration .sfCaptcha input, .sfFallbackStatement .sfCaptcha input, .sfPagenotAccesibleInfo .sfCaptcha input { padding-left:15px; width:200px;}
+
+/*---Safair hack excluding chrome by using"::i-block-chrome"----*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {   
+  ::i-block-chrome, .sfInputbox { line-height:0 !important;}
+}
+
+@media only screen and ( max-width: 480px ){
+	.sfLogininside, .sfForgotPasswordPageLeft, .sfUserRegistration, .sfFallbackStatement, .sfPagenotAccesibleInfo{ padding:15px; width:auto; margin:0 10px;}
+	#sfOuterwrapper a.sflogo img{ margin:10px auto; width:34%;}
+	.OpenID{margin:20px auto 0; padding:15px; width:auto;}
+	.OpenID input{ width:48px;}
+	.OpenID h3{ font-size:14px;}
+	.sfUserRegistration{ width:63%;}
+}

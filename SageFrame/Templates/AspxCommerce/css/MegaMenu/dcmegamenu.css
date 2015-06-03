@@ -1,0 +1,114 @@
+
+/* Mega Menu Styles */
+.mega-menuH ul, .mega-menuH ul li {list-style: none;}
+.mega-menuH ul {position: relative; padding: 0; margin: 0;}
+.mega-menuH ul li ul {display: none;}
+.mega-menuH .sub {display: none;}
+.mega-menuH .sub ul {display: block;}
+
+#mega-menuH {
+list-style: none; 
+position: relative; 
+padding: 0; 
+margin: 0;
+}
+#mega-menuH .sub ul {
+display: block;
+}
+#mega-menuH {
+width: 100%; 
+height: 40px;
+position: relative;
+}
+#mega-menuH li {
+float: left; 
+margin: 0; 
+padding: 0;
+border-right:solid 1px #eaeaea; 
+}
+#mega-menuH li ul li{border-right:none;}
+#mega-menuH li a {
+float: left; 
+display: block; 
+padding: 9px 15px;  
+text-decoration: none;
+-webkit-border-radius:3px;
+-o-border-radius:3px;
+transition:none;
+-webkit-transition:none;
+-o-transition:none;
+}
+
+
+#mega-menuH li .sub-container {
+position: absolute;
+}
+#mega-menuH li .sub:before{	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid black;}
+#mega-menuH li .sub { 
+padding:25px; 
+border: 1px solid #eaeaea;
+background:#fff;
+}
+#mega-menuH li .sub .row {
+width: 100%; 
+overflow: hidden;
+clear: both;
+}
+#mega-menuH li .sub li {
+list-style: none; 
+float: none; 
+width: 210px; 
+font-size: 1em; 
+font-weight: normal;
+}
+#mega-menuH li .sub li.mega-hdr { 
+float: left;
+margin-right:20px;
+}
+#mega-menuH li .sub li.mega-hdr.last {
+margin-right: 0;
+}
+#mega-menuH li .sub a {
+background: none; 
+display: block; 
+float: none; 
+font-size:16px;
+padding:0;
+font-weight:bold;
+}
+#mega-menuH li .sub li.mega-hdr a.mega-hdr-a { 
+margin-bottom: 5px;
+border:none; 
+background: none;  
+}
+#mega-menuH li .sub li.mega-hdr a.mega-hdr-a:hover {
+color: #000;
+border:none;
+}
+#mega-menuH .sub li.mega-hdr li a {
+padding: 4px 15px; 
+font-weight: normal;
+background:url(images/submenu_bullets.gif) no-repeat left 13px;
+font-size:14px;
+}
+#mega-menuH .sub li.mega-hdr li a:hover {
+ 
+}
+#mega-menuH .sub li.mega-hdr ul{ margin-right:10px;}
+#mega-menuH .sub ul li {
+padding-right: 0;
+border-bottom:solid 1px #e5e5e5;
+}
+#mega-menuH .sub ul li a,#mega-menuH .sub ul li a:hover{ border:none;}
+#mega-menuH li .sub-container.non-mega .sub {
+padding: 10px;
+}
+#mega-menuH li .sub-container.non-mega li {
+padding: 0; 
+width: 190px; 
+margin: 0;
+}

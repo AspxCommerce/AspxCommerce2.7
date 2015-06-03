@@ -1,0 +1,119 @@
+
+/* Vertical Mega Menu Styles */
+.mega-menu{
+line-height: 16px; 
+position: relative; /* Required */
+border-right:solid 1px #ededed;border-left:solid 1px #ededed;
+width:240px;
+margin:0 auto;
+}
+.mega-menu li, .acc-menu li{ background:#fff;}
+.mega-menu li a, .acc-menu li a {
+display: block;  
+padding: 9px 38px 12px 11px; text-transform:capitalize;
+text-decoration: none;  
+border-bottom: 1px solid #ededed;
+
+}
+.mega-menu li a:hover, .mega-menu li.mega-hover a {
+color: #fff;
+background:#6fc25c;
+
+
+}
+.mega-menu li a.dc-mega {
+position: relative;
+}
+/* Add arrow icon to parent links */
+.mega-menu li a .dc-mega-icon {
+display: block; 
+position: absolute; 
+top: 15px; 
+right: 15px; 
+width: 6px; 
+height: 8px; 
+background: url(images/arrow_right.png) no-repeat 0 0;
+}
+/* Mega menu container */
+.mega-menu li .sub-container {
+position: absolute; /* Required */
+background:#fff;
+padding: 10px 10px 0 10px; 
+border: 1px solid #ededed;  
+border-left: none;
+}
+.mega-menu li .sub-container .sub {}
+
+.mega-menu li .sub .row {
+width: 100%; overflow: hidden; /* Clear floats */
+}
+.mega-menu li .sub li {
+float: none; 
+width: 150px; 
+font-size: 1em; 
+font-weight: normal;
+}
+.mega-menu li .sub li.mega-hdr {
+float: left; /* Required */
+margin: 0 5px 10px 5px;
+}
+.mega-menu li .sub a, .mega-menu.left li .sub a {
+background: none; 
+border: 1px solid #ededed;  
+text-shadow: none;
+float: none;
+color: #686868; 
+padding: 6px 21px; 
+display: block;
+text-decoration: none; 
+font-size: 0.9em;
+}
+.mega-menu li .sub li.mega-hdr a.mega-hdr-a {
+margin-bottom: 5px; 
+text-transform: capitalize; 
+font-weight: normal;  height:auto !important; line-height:22px;
+text-align:center;
+font-size:14px;
+}
+.mega-menu li .sub li.mega-hdr a.mega-hdr-a:hover {
+color: #6fc25c; 
+text-shadow: none;
+}
+
+.mega-menu .sub li.mega-hdr li{ margin-bottom:3px;}
+
+.mega-menu .sub li.mega-hdr li a {
+padding: 4px 5px 4px 20px; 
+background: url(images/arrow_off.png) no-repeat 5px 8px; 
+font-weight: normal;
+}
+.mega-menu .sub li.mega-hdr li a:hover {
+color: #6fc25c; 
+}
+.mega-menu .sub ul li {
+padding-right: 0;
+}
+/* Styling for menu items with only 2 levels */
+.mega-menu li .sub-container.non-mega .sub {
+padding:0px;}
+.mega-menu li .sub-container.non-mega li {
+padding: 0; 
+margin:0 0 10px 0px;
+width: 150px;
+}
+.mega-menu li .sub-container.non-mega li a {
+padding: 7 px 5px 15px 22px; 
+background: url(images/arrow_off.png) no-repeat 7px 10px;
+}
+.mega-menu li .sub-container.non-mega li a:hover {
+color: #a32403; 
+background: url(images/arrow_on.png) no-repeat 7px 10px #efefef !important;
+}
+.acc-menu .sub-container{ margin-top:0 !important}
+.acc-menu .row { width:auto !important}
+.acc-menu .sub-container{  border-bottom:1px solid #ccc; height:auto!important; width:100% !important}
+.acc-menu .sub-container  ul li a{ border:none!important; padding-left:40px; background-color:#E9E9E9}
+.acc-menu .sub-container ul li  ul li a{ padding-left:80px !important;}
+
+.cssCollapable{ padding:15px; }
+.cssCollapable h2{ font-size:18px; font-weight:bold;}

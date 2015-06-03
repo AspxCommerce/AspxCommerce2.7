@@ -1,0 +1,599 @@
+﻿.sfLeftdiv
+{
+    width: 57%;
+    float: left;
+}
+.sfLeftdiv table td
+{
+    padding: 5px;
+}
+.sfLeftdiv #divPagelist
+{
+    max-height: 200px;
+    overflow: auto;
+}
+#menuList ul li
+{
+    padding: 8px 6px;
+    margin-bottom: 3px;
+    border-bottom: none\9;
+    overflow: hidden;
+    cursor: pointer;
+    color: #fff;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+}
+#menuList ul li span.sfMenuname
+{
+    float: left;
+    width: calc(100% - 65px);
+}
+#menuList ul li span.sfDefault
+{
+    float: left;
+    margin-left: 69px;
+    margin-top: -18px;
+}
+#menuList ul li span.sfMenuOption
+{
+    float: left;
+    width: 50px;
+}
+#menuList ul li span.sfMenuChecked { float:left; width:18px; margin-top:3px; font-size:16px;}
+#menuList ul li span.sfMenuChecked.icon-checked { color:#9AC659;}
+#menuList ul li span.sfMenuChecked.icon-unchecked {}
+#menuList ul li span.sfMenuOption i
+{
+    margin-left: 10px;
+    color: #6d7f95;
+    font-size: 14px;
+}
+
+#menuList ul li:hover
+{
+    background: #f3f3f3;
+    color: #0b4b83;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#menuList ul li.sfHighLight
+{
+    margin-right: 0px;
+    border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    -o-border-radius: 3px 3px 0px 0px;
+    -ms-border-radius: 3px 3px 0px 0px;
+}
+#menuList ul li.sfHighLight span.sfMenuname
+{
+    color: #0B4B83;
+}
+.sfHighLight
+{
+    background: #F3F3F3;
+    color: #0B4B83;
+}
+#menuList ul li.sfSelected
+{
+    background: #fff !important;
+    color: #0b4b83; 
+	    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+}
+
+#menuList ul li img
+{
+    float: right;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.sfQuicklink h3 label
+{
+    font-size: 13px;
+}
+.sfQuicklink .sfPageList
+{
+    padding: 10px 0 0 0;
+}
+.sfPageList ul#pagesTree li
+{
+    margin: 0 0 5px 25px;
+}
+ul#pagesTree > li:nth-child(2)
+{
+    height: 250px;
+    overflow: auto;
+}
+.sfPageList ul#pagesTree li label
+{
+    margin: 0 0 0 10px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.sfRightdiv
+{
+    float: right;
+    width: 40%;
+}
+.sfCheckboxholder
+{
+    overflow: hidden;
+}
+.sfCheckboxholder label, .sfCheckboxholder input, .sfCheckboxholder div
+{
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+.sfCheckboxholder label
+{
+    padding: 0 0 0 5px;
+}
+.sfCheckboxholder select.sfListmenu
+{
+    padding: 0 !important;
+}
+.divPermissions table tr
+{
+    border-bottom: 1px solid #fff;
+}
+#tblTopClientMenu
+{
+}
+#tblSideMenu
+{
+    border-top: 1px solid #F5F5F5;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 5px 0 5px 0;
+}
+.sfFormwrapper .sfGridwrapper table th label
+{
+    font-weight: bold !important;
+    color: #043F55;
+}
+
+#menuList ul li img.delete
+{
+    float: right;
+}
+img.sfIcon
+{
+    max-height: 30px;
+}
+#tabMenu .sfLeftdiv .sfQuicklink .cke_resizer.cke_resizer_ltr
+{
+    display: none !important;
+}
+#dvView .sfError
+{
+    display: inline-block;
+}
+span.deleteIcon
+{
+    cursor: pointer;
+    margin: 0 0 0 10px;
+}
+.divExternalLink label.sfFormlabel, .divHtmlContent label.sfFormlabel
+{
+    display: block;
+    padding: 0 0 5px 0;
+}
+.divExternalLink .sfCheckbox input
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    float: none;
+}
+
+
+.sfCenterdiv
+{
+    float: left;
+    width: 100%;
+}
+.sfCenterWrapper
+{
+    margin-left: 250px;
+    margin-right: 350px;
+    background: #485f7e;
+    padding: 7px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+}
+.sfCenter, .sfRightDivContainer
+{
+    background: #fff;
+    padding: 14px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+}
+.sfCenter
+{
+    min-height: 500px;
+}
+.sfLeftdiv
+{
+    margin-left: -100%;
+    border-radius: 3px;
+    float: left;
+    font-weight: bold;
+    position: relative;
+    padding: 10px 0px 10px 10px;
+    margin-top: 45px;
+    color: #4C4C4C;
+    width: 250px;
+    background: #485f7e;
+    min-height: 300px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+}
+.sfRightdiv
+{
+    width: 350px;
+    float: left;
+    margin-left: -350px;
+    margin-top: 37px;
+    margin-right: 0px;
+    background: #485f7e;
+    padding: 7px 7px 7px 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    -o-border-radius: 0 3px 3px 0;
+    -ms-border-radius: 0 3px 3px 0;
+}
+
+.sfRightDivContainer
+{
+    position: relative;
+}
+.sfRightDivContainer:after, .sfRightDivContainer:before
+{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 20px;
+    position: absolute;
+    left: -7px;
+    top: 20px;
+    background: #fff;
+}
+.sfRightDivContainer:before
+{
+    top: auto;
+    bottom: 20px;
+}
+
+
+.sfDivFlying
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    padding: 10px;
+    width: 209px;
+    border: 1px solid #bbb;
+    border-radius: 3px 0px 3px 3px;
+    -webkit-border-radius: 3px 0px 3px 3px;
+    -o-border-radius: 3px 0px 3px 3px;
+    -ms-border-radius: 3px 0px 3px 3px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.3) box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+.sfDivFlying i
+{
+    display: block;
+    position: absolute;
+    bottom: -13px;
+    right: -13px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    background: #4a4a4a;
+    color: #ccc;
+}
+.sfDivFlying i:hover
+{
+    background: #1a1a1a;
+    color: #fff;
+}
+.sfDivFlying input
+{
+    width: 90% !important;
+}
+
+.sfDivFlyingHighlighted
+{
+    background: #FFF;
+}
+
+.sfLeftdiv label.icon-addnew
+{
+    position: absolute;
+    bottom: -56px;
+    left: 142px;
+    background: #f4f4f4;
+    padding: 0px 10px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    border: 1px solid #bbb;
+    border-bottom: 2px solid #cbcbcb;
+    font-weight: bold;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+}
+.sfLeftdiv label.icon-addnew:before
+{
+    color: #F27337;
+}
+.sfLeftdiv label.icon-addnew
+{
+    bottom: 0px;
+    top: -36px;
+}
+.sfLeftdiv label.icon-addnew.active
+{
+    background: #fff; border-bottom-color:transparent; z-index: 99;
+}
+.sfLeftdiv label:hover.icon-addnew
+{
+    background: #fff;
+}
+
+.sfQuicklink .sfRadiobutton
+{
+    margin: 7px 0px 15px;
+}
+.sfRadiobutton.sfRadioTab
+{
+    margin: -25px 0 15px 182px;
+}
+.sfQuicklink #h3MenuType
+{
+    border-bottom: none;
+}
+
+#trPages
+{
+    position: relative;
+}
+#trPages .sfCheckbox.sfMargintop
+{
+    position: absolute;
+    top: 25px;
+    right: 0px;
+}
+.sfParentItems
+{
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.sfRightDivContainer h3
+{
+    border-bottom: none;
+}
+
+#MenuMgrView .ui-tree li
+{
+    color: #0B4B83;
+    font-size: 13px;
+}
+#MenuMgrView .ui-tree .ui-tree-list > span.ui-tree-title, #MenuMgrView .ui-tree .ui-tree-expanded > span.ui-tree-title, #MenuMgrView .ui-tree .ui-tree-node > span.ui-tree-title
+{
+    background: none;
+    position: relative;
+    display: block;
+    padding: 0px 0px 0px 20px;
+}
+.ui-tree .ui-tree-list > span.ui-tree-title:before, .ui-tree .ui-tree-node > span.ui-tree-title:before
+{
+    font-family: "sageframe" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e623";
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    color: #7C8EA4;
+}
+.ui-tree .ui-tree-list:hover > span.ui-tree-title:before, .ui-tree .ui-tree-node:hover > span.ui-tree-title:before
+{
+    color: #fff;
+}
+.ui-tree .ui-tree-expanded > span.ui-tree-title:before, .ui-tree .ui-tree-node > span.ui-tree-title:before
+{
+    font-family: "sageframe" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e625";
+    position: absolute;
+    left: 0px;
+    top: -2px;
+}
+.ui-tree li.ui-tree-expanded ul li span.ui-tree-title:before
+{
+    left: 4px;
+    top: -2px;
+}
+.ui-tree li:hover.ui-tree-expanded ul li span.ui-tree-title:before
+{
+    color: #fff;
+}
+
+#MenuMgrView .ui-tree li:hover
+{
+    background: #3b4d65;
+    color: #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+}
+#MenuMgrView .ui-tree .ui-tree-expanded ul
+{
+    border-left: 2px solid #7c8ea4;
+    margin-left: 4px;
+}
+#MenuMgrView .ui-tree .ui-tree-expanded.active ul li
+{
+    color: #fff;
+    width: 176px;
+}
+#MenuMgrView .ui-tree li:hover.ui-tree-expanded ul li
+{
+    width: 176px;
+    padding: 0 0 0 4px;
+    margin: 0px;
+    color: #fff;
+    position: relative;
+}
+#MenuMgrView .ui-tree li:hover.ui-tree-expanded ul li:before
+{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 3px;
+    top: 10px;
+    left: 0px;
+    display: block;
+    background: #7C8EA4;
+}
+#MenuMgrView .ui-tree .ui-tree-expanded ul li
+{
+    width: 176px;
+    padding: 0px;
+    margin: 0px;
+    color: #515357;
+}
+#MenuMgrView .ui-tree .ui-tree-expanded ul li:hover
+{
+    background: none;
+    color: #fff;
+}
+#MenuMgrView .ui-tree .ui-tree-expanded.active ul
+{
+    border-left: 2px solid #7c8ea4;
+}
+#MenuMgrView .ui-tree .ui-tree-expanded ul li span.ui-tree-title
+{
+    margin-bottom: 2px;
+    border-radius: 0px 3px 3px 0px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    -ms-border-radius: 0px 3px 3px 0px;
+    -o-border-radius: 0px 3px 3px 0px;
+}
+#MenuMgrView .ui-tree .ui-tree-expanded ul li span.ui-tree-title:hover, #MenuMgrView .ui-tree .ui-tree-expanded ul li span.ui-tree-selected
+{
+    background: #7c8ea4;
+    color: #fff;
+}
+
+
+.ui-tree li.ui-draggable-dragging, .ui-tree li ul li.ui-draggable-dragging
+{
+    background: #fff !important;
+    width: auto;
+    padding: 0px 10px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    color: #000 !important;
+    border: 1px dashed #000;
+    z-index: 999;
+}
+
+.ui-tree li ul li.ui-draggable-dragging span
+{
+    background: #fff !important;
+    color: #000 !important;
+}
+.ui-tree li.ui-tree-droppable, .ui-tree li span.ui-tree-droppable
+{
+    padding: 0px 0px 0px 20px;
+    margin-left: -7px;
+    outline: 1px dashed #ccc;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+    -ms-border-radius: 3px 0 0 3px;
+    background: none !important;
+    -webkit-box-shadow: inset 0 0 3px 0.1px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 3px 0.1px rgba(0,0,0,0.5);
+    -o-box-shadow: inset 0 0 3px 0.1px rgba(0,0,0,0.5);
+    -ms-box-shadow: inset 0 0 3px 0.1px rgba(0,0,0,0.5);
+}
+.ui-tree li.ui-tree-droppable.active, .ui-tree li.active span.ui-tree-droppable
+{
+    margin-left: 2px;
+    outline: 1px dashed #000;
+}
+
+#MenuMgrView #divLstMenu, .sfLeftdiv #menuList ul
+{
+    max-height: 400px;
+    overflow: hidden;
+}
+#MenuMgrView #divLstMenu { width:282px; word-break:break-word;}
+#MenuMgrView #divLstMenu:hover, .sfLeftdiv #menuList ul:hover
+{
+    overflow: auto;
+}
+.sfLeftdiv #menuList ul{ margin-right:-7px;}
+
+.sfFrontEndMenu { width:1100px;}
+
+
+/*#menuList > ul { margin-right:10px;}
+*/
+.divHtmlContent table tr td, .divExternalLink table tr td { padding:5px;}

@@ -1,0 +1,301 @@
+#divControls
+{
+	border-bottom: 1px dotted #ccc;
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+}
+#divControls ul
+{
+	float: right;
+}
+#divControls ul li
+{
+	float: left;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+	padding: 4px 0 0 20px;
+	text-shadow: 1px 1px 0 #fff;
+	cursor: pointer;
+	color: #0073A0;
+}
+#divControls ul li:hover
+{
+	color: #0094DE;
+}
+#divControls ul li.sfUpload
+{
+	background: url(../images/addfile.png) no-repeat 0 50%;
+}
+#divControls ul li.sfDelete
+{
+	background: url(../images/deletefile.png) no-repeat 0 50%;
+}
+#divControls ul li.sfAddfolder
+{
+	background: url(../images/addfolder.png) no-repeat 0 50%;
+}
+#divControls ul li.sfDeletefolder
+{
+	background: url(../images/deletefolder.png) no-repeat 0 50%;
+}
+#divControls ul li.sfCopy
+{
+	background: url(../images/copy.png) no-repeat 0 50%;
+}
+#divControls ul li.sfMove
+{
+	background: url(../images/move.png) no-repeat 0 50%;
+}
+#divControls ul li.sfRefresh
+{
+	background: url(../images/refresh.png) no-repeat 0 50%;
+}
+#divControls ul li.sfSync
+{
+	background: url(../images/sync.png) no-repeat 0 50%;
+}
+#divSearch
+{
+}
+#divSearch input
+{
+	width: 150px;
+}
+#divSearch input.sfAuto
+{
+	width: 80px !important;
+}
+#divSearch table td
+{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.sfFilemanageholder #divFileTreeOuter
+{
+	float: left;
+	border: 1px solid #a6c9e2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	float: left;
+	font-weight: bold;
+	padding: 10px 0;
+	width: 21%;
+	color: #4C4C4C;
+	background: #e8f5ff;
+	min-height: 150px;
+	margin: 0 20px 0 0;
+	-webkit-box-shadow: inset 0 0 0 1px #fff;
+	-moz-box-shadow: inset 0 0 0 1px #fff;
+	box-shadow: inset 0 0 0 1px #fff;
+}
+.sfFilemanageholder .sfRightcol
+{
+	overflow: hidden;
+}
+.sfFilemanageholder #divFileTreeOuter li
+{
+	color: #136686;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	line-height: 20px;
+	list-style-type: none;
+	text-shadow: 0px 1px 0 #FFFFFF;
+	padding: 5px 0px;
+	border-bottom: 1px solid #b9daf4;
+	border-top: 1px solid #FFFFFF;
+}
+#divPagerNav
+{
+	margin: 10px 0;
+}
+.currentPage a
+{
+	background: #4692C3 !important;
+	border: 1px solid #4692C3 !important;
+	color: #fff !important;
+	cursor: default;
+}
+#divFileTreeOuter UL.jqueryFileTree Li:first-child
+{
+	border-top: none;
+}
+#divFileTreeOuter UL.jqueryFileTree li:last-child
+{
+	border-bottom: none;
+}
+th span.fileName img
+{
+	margin-left: 10px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#imbSearch
+{
+	cursor: pointer;
+}
+#divSearch .sfLeftdiv
+{
+	float: left;
+}
+#divSearch .sfRightdiv
+{
+	float: right;
+}
+.sfTab li
+{
+	float: left;
+	list-style-type: none;
+	margin-left: 5px;
+}
+.sfTab li label
+{
+	padding: 5px;
+}
+
+
+/*Dialogue Conform*/
+#popup_container
+{
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	min-width: 300px; /* Dialog will be no smaller than this */
+	max-width: 600px; /* Dialog will wrap after this width */
+	background: #FFF;
+	border: solid 5px #999;
+	color: #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#popup_title
+{
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.75em;
+	color: #666;
+	background: #CCC url(images/title.gif) top repeat-x;
+	border: solid 1px #FFF;
+	border-bottom: solid 1px #999;
+	cursor: default;
+	padding: 0em;
+	margin: 0em;
+}
+
+#popup_content
+{
+	background: 16px 16px no-repeat url(images/info.gif);
+	padding: 1em 1.75em;
+	margin: 0em;
+}
+
+#popup_content.alert
+{
+	background-image: url(images/info.gif);
+}
+
+#popup_content.confirm
+{
+	background-image: url(images/important.gif);
+}
+
+#popup_content.prompt
+{
+	background-image: url(images/help.gif);
+}
+
+#popup_message
+{
+	padding-left: 48px;
+}
+
+#popup_panel
+{
+	text-align: center;
+	margin: 1em 0em 0em 1em;
+}
+
+#popup_prompt
+{
+	margin: .5em 0em;
+}
+
+/*onlineModuleList css*/
+.onlineModuleList { }
+.onlineModuleList .sfOnlineModule { float: left; width: 25%; overflow: hidden; margin: 0; padding:5px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; }
+.onlineModuleList .sfOnlineModule > div { background: #fff; width: 100%; border:1px solid #ddd; height:80px; overflow: hidden; padding:10px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; border-radius: 3px; -webkit-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; }
+.onlineModuleList .sfOnlineModule > div:hover {background:#f2f2f2; -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
+box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);}
+.onlineModuleList .sfOnlineModule .sfModuleDetails { float:left; width:100%;}
+.onlineModuleList .sfOnlineModule .sfModuleDetails > div { margin-left:75px; position:relative; height:60px;}
+.onlineModuleList .sfOnlineModule .sfModuleDetails > div > a { float:right; width:auto; position:absolute; top:0px; right:-5px;}
+.onlineModuleList .sfOnlineModule .sfModuleThumbs { width:75px; height: 60px; float: left; overflow:hidden;  margin-left: -100%; }
+.sfOnlineModule span { font-size: 13px; font-weight: bold; word-wrap: break-word; padding-left:10px; display:block; margin-right:50px;}
+.sfOnlineModule span.sfDescription { font-size:12px; font-weight:normal; line-height:16px; margin-right:50px; display:block;word-wrap: break-word;}
+.sfOnlineModule .sfBtn[class*="icon-"]:before { color: #f27337; font-size: 18px; margin-right:0px;}
+.sfOnlineModule .sfBtn[class*="icon-"]:hover:before { color: #fff;}
+
+@media screen and (max-width:1440px) { 
+.onlineModuleList .sfOnlineModule { float: left; width: 33%;}
+.sfOnlineModule span.sfDescription { font-size:11px; line-height:14px; }
+}
+@media screen and (max-width:1260px) { 
+.onlineModuleList .sfOnlineModule { float: left; width:50%;}
+.sfOnlineModule span.sfDescription { font-size:11px; line-height:14px; }
+}
+
+.sfSearchImg
+{
+	background: url("../../../../../Administrator/Templates/Default/images/btnsearch.png") no-repeat scroll 3px 3px rgba(0, 0, 0, 0);
+	display: inline-block;
+	height: 25px;
+	padding: 0;
+	position: absolute;
+	right: 15px;
+	text-indent: -999em;
+	top: 7px;
+	width: 25px;
+	border:none;
+}
+.sfSearchWrapper
+{
+	position: relative;
+	margin: 20px 0;
+}
+
+.sfSearchWrapper input.sfLargeInputbox
+{
+	width: 100%;
+	padding: 12px;
+	box-sizing: border-box;
+}
+/*Loader*/
+.modal
+{
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 99;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	min-height: 100%;
+	width: 100%;
+}
+
+.loading
+{
+	font-family: Arial;
+	font-size: 10pt;
+	border: 5px solid #67CFF5;
+	width: 200px;
+	height: 100px;
+	display: none;
+	position: fixed;
+	background-color: White;
+	z-index: 999;
+}

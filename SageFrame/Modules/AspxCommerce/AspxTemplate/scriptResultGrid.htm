@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <script type="text/javascript">
+         $(".sfLocale").localize({
+             moduleKey: AspxTemplateLocale
+         });        
+    </script>
+    <title>scriptResultGrid</title>
+</head>
+<body>
+    <div>
+        <div class="cssClassProductsBox">
+            <div class="cssClassProductsBoxInfo">
+                <h2>
+                    ${name}</h2>
+                <h3>
+                    ${sku}</h3>
+                <div class="cssClassProductPicture">
+                    <a href="${aspxRedirectPath}item/${sku}${pageExtension}">
+                        <img class="lazy" data-original='${imagePath}' src='${loaderpath}' alt='${alternateText}'
+                            title='${name}' /></a></div>
+                <div class="cssClassProductPriceBox">
+                    <div class="cssClassProductPrice">
+                        <p class="cssClassProductOffPrice">
+                            <span class="cssRegularPrice_${itemID} cssClassFormatCurrency">${(listPrice*rate).toFixed(2)}</span></p>
+                        <p class="cssClassProductRealPrice">
+                            <span class="cssClassFormatCurrency">${(price*rate).toFixed(2)}</span></p>
+                    </div>
+                </div>
+                <div class="cssClassProductDetail">
+                    <p>
+                        <a href="${aspxRedirectPath}item/${sku}${pageExtension}" class="sfLocale">Details</a></p>
+                </div>
+                
+            </div>
+            <div class="cssClassClear">
+    </div>
+            <div class="cssClassAddtoCard_${itemID} cssClassAddtoCard">
+                    <div class="sfButtonwrapper">
+                        <a href="#" onclick="AspxCommerce.RootFunction.AddToCartToJSFromTemplate(${itemID},${price},${JSON2.stringify(sku)},${1});">
+                            <span class="sfLocale">Add to Cart</span></a>
+                    </div>
+                </div><div class="cssClassClear">
+    </div>
+        </div>
+    </div>
+</body>
+</html>

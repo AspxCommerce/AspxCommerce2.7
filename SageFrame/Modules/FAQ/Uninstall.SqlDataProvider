@@ -1,0 +1,83 @@
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_AddFAQ]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_AddFAQ]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetAuthorEmailAddress]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetAuthorEmailAddress]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetUserEmailAddress]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetUserEmailAddress]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_AddViewOption]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_AddViewOption]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_DeleteCategory]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_DeleteCategory]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_DeleteFAQ]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_DeleteFAQ]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_DeleteUserReview]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_DeleteUserReview]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_FAQAdd_UpdateCategory]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_FAQAdd_UpdateCategory]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_FAQApprove]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_FAQApprove]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetCategoryByID]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetCategoryByID]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetCategoryList]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetCategoryList]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetFAQCategory]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetFAQCategory]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetFAQGraphDetails]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetFAQGraphDetails]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetFAQReview]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetFAQReview]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetFAQViewList]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetFAQViewList]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetRecordByID]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetRecordByID]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetSearchList]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetSearchList]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetSearchListAdmin]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetSearchListAdmin]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_GetUserInfo]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_GetUserInfo]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_LoadCategoryOnGrid]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_LoadCategoryOnGrid]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_LoadFAQList]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_LoadFAQList]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_LoadFAQListByCategory]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_LoadFAQListByCategory]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_FAQ_SubmitReason]    Script Date: 01/28/2013 17:54:54 ******/
+DROP PROCEDURE [dbo].[usp_FAQ_SubmitReason]
+GO
+/****** Object:  Table [dbo].[FAQ]    Script Date: 01/28/2013 17:54:56 ******/
+DROP TABLE [dbo].[FAQ]
+GO
+/****** Object:  Table [dbo].[FAQ_Category]    Script Date: 01/28/2013 17:54:57 ******/
+DROP TABLE [dbo].[FAQ_Category]
+GO
+/****** Object:  Table [dbo].[FAQHelpOption]    Script Date: 01/28/2013 17:54:57 ******/
+DROP TABLE [dbo].[FAQHelpOption]
+GO
+/****** Object:  Table [dbo].[FAQReview]    Script Date: 01/28/2013 17:54:57 ******/
+DROP TABLE [dbo].[FAQReview]
+GO
+/****** Object:  Table [dbo].[FAQViewResult]    Script Date: 01/28/2013 17:54:57 ******/
+DROP TABLE [dbo].[FAQViewResult]

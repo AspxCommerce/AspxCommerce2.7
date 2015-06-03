@@ -1,0 +1,46 @@
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetUSPSShippingProviderSetting]    Script Date: 11/27/2012 17:44:37 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_GetUSPSShippingProviderSetting]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_GetUSPSShippingProviderSetting]
+GO
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_GetUSPSShippingProviderSetting]    Script Date: 11/27/2012 17:44:01 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[usp_Aspx_GetUSPSShippingProviderSetting]
+	@ShippingProviderId [int],
+	@PortalId [int],
+    @StoreId int
+WITH EXECUTE AS CALLER
+AS
+BEGIN
+SET NOCOUNT ON;
+SELECT
+	  *
+FROM
+	(
+	SELECT  SettingKey,SettingValue
+	FROM [dbo].[Aspx_ShippingProviderSetting]
+	WHERE ShippingProviderId = @ShippingProviderId 
+AND StoreID = @StoreID AND PortalID=@PortalID
+) DataTable
+PIVOT
+	(
+	  MAX([SettingValue])
+	  FOR [SettingKey]
+	  IN (
+		[UspsUserId], 
+		[UspsMinWeight],
+		[UspsMaxWeight],
+		[UspsWeightUnit],
+		[UspsRateApiUrl],
+		[UspsShipmentApiUrl],
+        [UspsTrackApiUrl],
+        [UspsTestMode]       
+	)
+) PivotTable
+END
+GO

@@ -1,0 +1,1138 @@
+﻿html body { background:#212121 !important; color:#c8c8c8; }
+.BoxInfo p,.BoxInfo h2{color:#555;}
+p { color:#eee;}
+li.preview a.icon-preview:before {color:rgba(255,255,255,0.35);}
+li:hover.preview a.icon-preview, li:hover.preview a.icon-preview:before { color:rgba(255,255,255,1);}
+.icon-user:before { color:rgba(255,255,255,0.35); background:#455e75; background:rgba(255,255,255,0.2);}
+.icon-themesetting,  .templateChange, #signin_menu { background:#444; color:#ccc;}
+.icon-themesetting:hover { color:#eee;}
+
+
+a { color:#ccc; text-decoration:none;}
+a:hover, a:active, a:focus {color: #fff;}
+
+h1 {color:#aeaeae; border-bottom-color: #434343;}
+h3 {
+	color:#ccc;	border-bottom-color:#555;}
+h4 {
+	color:#fff;
+}
+h5 {
+	color:#0e83b0;
+}
+h6 {
+	color:#0e83b0;
+}
+fieldset { border-color:#555; background:none !important;}
+
+.button {border-color:#333;}
+.inputbox {border-color:#ccc;}
+.inputbox:hover, .inputbox:focus {
+	background: #FFFFCC;
+}
+.Shadow {
+	-moz-box-shadow: 5px 5px 5px #ccc;
+	-webkit-box-shadow: 5px 5px 5px #ccc;
+	box-shadow: 5px 5px 5px #ccc;
+}
+
+.sfSidebar { background:#252525; border-right-color:#2f2f2f;}
+div.sideBarRight .sfSidebar {border-left-color: #404040;}
+.sfSidebar ul.menu { background:#202020;}
+.sfSidebar ul.menu li  { border-bottom-color:#171717;}
+.sfSidebar.sfSidebarhide ul.menu li  { border-bottom-color:#333;}
+.sfSidebar ul.menu li a { color:#ccc;}
+.sfSidebar ul.menu a:hover { background:rgba(0,0,0,0.1);}
+.sfSidebar ul.menu li a i { color:#999;}
+.sfSidebar ul.menu li a.active, .sfSidebar ul.menu li a.active i { color:#fff;}
+.sfSidebar ul.menu li.Grandparent.sfLevel0 > a.active { color:#fff;}
+.sfSidebar ul.menu li.Grandparent > a.active { background:#3a3a3a !important; color:#eee;}
+.sfSidebar ul.menu li.Grandparent > a.active i { color:#eee;}
+.sfSidebar ul.menu li.Grandparent.sfLevel0.sfHover > ul { border-right-color: #444;  background:#151515;}
+
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent > a.active,.sfSidebar ul.menu li.Grandparent ul.acitem li.sfLevel1 > a.active , .sfSidebar ul.menu li.sfLevel0 > a.active
+{ background:#555; color:#eee;}
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent > a.active i, .sfSidebar ul.menu li.Grandparent ul.acitem li.sfLevel1> a.active i 
+{ color:#eee;}
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent > a:before 
+{ color:#a5a5a5;}
+.sfSidebar.sfSidebarhide ul.menu li.Grandparent ul.acitem li.parent > a:before { color:#a5a5a5;}
+div.sideBarLeft .sfSidebar ul.menu li.Grandparent ul.acitem li.parent > a.active:after, 
+div.sideBarLeft .sfSidebar ul.menu li.Grandparent ul.acitem li.sfLevel1 > a.active:after ,
+div.sideBarRight .sfSidebar ul.menu li.Grandparent ul.acitem li.parent > a.active:after, 
+div.sideBarRight .sfSidebar ul.menu li.Grandparent ul.acitem li.sfLevel1 > a.active:after , div.sideBarLeft .sfSidebar ul.menu li.sfLevel0 > a.active:after, div.sideBarRight .sfSidebar ul.menu li.sfLevel0 > a.active:after
+{ color:#2F2F2F;}
+
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent a.active:before {	color:#fff;}
+
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul {  background:#333;}
+
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a { color:#eee; }
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a i { color:#eee;}
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a:hover i { color:#eee;}
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a:hover,
+ .sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a.active { background:#7C8EA4; color:#eee;}
+div.sideBarRight .sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a:hover, 
+div.sideBarRight .sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a.active { background:#222; color:#eee;}
+
+.sideBarLeft .sfSidebar ul.menu li.Grandparent.sfLevel0.sfHover > ul { border-right-color:#373737;  background:#404040;}
+.sideBarRight .sfSidebar ul.menu li.Grandparent.sfLevel0.sfHover > ul { border-left-color:#373737;  background:#404040;}
+.sfSidebar ul.menu li.sfHover a i, .sfSidebar ul.menu li.sfHover a
+ { color:#fff;} 
+
+
+.sideBarLeft .sfHidepanel a i, .sideBarRight .sfHidepanel a i {
+	background: #1A1A1A;
+	color: #fff;
+}
+
+.sideBarLeft .sfHidepanel a i:hover, .sideBarRight .sfHidepanel a i:hover  {
+	background: #404040;
+	color: #fff;
+}
+
+
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a:hover { 
+border-radius:3px;}
+
+
+.sfMaincontent {
+	border-top-color:#2f2f2f;
+}
+.sfDashboard ul li a, .cssStoreQuickStatics div, #tblInventoryDetail {
+	color:#aeaeae;
+	background: #333;
+	border-color:#434343;
+}
+
+.sfDashboard ul li a:hover {
+	color: #0B4B83;
+}
+
+.sfAccordianheader {
+	background-color: #444;
+	border-color:#555;
+}
+.sfAccordianheader h2 {
+	color: #eee  !important;
+}
+.sfAccordianheader:hover {
+	background: #555;
+}
+.sfAccordian .Active .sfAccordianheader {
+	background-color: #bababa;
+}
+.sfAccordiancontent {
+	background: #fff;
+	border-color: #d9d9d9;
+}
+.sfAccordiancontent p {
+	color: #6c6c6c;
+}
+.sfAccordiancontent a {
+	color: #028cc1;
+}
+.sfAccordianholder.Active div.sfAccordianheader {
+	background: #353535;
+}
+.sfMaincontentHolder {
+	background: #f6f6f6;
+	border-color:#e9e8e8;
+}
+.sfTabpenelHeader ul li a {
+	color: #fff;
+}
+.sfTabpenelHeader ul li a:hover, .sfTabpenelHeader ul li.active a {
+	color: #333;
+}
+.sfTabpenelContent {
+	background: #f6f6f6;
+	border-color: #f0efef;
+}
+
+/*---Grid Wrapper---*/
+.sfGridwrapper th, .classTableWrapper .cssClassHeading td, .sfGridwrapper .cssClassHeading td, #tblQuantityDiscount .cssClassHeading td {
+	color: #ccc;
+	background-color: #2a2a2a;
+}
+.sfGridwrapper th, .classTableWrapper .cssClassHeading td, .sfGridwrapper .cssClassHeading td { background-color:#2a2a2a !important;} 
+.sfGridwrapper table, .sfGridwrapper td, .ajax__tab_xp .ajax__tab_body {
+	background: #444;
+	border-color:#555 !important;
+}
+.sfGridwrapper table tr {
+	border-bottom-color:#353535;
+}
+.sfGridwrapper table tr td { color: #c8c8c8;}
+.sfGridwrapper table tr:hover td { background: #4e4e4e;
+}
+.sfGridwrapper a.sfFormlabel {
+	color: #fff;
+}
+.sfGroupBox fieldset {
+	border-color: #c0c0c0;
+}
+.sfGroupBox fieldset legend {
+	color: #525252;
+}
+.sfBreadcrumb ul li a {	
+	color: #858585;
+}
+.sfBreadcrumb ul li a:hover {
+	color: #48a2c5;
+}
+.sfBreadcrumb ul li span {
+	color: #858585;
+}
+
+.sfFormwrapper {
+	background:#353535;
+	border-color:transparent;
+}
+.cssClassCommonBox .sfFormwrapper {
+	background: #444;
+}
+.sfFormwrapper input.sfInputbox, input[type="text"], .sfFormwrapper textarea.sfTextarea, .sfFormwrapper select, .sfFormwrapper select.sfListmenusmall, .sfFormwrapper select.sfListmenubig, textarea.sfTextareabig1, select.sfListmenusmall, textarea.sfInputbox, .sfTextBoxSmall, .cssClassSearchPanel select, .cssClassViewPerPage select, .cssClassVariantValueName, .cssClassIsActive, .cssClassTextArea, .cssClassElement select, .popupbox select {
+	border-color: #555;
+	background: #474747;
+	color: #eee;
+}
+textarea.sfTextarea {
+	color: #555; border-color: #aaa #ccc #aaa #ccc;
+}
+textarea.sfEditor {
+	color: #525252 !important;
+}
+input.sfDisable, select.sfDisable {
+	border-color: #bbb !important;
+	background: #e9e9e9 !important;
+}
+.sfFormwrapper input.sfInputbox:focus, input[type="text"]:focus, .sfFormwrapper textarea.sfTextarea:focus, .sfFormwrapper select.sfListmenu:focus, textarea.sfTextareabig1:focus, select.sfListmenusmall:focus, textarea.sfInputbox:focus {
+
+	background:#333;
+	box-shadow:0 3px 3px rgba(0, 0, 0, 0.4) inset;
+	border-color: #444;
+}
+.sfFormwrapper input.inputbox:focus, .sfFormwrapper textarea.textarea:focus, .sfFormwrapper select.listmenu:focus {
+	border-color: 1px solid #fff;
+	-moz-box-shadow: 0px 0px 3px #ccc;
+	-webkit-box-shadow: 0px 0px 3px #ccc;
+	box-shadow: 0px 0px 3px #ccc;
+}
+.sfRequired, .sfError {
+	color: red;
+}
+.sfFormwrapper .Error {
+	color: red;
+}
+.sfBtn, .sfEdit a, input.cssClassButtonSubmit, .sfModuleinfo .sfLinks a, #dvPageType label.icon-addnew, .sfLeftdiv label.icon-addnew  {
+	color: #eee;
+	background: #555;
+	border-color: #555;
+	border-bottom-color:#666;
+}
+.sfBtn[class*="icon-"]:before, #dvPageType label.icon-addnew:before {
+	color: #F6911E;
+}
+.sfBtn:hover[class*="icon-"]:before, #dvPageType label.icon-addnew:hover:before, .sfLeftdiv label.icon-addnew:hover:before  {
+	color: #fff;
+}
+.sfBtn:hover, .sfEdit a:hover, input.cssClassButtonSubmit:hover, .sfModuleinfo .sfLinks a:hover, #dvPageType label.icon-addnew:hover,
+ .sfLeftdiv label.icon-addnew:hover, .tourMsg .sfBtn, .tourMsg .sfBtn:hover, .ui-button:hover {
+	background: #c98027;
+	border-color:#c98027;
+	border-bottom-color:#bfa47a;
+	color: #fff;
+}
+
+.sfSearch input#txtSearchDate {background: #555;
+	border-color: #555;
+	border-bottom-color:#666;}
+.sfSearch span.icon-search {color: #F6911E;}
+.sfSearch span.icon-search:hover {color:#f8a549;}
+#dvaddNew, #divSearch { background-color:#353535; border-color: #444444;}
+#dvaddNew h4 { color:#f2f2f2;}
+/*
+.sfBtn:active, .sfEdit a:active, input.cssClassButtonSubmit:active, .sfModuleinfo .sfLinks a:active, #dvPageType label.icon-addnew:active,
+ .sfLeftdiv label.icon-addnew:active
+{
+position: relative; top:2px; border-color: transparent;
+
+}*/
+
+#dvPageType label.icon-addnew:active { position: absolute; top: auto; bottom:-66px;}
+
+
+.sfEdit a {
+	color: #136686;
+}
+.sfButtonwrapper label {
+	color: #f2f2f2;
+}
+
+.sfPagination { border-color:#666666;}
+.sfPagination ul li a, .sfPagination td a, .sfPagination td span, .Pagination a, .Pagination span,
+ .sfPagination .current.prev, div.sfPagination .current.next  {
+	color: #ccc !important;
+	border-color:#666 !important;
+	background: #666 !important;
+}
+.sfPagination a:hover, .sfPagination span:hover {
+	background: #333;
+	color: #fff;
+}
+.sfPagination ul li a.active, .sfPagination td a.active, .sfPagination a.current, .sfPagination span.current {
+	background: #202020 !important;
+	color: #fff !important; box-shadow:0 0 5px #000000 inset; -webkit-box-shadow:0 0 5px #000000 inset; -ms-box-shadow:0 0 5px #000000 inset; -o-box-shadow:0 0 5px #000000 inset;
+}
+.sfPagination ul li a.last_link, .sfPagination ul li a.last_link:hover, .sfPagination ul li a.first_link, .sfPagination ul li a.first_link:hover, .sfPagination ul li a.next_link, .sfPagination ul li a.next_link:hover, .sfPagination ul li a.previous_link, .sfPagination ul li a.previous_link:hover {
+	color: #fff;
+}
+
+
+.sfGridwrapper table tr.sfPagination td table tr td span{ background:#202020 !important; box-shadow:0 0 5px #000000 inset; -webkit-box-shadow:0 0 5px #000000 inset; -ms-box-shadow:0 0 5px #000000 inset; -o-box-shadow:0 0 5px #000000 inset;}
+
+.sfGridwrapper table tr.sfPagination td table tr td a,.sfGridwrapper table tr.sfPagination td table tr td span {border-right:1px solid #555 !important; border-left:none;}
+.sfGridwrapper table tr.sfPagination td table tr td:last-child a, .sfGridwrapper table tr.sfPagination td table tr td:last-child span, .sfPagination a, .sfPagination span
+{ border-right-color: #555 !important;}
+
+.pagination {
+	background: #666;
+	border-color:#666;
+}
+.pagination span.current.prev, .pagination span.current.next { background:#666 !important; box-shadow:none;} 
+.sfPagination a {
+	color: #ccc;
+}
+
+div.sfPagination span { background:#666; border-color:#777; }
+div.sfPagination span.click { background:#222; box-shadow:0 3px 3px #000 inset; border-color:#777; color:#fff;}
+#divPagerNav ul li.active a {
+	background: #4692c3;
+	border-color: #4692c3;
+	color: #fff;
+}
+tr.sfNotfound td, tr.sfEmptyrow td, div.sfEmptyrow {
+	color: #666;
+}
+.sfPopup, .popupbox {
+	background: #444;
+	border-color:#666;
+	-moz-box-shadow: 0 17px 40px rgba(0, 0, 0, 0.35);
+	-moz-border-radius: 5px;
+	-webkit-shadow: 0 17px 40px rgba(0, 0, 0, 0.35);
+}
+/*.popupbox .ui-widget-header { background-color:#333; }
+*/.sfPopupinner {
+	background: #444;
+}
+
+/* module information */
+.sfModuleinfo .sfInfo, .sfModuleinfo .sfWarning {
+	-webkit-box-shadow: 0 0 2px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 0 2px rgba(0,0,0,.5);
+	box-shadow: 0 0 2px rgba(0,0,0,.5);
+	border-color:#f2f2f2;
+	color: #383838;
+}
+.sfContextmenu {
+	background: #ededed;
+	border-color:#c9c9c9;
+	-moz-box-shadow: 2px 2px 5px #666;
+	-webkit-box-shadow: 2px 2px 5px #666;
+	box-shadow: 2px 2px 5px #666;
+}
+.sfContextmenu li {
+	border-bottom-color:#cccccc;
+	border-top-color: #fff;
+}
+.sfContextmenu li, .sfContextmenu li b {
+	color: #707070;
+}
+.sfContextmenu li:hover, .sfContextmenu li:hover b {
+	background: #c9c9c9;
+	color: #000;
+}
+.sfTreeview {
+	border-color: #444;
+}
+.sfTreeview a {
+	color: #fff;
+}
+.sfEventview .sfEventinfo {
+	background: #fff;
+}
+.sfEventview table tr.sfActive, .sfEventview table tr.sfActive:hover {
+	background: #a4dff6;
+}
+.sfTemplate ul li {
+	background: #fff;
+	border: #CCC;}
+
+label.error {
+	color: Red;
+}
+.sfActive {
+	background-color: #53c7ff
+}
+#ajaxBusy, .sfLoadingdiv {
+	color: #fff;
+	background: rgba(0,0,0,0.8);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#8000000, endColorstr=#80000000);	
+}
+p.sfNote, p.sfNote span {
+	color: #ccc;
+}
+.sfTableOption p.sfNote, .sfTableOption p.sfNote span {
+	color: #fff;
+}
+.sfProfileimage {
+	border-color: #ccc;
+}
+.sfProfileimage .icon-close {
+	background: #3A3A3A;
+	color: #FFFFFF;
+}
+.sfProfileimage .icon-close:hover {
+	background: #505F7C;
+}
+.sfCkeditor {
+	border: #ccc;
+}
+/* permission + add user */
+#divSearchedUsers {
+	background: #fff;
+}
+#divSearchedUsers ul li {
+	color: #1193c5;
+	border-bottom-color:#d4d4d4;
+}
+#divSearchedUsers ul li.sfActive {
+	background: #b5e3f5;
+	border-bottom-color: #fff;
+	color: #333;
+}
+.sfquicklinks ul li a {
+	color: #464545;
+	background: #f5f5f5;
+	border-color: #d1d1d1;
+}
+.sfquicklinks .jcarousel-item-placeholder {
+	background: #fff;
+	color: #000;
+}
+div.uploader span.action {
+	background-color: #fff;
+}
+div.uploader span.filename {
+	color: #777;
+	border-right-color: solid 1px #bbb;
+}
+div.uploader.disabled span.action {
+	color: #aaa;
+}
+div.uploader.disabled span.filename {
+	border-color: #ddd;
+	color: #aaa;
+}
+.cssClassActionOnClickShowInfo {
+	background-color: #f2f2f2;
+}
+.cssClassActionOnClickShowInfo p a {
+	color: #515357;
+}
+.cssClassActionOnClickShowInfo p a:hover { color:#fff; background-color:#555;}
+.popupbox {
+	background-color: #444;
+}
+
+.popupbox .cssClassHeader h3 {
+	color: white;
+	background: #1092C4;
+	background: -moz-linear-gradient(top, #1092C4 17%, #25A5D6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(17%, #1092C4), color-stop(100%, #25A5D6));
+	background: -webkit-linear-gradient(top, #1092C4 17%, #25A5D6 100%);
+	background: -o-linear-gradient(top, #1092C4 17%, #25A5D6 100%);
+	background: -ms-linear-gradient(top, #1092C4 17%, #25A5D6 100%);
+	background: linear-gradient(top, #1092C4 17%, #25A5D6 100%);
+}
+.cssClassAccordionWrapper .ui-accordion .ui-widget-content {
+	border-color: #ccc
+}
+.cssClassAccordionWrapper .ui-accordion .ui-accordion-header {
+	background: #0084B7
+}
+.cssClassAccordionWrapper .ui-accordion .ui-accordion-header:hover {
+	background: #039DD9;
+	color: #fff;
+}
+.cssClassAccordionWrapper .ui-accordion .ui-state-active {
+	background: #055E7F
+}
+.cssClassAccordionWrapper .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+	color: #8a8a8a;
+}
+.cssClassAccordionWrapper .ui-accordion .ui-accordion-header a {
+	color: #ddd;
+}
+.cssClassTabPanelTable .ui-widget-content {
+	background: #444444;
+}
+.iferror {
+	color: #F00
+}
+#divBrandImage img {
+	border-top-color:#fff;
+	background: #fff;
+	-moz-box-shadow: 0px 0px 3px 2px #ccc;
+	-webkit-box-shadow: 0px 0px 3px 2px #CCC;
+	box-shadow: 0px 0px 3px 2px #CCC;
+}
+#divBrandManage .cssImage img {
+	border-color: #fff;
+	background: #fff;
+	-moz-box-shadow: 0px 0px 3px 2px #ccc;
+	-webkit-box-shadow: 0px 0px 3px 2px #CCC;
+	box-shadow: 0px 0px 3px 2px #CCC;
+}
+#alert-Buttons input {
+	border-color: #0170ab !important;
+	color: #fff;
+	-moz-box-shadow: 0 1px 0 #45b7e3 inset;
+	-webkit-box-shadow: 0 1px 0 #45b7e3 inset;
+	box-shadow: 0 1px 0 #45b7e3 inset;
+	background: #16a5db; /* Old browsers */
+	background: -moz-linear-gradient(top, #16a5db 16%, #0170ab 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(16%, #16a5db), color-stop(100%, #0170ab)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #16a5db 16%, #0170ab 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #16a5db 16%, #0170ab 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #16a5db 16%, #0170ab 100%); /* IE10+ */
+	background: linear-gradient(top, #16a5db 16%, #0170ab 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16a5db', endColorstr='#0170ab', GradientType=0 ); /*IE6-9 */
+}
+#alert-Buttons input:hover {
+	background: #16a5db
+}
+.servicerow {
+	background: #ebebeb;
+}
+.servicerow td {
+	border-bottom-color: #CFCFCF !important;
+	border-left-color: #CFCFCF !important
+}
+.diverror input.error {
+	border-color: #930 !important;
+}
+
+/*active states */
+.sfDashboard ul li a:hover, .sfquicklinks ul li a:hover,  .sfFormwrapper input.sfInputbox:focus, .sfFormwrapper textarea.sfTextarea:focus, .sfFormwrapper select.sfListmenu:focus, .sfFormwrapper select.sfListmenusmall:focus, .sfFormwrapper select.sfListmenubig:focus, textarea.sfTextareabig1:focus, select.sfListmenusmall:focus, textarea.sfInputbox:focus, .sfTextBoxSmall:focus, .cssClassSearchPanel select:focus, .cssClassViewPerPage select:focus, .cssClassVariantValueName:focus, .cssClassIsActive:focus, .cssClassTextArea:focus, .cssClassElement select:focus, .popupbox select:focus {
+	background: #fff;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+	-ms-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+	border-color: #96b3fc;}
+
+.ModalPopupBG {
+	background: #000;
+}
+.sfFooterwrapper {
+	color: #6b6c6d;
+}
+.pageHelp.off {
+	background: #444;
+}
+.pageHelp:after {
+	color: #c8c8c8;
+}
+
+.sfAdvanceRadioBtn .sfRadiobutton, .sfLayoutSwitch, .sfChartSelection ul.sfTab  {
+	background: #333; border:1px solid rgba(255,255,255,0.2);
+}
+div.sfChartSelection ul.sfTab li{ background:#333 !important;}
+.sfAdvanceRadioBtn .sfRadiobutton label, .sfChartSelection ul.sfTab li {
+	color: #bfbfbf;
+	border-right-color: #4F4F4F;
+}
+.sfAdvanceRadioBtn .sfRadiobutton label:hover  {
+	background: #444;
+}
+.sfChartSelection ul.sfTab li:hover { background:#444 !important;}
+.sfAdvanceRadioBtn .sfRadiobutton label.sfActive, .sfAdvanceRadioBtn .sfRadiobutton span.active label, .sfLayoutSwitch span.active, .sfChartSelection ul.sfTab li.sfDefault {
+	 background: #222 !important; box-shadow:0 3px 5px #111111 inset; -webkit-box-shadow:0 3px 5px #111111 inset; -ms-box-shadow:0 3px 5px #111111 inset; -o-box-shadow:0 3px 5px #111111 inset; 
+	color: #fff;
+}
+.sfGridwrapper {
+	border-color:transparent;
+}
+/*Table Option*/
+.sfTableOption {
+	background: #292929;
+}
+.sfTableOption .sfBtn.icon-search {
+	background: #666 !important;
+	border-color: #777;
+}
+table.sfTableOption2 {
+    border-top-color:rgba(255,255,255,0.1);
+}
+
+.sfTableOption .sfRightdiv label {
+	color: #fff;
+}
+div .sfGridwrapper table td a.icon-edit, .sfGridwrapper table td a.icon-delete, .sfGridwrapper table td a.icon-preview {
+	color: #bbb;
+}
+div .sfGridwrapper table td a:hover.icon-edit, .sfGridwrapper table td a:hover.icon-delete, .sfGridwrapper table td a:hover.icon-preview {
+	color: #1a1a1a;
+}
+#divModulesLists .icon-edit:hover, #divModulesLists .icon-delete:hover {
+	color: #fff;
+}
+.sfContentWrap {
+	background: #485f7e;
+}
+.sfContent {
+	background: #fff;
+}
+.sfTxtOrange {
+	color: Orange;
+}
+.sfSelectarrow label:hover {
+	color: #000;
+}
+
+.sfWelcomeWrap {
+	background: #333; color: #fff;
+	border-color: #444;
+}
+.sfWelcomeWrap label.icon-close {
+	color: #c5c5c5;
+}
+.sfWelcomeWrap label:hover.icon-close {
+	color: #515357;
+}
+.sfWelcomeWrap h1 {
+	color: #ddd;
+}
+.sfWelcomeWrap h2 {
+	color: #838383;
+}
+.sfTutorialWrap ul li span {
+	color: #ccc;
+}
+.sfTutorialWrap ul li a {
+	color: #ccc;
+}
+.sfTutorialWrap ul li.sfTutorialC, .sfTutorialWrap ul li.sfModuleList {
+	border-left-color: #444;
+}
+.sfTutorialWrap ul li.sfTutorialA a, .sfTutorialWrap ul li.sfTutorialB a {
+	background-color: #5f94ce;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+	-o-box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+	-ms-box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+	box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+}
+.sfTutorialWrap ul li.sfTutorialA a:before, .sfTutorialWrap ul li.sfTutorialB a:before {
+	background: rgba(0,0,0,0.0);
+}
+.sfTutorialWrap ul li.sfTutorialA:hover a:before, .sfTutorialWrap ul li.sfTutorialB:hover a:before {
+	background: rgba(0,0,0,0.4);
+}
+.sfTutorialWrap ul li.sfTutorialA a:after, .sfTutorialWrap ul li.sfTutorialB a:after {
+	color: #fff;
+	background: rgba(0,0,0,.4);
+}
+.sfTutorialWrap ul li.sfTutorialA:hover a:after, .sfTutorialWrap ul li.sfTutorialB:hover a:after {
+	color: #fff;
+}
+.sfMoveNS a {
+	color: #8C8C8C;
+}
+.sfMoveNS a:hover {
+	color: #1A1A1A;
+}
+.sfExceptions {
+	border-color: #444;
+	background: #333;
+}
+.sfExceptions i.icon-info {
+	color: #008bda;
+}
+/*CDN*/
+#divViewList {
+	border-color: #444;
+}
+#divViewList ul li {
+	border-bottom-color: #333;
+}
+#divViewList ul li .sfLinks .sfBlock .sfOrder i {
+	color: #7E7E7E;
+}
+#divViewList ul li .sfLinks .sfBlock .sfDelete {
+	color: #7E7E7E;
+}
+#divViewList ul li .sfLinks .sfBlock .sfDelete:hover, #divViewList ul li .sfLinks .sfBlock .sfOrder i:hover {
+	color: #1a1a1a;
+}
+.sfAddUrl {
+	background:none;
+}
+.sfAddUrl fieldset legend {
+	background: #fff;
+}
+i.icon-info {
+	color:#008bda;
+}
+i:hover.icon-info {
+	color:#17abff;
+}
+i.icon-info[data-title]:hover:after {
+	color: #333;
+	-moz-box-shadow: 0px 0px 4px #222;
+	-webkit-box-shadow: 0px 0px 4px #222;
+	box-shadow: 0px 0px 4px #222;
+}
+
+
+/* Top Sticky Bar */
+.sfTopbar { background:#141414; }
+.sfTopbar ul li.sfUpgrade a { background:#252525;}
+
+
+.sfDashboard ul li a:hover, .sfquicklinks ul li a:hover, .sfFormwrapper input.sfInputbox:focus, .sfFormwrapper textarea.sfTextarea:focus, .sfFormwrapper select.sfListmenu:focus, .sfFormwrapper select.sfListmenusmall:focus, .sfFormwrapper select.sfListmenubig:focus, textarea.sfTextareabig1:focus, select.sfListmenusmall:focus, textarea.sfInputbox:focus, .sfTextBoxSmall:focus, .cssClassSearchPanel select:focus, .cssClassViewPerPage select:focus, .cssClassVariantValueName:focus, .cssClassIsActive:focus, .cssClassTextArea:focus, .cssClassElement select:focus, .popupbox select:focus
+{
+background: #333;
+    border-color: #444;
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4) inset;
+ }
+ 
+div.sfPageHelpHolder, span.pageHelp { background:#535352;}
+
+
+/* Juery Ui */
+div.ajax__tab_default, div.ui-widget-content {
+    background:#353535; 
+    border-color:#444;
+}
+
+/* Accordions */
+div.sfInformationheader h2 { color:#fff; }
+div.sfInformationheader {
+    background-color: #333;
+    background-image: linear-gradient(to top, #353535, #444);
+    border-color: #222;}
+
+div.sfInformation .Active .sfInformationheader {
+    background-color: #272727;
+    background-image: linear-gradient(to top, #171717, #272727);
+}
+
+div.sfInformationcontent { background:#272727; border-color: transparent;}
+div.sfInformation .Active .sfInformationheader h2 { color:#ccc;}
+li.ui-state-active a, li.ui-state-active a:link, li.ui-state-active a:visited {
+    color: #fff;
+}
+li.ui-state-active a { background:#353535;}
+li.ui-state-default a {
+    border-right-color: #444;
+}
+
+
+/* Layout Manager */
+#templateList, #presetsDiv { background:#333;}
+#templateList .sfTemplatethumb {
+	border-color:#e5e5e5;
+	background:#fff;
+}
+
+.sfTemplateholder.sfActivetemplate a.sfTemplatethumb:after {  background:rgba(11,75,131,0.5);}
+
+.sfTemplateholder:hover a.sfTemplatethumb:after { background:rgba(0,0,0,0.5);}
+
+.sfTemplatedetail ul li { color:#aaa;}
+
+
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li { background:#f2f2f2; color:#515357; }
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li a {background:#f2f2f2; color:#515357;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li:hover, .sfTemplateholder .sfButtonwrapper ul li a:hover { background:#333333; color:#fff;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.activate a{ background:#555555; color:#fff;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.activate a { color:#fff;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.activate a:hover { background:#61B416;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize ul.sfTemplateEdit { background:#333333;}
+
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize ul.sfTemplateEdit li { color:#ccc;}
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize ul.sfTemplateEdit li a { color:#ccc;}
+
+.sfTemplateholder .sfButtonwrapper ul.sfTemplateSetting li.sfTemplateCustomize ul.sfTemplateEdit li:hover { background:#555; color:#fff;}
+
+.sfTemplateholder i.icon-close { background:#242424;}
+.sfTemplateholder i.icon-close:hover { background:#505F7C;}
+.sfTemplateholder.sfActivetemplate .sfButtonwrapper ul.sfTemplateSetting li.activate {  background:#61b416;}
+.sfTemplateholder.sfActivetemplate .sfButtonwrapper ul.sfTemplateSetting li.activate a{  background:#61b416;}
+.sfTemplateholder.sfActivetemplate .sfButtonwrapper ul.sfTemplateSetting li.activate a { color:#fff;}
+
+
+#imageThumbs a img {
+	background:#fff;
+	border-color:#ccc;
+}
+#divPagePresets ul#pageTree li span {
+	text-shadow:1px 1px 0 #000;
+	color:#e5e5e5;
+	border-bottom-color:rgba(0,0,0,0.5);
+}
+#divPagePresets ul#pageTree li span.sfAssigned
+{	background:rgba(0,0,0,0.5);
+	border-bottom-color: rgba(0,0,0,0.5);
+	color:#ebebeb;
+	cursor:default;
+}
+
+#divPagePresets ul#pageTree li span.sfActivepage {
+	background:rgba(255,255,255,0.3);
+	border-bottom-color: rgba(0,0,0,0.5);
+	color:#333;
+}
+#divPagePresets ul#pageTree li span.sfAssigned {
+	background:#222;
+	border-bottom-color:#fff;
+	color:#666;
+}
+.sfPopup .controls {
+	background:#fff;
+}
+.sfPopup .controls .sftype1 {
+	background:#f2f2f2;
+}
+#activeThemeList ul li, #activeWidthList ul li, #presetsDiv fieldset #activeLayoutList ul li label {
+	background:#222;
+	border-color: #e5e5e5;
+	color:#444;
+}
+#activeThemeList ul li:hover, #activeWidthList ul li:hover {
+	background:#fff;
+	color:#000;
+}
+#activeThemeList ul li.sfActive, #activeWidthList ul li.sfActive, #activeLayoutList ul li label.sfActive {
+	background:#222 !important;
+	color:#ccc !important; 
+	text-shadow:none;
+	border-color: #555 !important;
+	box-shadow: 0 5px 3px #111 inset; 
+}
+/* new css */
+.sflayoutbuilderhead {
+	color:#00719C;
+}
+.sflayoutbuilderhead:hover {
+	color:#0094DE;
+}
+.sfBuilder, .sflayoutbuilderhead {
+	background:#222;
+}
+.sfCodepreview {
+	background:#fff;
+}
+
+/* ---------------------------------- template wireframe -----------------------------------*/
+.cm-s-default span.cm-string { color:#f26136;}
+.cm-s-default span.cm-attribute {color:#00adf5;}
+.cm-s-default span.cm-tag { color:#81c341;}
+.CodeMirror-gutter { background:rgba(0,0,0,0.3); border-right-color:rgba(0,0,0,0.1);}
+
+.ui-dialog .sfFormwrapper  { background:transparent !important;}
+#presetsDiv #activeLayoutList ul li { border-bottom-color:rgba(0,0,0,0.2);}
+
+#presetsDiv fieldset #activeLayoutList ul li .sfPresetpages ul li { background:#222; border-color:#555;}
+.sfWrapper {
+	border-color: #444;
+	background: #444; box-shadow: none}
+
+.sfPosition {
+	color: #ccc; text-shadow:none;
+}
+div#visualLayoutMgr {
+	background:none;
+}
+.sfPchpreview {
+	background:#fff;
+}
+.sfLayOut
+{
+    background: #DEEFFB;
+}
+
+TH .sfWrapper
+{
+    border-color:rgba(255,255,255,0.2); 
+}
+
+TH .sfWrapper:hover
+{
+     background:rgba(255,255,255,0.2);
+}
+TH.sfActive { background:none !important;}
+
+TH.sfActive .sfWrapper {border-color:#219ddb;  background:rgba(0,0,0,0.5); border-color: rgba(255,255,255,0.2); }
+
+.srt-draghandle.dragged
+{
+    border-left-color:#333;
+}
+
+.srt-draghandle.dragged
+{
+    border-left-color: #333;
+}
+
+#divColsInfo span
+{
+    background-color: Red;
+}
+#divColsInfo span.active
+{
+    background-color: blue;
+}
+.sfMerge , .sfSplit { background:#219DDB;}
+	
+.sfResetCore 
+{ color:#333; border-color: #fff;
+background: #f5f5f5;
+background: -moz-linear-gradient(top,  #f5f5f5 0%, #d9d9d9 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#d9d9d9));
+background: -webkit-linear-gradient(top,  #f5f5f5 0%,#d9d9d9 100%);
+background: -o-linear-gradient(top,  #f5f5f5 0%,#d9d9d9 100%);
+background: -ms-linear-gradient(top,  #f5f5f5 0%,#d9d9d9 100%);
+background: linear-gradient(to bottom,  #f5f5f5 0%,#d9d9d9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#d9d9d9',GradientType=0 );
+}
+     
+.sfResetCore:hover {background: #d9d9d9;
+background: -moz-linear-gradient(top,  #d9d9d9 0%, #f5f5f5 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d9d9d9), color-stop(100%,#f5f5f5));
+background: -webkit-linear-gradient(top,  #d9d9d9 0%,#f5f5f5 100%);
+background: -o-linear-gradient(top,  #d9d9d9 0%,#f5f5f5 100%);
+background: -ms-linear-gradient(top,  #d9d9d9 0%,#f5f5f5 100%);
+background: linear-gradient(to bottom,  #d9d9d9 0%,#f5f5f5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d9d9', endColorstr='#f5f5f5',GradientType=0 );
+}
+#divLayoutWireframe .sfErrormsg { color:#fff !important;}
+
+
+.sfTemplatedetail ul li.title span { color: #fff;}
+
+
+
+#divDroppable.sfModulesHolder { background:#444 !important; border-color:transparent;}
+#navContainer h3 div.sfSearch input#txtSearch, .sfModulesHolder h3 div.sfSearch input#txtSearchModules { background:#666; }
+
+#sfOuterWrapper div.widget-instance, .sfLcontent ul li { color: #c8c8c8; background:#666; border-bottom-color:#555; }
+.sfLcontent ul li {    border-color:#888;}
+
+.sfLcontent ul li:hover, .sfLcontent ul li.sfActive, .sfPopupinner .sfLcontent ul li.sfActive:hover { background:#888;}
+.sfLayoutSettingHolder { background:rgba(0,0,0,0.3);}
+
+#divLayout, .divLayoutContainer div.sfFormwrapper div.publishbar, .cssClassTreeNav, .sfFilemanageholder #divFileTreeOuter #divFileTree, .sfContentWrap
+,.sfFilemanageholder #divFileTreeOuter .sfTab li.sfActive, .sfLeftdiv, .sfCenterWrapper, .sfRightdiv, .sfTreeview, .sfLanguage .sfTreeview, 
+.sfLanguage td.sfSelectednode a, div.st_vertical div.st_tabs_container, div.st_vertical div.st_view_container
+  { background:#2e2e2e;}
+ .cssClassSideBox
+  { background:#2e2e2e !important;} 
+  
+.divLayoutContainer h3, .sfModulesHolder h3 { color:#eee;}
+.divLayoutContainer, .sfNewPage,  .sfContent { background: #404040;}
+.sfOuterwrapper, #divFloat {
+    background: #3A3A3A;
+    -webkit-box-shadow: 0 1px 0 #555  inset;
+    box-shadow: 0 1px 0 #555  inset;
+    border-color:#333;
+}
+
+div.widget-instance span.control i { color: #fff;}
+.sfblocks { border-color:#666;}
+
+#sfOuterWrapper div.widget-instance:hover { background:#999; }
+.ui-tree li { color:#aeaeae;}
+#navContainer .ui-tree li.active { background:#404040; color: #ccc; }
+.cssClassTreeNav h3 { border-bottom-color: transparent;}
+#navContainer .ui-tree li:hover { background:#353535;}
+
+.sfActivedroparea { background:#252525;}
+
+#dvPageType label.icon-addnew.sfAddActive { background: #404040;}
+
+/* Menu Manager */
+.sfLeftdiv, .sfCenterWrapper,  .sfRightdiv{  background: #2e2e2e;}
+.sfCenter, .sfRightDivContainer, #menuList ul li.sfSelected, div.st_vertical div.st_view, div.st_vertical ul.st_tabs li a.st_tab_active { background:#404040 !important;}
+div.st_vertical ul.st_tabs li a.st_tab_active { color:#fff;}
+.sfParentItems { border-top-color:#555;}
+#menuList ul li.sfSelected, #MenuMgrView .ui-tree li  { color:#ddd; }
+.ui-tree .ui-tree-list > span.ui-tree-title:before, .ui-tree .ui-tree-node > span.ui-tree-title:before { color:#ddd;}
+#menuList ul li span.sfMenuOption i { color: #bbb;}
+.sfRightDivContainer:after, .sfRightDivContainer:before { background:#404040;}
+#MenuMgrView .ui-tree li:hover, #menuList ul li:hover, div.st_vertical ul.st_tabs li a:hover { background:#555; color: #fff;}
+
+
+/* CK editor */
+.cke_skin_kama .cke_wrapper { background:#555 !important; }
+span.cke_skin_kama { border:1px solid #555 !important;}
+
+
+
+/* File Manager */
+#divSearch.sfTableOption > div  { background:none; }
+.sfFilemanageholder #divFileTreeOuter .sfTab li  { background: #444; color: #fff;}
+
+
+/*Dashboard */
+.sfDashboard ul li a:hover { color: #F6911E;}
+.sfCountryHolder { background:#353535; border-color: #444;}
+.sftotalVisitor { border-top-color: #444;}
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a:hover, .sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child a.active 
+{ background: #222;}
+
+div .sfGridwrapper table td a.icon-edit:hover, .sfGridwrapper table td a.icon-delete:hover, .sfGridwrapper table td a.icon-preview:hover, .sfMoveNS a:hover
+{ color:#fff}
+
+
+/* Content Delivery Network */
+.sfAddUrl fieldset legend { background: none;}
+
+
+
+/* Page Manager */
+.ui-state-active a { box-shadow: 0 1px 0 #444; }
+li:first-child.ui-corner-top.ui-state-active a {border-top-left-radius: 5px;}
+#navContainer .ui-tree .ui-tree-expanded ul li span.ui-tree-title:hover, #navContainer .ui-tree .ui-tree-expanded ul li span.ui-tree-selected 
+{ background:#555;}
+
+/* 	ALL TAB DESIGN 
+.ajax__tab_header { background:#353535 !important; border-bottom:1px solid #7A7A7A;}
+.ajax__tab_active span.ajax__tab_outer { border-right:none !important; background:#353535 !important; box-shadow: none;}
+.ajax__tab_xp .ajax__tab_inner span {border-radius:3px 3px 0px 0px; -webkit-border-radius:3px 3px 0px 0px; -o-border-radius:3px 3px 0px 0px; -ms-border-radius:3px 3px 0px 0px;}
+.ajax__tab_xp .ajax__tab_outer:hover,.ajax__tab_xp .ajax__tab_inner:hover,.ajax__tab_xp .ajax__tab_inner span:hover { background:#2a2a2a !important;}
+.ajax__tab_xp .ajax__tab_inner span span:hover { background:none !important;}
+.ajax__tab_xp .ajax__tab_outer { border-right:none !important;}
+.ajax__tab_active span.ajax__tab_outer span.ajax__tab_inner > span { border:1px solid #7a7a7a; background:#353535 !important; 
+ border-bottom:none; box-shadow:0 1px 0 #353535; color:#fff !important;}
+.ajax__tab_active span.ajax__tab_outer span.ajax__tab_inner span {color:#fff !important;}
+.ajax__tab_active span.ajax__tab_outer span.ajax__tab_inner span { background:none !important;}
+.ajax__tab_inner:hover span { color:#fff !important; background:#353535 !important;}
+.ui-widget-header, .sfTab { border-bottom:1px solid #7a7a7a; }
+#sfPageHelpDetails .ui-widget-header, #sfPageHelpDetails .sfTab { background:none !important;}
+.ui-state-hover a, .ui-state-hover a:hover { background:#3a3a3a;}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { background:#444444; border-color:#7a7a7a;}
+.ajax__tab_xp .ajax__tab_header { padding:0px 5px;}
+*/
+.ajax__tab_header { background:none !important; border-bottom:1px solid #7a7a7a; padding:0px 5px;}
+.ajax__tab_xp .ajax__tab_inner span.ajax__tab_tab:hover { background:#3a3a3a; color:#ccc;}
+.ajax__tab_active span.ajax__tab_outer span.ajax__tab_inner span { background:none !important;color:#fff !important;}
+.ajax__tab_xp .ajax__tab_outer { border-right:none !important;}
+.ajax__tab_xp .ajax__tab_inner span.ajax__tab_tab {border-radius:3px 3px 0px 0px; -webkit-border-radius:3px 3px 0px 0px; -o-border-radius:3px 3px 0px 0px; -ms-border-radius:3px 3px 0px 0px;}
+.ajax__tab_active span.ajax__tab_outer { background:none !important;}
+.ajax__tab_hover .ajax__tab_outer .ajax__tab_inner span.ajax__tab_tab:hover { background:red;}
+.ajax__tab_xp .ajax__tab_inner span.ajax__tab_tab:hover { background:#2a2a2a !important; }
+.ajax__tab_inner:hover span { color:#8a8a8a !important;}
+
+.ui-widget-header, .sfTab { border-bottom:1px solid #7a7a7a;}
+.ui-state-hover a, .ui-state-hover a:hover {text-decoration: none;	background:#3a3a3a;}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited, .ajax__tab_active span.ajax__tab_outer span.ajax__tab_inner > span { background:#444 !important; color:#fff !important; border:1px solid #7a7a7a; border-bottom:none; box-shadow:0px 1px 1px #444;}
+
+.ajax__tab_xp .ajax__tab_active span.ajax__tab_outer span.ajax__tab_inner > span { background:#353535 !important; box-shadow:0px 1px 0px #353535;}
+
+
+/* Menu Manager */
+#MenuMgrView .ui-tree .ui-tree-expanded ul {border-left-color:#666;}
+#MenuMgrView .ui-tree .ui-tree-expanded ul li span.ui-tree-title:hover, #MenuMgrView .ui-tree .ui-tree-expanded ul li span.ui-tree-selected 
+{ background: #666;}
+.sfDivFlying, .sfLeftdiv label.icon-addnew.active{ background:#333;}
+.sfDivFlying { border-color: #555555;}
+
+/* File Manager */
+.sfFilemanageholder #divFileTreeOuter .sfTab li:hover { background:#555;}
+.sfFilemanageholder #divFileTree li.sfActive  { background:#404040 !important;}
+.sfFilemanageholder #divFileTree li.sfActive a{ color:#fff;}
+.sfFilemanageholder #divFileTree ul li ul li:before { background:#666;}
+.sfFilemanageholder #divFileTree li ul { border-left:2px solid #666;}
+.sfFilemanageholder #divFileTree li.sfActive a.cssClassTreeSelected, .sfFilemanageholder #divFileTreeOuter .sfTab li.sfActive:hover { background:#222;}
+.sfTab li.lastList.sfActive { border-right-color:transparent !important;}
+
+#activeThemeList ul li, #activeWidthList ul li, #presetsDiv fieldset #activeLayoutList ul li label { background:transparent; border-color:#777; color:#fff;}
+
+
+ul.sfTab li { background:#555; border-color: transparent;}
+		
+#activeThemeList ul li, #activeWidthList ul li, #presetsDiv #activeLayoutList ul li label { background:transparent; border-color:rgba(255,255,255,0.1); color:#ccc;}
+
+#presetsDiv #activeLayoutList ul li .sfPresetpages ul li { background: rgba(0,0,0,0.2); border-color: rgba(255,255,255,0.2);}
+#divPagePresets ul#pageTree li span { border-bottom-color:rgba(0,0,0,0.4);}
+.ui-dialog .ui-dialog-titlebar { background:#151515 !important;}
+
+
+
+/* POPUPS */
+.ajax__tab_header, #ulTabList { }
+
+/* Take a Tour */
+.tourMsg { background:#555;}
+
+.sfNoRecord { color:#d84935; }
+
+
+
+.sfBreadcrumb ul li.sfFirst a i:hover, .sfBreadcrumb ul li a:hover { color:rgba(255,255,255,0.7);}
+.sfTopbar ul.right li { border-left-color:rgba(255,255,255,0.1);}
+
+.taskDate { background: rgba(0,0,0,0.3);}
+.tasktodo { border-bottom-color:rgba(255,255,255,0.1);}
+
+.sfQuicklinklist li, ul.ui-sortable li { background:rgba(0, 0, 0, 0.1); text-shadow:none; border-color:rgba(255,255,255,0.2);}
+.sfSidebarItems ul.ui-sortable li ul.ui-sortable li { background:rgba(255, 255, 255, 0.1); text-shadow:none;  border-color:rgba(255,255,255,0.2);}
+.sfQuicklinklist li:hover, ul.ui-sortable li:hover { background:transparent;}
+.sfSidebarItems ul.ui-sortable li ul.ui-sortable li:hover { background:rgba(255,255,255,0.2);}
+
+.sfSidebar ul.menu li.Grandparent > a span:after { color:#b5b5b5;}
+.sfSidebar ul.menu li.Grandparent > a.active span:after { color:#fff;}
+
+.sfTopbar ul.right li div.myProfileDrop ul li a:hover { background:#555555;}
+
+.sfListright .sfFormwrapper { background-color:#333;}
+
+.sfTopbar ul li.sfUpgrade a { background:#222; }
+
+
+
+.tourMsg .sfBtn {
+	background:#D68F2B;
+	border:1px solid #D68F2B; color:#fff;
+	border-bottom:2px solid #7C4900;
+}
+.tourMsg .sfBtn[class*="icon-"]:before  { color:#f2f2f2; }
+.tourMsg .sfBtn:hover {
+	background: #f0a030;
+	border:1px solid #f0a030;
+	border-bottom:2px solid #b06700;
+	text-decoration:none; }
+.tourMsg i.icon-close:before { background:#444;}
+.tourMsg i.icon-close:hover:before { background:#666;}
+
+#divVisitedCountryList, #divVisitedPageList, #divBrowserList, #divRefSite { background-color:#444;}
+#spnVistTime { background-color:#222;}
+
+.cssStoreQuickStatics div i, #tblInventoryDetail tr td i {color:#aeaeae;}
+.sfTimeSelMain { background:#212121;}
+#tblInventoryDetail tr td { border-color:#434343;color:#aeaeae;}
+
+.sfSelectTime:after { border-color:#7a7a7a;}
+
+
+.cssClassPageNumber { background-color:#3a3a3a;}
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child.parentchild > ul.acitem, .sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child.parentchild > a.active:before { background-color:#555;}
+.sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child.parentchild ul li.grandchild a:hover, .sfSidebar ul.menu li.Grandparent ul.acitem li.parent ul li.child.parentchild ul li.grandchild a.active { background:#333;}
+
+.sfGridwrapper .sfTableOption table, .sfGridwrapper .sfTableOption table td { background:#444 !important;}
+
+.sfBtn[class*="icon-"]:before, .sfBtn span[class*="icon-"]:before, .sfBtn i[class*="icon-"]:before { color:#C98027;}

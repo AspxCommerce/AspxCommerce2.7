@@ -1,0 +1,172 @@
+﻿.sfFAQList h6{cursor:pointer; font-size:16px; display:inline-block; background: url("../images/buttetlist.png") no-repeat scroll 0 7px}
+.sfFAQList h6 span{padding:5px;}
+.helpOption li{ border-bottom: 1px solid #EEEEEE;
+    color: #C95959;
+    cursor: pointer;
+    font: bold 12px/25px sans-serif;
+    padding-left: 30px;
+	-webkit-transition: background 0.3 ease-in;
+		-moz-transition: background 0.3 ease-in;
+        -ms-transition: background 0.3 ease-in;
+        -o-transition: background 0.3 ease-in;
+		transition: background 0.3 ease-in;
+		}
+	
+	.helpOption li:hover {
+    background: url("../images/tick02.png") no-repeat left center transparent;
+	}
+	.sfEmptyresult p, .sfEmptyFAQ p{ background: url("../images/error.png") no-repeat scroll 5px center #AD3435;
+    border-radius: 3px 3px 3px 3px;
+      border-bottom: 1px solid #FFFFFF;    
+    font-weight: bold;
+    margin: 10px 0 7px;
+     color:#fff;
+    padding: 5px 5px 5px 40px;}
+.sfFeedBack p{ padding:5px 5px 5px 40px; margin:10px 0 20px; background:#00B48C url(../images/tick.png) no-repeat 5px center; font-weight:bold;
+    border-radius:3px; color:#fff;color: #fff;	border-radius:3px;}
+    .sfSuccessPost{display:none;}
+.sfSuccessPost p{padding:5px 5px 5px 40px; margin:10px 0 20px; background:#00B48C url(../images/tick.png) no-repeat 5px center; font-weight:bold;
+    border-radius:3px; color:#fff;color: #fff;	border-radius:3px;}
+.sfOptionList h2 {   font-size: 18px; visibility:hidden;
+    margin-bottom: 5px !important;
+    padding-left: 30px !important;}
+
+.popupbox1       	{background-color: #B0B0B0;-moz-border-radius: 5px;-webkit-border-radius: 5px;-khtml-border-radius: 5px;box-shadow: 0 0 20px #000000;display: none;left: 50%;	padding: 10px;position: fixed;top: 50%;width: 550px;z-index: 9999;}
+#fade1           	{display: none;background: #000;position: fixed;left: 0;top: 0;width: 100%;height: 100%;opacity: .80;z-index: 999;}
+.sfError        	{color:Red;}
+.sfFieldItems   	{ padding:0px 0 0 20px;}
+.sfFAQHelpful   	{ margin: 10px auto 20px;
+    padding: 5px 10px;
+    width: 295px; background:#f1f1f1; border-radius:3px;}
+.sfFAQHelpful strong{ padding:0 35px 0 0px; font-size:13px; color:#555; }
+.sfOptionList   { margin:10px 0 20px;}
+.sfFAQHelpful .sfBtn          {margin-left:5px!important;}
+.sfBtnWrap      {/*width:120px; float:right; margin:12px 0 0 0 ;*/}
+.sfFaqtext      {margin:0 10px 0 21px; text-align:left; height:22px; width:238px; background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #E5E5E5;border-radius: 4px 4px 4px 4px;}
+.sfFaquestion   {margin-left:7px; height:75px; width:238px; background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #E5E5E5; border-radius: 4px 4px 4px 4px; margin:0 10px 0 6px;}
+.spnLabel       {padding:10px;margin-right: 17px;}
+.spnrewLabel 	{margin-left:0px; padding:10px;}
+.sfReview 		{width: 268px; height:60px;}  
+.spndelete img	{float:right !important;}
+.dvEmail input	{width:270px; height:22px;}
+.spnAlert			{ color:Red; display:none; position:relative; top:-25px; left:3px;}
+.sfReviewlist 		{ border:1px solid #cccccc; padding:10px 5px; border-radius:4px; background:#fff; margin:8px 5px;}
+.sfReviewlist span	{ padding:5px 0}
+.sfuserEmail 		{ font-size:14px; color:#52276c; }
+.sfReviewdate		{ font-size:11px; text-transform:uppercase; font-style:italic;}
+.spnrewLabel		{ position:relative; top:-22px;}
+
+.dvCategory > span { background:url(../images/right-arrow.png) no-repeat center; width:20px; height:20px; text-align:center; line-height:20px; color:#fff; font-weight:bold; border-radius:50%; font-size:12px; text-indent:-999em; 
+-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;}
+		
+h6.ncFAQHeader { padding-left:15px !important; color:#047CAA;}
+h3.categoryHeader{cursor:pointer; padding-left:30px !important; padding-bottom:7px !important; border-bottom:1px solid #eee; text-transform:capitalize;
+}
+
+div.dvCategory.sfActive { border-bottom:none;}
+div.dvCategory.sfActive > span {
+	  -webkit-transform: rotate(90deg); 
+     -moz-transform: rotate(90deg); 
+      -ms-transform: rotate(90deg);   
+       -o-transform: rotate(90deg);   
+          transform: rotate(90deg);			     
+}
+
+h3.categoryHeader label { font:bold 10px Tahoma, Geneva, sans-serif; color:#777; padding-left:5px; position:relative; top:-10px;}
+
+.dvCategoryList {padding-left:30px !important;}
+.ncFAQ >span {background:#652D86; width:8px; height:8px;  margin: 6px 0 0; border-radius:50%;}
+.btnCategory {float:right!important;}
+.btnnewCategory{margin: 0 0 -4px 5px;}
+.dvReason > div { margin-bottom:10px; }
+.sfFieldItems ul li { list-style:disc inside;}
+.sfOptionList ul li { list-style:none;}
+
+#btnSendReason { margin-left:314px;}
+.sfFieldsetForm{}
+.divQuestionPost{display:none;}
+.sfCategoryList{float:left;}
+.sfPageSize{float:right;}
+textarea.watermark { color: #999; } 
+input.watermark { color: #999; }
+.uvField {
+    background-color: #FCFDFF;
+    border: 1px solid #8F9BB3;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1) inset, 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.1s ease 0s;
+    height:45px;
+}
+.uvField-select {
+    display: inline-block;
+}
+.uvField-idea {
+    clear: both;
+    font-size: 18px;
+    padding-right: 30px;
+}
+ .uvFieldText {
+    -moz-font-feature-settings: inherit;
+    -moz-font-language-override: inherit;
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    box-shadow: none;
+   /* display: block;*/
+    font-family: inherit;
+    font-size: inherit;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    line-height: 1em;
+    outline: medium none;
+    padding: 10px;
+    resize: none;
+     width: 83%;
+}
+
+.pagination a {
+    border: 1px solid #E0E0E0;
+    border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+.pagination .current {
+    background: none repeat scroll 0 0 #828282;
+    border: 1px solid transparent;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 3px 10px;
+}
+#Pagination .next {
+    background: url("../images/next-arrow.jpg") no-repeat scroll 8px 5px transparent;
+    padding: 5px 10px;
+}
+.pagination a {
+    border: 1px solid #E0E0E0;
+    border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#Pagination .prev {
+    background: url("../images/previous-arrow.jpg") no-repeat scroll 6px 5px transparent;
+    padding: 5px 10px;
+}
+.sfFAQSearch{float:left; padding-left:60px;}
+.sfSearchimg{    float: right;
+    height: 27px;
+    padding: 1px;
+    width: 31px;}

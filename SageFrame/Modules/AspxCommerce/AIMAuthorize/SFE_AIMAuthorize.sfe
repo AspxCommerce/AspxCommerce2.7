@@ -1,0 +1,73 @@
+﻿<sageframe version="2.5.0.0" type="PaymentGateway">
+  <folders>
+    <folder>
+      <name>SFE_AIMAuthorize</name>
+      <paymentgatewayname>AIM Authorize.NET</paymentgatewayname>
+      <friendlyname>AIMAuthorize</friendlyname>
+      <foldername>AspxCommerce/AIMAuthorize</foldername>
+      <description>AIMAuthorize</description>
+      <culturename>en-US</culturename>
+      <version>2.50.00</version>
+      <settings>
+        <setting>
+          <key>APILoginID</key>
+          <value>8aJ3PYEt7k</value>
+        </setting>
+        <setting>
+          <key>TransactionKey</key>
+          <value>47M839T7x5XuVGa6</value>
+        </setting>
+        <setting>
+          <key>IsTestAIM</key>
+          <value>True</value>
+        </setting>
+        <setting>
+          <key>Version</key>
+          <value>3.1</value>
+        </setting>
+      </settings>
+      <modules>
+        <module>
+          <controls>
+            <control>
+              <key>AIMAuthorizeView</key>
+              <title>AspxCommerce Payment Through AIMAuthorize</title>
+              <src>Modules/AspxCommerce/AIMAuthorize/AIM_AuthorizeDotNET.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>false</supportspartialrendering>
+            </control>
+            <control>
+              <key>AIMAuthorizeSetting</key>
+              <title>AspxCommerce AIMAuthorize Setting</title>
+              <src>Modules/AspxCommerce/AIMAuthorize/AuthorizeDotNetAIMSetting.ascx</src>
+              <type>Setting</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>false</supportspartialrendering>
+            </control>
+            <control type="Page">
+              <key>AIM-Success</key>
+              <title>AspxCommerce AIMAuthorize Setting</title>
+              <src>Modules/AspxCommerce/AIMAuthorize/AuthorizeDotNetAIMSuccess.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>false</supportspartialrendering>
+            </control>
+
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>02.50.00.SqlDataProvider</name>
+        </file>
+        <file>
+          <name>AspxCommerce.AIM.dll</name>
+        </file>
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>
+      </files>
+    </folder>
+  </folders>
+</sageframe>

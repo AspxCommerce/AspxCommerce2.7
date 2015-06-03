@@ -1,0 +1,3300 @@
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_RewardRule_IsActive]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_RewardRule] DROP CONSTRAINT [DF_Aspx_RewardRule_IsActive]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_RewardRule_IsDeleted]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_RewardRule] DROP CONSTRAINT [DF_Aspx_RewardRule_IsDeleted]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_RewardRule_IsModified]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_RewardRule] DROP CONSTRAINT [DF_Aspx_RewardRule_IsModified]
+END
+
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_Aspx_RewardRule_AddedOn]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[Aspx_RewardRule] DROP CONSTRAINT [DF_Aspx_RewardRule_AddedOn]
+END
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardGeneralSettings]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardGeneralSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardGeneralSettings]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPoints]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPoints]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPoints]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointSettings]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointSettings]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointSettings]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsFirstReferalPurchase]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsFirstReferalPurchase]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsFirstReferalPurchase]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsItemReview]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsItemReview]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsItemReview]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsNewsLetter]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsNewsLetter]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsNewsLetter]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsNextReferalPurchase]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsNextReferalPurchase]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsNextReferalPurchase]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsPolling]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsPolling]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsPolling]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsPurchase]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsPurchase]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsPurchase]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsReferalSignUp]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsReferalSignUp]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsReferalSignUp]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsSignUp]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsSignUp]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsSignUp]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsUsed]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardPointsUsed]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardPointsUsed]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardRule]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardRule]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardRule]
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardRuleAlias]    Script Date: 05/16/2013 16:57:58 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aspx_RewardRuleAlias]') AND type in (N'U'))
+DROP TABLE [dbo].[Aspx_RewardRuleAlias]
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardGeneralSettings]    Script Date: 05/16/2013 16:57:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardGeneralSettings](
+	[GeneralSettingsID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardPoints] [decimal](18, 2) NULL,
+	[RewardExchangeRate] [decimal](18, 2) NULL,
+	[AmountSpent] [decimal](18, 2) NULL,
+	[RewardPointsEarned] [decimal](18, 2) NULL,
+	[AddOrderStatusID] [nvarchar](256) NULL,
+	[SubOrderStatusID] [nvarchar](256) NULL,
+	[RewardPointsExpiresInDays] [int] NULL,
+	[MinRedeemBalance] [decimal](18, 2) NULL,
+	[BalanceCapped] [decimal](18, 2) NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardRate] PRIMARY KEY CLUSTERED 
+(
+	[GeneralSettingsID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPoints]    Script Date: 05/16/2013 16:57:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPoints](
+	[RewardPointsID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[RewardPoints] [decimal](18, 2) NULL,
+	[UsedRewardPoints] [decimal](18, 2) NULL,
+	[BalanaceRewardPoints] [decimal](18, 2) NULL,
+	[CustomerID] [int] NULL,
+	[UserName] [nvarchar](1000) NULL,
+	[NL_Email] [nvarchar](1000) NULL,
+	[Ref_Email] [nvarchar](1000) NULL,
+	[ItemID] [int] NULL,
+	[CostVariantValueID] [nvarchar](1000) NULL,
+	[OrderID] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPints] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointSettings]    Script Date: 05/16/2013 16:57:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointSettings](
+	[RewardPointSettingsID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleName] [nvarchar](256) NULL,
+	[RewardRuleID] [int] NULL,
+	[RewardRuleType] [nvarchar](max) NULL,
+	[RewardPoints] [decimal](18, 2) NULL,
+	[PurchaseAmount] [decimal](18, 2) NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointSettings] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointSettingsID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsFirstReferalPurchase]    Script Date: 05/16/2013 16:57:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsFirstReferalPurchase](
+	[RewardPointsFirstRefPurchaseID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[OrderID] [int] NULL,
+	[ItemID] [int] NULL,
+	[ItemCostVariantValueIDs] [nvarchar](256) NULL,
+	[ItemName] [nvarchar](256) NULL,
+	[CostVariantName] [nvarchar](256) NULL,
+	[CustomerID] [int] NULL,
+	[FirstRefPurchasePoints] [decimal](18, 2) NULL,
+	[ReferalEmail] [nvarchar](256) NULL,
+	[ReferalCustomerID] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsFirstReferalPurchase] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsFirstRefPurchaseID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsItemReview]    Script Date: 05/16/2013 16:57:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsItemReview](
+	[RewardPointsReviewID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[ReviewPoints] [decimal](18, 2) NULL,
+	[CustomerID] [int] NULL,
+	[ItemID] [int] NULL,
+	[ItemName] [nvarchar](256) NULL,
+	[ItemReviewID] [int] NULL,
+	[ItemRatingCriteriaID] [int] NULL,
+	[ReviewSummary] [nvarchar](max) NULL,
+	[Review] [nvarchar](max) NULL,
+	[StatusID] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsItemReview] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsReviewID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsNewsLetter]    Script Date: 05/16/2013 16:57:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsNewsLetter](
+	[RewardPointsNewsSubscriptionID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[SubscriptionPoints] [decimal](18, 2) NULL,
+	[SubscribedEmail] [nvarchar](256) NULL,
+	[CustomerID] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsNewsLetter] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsNewsSubscriptionID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsNextReferalPurchase]    Script Date: 05/16/2013 16:57:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsNextReferalPurchase](
+	[RewardPointsNextRefPurchaseID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[OrderID] [int] NULL,
+	[ItemID] [int] NULL,
+	[ItemCostVariantValueIDs] [nvarchar](256) NULL,
+	[ItemName] [nvarchar](256) NULL,
+	[CostVariantName] [nvarchar](256) NULL,
+	[CustomerID] [int] NULL,
+	[NextRefPurchasePoints] [decimal](18, 2) NULL,
+	[ReferalEmail] [nvarchar](256) NULL,
+	[ReferalCustomerID] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsNextReferalPurchase] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsNextRefPurchaseID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsPolling]    Script Date: 05/16/2013 16:57:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsPolling](
+	[RewardPointsPollID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[PollingPoints] [decimal](18, 2) NULL,
+	[CustomerID] [int] NULL,
+	[PollID] [int] NULL,
+	[Question] [nvarchar](256) NULL,
+	[UserModuleID] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsPolling] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsPollID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsPurchase]    Script Date: 05/16/2013 16:57:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsPurchase](
+	[RewardPointsPuchaseID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[OrderID] [int] NULL,
+	[ItemID] [int] NULL,
+	[ItemCostVariantValueIDs] [nvarchar](256) NULL,
+	[ItemName] [nvarchar](256) NULL,
+	[CostVariantName] [nvarchar](256) NULL,
+	[CustomerID] [int] NULL,
+	[PurchasePoints] [decimal](18, 2) NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsPurchase] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsPuchaseID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsReferalSignUp]    Script Date: 05/16/2013 16:57:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsReferalSignUp](
+	[RewardPointsReferalSignUpID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[ReferalSignUpPoints] [decimal](18, 2) NULL,
+	[CustomerID] [int] NULL,
+	[ReferalEmail] [nvarchar](256) NULL,
+	[ReferalCustomerID] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsReferalSignUp] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsReferalSignUpID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsSignUp]    Script Date: 05/16/2013 16:57:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsSignUp](
+	[RewardPointsSignUpID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[SignUpPoints] [decimal](18, 2) NULL,
+	[CustomerID] [int] NULL,
+	[SignUpEmail] [nvarchar](256) NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsSignUp] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsSignUpID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardPointsUsed]    Script Date: 05/16/2013 16:57:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardPointsUsed](
+	[RewardPointsUsedID] [int] IDENTITY(1,1) NOT NULL,
+	[RewardRuleID] [int] NULL,
+	[UsedRewardPoints] [decimal](18, 2) NULL,
+	[CustomerID] [int] NULL,
+	[OrderID] [int] NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[CultureName] [nvarchar](256) NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardPointsUsed] PRIMARY KEY CLUSTERED 
+(
+	[RewardPointsUsedID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardRule]    Script Date: 05/16/2013 16:57:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardRule](
+	[RewardRuleID] [int] IDENTITY(1,1) NOT NULL,
+	[StoreID] [int] NULL,
+	[PortalID] [int] NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [bit] NULL,
+	[IsModified] [bit] NULL,
+	[AddedOn] [datetime] NULL,
+	[UpdatedOn] [datetime] NULL,
+	[DeletedOn] [datetime] NULL,
+	[AddedBy] [nvarchar](256) NULL,
+	[UpdatedBy] [nvarchar](256) NULL,
+	[DeletedBy] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Aspx_RewardRule] PRIMARY KEY CLUSTERED 
+(
+	[RewardRuleID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+GO
+
+/****** Object:  Table [dbo].[Aspx_RewardRuleAlias]    Script Date: 05/16/2013 16:57:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Aspx_RewardRuleAlias](
+	[RewardRuleID] [int] NOT NULL,
+	[RewardRuleAliasName] [nvarchar](256) NULL,
+	[AliasToolTip] [nvarchar](256) NULL,
+	[AliasHelp] [nvarchar](256) NULL,
+	[CultureName] [nvarchar](256) NULL
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Aspx_RewardRule] ADD  CONSTRAINT [DF_Aspx_RewardRule_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+ALTER TABLE [dbo].[Aspx_RewardRule] ADD  CONSTRAINT [DF_Aspx_RewardRule_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+GO
+
+ALTER TABLE [dbo].[Aspx_RewardRule] ADD  CONSTRAINT [DF_Aspx_RewardRule_IsModified]  DEFAULT ((0)) FOR [IsModified]
+GO
+
+ALTER TABLE [dbo].[Aspx_RewardRule] ADD  CONSTRAINT [DF_Aspx_RewardRule_AddedOn]  DEFAULT (getdate()) FOR [AddedOn]
+GO
+
+
+
+
+
+/****** Object:  Table [dbo].[Aspx_RewardRule]    Script Date: 01/07/2013 09:56:03 ******/
+DELETE FROM [dbo].[Aspx_RewardRule]
+GO
+/****** Object:  Table [dbo].[Aspx_RewardRuleAlias]    Script Date: 01/07/2013 09:56:03 ******/
+DELETE FROM [dbo].[Aspx_RewardRuleAlias]
+GO
+/****** Object:  Table [dbo].[Aspx_RewardRuleAlias]    Script Date: 01/07/2013 09:56:03 ******/
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (1, N'Signing Up', N'Signing Up', N'Signing Up', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (2, N'Signing Up Newsletter', N'Signing Up Newsletter', N'Signing Up Newsletter', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (3, N'Purchase', N'Purchase', N'Purchase', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (4, N'Posting Product Review', N'Posting Product Review', N'Posting Product Review', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (5, N'Referal Visitor', N'Referal Visitor', N'Referal Visitor', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (6, N'Referal Sign-Up', N'Referal Sign-Up', N'Referal Sign-Up', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (7, N'Voting Poll', N'Voting Poll', N'Voting Poll', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (8, N'First Referal Purchase', N'First Referal Purchase', N'First Referal Purchase', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (9, N'Next Referal Purchase', N'Next Referal Purchase', N'Next Referal Purchase', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (10, N'Facebook Like', N'Facebook Like', N'Facebook Like', N'en-US')
+INSERT [dbo].[Aspx_RewardRuleAlias] ([RewardRuleID], [RewardRuleAliasName], [AliasToolTip], [AliasHelp], [CultureName]) VALUES (11, N'Video Upload', N'Video Upload', N'Video Upload', N'en-US')
+/****** Object:  Table [dbo].[Aspx_RewardRule]    Script Date: 01/07/2013 09:56:03 ******/
+SET IDENTITY_INSERT [dbo].[Aspx_RewardRule] ON
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (1, 1, 1, 1, 0, 0, CAST(0x0000A13800FFE2B7 AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (2, 1, 1, 1, 0, 0, CAST(0x0000A13800FFE4C3 AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (3, 1, 1, 1, 0, 0, CAST(0x0000A13800FFE5A3 AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (4, 1, 1, 1, 0, 0, CAST(0x0000A13800FFE685 AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (5, 1, 1, 1, 0, 0, CAST(0x0000A13800FFE759 AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (6, 1, 1, 1, 0, 0, CAST(0x0000A13800FFE83D AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (7, 1, 1, 1, 0, 0, CAST(0x0000A13800FFE8FE AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (8, 1, 1, 1, 0, 0, CAST(0x0000A13800FFE9CC AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (9, 1, 1, 1, 0, 0, CAST(0x0000A13800FFEAD8 AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (10, 1, 1, 1, 0, 0, CAST(0x0000A13800FFEB79 AS DateTime), NULL, NULL, NULL, NULL, NULL)
+INSERT [dbo].[Aspx_RewardRule] ([RewardRuleID], [StoreID], [PortalID], [IsActive], [IsDeleted], [IsModified], [AddedOn], [UpdatedOn], [DeletedOn], [AddedBy], [UpdatedBy], [DeletedBy]) VALUES (11, 1, 1, 1, 0, 0, CAST(0x0000A13800FFEC07 AS DateTime), NULL, NULL, NULL, NULL, NULL)
+SET IDENTITY_INSERT [dbo].[Aspx_RewardRule] OFF
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsDeleteByCore]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsDeleteByCore]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsDeleteByCore]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsDeleteNewsLetter]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsDeleteNewsLetter]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsDeleteNewsLetter]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsGeneralSettingsGetAll]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsGeneralSettingsGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsGeneralSettingsGetAll]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsGeneralSettingsIsActive]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsGeneralSettingsIsActive]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsGeneralSettingsIsActive]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsHistory]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsHistory]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsHistory]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsHistoryCustomer]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsHistoryCustomer]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsHistoryCustomer]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsIsPurchaseActive]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsIsPurchaseActive]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsIsPurchaseActive]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsRuleDelete]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsRuleDelete]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsRuleDelete]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsRuleListBind]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsRuleListBind]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsRuleListBind]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSaveByCore]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsSaveByCore]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsSaveByCore]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSaveGeneralSettings]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsSaveGeneralSettings]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsSaveGeneralSettings]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSaveNewsLetter]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsSaveNewsLetter]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsSaveNewsLetter]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSavePolling]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsSavePolling]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsSavePolling]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSaveUpdateNewRule]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsSaveUpdateNewRule]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsSaveUpdateNewRule]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSettingGetAll]    Script Date: 05/16/2013 17:00:48 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[usp_Aspx_RewardPointsSettingGetAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[usp_Aspx_RewardPointsSettingGetAll]
+GO
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsDeleteByCore]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET REWRD POINTS BY CUSTOMERID
+-- =============================================
+-- EXEC [dbo].[usp_Aspx_RewardPointsDeleteByCore] 1,2,'superuser',1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsDeleteByCore] (
+	@RewardRuleID INT
+	,@CustomerID INT
+	,@UserName NVARCHAR(256)
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	BEGIN
+		UPDATE Aspx_RewardPoints
+		SET IsDeleted = 1
+			,DeletedBy = @UserName
+			,DeletedOn = GETDATE()
+		WHERE CustomerID = @CustomerID
+			AND UserName = @UserName
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+			--AND CultureName = @CultureName
+	END
+
+	SET NOCOUNT OFF
+END
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsDeleteNewsLetter]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET REWRD POINTS BY CUSTOMERID
+-- =============================================
+-- EXEC [dbo].[usp_Aspx_RewardPointsDeleteNewsLetter] 1,'superuser',1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsDeleteNewsLetter] (
+	@RewardRuleID INT
+	,@CustomerID INT
+	,@UserName NVARCHAR(256)
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	BEGIN
+		UPDATE Aspx_RewardPoints
+		SET IsDeleted = 1
+			,DeletedBy = @UserName
+			,DeletedOn = GETDATE()
+		WHERE CustomerID = @CustomerID
+			AND UserName = @UserName
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+			--AND CultureName =  @CultureName
+	END
+
+	SET NOCOUNT OFF
+END
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsGeneralSettingsGetAll]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET GENERAL SETTINGS INFO
+-- =============================================
+--[dbo].[usp_Aspx_RewardPointsGeneralSettingsGetAll] 1,1,1,'en-US'
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsGeneralSettingsGetAll] (
+	@CustomerID INT = NULL
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @totalRewardPoints DECIMAL(18, 2)
+		,@totalUsed DECIMAL(18, 2)
+		,@rewardPointsExpiresInDays INT
+		,@amountSpent DECIMAL(18, 2)
+		,@rewardPointsEarned DECIMAL(18, 2)
+		,@refAmountSpent DECIMAL(18, 2)
+		,@refPointsEarned DECIMAL(18, 2)
+		,@refAmountSpentNext DECIMAL(18, 2)
+		,@refPointsEarnedNext DECIMAL(18, 2)
+		,@totalSignUpPoints DECIMAL(18, 2)
+		,@totalReferalSignUpPoints DECIMAL(18, 2)
+		,@totalNewsPoints DECIMAL(18, 2)
+		,@totalPollPoints DECIMAL(18, 2)
+		,@totalReviewPoints DECIMAL(18, 2)
+		,@totalPurchasePoints DECIMAL(18, 2)
+		,@totalFirstReferalPurchasePoints DECIMAL(18, 2)
+		,@totalNextReferalPurchasePoints DECIMAL(18, 2)
+		,@ReturnP DECIMAL(18, 2)
+		,@ReturnFRP DECIMAL(18, 2)
+		,@ReturnNRP DECIMAL(18, 2)
+
+	SELECT @amountSpent = ISNULL(PurchaseAmount, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = 3
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND IsActive = 1
+		AND (
+			IsDeleted = 0
+			OR IsDeleted IS NULL
+			)
+
+	SELECT @rewardPointsEarned = ISNULL(RewardPoints, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = 3
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND IsActive = 1
+		AND (
+			IsDeleted = 0
+			OR IsDeleted IS NULL
+			)
+
+	SELECT @refAmountSpent = ISNULL(PurchaseAmount, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = 8
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND IsActive = 1
+		AND (
+			IsDeleted = 0
+			OR IsDeleted IS NULL
+			)
+
+	SELECT @refPointsEarned = ISNULL(RewardPoints, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = 8
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND IsActive = 1
+		AND (
+			IsDeleted = 0
+			OR IsDeleted IS NULL
+			)
+
+	SELECT @refAmountSpentNext = ISNULL(PurchaseAmount, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = 9
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND IsActive = 1
+		AND (
+			IsDeleted = 0
+			OR IsDeleted IS NULL
+			)
+
+	SELECT @refPointsEarnedNext = ISNULL(RewardPoints, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = 9
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND IsActive = 1
+		AND (
+			IsDeleted = 0
+			OR IsDeleted IS NULL
+			)
+
+	SET @rewardPointsExpiresInDays = (
+			SELECT ISNULL(RewardPointsExpiresInDays, 0) AS RewardPointsExpiresInDays
+			FROM [dbo].[Aspx_RewardGeneralSettings]
+			WHERE StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND IsActive = 1
+			)
+
+	IF (@rewardPointsExpiresInDays = 0)
+	BEGIN
+		SET @rewardPointsExpiresInDays = 36500
+	END
+
+	---Total Points for SignUp
+	SET @totalSignUpPoints = (
+			SELECT ISNULL(SUM(SignUpPoints), 0)
+			FROM [dbo].[Aspx_RewardPointsSignUp]
+			WHERE CustomerID = @CustomerID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND IsActive = 1
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			)
+	---Total Points for Referal SignSignUp
+	SET @totalReferalSignUpPoints = (
+			SELECT ISNULL(SUM(ReferalSignUpPoints), 0)
+			FROM [dbo].[Aspx_RewardPointsReferalSignUp]
+			WHERE CustomerID = @CustomerID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND IsActive = 1
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			)
+	---Total Points for Subscribing Newsletter
+	SET @totalNewsPoints = (
+			SELECT ISNULL(SUM(SubscriptionPoints), 0)
+			FROM [dbo].[Aspx_RewardPointsNewsLetter]
+			WHERE CustomerID = @CustomerID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			)
+	---Total Points for Polling
+	SET @totalPollPoints = (
+			SELECT ISNULL(SUM(PollingPoints), 0)
+			FROM [dbo].[Aspx_RewardPointsPolling]
+			WHERE CustomerID = @CustomerID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			)
+	---Total Points Posting Product Review
+	-- DECLARE @totalReviewPoints DECIMAL(18,2)
+	SET @totalReviewPoints = (
+			SELECT ISNULL(SUM(ReviewPoints), 0) AS ReviewPoints
+			FROM (
+				SELECT DISTINCT ItemReviewID
+					,ReviewPoints
+				FROM [dbo].[Aspx_RewardPointsItemReview]
+				WHERE StatusID = 3
+					AND CustomerID = @CustomerID
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				) AS X
+			)
+	--PRINT @totalReviewPoints
+	---Points for purchase			 
+	SET @totalPurchasePoints = (
+			SELECT ISNULL(SUM(RP.PurchasePoints), 0)
+			FROM [dbo].[Aspx_RewardPointsPurchase] RP
+			INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = RP.PortalID
+			INNER JOIN [dbo].[Aspx_RewardPointSettings] RPS ON RPS.RewardRuleID = RP.RewardRuleID
+				AND RPS.PortalID = RP.PortalID
+			INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID = RP.OrderID
+			INNER JOIN [dbo].[Aspx_OrderStatusAlias] OSA ON OSA.OrderStatusID = O.OrderStatusID
+				AND O.OrderStatusID IN (
+					SELECT rtrim(ltrim(items))
+					FROM split(RGS.AddOrderStatusID, ',')
+					)
+			WHERE RP.CustomerID = @CustomerID
+				AND RP.StoreID = @StoreID
+				AND RP.PortalID = @PortalID
+				AND RP.IsActive = 1
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), RP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			)
+	-----ponits for return
+	SET @ReturnP = (
+			SELECT ISNULL(SUM(RP.PurchasePoints), 0)
+			FROM [dbo].[Aspx_RewardPointsPurchase] RP
+			INNER JOIN [dbo].[Aspx_ReturnDetails] RD ON RD.OrderID = RP.OrderID
+				AND RD.ItemID = RP.ItemID
+				AND (
+					RD.CostVariantValueIDs = RP.ItemCostVariantValueIDs
+					OR RD.CostVariantValueIDs = ''
+					)
+			INNER JOIN [dbo].[Aspx_ReturnActionText] RAT ON RD.ReturnActionID IN (
+					SELECT rtrim(ltrim(items))
+					FROM split(RAT.ReturnActionID, ',')
+					WHERE RAT.ReturnActionID IN (
+							1
+							,2
+							)
+					)
+			WHERE RP.CustomerID = @CustomerID
+				AND RP.StoreID = @StoreID
+				AND RP.PortalID = @PortalID
+			)
+	---Points for First Referal Purchase 
+	SET @totalFirstReferalPurchasePoints = (
+			SELECT ISNULL(SUM(FRP.FirstRefPurchasePoints), 0)
+			FROM [dbo].[Aspx_RewardPointsFirstReferalPurchase] FRP
+			INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = FRP.PortalID
+			INNER JOIN [dbo].[Aspx_RewardPointSettings] RPS ON RPS.RewardRuleID = FRP.RewardRuleID
+				AND RPS.PortalID = FRP.PortalID
+			INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID = FRP.OrderID
+			INNER JOIN [dbo].[Aspx_OrderStatusAlias] OSA ON OSA.OrderStatusID = O.OrderStatusID
+				AND O.OrderStatusID IN (
+					SELECT rtrim(ltrim(items))
+					FROM split(RGS.AddOrderStatusID, ',')
+					)
+			WHERE FRP.CustomerID = @CustomerID
+				AND FRP.StoreID = @StoreID
+				AND FRP.PortalID = @PortalID
+				AND FRP.IsActive = 1
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), FRP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			)
+	-----Points for return for First Referal Purchase	
+	SET @ReturnFRP = (
+			SELECT ISNULL(SUM(FRP.FirstRefPurchasePoints), 0)
+			FROM [dbo].[Aspx_RewardPointsFirstReferalPurchase] FRP
+			INNER JOIN [dbo].[Aspx_ReturnDetails] RD ON RD.OrderID = FRP.OrderID
+				AND RD.ItemID = FRP.ItemID
+				AND (
+					RD.CostVariantValueIDs = FRP.ItemCostVariantValueIDs
+					OR RD.CostVariantValueIDs = ''
+					)
+			INNER JOIN [dbo].[Aspx_ReturnActionText] RAT ON RD.ReturnActionID IN (
+					SELECT rtrim(ltrim(items))
+					FROM split(RAT.ReturnActionID, ',')
+					WHERE RAT.ReturnActionID IN (
+							1
+							,2
+							)
+					)
+			WHERE FRP.CustomerID = @CustomerID
+				AND FRP.StoreID = @StoreID
+				AND FRP.PortalID = @PortalID
+			)
+	--AND FRP.CultureName = @CultureName
+	---Points for Next Referal Purchase purchase
+	SET @totalNextReferalPurchasePoints = (
+			SELECT ISNULL(SUM(NRP.NextRefPurchasePoints), 0)
+			FROM [dbo].[Aspx_RewardPointsNextReferalPurchase] NRP
+			INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = NRP.PortalID
+			INNER JOIN [dbo].[Aspx_RewardPointSettings] RPS ON RPS.RewardRuleID = NRP.RewardRuleID
+				AND RPS.PortalID = NRP.PortalID
+			INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID = NRP.OrderID
+			INNER JOIN [dbo].[Aspx_OrderStatusAlias] OSA ON OSA.OrderStatusID = O.OrderStatusID
+				AND O.OrderStatusID IN (
+					SELECT rtrim(ltrim(items))
+					FROM split(RGS.AddOrderStatusID, ',')
+					)
+			WHERE NRP.CustomerID = @CustomerID
+				AND NRP.StoreID = @StoreID
+				AND NRP.PortalID = @PortalID
+				AND NRP.IsActive = 1
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), NRP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			)
+	----Points for return Next Referal Purchase
+	SET @ReturnNRP = (
+			SELECT ISNULL(SUM(NRP.NextRefPurchasePoints), 0)
+			FROM [dbo].[Aspx_RewardPointsNextReferalPurchase] NRP
+			INNER JOIN [dbo].[Aspx_ReturnDetails] RD ON RD.OrderID = NRP.OrderID
+				AND RD.ItemID = NRP.ItemID
+				AND (
+					RD.CostVariantValueIDs = NRP.ItemCostVariantValueIDs
+					OR RD.CostVariantValueIDs = ''
+					)
+			INNER JOIN [dbo].[Aspx_ReturnActionText] RAT ON RD.ReturnActionID IN (
+					SELECT rtrim(ltrim(items))
+					FROM split(RAT.ReturnActionID, ',')
+					WHERE RAT.ReturnActionID IN (
+							1
+							,2
+							)
+					)
+			WHERE NRP.CustomerID = @CustomerID
+				AND NRP.StoreID = @StoreID
+				AND NRP.PortalID = @PortalID
+			)
+	---Used Points with OrdeID for processed,Pending orders
+	SET @totalUsed = (
+			SELECT ISNULL(SUM(RP.UsedRewardPoints), 0)
+			FROM [dbo].[Aspx_RewardPointsUsed] RP
+			INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = RP.PortalID
+			INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID = RP.OrderID
+			WHERE RP.CustomerID = @CustomerID
+				AND RP.StoreID = @StoreID
+				AND RP.PortalID = @PortalID
+				--AND RP.CultureName = @CultureName
+				AND O.OrderStatusID NOT IN (
+					SELECT rtrim(ltrim(items))
+					FROM split(RGS.SubOrderStatusID, ',')
+					)
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), RP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			)
+	--print @totalSignUpPoints
+	--print @totalReferalSignUpPoints
+	--print @totalNewsPoints
+	--print @totalPurchasePoints
+	--print @totalFirstReferalPurchasePoints
+	--print @totalNextReferalPurchasePoints
+	--print @totalUsed
+	--print @ReturnP
+	--print @ReturnFRP
+	--print @ReturnNRP
+	--print @totalRewardPoints
+	SET @totalRewardPoints = @totalSignUpPoints + @totalReferalSignUpPoints + @totalNewsPoints + @totalPollPoints + @totalReviewPoints + @totalPurchasePoints + @totalFirstReferalPurchasePoints + @totalNextReferalPurchasePoints - @totalUsed - @ReturnP - @ReturnFRP - @ReturnNRP
+
+	DECLARE @orderAlias NVARCHAR(256)
+
+	SET @orderAlias = ''
+
+	SELECT @orderAlias = OrderStatusAliasName + ', ' + @orderAlias
+	FROM [dbo].[Aspx_OrderStatusAlias] OA
+	INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON OA.OrderStatusID IN (
+			SELECT rtrim(ltrim(items))
+			FROM split(RGS.AddOrderStatusID, ',')
+			)
+	WHERE OA.OrderStatusID IN (
+			SELECT rtrim(ltrim(items))
+			FROM split(RGS.AddOrderStatusID, ',')
+			)
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+
+	--and rgs.CultureName=@CultureName
+	SELECT @orderAlias = SUBSTRING(@orderAlias, 0, len(@orderAlias))
+
+	SELECT GeneralSettingsID
+		,RewardPoints
+		,RewardExchangeRate
+		,ISNULL(@amountSpent, 0) AS AmountSpent
+		,ISNULL(@rewardPointsEarned, 0) AS RewardPointsEarned
+		,AddOrderStatusID
+		,SubOrderStatusID
+		,RewardPointsExpiresInDays
+		,MinRedeemBalance
+		,BalanceCapped
+		,IsActive
+		,ISNULL(@totalRewardPoints, 0) AS TotalRewardPoints
+		,CAST((RewardExchangeRate / RewardPoints) * ISNULL(@totalRewardPoints, 0) AS DECIMAL(16, 4)) AS TotalRewardAmount
+		,@orderAlias AS OrderStatus
+		,ISNULL(@refAmountSpent, 0) AS RefAmountSpent
+		,ISNULL(@refPointsEarned, 0) AS RefPointsEarned
+		,ISNULL(@refAmountSpentNext, 0) AS RefAmountSpentNext
+		,ISNULL(@refPointsEarnedNext, 0) AS RefPointsEarnedNext
+	FROM [dbo].[Aspx_RewardGeneralSettings]
+	WHERE StoreID = @StoreID
+		AND PortalID = @PortalID
+		--AND CultureName = @CultureName
+END
+
+--select * from [dbo].[Aspx_RewardGeneralSettings]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsGeneralSettingsIsActive]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET GENERAL SETTINGS ACTIVE STATUS
+-- =============================================
+--[dbo].[usp_Aspx_RewardPointsGeneralSettingsIsActive] 3,3,'en-US',false
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsGeneralSettingsIsActive] (
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@IsActive BIT OUTPUT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF NOT EXISTS (
+			SELECT *
+			FROM [dbo].[Aspx_RewardGeneralSettings]
+			WHERE StoreID = @StoreID
+				AND PortalID = @PortalID
+			)
+		INSERT INTO [dbo].[Aspx_RewardGeneralSettings]
+		SELECT RewardPoints
+			,RewardExchangeRate
+			,AmountSpent
+			,RewardPointsEarned
+			,AddOrderStatusID
+			,SubOrderStatusID
+			,RewardPointsExpiresInDays
+			,MinRedeemBalance
+			,BalanceCapped
+			,@StoreID
+			,@PortalID
+			,@CultureName
+			,IsActive
+			,IsDeleted
+			,IsModified
+			,AddedOn
+			,UpdatedOn
+			,DeletedOn
+			,AddedBy
+			,UpdatedBy
+			,DeletedBy
+		FROM [dbo].[Aspx_RewardGeneralSettings]
+		WHERE StoreID = 0
+			AND PortalID = 1
+
+	DECLARE @active BIT
+
+	SELECT @active = IsActive
+	FROM [dbo].[Aspx_RewardGeneralSettings]
+	WHERE StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND CultureName = @CultureName
+
+	SET @IsActive = CAST(isnull(@active, 0) AS BIT)
+
+	PRINT @IsActive
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsHistory]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET REWRD POINTS BY CUSTOMERID
+-- =============================================
+-- [dbo].[usp_Aspx_RewardPointsHistory] 1,30,1,1,'EN-us','',''
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsHistory] (
+	@Offset INT
+	,@Limit INT = NULL
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@CustomerName NVARCHAR(256) = NULL
+	,@Email NVARCHAR(256) = NULL
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @rewardPointsExpiresInDays INT
+		,@ExpiresInDays INT
+		,@exchangeRate DECIMAL(16, 4)
+		,@totalRewardPoints DECIMAL(18, 2)
+		,@totalUsed DECIMAL(18, 2)
+		,@totalSignUpPoints DECIMAL(18, 2)
+		,@totalReferalSignUpPoints DECIMAL(18, 2)
+		,@totalNewsPoints DECIMAL(18, 2)
+		,@totalPollPoints DECIMAL(18, 2)
+		,@totalReviewPoints DECIMAL(18, 2)
+		,@totalPurchasePoints DECIMAL(18, 2)
+		,@totalFirstReferalPurchasePoints DECIMAL(18, 2)
+		,@totalNextReferalPurchasePoints DECIMAL(18, 2)
+		,@ReturnP DECIMAL(18, 2)
+		,@ReturnFRP DECIMAL(18, 2)
+		,@ReturnNRP DECIMAL(18, 2)
+
+	SET @ExpiresInDays = (
+			SELECT ISNULL(RewardPointsExpiresInDays, 0) AS RewardPointsExpiresInDays
+			FROM Aspx_RewardGeneralSettings
+			WHERE StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND IsActive = 1
+			)
+
+	IF (@ExpiresInDays = 0)
+	BEGIN
+		SET @rewardPointsExpiresInDays = 36500
+	END
+	ELSE
+	BEGIN
+		SET @rewardPointsExpiresInDays = @ExpiresInDays
+	END
+
+	SELECT @exchangeRate = RewardExchangeRate / RewardPoints
+	FROM [dbo].[Aspx_RewardGeneralSettings]
+	WHERE StoreID = @StoreID
+		AND PortalID = @PortalID
+		AND IsActive = 1
+
+	DECLARE @tbltemp TABLE (
+		RowNum INT IDENTITY(1, 1)
+		,CustomerID INT
+		)
+	DECLARE @tbltemp2 TABLE (
+		RowNum INT IDENTITY(1, 1)
+		,RowTotal INT
+		,CustomerID INT
+		,CustomerName NVARCHAR(256)
+		,Email NVARCHAR(256)
+		,TotalPoints DECIMAL(18, 2)
+		,UsedPoints DECIMAL(18, 2)
+		,NetPoints DECIMAL(18, 2)
+		,NetAmount DECIMAL(18, 2)
+		);
+
+	WITH MainTbl
+	AS (
+		SELECT RewardRuleID
+			,SignUpPoints AS RewardPoints
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,AddedOn
+		FROM [dbo].[Aspx_RewardPointsSignUp]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,ReferalSignUpPoints AS RewardPoints
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,AddedOn
+		FROM [dbo].[Aspx_RewardPointsReferalSignUp]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,SubscriptionPoints AS RewardPoints
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,AddedOn
+		FROM [dbo].[Aspx_RewardPointsNewsLetter]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,PollingPoints AS RewardPoints
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,AddedOn
+		FROM [dbo].[Aspx_RewardPointsPolling]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,ReviewPoints AS RewardPoints
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,AddedOn
+		FROM [dbo].[Aspx_RewardPointsItemReview]
+		WHERE StatusID = 3
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,PurchasePoints AS RewardPoints
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,AddedOn
+		FROM [dbo].[Aspx_RewardPointsPurchase]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,FirstRefPurchasePoints AS RewardPoints
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,AddedOn
+		FROM [dbo].[Aspx_RewardPointsFirstReferalPurchase]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,NextRefPurchasePoints AS RewardPoints
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,AddedOn
+		FROM [dbo].[Aspx_RewardPointsNextReferalPurchase]
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+		)
+	SELECT *
+	INTO #tblMain
+	FROM MainTbl
+	ORDER BY AddedOn
+
+	DECLARE @RowTotal INT
+
+	BEGIN
+		SET @RowTotal = (
+				SELECT COUNT(DISTINCT CustomerID)
+				FROM #tblMain
+				WHERE StoreID = @StoreID
+					AND PortalID = @PortalID
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+					AND (
+						CustomerID != 0
+						AND CustomerID IS NOT NULL
+						)
+				)
+	END
+
+	DECLARE @counter INT
+		,@rowCount INT
+
+	INSERT INTO @tbltemp (CustomerID)
+	SELECT DISTINCT CustomerID
+	FROM #tblMain
+
+	SELECT @rowCount = COUNT(RowNum)
+	FROM @tbltemp
+
+	SET @counter = 1
+
+	WHILE (
+			@counter <= @rowCount
+			OR @counter = 1
+			)
+	BEGIN
+		DECLARE @custID INT
+
+		SELECT @custID = CustomerID
+		FROM @tbltemp
+		WHERE RowNum = @counter
+
+		---Total Points for SignUp
+		SET @totalSignUpPoints = (
+				SELECT ISNULL(SUM(SignUpPoints), 0)
+				FROM [dbo].[Aspx_RewardPointsSignUp]
+				WHERE CustomerID = @custID
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+					AND IsActive = 1
+					AND (
+						IsDeleted = 0
+						OR IsDeleted IS NULL
+						)
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+		---Total Points for Referal SignSignUp
+		SET @totalReferalSignUpPoints = (
+				SELECT ISNULL(SUM(ReferalSignUpPoints), 0)
+				FROM [dbo].[Aspx_RewardPointsReferalSignUp]
+				WHERE CustomerID = @custID
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+					AND IsActive = 1
+					AND (
+						IsDeleted = 0
+						OR IsDeleted IS NULL
+						)
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+		---Total Points for Subscribing Newsletter
+		SET @totalNewsPoints = (
+				SELECT ISNULL(SUM(SubscriptionPoints), 0)
+				FROM [dbo].[Aspx_RewardPointsNewsLetter]
+				WHERE CustomerID = @custID
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+					AND IsActive = 1
+					AND (
+						IsDeleted = 0
+						OR IsDeleted IS NULL
+						)
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+		---Total Points for Polling
+		SET @totalPollPoints = (
+				SELECT ISNULL(SUM(PollingPoints), 0)
+				FROM [dbo].[Aspx_RewardPointsPolling]
+				WHERE CustomerID = @custID
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+		SET @totalReviewPoints = (
+				SELECT ISNULL(SUM(ReviewPoints), 0) AS ReviewPoints
+				FROM (
+					SELECT DISTINCT ItemReviewID
+						,ReviewPoints
+					FROM [dbo].[Aspx_RewardPointsItemReview]
+					WHERE StatusID = 3
+						AND CustomerID = @custID
+						AND StoreID = @StoreID
+						AND PortalID = @PortalID
+						AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+					) AS X
+				)
+		---Points for purchase
+		SET @totalPurchasePoints = (
+				SELECT ISNULL(SUM(RP.PurchasePoints), 0)
+				FROM [dbo].[Aspx_RewardPointsPurchase] RP
+				INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = RP.PortalID
+				INNER JOIN [dbo].[Aspx_RewardPointSettings] RPS ON RPS.RewardRuleID = RP.RewardRuleID
+					AND RPS.PortalID = RP.PortalID
+				INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID = RP.OrderID
+				INNER JOIN [dbo].[Aspx_OrderStatusAlias] OSA ON OSA.OrderStatusID = O.OrderStatusID
+					AND O.OrderStatusID IN (
+						SELECT rtrim(ltrim(items))
+						FROM split(RGS.AddOrderStatusID, ',')
+						)
+				WHERE RP.CustomerID = @custID
+					AND RP.StoreID = @StoreID
+					AND RP.PortalID = @PortalID
+					AND RP.IsActive = 1
+					AND (
+						RP.IsDeleted = 0
+						OR RP.IsDeleted IS NULL
+						)
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), RP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+		-----ponits for return
+		SET @ReturnP = (
+				SELECT ISNULL(SUM(RP.PurchasePoints), 0)
+				FROM [dbo].[Aspx_RewardPointsPurchase] RP
+				INNER JOIN [dbo].[Aspx_ReturnDetails] RD ON RD.OrderID = RP.OrderID
+					AND RD.ItemID = RP.ItemID
+					AND (
+						RD.CostVariantValueIDs = RP.ItemCostVariantValueIDs
+						OR RD.CostVariantValueIDs = ''
+						)
+				INNER JOIN [dbo].[Aspx_ReturnActionText] RAT ON RD.ReturnActionID IN (
+						SELECT rtrim(ltrim(items))
+						FROM split(RAT.ReturnActionID, ',')
+						WHERE RAT.ReturnActionID IN (
+								1
+								,2
+								)
+						)
+				WHERE RP.CustomerID = @custID
+					AND RP.StoreID = @StoreID
+					AND RP.PortalID = @PortalID
+				)
+		---Points for First Referal Purchase purchase
+		SET @totalFirstReferalPurchasePoints = (
+				SELECT ISNULL(SUM(FRP.FirstRefPurchasePoints), 0)
+				FROM [dbo].[Aspx_RewardPointsFirstReferalPurchase] FRP
+				INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = FRP.PortalID
+				INNER JOIN [dbo].[Aspx_RewardPointSettings] RPS ON RPS.RewardRuleID = FRP.RewardRuleID
+					AND RPS.PortalID = FRP.PortalID
+				INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID = FRP.OrderID
+				INNER JOIN [dbo].[Aspx_OrderStatusAlias] OSA ON OSA.OrderStatusID = O.OrderStatusID
+					AND O.OrderStatusID IN (
+						SELECT rtrim(ltrim(items))
+						FROM split(RGS.AddOrderStatusID, ',')
+						)
+				WHERE FRP.CustomerID = @custID
+					AND FRP.StoreID = @StoreID
+					AND FRP.PortalID = @PortalID
+					AND FRP.IsActive = 1
+					AND (
+						FRP.IsDeleted = 0
+						OR FRP.IsDeleted IS NULL
+						)
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), FRP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+		-----Points for return for First Referal Purchase	
+		SET @ReturnFRP = (
+				SELECT ISNULL(SUM(FRP.FirstRefPurchasePoints), 0)
+				FROM [dbo].[Aspx_RewardPointsFirstReferalPurchase] FRP
+				INNER JOIN [dbo].[Aspx_ReturnDetails] RD ON RD.OrderID = FRP.OrderID
+					AND RD.ItemID = FRP.ItemID
+					AND (
+						RD.CostVariantValueIDs = FRP.ItemCostVariantValueIDs
+						OR RD.CostVariantValueIDs = ''
+						)
+				INNER JOIN [dbo].[Aspx_ReturnActionText] RAT ON RD.ReturnActionID IN (
+						SELECT rtrim(ltrim(items))
+						FROM split(RAT.ReturnActionID, ',')
+						WHERE RAT.ReturnActionID IN (
+								1
+								,2
+								)
+						)
+				WHERE FRP.CustomerID = @custID
+					AND FRP.StoreID = @StoreID
+					AND FRP.PortalID = @PortalID
+				)
+		---Points for Next Referal Purchase purchase
+		SET @totalNextReferalPurchasePoints = (
+				SELECT ISNULL(SUM(NRP.NextRefPurchasePoints), 0)
+				FROM [dbo].[Aspx_RewardPointsNextReferalPurchase] NRP
+				INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = NRP.PortalID
+				INNER JOIN [dbo].[Aspx_RewardPointSettings] RPS ON RPS.RewardRuleID = NRP.RewardRuleID
+					AND RPS.PortalID = NRP.PortalID
+				INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID = NRP.OrderID
+				INNER JOIN [dbo].[Aspx_OrderStatusAlias] OSA ON OSA.OrderStatusID = O.OrderStatusID
+					AND O.OrderStatusID IN (
+						SELECT rtrim(ltrim(items))
+						FROM split(RGS.AddOrderStatusID, ',')
+						)
+				WHERE NRP.CustomerID = @custID
+					AND NRP.StoreID = @StoreID
+					AND NRP.PortalID = @PortalID
+					AND NRP.IsActive = 1
+					AND (
+						NRP.IsDeleted = 0
+						OR NRP.IsDeleted IS NULL
+						)
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), NRP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+		----Points for return Next Referal Purchase
+		SET @ReturnNRP = (
+				SELECT ISNULL(SUM(NRP.NextRefPurchasePoints), 0)
+				FROM [dbo].[Aspx_RewardPointsNextReferalPurchase] NRP
+				INNER JOIN [dbo].[Aspx_ReturnDetails] RD ON RD.OrderID = NRP.OrderID
+					AND RD.ItemID = NRP.ItemID
+					AND (
+						RD.CostVariantValueIDs = NRP.ItemCostVariantValueIDs
+						OR RD.CostVariantValueIDs = ''
+						)
+				INNER JOIN [dbo].[Aspx_ReturnActionText] RAT ON RD.ReturnActionID IN (
+						SELECT rtrim(ltrim(items))
+						FROM split(RAT.ReturnActionID, ',')
+						WHERE RAT.ReturnActionID IN (
+								1
+								,2
+								)
+						)
+				WHERE NRP.CustomerID = @custID
+					AND NRP.StoreID = @StoreID
+					AND NRP.PortalID = @PortalID
+				)
+		---Used Points with OrdeID for processed,Pending orders
+		SET @totalUsed = (
+				SELECT ISNULL(SUM(RP.UsedRewardPoints), 0)
+				FROM [dbo].[Aspx_RewardPointsUsed] RP
+				INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = RP.PortalID
+				INNER JOIN [dbo].[Aspx_Order] O ON O.OrderID = RP.OrderID
+				WHERE RP.CustomerID = @custID
+					AND RP.StoreID = @StoreID
+					AND RP.PortalID = @PortalID
+					AND O.OrderStatusID NOT IN (
+						SELECT rtrim(ltrim(items))
+						FROM split(RGS.SubOrderStatusID, ',')
+						)
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), RP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+		--print @totalSignUpPoints
+		--print @totalReferalSignUpPoints 
+		--print @totalNewsPoints 
+		--print @totalPollPoints 
+		--print @totalReviewPoints 
+		--print @totalPurchasePoints 
+		--print @totalFirstReferalPurchasePoints 
+		--print @totalNextReferalPurchasePoints 
+		--print @totalUsed 
+		--print @ReturnP
+		--print @ReturnFRP
+		--print @ReturnNRP
+		SET @totalRewardPoints = @totalSignUpPoints + @totalReferalSignUpPoints + @totalNewsPoints + @totalPollPoints + @totalReviewPoints + @totalPurchasePoints + @totalFirstReferalPurchasePoints + @totalNextReferalPurchasePoints - @totalUsed - @ReturnP - @ReturnFRP - @ReturnNRP
+
+		INSERT INTO @tbltemp2 (
+			RowTotal
+			,CustomerID
+			,CustomerName
+			,Email
+			,TotalPoints
+			,UsedPoints
+			,NetPoints
+			,NetAmount
+			)
+		SELECT DISTINCT @RowTotal AS RowTotal
+			,@custID AS CustomerID
+			,(U.FirstName + ' ' + U.LastName) AS CustomerName
+			,U.Email
+			,@totalSignUpPoints + @totalReferalSignUpPoints + @totalNewsPoints + @totalPollPoints + @totalReviewPoints + @totalPurchasePoints + @totalFirstReferalPurchasePoints + @totalNextReferalPurchasePoints AS TotalPoints
+			,@totalUsed AS UsedPoints
+			,@totalRewardPoints AS NetPoints
+			,@exchangeRate * @totalRewardPoints AS NetAmount
+		FROM #tblMain RP
+		INNER JOIN [dbo].[Aspx_RewardPointSettings] RPS ON RPS.RewardRuleID = RP.RewardRuleID
+		INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = RPS.PortalID
+		INNER JOIN [dbo].[Aspx_Customer] C ON C.CustomerID = RP.CustomerID
+		INNER JOIN Users U ON U.Username = C.UserName
+		WHERE RP.StoreID = @StoreID
+			AND RP.PortalID = @PortalID
+			AND (U.FirstName + ' ' + U.LastName) LIKE ISNULL(@CustomerName, '') + '%'
+			AND U.Email LIKE ISNULL(@Email, '') + '%'
+			AND (
+				RP.IsDeleted = 0
+				OR RP.IsDeleted IS NULL
+				)
+			AND RPS.IsActive = 1
+			AND RP.CustomerID = @custID
+			AND (
+				RPS.IsDeleted = 0
+				OR RPS.IsDeleted IS NULL
+				)
+			AND DATEDIFF(DAY, CONVERT(VARCHAR(23), RP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+
+		SET @counter = @counter + 1
+	END
+
+	IF (@Limit IS NULL)
+	BEGIN
+		SET @Limit = @RowTotal
+	END
+
+	SELECT *
+	FROM (
+		SELECT ROW_NUMBER() OVER (
+				ORDER BY (CustomerID) DESC
+				) AS RowNumber
+			,*
+		FROM @tbltemp2
+		) AS w
+	WHERE RowNumber >= @Offset
+		AND RowNumber <= (@Offset + @Limit - 1)
+
+	SET NOCOUNT OFF
+
+	DROP TABLE #tblMain
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsHistoryCustomer]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET REWRD POINTS BY CUSTOMERID
+-- =============================================
+--select * from Aspx_RewardPoints
+-- [dbo].[usp_Aspx_RewardPointsHistoryCustomer] 1,100,1,1,'en-US',1,null
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsHistoryCustomer] (
+	@Offset INT
+	,@Limit INT = NULL
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@CustomerID INT = NULL
+	,@DateFrom NVARCHAR(256) = NULL
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @rewardPointsExpiresInDays INT
+		,@ExpiresInDays INT
+
+	SET @ExpiresInDays = (
+			SELECT ISNULL(RewardPointsExpiresInDays, 0) AS RewardPointsExpiresInDays
+			FROM [dbo].[Aspx_RewardGeneralSettings]
+			WHERE StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND IsActive = 1
+			)
+
+	IF (@ExpiresInDays = 0)
+	BEGIN
+		SET @rewardPointsExpiresInDays = 36500
+	END
+	ELSE
+	BEGIN
+		SET @rewardPointsExpiresInDays = @ExpiresInDays
+	END;
+
+	WITH MainTbl
+	AS (
+		SELECT RewardRuleID
+			,SignUpPoints AS RewardPoints
+			,0 AS UsedRewardPoints
+			,NULL AS NL_Email
+			,SignUpEmail AS S_Email
+			,NULL AS RS_Email
+			,NULL AS FRP_Email
+			,NULL AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,NULL AS OrderID
+			,NULL AS ItemID
+			,NULL AS ItemCostVariantValueIDs
+			,NULL AS CostVariantsValueName
+			,NULL AS ItemName
+			,AddedOn
+			,NULL AS PollQuestion
+			,NULL AS ItemReview
+		FROM [dbo].[Aspx_RewardPointsSignUp]
+		WHERE CustomerID = @CustomerID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,ReferalSignUpPoints AS RewardPoints
+			,0 AS UsedRewardPoints
+			,NULL AS NL_Email
+			,NULL AS S_Email
+			,ReferalEmail AS RS_Email
+			,NULL AS FRP_Email
+			,NULL AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,NULL AS OrderID
+			,NULL AS ItemID
+			,NULL AS ItemCostVariantValueIDs
+			,NULL AS CostVariantsValueName
+			,NULL AS ItemName
+			,AddedOn
+			,NULL AS PollQuestion
+			,NULL AS ItemReview
+		FROM [dbo].[Aspx_RewardPointsReferalSignUp]
+		WHERE CustomerID = @CustomerID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,SubscriptionPoints AS RewardPoints
+			,0 AS UsedRewardPoints
+			,SubscribedEmail AS NL_Email
+			,NULL AS S_Email
+			,NULL AS RS_Email
+			,NULL AS FRP_Email
+			,NULL AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,NULL AS OrderID
+			,NULL AS ItemID
+			,NULL AS ItemCostVariantValueIDs
+			,NULL AS CostVariantsValueName
+			,NULL AS ItemName
+			,AddedOn
+			,NULL AS PollQuestion
+			,NULL AS ItemReview
+		FROM [dbo].[Aspx_RewardPointsNewsLetter]
+		WHERE CustomerID = @CustomerID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,PollingPoints AS RewardPoints
+			,0 AS UsedRewardPoints
+			,NULL AS NL_Email
+			,NULL AS S_Email
+			,NULL AS RS_Email
+			,NULL AS FRP_Email
+			,NULL AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,NULL AS OrderID
+			,NULL AS ItemID
+			,NULL AS ItemCostVariantValueIDs
+			,NULL AS CostVariantsValueName
+			,NULL AS ItemName
+			,AddedOn
+			,Question AS PollQuestion
+			,NULL AS ItemReview
+		FROM [dbo].[Aspx_RewardPointsPolling]
+		WHERE CustomerID = @CustomerID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,ReviewPoints AS RewardPoints
+			,0 AS UsedRewardPoints
+			,NULL AS NL_Email
+			,NULL AS S_Email
+			,NULL AS RS_Email
+			,NULL AS FRP_Email
+			,NULL AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,NULL AS OrderID
+			,NULL AS ItemID
+			,NULL AS ItemCostVariantValueIDs
+			,NULL AS CostVariantsValueName
+			,ItemName AS ItemName
+			,AddedOn
+			,NULL AS PollQuestion
+			,Review AS ItemReview
+		FROM (
+			SELECT DISTINCT ItemReviewID
+				,RewardRuleID
+				,CustomerID
+				,StoreID
+				,PortalID
+				,CultureName
+				,IsActive
+				,IsDeleted
+				,AddedOn
+				,ReviewPoints
+				,ItemName
+				,Review
+			FROM [dbo].[Aspx_RewardPointsItemReview]
+			WHERE StatusID = 3
+				AND CustomerID = @CustomerID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+				AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+			) AS X
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,PurchasePoints AS RewardPoints
+			,0 AS UsedRewardPoints
+			,NULL AS NL_Email
+			,NULL AS S_Email
+			,NULL AS RS_Email
+			,NULL AS FRP_Email
+			,NULL AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,OrderID AS OrderID
+			,ItemID AS ItemID
+			,ItemCostVariantValueIDs AS ItemCostVariantValueIDs
+			,CostVariantName AS CostVariantsValueName
+			,ItemName AS ItemName
+			,AddedOn
+			,NULL AS PollQuestion
+			,NULL AS ItemReview
+		FROM [dbo].[Aspx_RewardPointsPurchase]
+		WHERE CustomerID = @CustomerID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,FirstRefPurchasePoints AS RewardPoints
+			,0 AS UsedRewardPoints
+			,NULL AS NL_Email
+			,NULL AS S_Email
+			,NULL AS RS_Email
+			,ReferalEmail AS FRP_Email
+			,NULL AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,OrderID AS OrderID
+			,ItemID AS ItemID
+			,ItemCostVariantValueIDs AS ItemCostVariantValueIDs
+			,CostVariantName AS CostVariantsValueName
+			,ItemName AS ItemName
+			,AddedOn
+			,NULL AS PollQuestion
+			,NULL AS ItemReview
+		FROM [dbo].[Aspx_RewardPointsFirstReferalPurchase]
+		WHERE CustomerID = @CustomerID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,NextRefPurchasePoints AS RewardPoints
+			,0 AS UsedRewardPoints
+			,NULL AS NL_Email
+			,NULL AS S_Email
+			,NULL AS RS_Email
+			,NULL AS FRP_Email
+			,ReferalEmail AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,OrderID AS OrderID
+			,ItemID AS ItemID
+			,ItemCostVariantValueIDs AS ItemCostVariantValueIDs
+			,CostVariantName AS CostVariantsValueName
+			,ItemName AS ItemName
+			,AddedOn
+			,NULL AS PollQuestion
+			,NULL AS ItemReview
+		FROM [dbo].[Aspx_RewardPointsNextReferalPurchase]
+		WHERE CustomerID = @CustomerID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		
+		UNION ALL
+		
+		SELECT RewardRuleID
+			,0 AS RewardPoints
+			,UsedRewardPoints AS UsedRewardPoints
+			,NULL AS NL_Email
+			,NULL AS S_Email
+			,NULL AS RS_Email
+			,NULL AS FRP_Email
+			,NULL AS NRP_Email
+			,CustomerID
+			,StoreID
+			,PortalID
+			,CultureName
+			,IsActive
+			,IsDeleted
+			,OrderID
+			,NULL AS ItemID
+			,NULL AS ItemCostVariantValueIDs
+			,NULL AS CostVariantsValueName
+			,NULL AS ItemName
+			,AddedOn
+			,NULL AS PollQuestion
+			,NULL AS ItemReview
+		FROM [dbo].[Aspx_RewardPointsUsed]
+		WHERE CustomerID = @CustomerID
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+		)
+	SELECT *
+	INTO #tblMain
+	FROM MainTbl
+	ORDER BY AddedOn
+
+	--select * from #tblMain
+	DECLARE @RowTotal INT
+
+	BEGIN
+		SET @RowTotal = (
+				SELECT COUNT(RewardRuleID)
+				FROM #tblMain
+				WHERE CustomerID = @CustomerID
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+					AND CONVERT(VARCHAR(10), AddedOn, 111) LIKE '%' + ISNULL(@DateFrom, '') + '%'
+					AND DATEDIFF(DAY, CONVERT(VARCHAR(23), AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+				)
+	END
+
+	IF (@Limit IS NULL)
+	BEGIN
+		SET @Limit = @RowTotal
+	END
+
+	SELECT DISTINCT @RowTotal AS RowTotal
+		,0 AS RewardPointsID
+		,ISNULL(RP.RewardPoints, 0) AS RewardPoints
+		,ISNULL(CAST((RGS.RewardExchangeRate / RGS.RewardPoints) * RP.RewardPoints AS DECIMAL(16, 4)), 0) AS RewardAmount
+		,ISNULL(RP.UsedRewardPoints, 0) AS UsedRewardPoints
+		,CASE RP.RewardRuleID
+			WHEN 0
+				THEN 'Used to Checkout Order # ' + CAST(RP.OrderID AS NVARCHAR(20)) + ', ' + 'Order Status: ' + OSA.OrderStatusAliasName --Used Points
+			WHEN 1
+				THEN 'Reward on Signing Up ' + ' with Email: ' + RP.S_Email --Signing Up
+			WHEN 2
+				THEN 'Reward on Subscribing Newsletter ' + ' with Email: ' + RP.NL_Email --Signing Up Newsletter
+			WHEN 3
+				THEN 'Reward on Purchasing Product ' + RP.ItemName +', ' + isnull(RP.CostVariantsValueName,'') + ' in Order # ' + CAST(RP.OrderID AS NVARCHAR(20)) + ', ' + ISNULL('Order Status: ' + RAT.ReturnActionAliasName + ' due to Item Ruturn', 'Order Status: ' + OSA.OrderStatusAliasName) --CASE RAT.ReturnActionAliasName WHEN null then '' ELSE 'Returned' END ----Purchase
+			WHEN 4
+				THEN 'Reward on Posting Review on Product "' + RP.ItemName + '" as "' + RP.ItemReview + ' "' --Posting Product Review
+			WHEN 5
+				THEN '' --Referal Visitor
+			WHEN 6
+				THEN 'Reward on Registering Friend by Your Reference ' + 'with Email: ' + RP.RS_Email --Referal Sign-Up
+			WHEN 7
+				THEN 'Reward on Polling "' + RP.PollQuestion + ' "' --Voting Poll
+			WHEN 8
+				THEN 'Reward on First Purchase by Your Refered Friend ' + 'with Email: ' + RP.FRP_Email + ' For Item : ' + RP.ItemName + ', ' + ISNULL('Order Status: ' + RAT.ReturnActionAliasName + ' due to Item Ruturn', 'Order Status: ' + OSA.OrderStatusAliasName) --First Referal Purchase
+			WHEN 9
+				THEN 'Reward on Next Purchase by Your Refered Friend ' + 'with Email: ' + RP.NRP_Email + ' For Item : ' + RP.ItemName + ', ' + ISNULL('Order Status: ' + RAT.ReturnActionAliasName + ' due to Item Ruturn', 'Order Status: ' + OSA.OrderStatusAliasName) --Next Referal Purchase
+			WHEN 10
+				THEN '' --Facebook Like
+			WHEN 11
+				THEN '' --Video Upload		
+			END AS RewardReason
+		,CAST(RP.AddedOn AS NVARCHAR(20)) AS AddedOn
+		,CASE @ExpiresInDays
+			WHEN 0
+				THEN 'Never'
+			ELSE CAST(DATEADD("d", @rewardPointsExpiresInDays, RP.AddedOn - 1) AS NVARCHAR(20))
+			END AS ExpiresOn
+		,CASE @ExpiresInDays
+			WHEN 0
+				THEN 'Never'
+			ELSE CAST(@rewardPointsExpiresInDays AS NVARCHAR(20))
+			END AS RewardPointsExpiresInDays
+		,RP.IsActive
+	INTO #tmp
+	FROM #tblMain RP
+	INNER JOIN [dbo].[Aspx_RewardGeneralSettings] RGS ON RGS.PortalID = RP.PortalID
+	LEFT JOIN [dbo].[Aspx_Order] O ON O.OrderID = RP.OrderID
+	--LEFT JOIN Aspx_OrderItem OI ON RP.OrderID = OI.OrderID
+	--	AND RP.ItemID = OI.ItemId
+	--LEFT JOIN Aspx_OrderItemCostVariant OICV ON OICV.OrderItemID = OI.OrderItemID
+	--	AND (
+	--		OICV.ItemCostVariantValueIDS = RP.ItemCostVariantValueIDS
+	--		OR RP.ItemCostVariantValueIDS = ''
+	--		)
+	LEFT JOIN [dbo].[Aspx_OrderStatusAlias] OSA ON OSA.OrderStatusID = O.OrderStatusID
+	LEFT JOIN [dbo].[Aspx_ReturnDetails] RD ON RD.OrderID = RP.OrderID
+		AND RD.ItemID = RP.ItemID
+		AND (
+			RD.CostVariantValueIDs = RP.ItemCostVariantValueIDs
+			OR RD.CostVariantValueIDs = ''
+			)
+	LEFT JOIN dbo.Aspx_ReturnActionText RAT ON RD.ReturnActionID IN (
+			SELECT rtrim(ltrim(items))
+			FROM split(RAT.ReturnActionID, ',')
+			WHERE RAT.ReturnActionID IN (
+					1
+					,2
+					)
+			)
+	WHERE RP.StoreID = @StoreID
+		AND RP.PortalID = @PortalID
+		AND RP.CustomerID = @CustomerID
+		AND CONVERT(VARCHAR(10), RP.AddedOn, 111) LIKE '%' + ISNULL(@DateFrom, '') + '%'
+		AND DATEDIFF(DAY, CONVERT(VARCHAR(23), RP.AddedOn, 121), CONVERT(VARCHAR(23), GETDATE() + 1, 121)) < @rewardPointsExpiresInDays
+
+--select * from #tmp
+	SELECT *
+	FROM (
+		SELECT ROW_NUMBER() OVER (
+				ORDER BY (cast(AddedOn AS DATETIME)) DESC
+				) AS RowNumber
+			,*
+		FROM #tmp
+		) AS w
+	WHERE RowNumber >= @Offset
+		AND RowNumber <= (@Offset + @Limit - 1)
+
+	SET NOCOUNT OFF
+
+	DROP TABLE #tmp
+
+	DROP TABLE #tblMain
+END
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsIsPurchaseActive]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+---[usp_Aspx_RewardPointsIsPurchaseActive] 1,1,'en-US',''
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsIsPurchaseActive] (
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@IsActive BIT OUTPUT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (
+			EXISTS (
+				SELECT RewardRuleID
+				FROM [dbo].[Aspx_RewardPointSettings]
+				WHERE RewardRuleID = 3
+					AND IsActive = 1
+					AND IsDeleted = 0
+					AND storeID = @StoreID
+					AND PortalID = @PortalID
+				)
+			)
+		SET @IsActive = 1
+	ELSE
+		SET @IsActive = 0
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsRuleDelete]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 31, 2012
+-- Description:	Delete Reward Rule by RuleID
+-- =============================================
+-- =============================================
+--select * from Aspx_RewardPointSettings where IsActive=1
+--[dbo].[usp_Aspx_RewardPointsRuleDelete] '1,2',1,1,'superuser'
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsRuleDelete]
+	-- Add the parameters for the stored procedure here
+	(
+	@RewardPointSettingsID NVARCHAR(500)
+	,@StoreID INT
+	,@PortalID INT
+	,@UserName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @tblTmp TABLE (
+		RowNum INT IDENTITY(1, 1)
+		,RewardPointSettingsID INT
+		)
+
+	INSERT INTO @tblTmp (RewardPointSettingsID)
+	SELECT RTRIM(LTRIM(items))
+	FROM Split(@RewardPointSettingsID, ',')
+
+	DECLARE @counter INT
+		,@rowCount INT
+
+	SELECT @rowCount = COUNT(RowNum)
+	FROM @tblTmp
+
+	SET @counter = 1
+
+	WHILE (
+			@counter <= @rowCount
+			OR @counter = 1
+			)
+	BEGIN
+		DECLARE @key NVARCHAR(1000)
+
+		SELECT @key = RewardPointSettingsID
+		FROM @tblTmp
+		WHERE RowNum = @counter
+
+		UPDATE [dbo].[Aspx_RewardPointSettings]
+		SET IsDeleted = 1
+			,DeletedOn = GETDATE()
+			,DeletedBy = @UserName
+		WHERE RewardPointSettingsID = @key
+			AND StoreID = @StoreID
+			AND PortalID = @PortalID
+
+		SET @counter = @counter + 1
+	END
+END
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsRuleListBind]    Script Date: 05/16/2013 17:00:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		JAINUL KHNA
+-- Create date: DECEMBER, 31,2012
+-- Description:	BIND REWARD RULES
+-- =============================================
+-- [dbo].[usp_Aspx_RewardPointsRuleListBind] 1,1,'zh-CN'
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsRuleListBind]
+	-- Add the parameters for the stored procedure here
+	@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @SettingCulture NVARCHAR(10)
+
+	SELECT @SettingCulture = COALESCE(settVal.SettingValue, setKey.SettingValue)
+	FROM dbo.SettingValue AS settVal
+	RIGHT JOIN dbo.SettingKey AS setKey ON setKey.SettingKey = settVal.SettingKey
+	WHERE settVal.SettingKey = 'PortalDefaultLanguage'
+		AND settVal.SettingTypeID = @PortalID;
+
+	SELECT RR.RewardRuleID
+		,RRA.RewardRuleAliasName AS RewardRuleType
+	FROM Aspx_RewardRuleAlias RRA
+	INNER JOIN Aspx_RewardRule RR ON RR.RewardRuleID = RRA.RewardRuleID
+	WHERE IsActive = 1
+		AND (
+			IsDeleted = 0
+			OR IsDeleted IS NULL
+			)
+		AND CultureName = CASE @CultureName
+			WHEN (
+					SELECT CultureName
+					FROM Aspx_RewardRuleAlias
+					WHERE CultureName = @CultureName
+						AND RewardRuleID = RR.RewardRuleID
+					)
+				THEN @CultureName
+			ELSE @SettingCulture
+			END
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSaveByCore]    Script Date: 05/16/2013 17:00:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	Save Reward Points 
+-- =============================================
+--truncate table Aspx_RewardPoints
+--select * from Aspx_RewardPoints
+-- [dbo].[usp_Aspx_RewardPointsSaveByCore] 1,1,1,'en-US','jivan','jivan@gmail.com'
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsSaveByCore] (
+	@RewardRuleID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@UserName NVARCHAR(256)
+	,@Email NVARCHAR(256) = NULL
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @rewardPoints INT
+		,@balanceRewardPoints INT
+		,@rewardPointsExpiresInDays INT
+		,@customerID INT
+		,@senderEmail NVARCHAR(256)
+		,@isSignUpActive INT
+		,@isReferalSignUpActive INT
+		,@isNewsActive INT
+
+	SET @isSignUpActive = (
+			SELECT IsActive
+			FROM [dbo].[Aspx_RewardPointSettings]
+			WHERE RewardRuleID = 1
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+			)
+	--AND CultureName = @CultureName
+	SET @isReferalSignUpActive = (
+			SELECT IsActive
+			FROM Aspx_RewardPointSettings
+			WHERE RewardRuleID = 6
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+			)
+	--AND CultureName = @CultureName
+	SET @isNewsActive = (
+			SELECT IsActive
+			FROM [dbo].[Aspx_RewardPointSettings]
+			WHERE RewardRuleID = 2
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+			)
+	--AND CultureName = @CultureName
+	SET @customerID = (
+			SELECT CustomerID
+			FROM [dbo].[Aspx_Customer]
+			WHERE UserName = @UserName
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+			)
+	--AND CultureName = @CultureName
+	SET @rewardPointsExpiresInDays = (
+			SELECT ISNULL(RewardPointsExpiresInDays, 0) AS RewardPointsExpiresInDays
+			FROM [dbo].[Aspx_RewardGeneralSettings]
+			WHERE StoreID = @StoreID
+				AND PortalID = @PortalID
+				--AND CultureName = @CultureName
+				AND IsActive = 1
+			)
+
+	SELECT @rewardPoints = ISNULL(RewardPoints, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = @RewardRuleID
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+
+	--AND CultureName = @CultureName
+	---For First Sign Up			
+	IF (@RewardRuleID = 1)
+	BEGIN
+		IF (@isSignUpActive = 1)
+		BEGIN
+			INSERT INTO [dbo].[Aspx_RewardPointsSignUp] (
+				[RewardRuleID]
+				,[SignUpPoints]
+				,[CustomerID]
+				,[SignUpEmail]
+				,[StoreID]
+				,[PortalID]
+				,[CultureName]
+				,[IsActive]
+				,[AddedOn]
+				,[AddedBy]
+				,[IsDeleted]
+				,[IsModified]
+				)
+			VALUES (
+				@RewardRuleID
+				,@rewardPoints
+				,@customerID
+				,@Email
+				,@StoreID
+				,@PortalID
+				,@CultureName
+				,1
+				,GETDATE()
+				,@UserName
+				,0
+				,0
+				)
+		END
+
+		----For Referal Sign Up
+		IF (@isReferalSignUpActive = 1)
+		BEGIN
+			SET @senderEmail = (
+					SELECT SenderEmail
+					FROM [dbo].[Aspx_EmailAFriend]
+					WHERE ReceiverEmail = @Email
+						AND StoreID = @StoreID
+						AND PortalID = @PortalID
+					)
+
+			IF (@senderEmail IS NOT NULL)
+			BEGIN
+				IF NOT EXISTS (
+						SELECT RewardRuleID
+						FROM [dbo].[Aspx_RewardPointsReferalSignUp]
+						WHERE ReferalEmail = @Email
+						)
+				BEGIN
+					DECLARE @tblTemp TABLE (
+						RowNum INT IDENTITY(1, 1)
+						,RewardRuleID INT
+						,RewardPoints INT
+						,CustomerID INT
+						)
+
+					INSERT INTO @tblTemp
+					SELECT DISTINCT RPS.RewardRuleID
+						,RPS.RewardPoints
+						,C.CustomerID
+					FROM [dbo].[Aspx_EmailAFriend] EF
+					INNER JOIN [dbo].[users] U ON EF.SenderEmail = U.Email
+					INNER JOIN [dbo].[Aspx_Customer] C ON U.Username = C.UserName
+					INNER JOIN [dbo].[Aspx_RewardPointSettings] RPS ON C.PortalID = RPS.PortalID
+					WHERE EF.ReceiverEmail = @Email
+						AND RPS.RewardRuleID = 6
+						AND RPS.StoreID = @StoreID
+						AND RPS.PortalID = @PortalID
+
+					--AND RPS.CultureName = @CultureName
+					INSERT INTO [dbo].[Aspx_RewardPointsReferalSignUp] (
+						[RewardRuleID]
+						,[ReferalSignUpPoints]
+						,[CustomerID]
+						,[ReferalEmail]
+						,[ReferalCustomerID]
+						,[StoreID]
+						,[PortalID]
+						,[CultureName]
+						,[IsActive]
+						,[AddedOn]
+						,[AddedBy]
+						,[IsDeleted]
+						,[IsModified]
+						)
+					SELECT RewardRuleID
+						,RewardPoints
+						,CustomerID
+						,@Email
+						,@customerID
+						,@StoreID
+						,@PortalID
+						,@CultureName
+						,1
+						,GETDATE()
+						,@UserName
+						,0
+						,0
+					FROM @tblTemp
+				END
+			END
+		END
+	END
+
+	---For NewsLetter
+	IF (@RewardRuleID = 2)
+	BEGIN
+		IF (@isNewsActive = 1)
+		BEGIN
+			IF NOT EXISTS (
+					SELECT RewardRuleID
+					FROM [dbo].[Aspx_RewardPointsNewsLetter]
+					WHERE RewardRuleID = @RewardRuleID
+						AND AddedBy = @UserName
+						AND CustomerID = @customerID
+						AND StoreID = @StoreID
+						AND PortalID = @PortalID
+					)
+				--AND CultureName = @CultureName
+			BEGIN
+				INSERT INTO [dbo].[Aspx_RewardPointsNewsLetter] (
+					[RewardRuleID]
+					,[SubscriptionPoints]
+					,[CustomerID]
+					,[SubscribedEmail]
+					,[StoreID]
+					,[PortalID]
+					,[CultureName]
+					,[IsActive]
+					,[AddedOn]
+					,[AddedBy]
+					,[IsDeleted]
+					,[IsModified]
+					)
+				VALUES (
+					@RewardRuleID
+					,@rewardPoints
+					,@customerID
+					,@Email
+					,@StoreID
+					,@PortalID
+					,@CultureName
+					,1
+					,GETDATE()
+					,@UserName
+					,0
+					,0
+					)
+			END
+		END
+	END
+
+	SET NOCOUNT OFF
+END
+
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSaveGeneralSettings]    Script Date: 05/16/2013 17:00:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	Saving Reward point's General Settings
+-- =============================================
+--[dbo].[usp_Aspx_RewardPointsSaveGeneralSettings] 10,1,1,1,1,'en-US','superuser'
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsSaveGeneralSettings] (
+	@RewardPoints INT
+	,@RewardAmount DECIMAL(18, 2)
+	,@AddOrderStatusID NVARCHAR(256)
+	,@SubOrderStatusID NVARCHAR(256)
+	,@RewardPointsExpiresInDays INT
+	,@MinRedeemBalance INT
+	,@BalanceCapped INT
+	,@IsActive BIT
+	,@StoreID INT
+	,@PortalID INT
+	,@CulturName NVARCHAR(256)
+	,@UserName NVARCHAR(256)
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF NOT EXISTS (
+			SELECT GeneralSettingsID
+			FROM Aspx_RewardGeneralSettings
+			WHERE StoreID = @StoreID
+				AND PortalID = @PortalID
+			)
+	BEGIN
+		INSERT INTO [dbo].[Aspx_RewardGeneralSettings] (
+			[RewardPoints]
+			,[RewardExchangeRate]
+			,[AddOrderStatusID]
+			,[SubOrderStatusID]
+			,[RewardPointsExpiresInDays]
+			,[MinRedeemBalance]
+			,[BalanceCapped]
+			,[StoreID]
+			,[PortalID]
+			,[CultureName]
+			,[IsActive]
+			,[AddedOn]
+			,[AddedBy]
+			)
+		VALUES (
+			@RewardPoints
+			,@RewardAmount
+			,@AddOrderStatusID
+			,@SubOrderStatusID
+			,@RewardPointsExpiresInDays
+			,@MinRedeemBalance
+			,@BalanceCapped
+			,@StoreID
+			,@PortalID
+			,@CulturName
+			,@IsActive
+			,GETDATE()
+			,@UserName
+			)
+	END
+	ELSE
+	BEGIN
+		UPDATE [dbo].[Aspx_RewardGeneralSettings]
+		SET [RewardPoints] = @RewardPoints
+			,[RewardExchangeRate] = @RewardAmount
+			,[AddOrderStatusID] = @AddOrderStatusID
+			,[SubOrderStatusID] = @SubOrderStatusID
+			,[RewardPointsExpiresInDays] = @RewardPointsExpiresInDays
+			,[MinRedeemBalance] = @MinRedeemBalance
+			,[BalanceCapped] = @BalanceCapped
+			,[StoreID] = @StoreID
+			,[PortalID] = @PortalID
+			,[CultureName] = @CulturName
+			,[IsActive] = @IsActive
+			,[IsModified] = 1
+			,[UpdatedOn] = GETDATE()
+			,[UpdatedBy] = @UserName
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+	END
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSaveNewsLetter]    Script Date: 05/16/2013 17:00:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET REWRD POINTS BY CUSTOMERID
+-- =============================================
+--truncate table Aspx_RewardPoints
+--select * from Aspx_RewardPoints
+-- [dbo].[usp_Aspx_RewardPointsSaveByCore] 2,1,1,'en-US','superuser',''
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsSaveNewsLetter] (
+	@RewardRuleID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@CustomerID INT
+	,@UserName NVARCHAR(256)
+	,@Email NVARCHAR(256) = NULL
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @rewardPointsExpiresInDays INT
+		,@rewardPoints INT
+		,@isNewsActive INT
+
+	SET @isNewsActive = (
+			SELECT IsActive
+			FROM [dbo].[Aspx_RewardPointSettings]
+			WHERE RewardRuleID = @RewardRuleID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+			)
+	--AND CultureName = @CultureName
+	SET @rewardPointsExpiresInDays = (
+			SELECT ISNULL(RewardPointsExpiresInDays, 0) AS RewardPointsExpiresInDays
+			FROM [dbo].[Aspx_RewardGeneralSettings]
+			WHERE StoreID = @StoreID
+				AND PortalID = @PortalID
+				--AND CultureName = @CultureName
+				AND IsActive = 1
+			)
+
+	SELECT @rewardPoints = ISNULL(RewardPoints, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = @RewardRuleID
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+
+	--AND CultureName = @CultureName
+	IF (@isNewsActive = 1)
+	BEGIN
+		IF NOT EXISTS (
+				SELECT RewardRuleID
+				FROM [dbo].[Aspx_RewardPointsNewsLetter]
+				WHERE RewardRuleID = @RewardRuleID
+					AND AddedBy = @UserName
+					AND CustomerID = @CustomerID
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+				)
+			--AND CultureName = @CultureName
+		BEGIN
+			INSERT INTO [dbo].[Aspx_RewardPointsNewsLetter] (
+				[RewardRuleID]
+				,[SubscriptionPoints]
+				,[CustomerID]
+				,[SubscribedEmail]
+				,[StoreID]
+				,[PortalID]
+				,[CultureName]
+				,[IsActive]
+				,[AddedOn]
+				,[AddedBy]
+				,[IsDeleted]
+				,[IsModified]
+				)
+			VALUES (
+				@RewardRuleID
+				,@rewardPoints
+				,@CustomerID
+				,@Email
+				,@StoreID
+				,@PortalID
+				,@CultureName
+				,1
+				,GETDATE()
+				,@UserName
+				,0
+				,0
+				)
+		END
+	END
+
+	SET NOCOUNT OFF
+END
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSavePolling]    Script Date: 05/16/2013 17:00:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET REWRD POINTS BY CUSTOMERID
+-- =============================================
+--truncate table Aspx_RewardPoints
+--select * from Aspx_RewardPoints
+-- [dbo].[usp_Aspx_RewardPointsSavePolling] 2,1,1,'en-US','superuser',1,202
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsSavePolling] (
+	@RewardRuleID INT
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@CustomerID INT
+	,@UserName NVARCHAR(256)
+	,@PollID INT
+	,@UserModuleID INT
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @rewardPoints INT
+		,@isPollActive INT
+		,@pollQuestion NVARCHAR(max)
+
+	SET @pollQuestion = (
+			SELECT Question
+			FROM [dbo].[Poll]
+			WHERE UserModuleID = @UserModuleID
+				AND PollID = @PollID
+				AND PortalID = @PortalID
+			)
+	SET @isPollActive = (
+			SELECT IsActive
+			FROM [dbo].[Aspx_RewardPointSettings]
+			WHERE RewardRuleID = @RewardRuleID
+				AND StoreID = @StoreID
+				AND PortalID = @PortalID
+			)
+
+	--AND CultureName = @CultureName
+	SELECT @rewardPoints = ISNULL(RewardPoints, 0)
+	FROM [dbo].[Aspx_RewardPointSettings]
+	WHERE RewardRuleID = @RewardRuleID
+		AND StoreID = @StoreID
+		AND PortalID = @PortalID
+
+	--AND CultureName = @CultureName
+	IF (@CustomerID != 0)
+	BEGIN
+		IF (@isPollActive = 1)
+		BEGIN
+			IF NOT EXISTS (
+					SELECT PollID
+					FROM [dbo].[Aspx_RewardPointsPolling]
+					WHERE RewardRuleID = @RewardRuleID
+						AND PollID = @PollID
+						AND AddedBy = @UserName
+						AND CustomerID = @CustomerID
+						AND StoreID = @StoreID
+						AND PortalID = @PortalID
+					)
+				--AND CultureName = @CultureName
+			BEGIN
+				INSERT INTO [dbo].[Aspx_RewardPointsPolling] (
+					[RewardRuleID]
+					,[PollingPoints]
+					,[CustomerID]
+					,[PollID]
+					,[Question]
+					,[UserModuleID]
+					,[StoreID]
+					,[PortalID]
+					,[CultureName]
+					,[IsActive]
+					,[AddedOn]
+					,[AddedBy]
+					,[IsDeleted]
+					,[IsModified]
+					)
+				VALUES (
+					@RewardRuleID
+					,@rewardPoints
+					,@CustomerID
+					,@PollID
+					,@pollQuestion
+					,@UserModuleID
+					,@StoreID
+					,@PortalID
+					,@CultureName
+					,1
+					,GETDATE()
+					,@UserName
+					,0
+					,0
+					)
+			END
+		END
+	END
+
+	SET NOCOUNT OFF
+END
+
+
+
+
+
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSaveUpdateNewRule]    Script Date: 05/16/2013 17:00:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	Saving Reward Rule Settings
+-- =============================================
+--select * from [Aspx_RewardPointSettings]
+--[dbo].[usp_Aspx_RewardPointsSaveUpdateNewRule] '','','' ,'','',1,1,1,'en-US','superuser'
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsSaveUpdateNewRule] (
+	@RewardPointSettingsID INT = NULL
+	,@RewardRuleName NVARCHAR(max) = NULL
+	,@RewardRuleID INT = NULL
+	,@RewardRuleType NVARCHAR(max) = NULL
+	,@RewardPoints INT = NULL
+	,@PurchaseAmount INT = NULL
+	,@IsActive BIT = NULL
+	,@StoreID INT = NULL
+	,@PortalID INT = NULL
+	,@CulturName NVARCHAR(256) = NULL
+	,@UserName NVARCHAR(256) = NULL
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	BEGIN
+		IF NOT EXISTS (
+				SELECT RewardRuleID
+				FROM [dbo].[Aspx_RewardPointSettings]
+				WHERE RewardRuleID = @RewardRuleID
+					AND StoreID = @StoreID
+					AND PortalID = @PortalID
+				)
+		BEGIN
+			INSERT INTO [dbo].[Aspx_RewardPointSettings] (
+				[RewardRuleName]
+				,[RewardRuleID]
+				,[RewardRuleType]
+				,[RewardPoints]
+				,[PurchaseAmount]
+				,[StoreID]
+				,[PortalID]
+				,[CultureName]
+				,[IsActive]
+				,[IsDeleted]
+				,[IsModified]
+				,[AddedOn]
+				,[UpdatedOn]
+				,[DeletedOn]
+				,[AddedBy]
+				,[UpdatedBy]
+				,[DeletedBy]
+				)
+			VALUES (
+				@RewardRuleName
+				,@RewardRuleID
+				,@RewardRuleType
+				,@RewardPoints
+				,@PurchaseAmount
+				,@StoreID
+				,@PortalID
+				,@CulturName
+				,@IsActive
+				,0
+				,0
+				,GETDATE()
+				,NULL
+				,NULL
+				,@UserName
+				,NULL
+				,NULL
+				)
+		END
+		ELSE
+		BEGIN
+			UPDATE [dbo].[Aspx_RewardPointSettings]
+			SET [RewardRuleName] = @RewardRuleName
+				,[RewardRuleID] = @RewardRuleID
+				,[RewardRuleType] = @RewardRuleType
+				,[RewardPoints] = @RewardPoints
+				,[PurchaseAmount] = @PurchaseAmount
+				,[IsActive] = @IsActive
+				,[IsModified] = 1
+				,[IsDeleted] = 0
+				,[UpdatedOn] = GETDATE()
+				,[UpdatedBy] = @UserName
+				,[CultureName] = @CulturName
+			WHERE RewardRuleID = @RewardRuleID
+		END
+	END
+END
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_Aspx_RewardPointsSettingGetAll]    Script Date: 05/16/2013 17:00:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+-- =============================================
+-- Author:		Jainul Khan
+-- Create date: December 28, 2012
+-- Description:	GET GENERAL SETTINGS INFO
+-- =============================================
+--select * from Aspx_RewardPointSettings where IsActive=1
+-- [dbo].[usp_Aspx_RewardPointsSettingGetAll] 1,10,1,1,'en-US',null,null
+CREATE PROCEDURE [dbo].[usp_Aspx_RewardPointsSettingGetAll] (
+	@Offset INT
+	,@Limit INT = NULL
+	,@StoreID INT
+	,@PortalID INT
+	,@CultureName NVARCHAR(256)
+	,@RewardRuleName NVARCHAR(100) = NULL
+	,@IsActive BIT = NULL
+	)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF (@Limit IS NULL)
+	BEGIN
+		SET @Limit = 0
+	END;
+
+	WITH test (
+		RewardPointSettingsID
+		,RewardRuleName
+		,RewardRuleID
+		,RewardRuleType
+		,RewardPoints
+		,PurchaseAmount
+		,IsActive
+		,RowNumber
+		)
+	AS (
+		SELECT DISTINCT RewardPointSettingsID
+			,RewardRuleName
+			,RewardRuleID
+			,RewardRuleType
+			,RewardPoints
+			,ISNULL(PurchaseAmount, 0) AS PurchaseAmount
+			,IsActive
+			,ROW_NUMBER() OVER (
+				ORDER BY (RewardPointSettingsID) ASC
+				) AS RowNumber
+		FROM Aspx_RewardPointSettings
+		WHERE StoreID = @StoreID
+			AND PortalID = @PortalID
+			--AND CultureName=@CultureName
+			AND RewardRuleName LIKE ISNULL(@RewardRuleName, '') + '%'
+			AND (
+				IsActive = @IsActive
+				OR @IsActive IS NULL
+				)
+			AND (
+				IsDeleted = 0
+				OR IsDeleted IS NULL
+				)
+		)
+		,rowTotal (RowTotal)
+	AS (
+		SELECT MAX(RowNumber)
+		FROM test
+		)
+	SELECT CONVERT(INT, r.RowTotal) AS RowTotal
+		,c.*
+	FROM test c
+		,rowTotal r
+	WHERE RowNumber >= @offset
+		AND RowNumber <= CASE @limit
+			WHEN 0
+				THEN (@offset + r.RowTotal - 1)
+			ELSE (@offset + @limit - 1)
+			END
+
+	SET NOCOUNT OFF
+END
+
+
+
+
+
+
+
+
+GO
+
+

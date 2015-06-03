@@ -1,0 +1,56 @@
+﻿<sageframe version="2.5.0.0" type="Module">
+  <folders>
+    <folder>
+      <name>SFE_SpecialItems</name>
+      <friendlyname>AspxSpecialItesm</friendlyname>
+      <foldername>AspxCommerce/AspxSpecialsItems</foldername>
+      <modulename>AspxSpecialsItems</modulename>
+      <description>AspxCommerce Special Itmes</description>
+      <version>02.50.00</version>
+      <businesscontrollerclass>SageFrame.Modules.AspxSpecialItesm.SpecialItemsController, SageFrame.Modules.AspxSpecialItesm.SpecialItemsProvider</businesscontrollerclass>
+      <compatibleversions>^[0]?[4-9]{1}\.[0-9]{1}[7-9]{1}\.[0-9]{1}[0-9]{1}$</compatibleversions>
+      <owner>Sageframe Pvt. Ltd.</owner>
+      <organization>Sageframe Pvt. Ltd.</organization>
+      <url>www.aspxcommerce.com</url>
+      <email>info@aspxcommerce.com</email>
+      <releasenotes>This is  release notes for AspxCommerce Special Items.</releasenotes>
+      <license>This is  license copy for AspxCommerce Special Items.</license>
+      <modules>
+        <module>
+          <friendlyname>AspxSpecialItemsView</friendlyname>
+          <cachetime>-1</cachetime>
+          <controls>
+            <control>
+              <key>AspxSpecialItemsView</key>
+              <title>AspxSpecialItemsView</title>
+              <src>Modules/AspxCommerce/AspxSpecialsItems/Specials.ascx</src>
+              <type>View</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>           
+            <control>
+              <key>AspxSpecialItemsSetting</key>
+              <title>AspxSpecialItemsSetting</title>
+              <src>Modules/AspxCommerce/AspxSpecialsItems/SpecialItemSetting.ascx</src>
+              <type>Setting</type>
+              <helpurl>http://www.aspxcommerce.com/default.aspx</helpurl>
+              <supportspartialrendering>true</supportspartialrendering>
+            </control>
+          </controls>
+        </module>
+      </modules>
+      <files>
+        <file>
+          <name>02.50.00.SqlDataProvider</name>
+        </file>
+        <file>
+          <name>AspxCommerce.SpecialItems.dll</name>
+        </file>
+        <file>
+          <name>Uninstall.SqlDataProvider</name>
+        </file>
+      </files>
+      <interfaceimplementedclass>AspxCommerce.SpecialItems,SpecialItemsIModuleExtraCodeExecute</interfaceimplementedclass>
+    </folder>
+  </folders>
+</sageframe>

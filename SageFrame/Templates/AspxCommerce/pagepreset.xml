@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pagepreset>
+  <layout>
+    <preset layout="All">All</preset>
+    <preset layout="ItemDetail">Item-Detail</preset>
+    <preset layout="home">Under-Construction,Home</preset>
+  </layout>
+  <theme>default</theme>
+  <width>wide</width>
+</pagepreset>

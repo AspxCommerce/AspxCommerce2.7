@@ -1,0 +1,9 @@
+.cssClassBottomContent .bx-window ul {height:auto !important}
+#slide .sfBannerslide {height:125px !important;margin-top:20px;padding:5px !important;}
+#slide a {margin:20px;}
+#slide .bx-window {margin-top: 13px;margin-left:38px;height:125px;/*margin-right:60px;*/width: 893px;}
+#brandSlider li {float: left;width: 150px;}
+#slide .bx-prev {left: -2% !important; top: 8% !important ;width: 50px;z-index: 99;background: url(../images/arrow-prev.png) no-repeat;}
+#slide .bx-prev, #slide .bx-next{	height: 60px;	position: absolute;	text-indent: -999999px;	width: 32px;}
+#slide .bx-next {top: 13%;right:-2%;z-index: 99;background: url(../images/arrow-next.png) no-repeat;right: -2% !important; top: 8% !important }
+.sfModulebrands {margin-bottom:30px}

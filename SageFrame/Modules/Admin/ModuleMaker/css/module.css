@@ -1,0 +1,167 @@
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow: auto;
+}
+
+    .ui-autocomplete .ui-menu-item {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+.sfCheckbox input, .sfCheckbox label {
+    float: none;
+}
+
+#slqProcedures li {
+    margin-top: 10px;
+}
+
+    #slqProcedures li .subHeading {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+.icon-checked.active {
+    background-color: red;
+}
+
+.sfRadioTab {
+    padding: 2px 5px;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #ececec;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.15);
+}
+
+div.sfRadioTab > label {
+    padding: 2px 10px;
+    border-radius: 2px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.sfRadioTab label.sfActive {
+    background: #62a7e4;
+    color: #ffffff;
+}
+
+.info.icon-password {
+    position: absolute; left:0; top:20px;
+    transform: rotate(-45deg);
+    color: #fdee00;
+text-shadow:-1px 0 0 #333, 1px 0 0 #333;
+}
+
+.icon-navigate.sfBtn.next {
+    padding: 8px 36px 8px 10px;
+    position: relative;
+}
+
+span.sfBtn.icon-arrow-slim-s, span.sfBtn.icon-arrow-slim-s:hover,
+span.sfBtn.icon-arrow-slim-s:active {
+    background: #ccc;
+    border: none;
+    padding: 7px 10px 11px;
+    transform: translateX(-100%);
+    border-radius: 0 3px 3px 0;
+}
+
+    span.sfBtn.icon-arrow-slim-s:before {
+        background: #ccc;
+        color: #fff;
+        margin-right: 0;
+        padding: 0;
+    }
+
+.next.icon-navigate:before {
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    transform: rotate(134deg);
+}
+
+.sfBtn.icon-addnew.sfHighlightBtn {
+    margin: 15px 24px;
+}
+
+.ui-widget-content a.ui-state-focus {
+    background: #62a7e4;
+    color: #ffffff; border:1px solid #62a7e4;
+}
+#divProperties thead tr:first-child td { font-weight:bold; }
+.moduleCreator table tr:first-child td { position:relative;}
+.sfDelete.icon-delete:hover { cursor:pointer; color:red;}
+label + label input[type="radio"], label + label input[type="checkbox"] { margin-left:10px;}
+
+.subHeading { background:#e4e4e4; padding:10px; }
+
+.procedures {
+    padding: 10px 20px;
+}
+
+#slqProcedures li .subHeading {
+    background: #e4e4e4;
+    border-radius: 2px 2px 0 0;
+    font-size: 16px;
+    margin-bottom: 6px;
+    padding: 10px;
+}
+
+#slqProcedures li {
+    border: 2px solid #e4e4e4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.subHeading .icon-checked { margin-right:5px; background:none;}
+
+.icon-checked.active { color:#378dda;}
+
+.sfloader:before { color:#62a7e4;
+-webkit-animation:loader 1s linear 0s infinite  alternate;
+-o-animation:loader 1s linear 0s infinite  alternate;
+animation:loader 1s linear 0s infinite alternate ;
+  position:absolute;
+}
+
+@-webkit-keyframes  loader{
+	0% {   left:5px; top:10px;  }
+  25% { left:10px; top:10px;  }
+  50% { left:15px; top:15px;}
+	100% { left:10px; top:20px; }
+}
+
+@keyframes loader {
+	0% {   left:5px; top:10px;  }
+  25% { left:10px; top:10px;  }
+  50% { left:15px; top:15px;}
+	100% { left:10px; top:20px; }
+}
+
+.icon-arrow-slim-e::before {
+    color: #999;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.ui-autocomplete .ui-menu-item a { padding:5px 10px; font-size: 14px; border-radius:5px; color:#666;}
+.ui-autocomplete .ui-menu-item a:hover, .ui-autocomplete .ui-menu-item a.ui-state-focus  { color:#fff;}
+.ui-autocomplete { background:#fff;}
+.ui-autocomplete li.ui-menu-item:last-child  { padding-bottom:20px;}
