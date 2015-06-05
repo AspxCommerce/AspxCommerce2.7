@@ -422,7 +422,7 @@ input.sfError, input.sfError:focus
     padding-left: 10px;
     height: 30px;
     line-height: 30px !important;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .sfUserRegistrationPage .sfCatpchatd img { float:left; width:auto;}
@@ -843,9 +843,8 @@ p.sfDisplayName span.sfFormlabel.sfDefaultName
 {
     height: 100px;
 }
-.sfUserRegistrationInfoLeft .sfError { float:left; width:5px; padding:0px; text-align:center;}
-.sfUserRegistrationInfoLeft .sfError.sfErrorBlock { display:block; float:none; text-align:left; width:auto; font-size:11px;}
-.sfUserRegistrationInfoLeft input { width:95%; float:left;}
+.sfUserRegistrationInfoLeft .sfError { float:none; padding:0px; text-align:left; width:100%; color:Red; visibility: visible;}
+.sfUserRegistrationInfoLeft .sfError.sfErrorBlock { display:block; float:none; text-align:left; width:100%; font-size:11px;}
 .sfUserRegistrationInfoLeft .sfButtonwrapper input { width:auto;}
 #ProfileSetting .sfProfilewrapper { width:450px;}
 #ProfileSetting .sfProfilewrapper a.icon-close:before{ display: inherit; margin-right:5px;}
