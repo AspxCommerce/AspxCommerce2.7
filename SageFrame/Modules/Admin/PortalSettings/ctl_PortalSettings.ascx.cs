@@ -266,6 +266,8 @@ namespace SageFrame.Modules.Admin.PortalSettings
             //RemeberMe setting
             chkEnableRememberme.Checked = bool.Parse(hsts[SageFrameSettingKeys.RememberCheckbox].ToString());
 
+            //ssl
+            cbUseSSL.Checked = string.IsNullOrEmpty(hsts[SageFrameSettingKeys.UseSSL].ToString()) ? false : bool.Parse(hsts[SageFrameSettingKeys.UseSSL].ToString().ToLower());
 
             if (rblUserRegistration.Items.Count > 0)
             {
@@ -743,6 +745,10 @@ namespace SageFrame.Modules.Admin.PortalSettings
                 sbSettingValue.Append(chkShowSidebar.Checked + ",");
                 sbSettingType.Append(SettingType.SiteAdmin + ",");
 
+                //SSL
+                sbSettingKey.Append(SageFrameSettingKeys.UseSSL + ",");
+                sbSettingValue.Append(cbUseSSL.Checked + ",");
+                sbSettingType.Append(SettingType.SiteAdmin + ",");
 
                 //SageFrameSettingKeys.PortalUserRegistration
                 sbSettingKey.Append(SageFrameSettingKeys.PortalUserRegistration + ",");

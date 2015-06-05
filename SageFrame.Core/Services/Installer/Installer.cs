@@ -28,8 +28,8 @@ using SageFrame.Web.Utilities;
 using RegisterModule;
 using SageFrame.Core;
 using System.Web.Hosting;
-//using System.Reflection;
-//using SageFrame.Core.Services;
+using System.Reflection;
+using SageFrame.Core.Services;
 
 #endregion
 
@@ -1144,6 +1144,12 @@ namespace SageFrame.SageFrameClass.Services
                     //File.Move();
                 }
             }
+            // check IModuleExtraCodeExecute interface is implemented or not for insallation of module
+            if (IsIModuleExtraCodeInterfaceImplemented(doc))
+            {
+                ExtraCodeOnInstallation(doc, module.TempFolderPath);
+            }
+
             //-----------------------------------//
             RemoveFromAvailableResources(module.ModuleName + ".zip");
             //------------------------------------------//
@@ -1394,6 +1400,91 @@ namespace SageFrame.SageFrameClass.Services
 
         //-----------------------------------------------------------//
 
+        #region Extra Code Execution on Insallation & UnInstallation of Module
+        /// <summary>
+        /// function GetAssemblyNameWithIClass(doc); return list with two value
+        /// index 0 consist the AssemblyName
+        /// index 1 consist the Interface implemented Class Name for Install and Unstall of module
+        /// </summary>
+        /// <param name="doc"></param>
+        public void ExtraCodeOnInstallation(XmlDocument doc, string tempFolderPath)
+        {
+            try
+            {
+                List<string> assemblyClassIName = GetAssemblyNameWithIClass(doc);
+                AppDomain.CurrentDomain.Load(assemblyClassIName[0]);
+                foreach (Assembly ass in AppDomain.CurrentDomain.GetAssemblies())
+                {
+                    string assName = ass.GetName().Name.ToString();
+                    if (assName == assemblyClassIName[0])
+                    {
+                        Type type = ass.GetType(assemblyClassIName[0] + "." + assemblyClassIName[1], false);
+                        IModuleExtraCodeExecute imece = (IModuleExtraCodeExecute)Activator.CreateInstance(type);
 
+                        imece.ExecuteOnInstallation(doc, tempFolderPath);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ProcessException(ex);
+            }
+        }
+
+        public void ExtraCodeOnUnInstallation(XmlDocument doc)
+        {
+            try
+            {
+                List<string> assemblyClassIName = GetAssemblyNameWithIClass(doc);
+                foreach (Assembly ass in AppDomain.CurrentDomain.GetAssemblies())
+                {
+                    string assName = ass.GetName().Name.ToString();
+                    if (assName == assemblyClassIName[0])
+                    {
+                        Type type = ass.GetType(assemblyClassIName[0] + "." + assemblyClassIName[1], false);
+                        IModuleExtraCodeExecute imece = (IModuleExtraCodeExecute)Activator.CreateInstance(type);
+                        imece.ExecuteOnUnInstallation(doc);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ProcessException(ex);
+            }
+        }
+
+        /// <summary>
+        ///Function GetAssemblyNameWithIClass(XmlDocument doc) checks for "interfaceimplementedclass" node in sfe
+        /// "interfaceimplementedclass" node consists assembly name and IModuleExtraCodeExecute interface implemented class name with comma seperated like
+        ///  <interfaceimplementedclass>AssemblyName,IModuleExtraCodeExecuteImplemented</interfaceimplementedclass>
+        ///  function returns list with two values, AssemblyName at index 0 and IModuleExtraCodeExecute interface implemented class name at in index 1
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <returns></returns>
+        public List<string> GetAssemblyNameWithIClass(XmlDocument doc)
+        {
+            XmlNodeList xnInterfaceImplement = doc.SelectNodes("sageframe/folders/folder/interfaceimplementedclass");
+            string[] assemblyValue = new string[] { };
+            if (xnInterfaceImplement != null && xnInterfaceImplement.Count != 0)
+            {
+                char[] commaSeparator = new char[] { ',' };
+                foreach (XmlNode interFaceCode in xnInterfaceImplement)
+                {
+                    assemblyValue = interFaceCode.InnerText.Split(commaSeparator, StringSplitOptions.RemoveEmptyEntries);
+                }
+            }
+            return new List<string> { assemblyValue[0], assemblyValue[1] };
+        }
+
+        public bool IsIModuleExtraCodeInterfaceImplemented(XmlDocument doc)
+        {
+            XmlNodeList xnListModule = doc.SelectNodes("sageframe/folders/folder/interfaceimplementedclass");
+            if (xnListModule != null && xnListModule.Count != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
     }
 }

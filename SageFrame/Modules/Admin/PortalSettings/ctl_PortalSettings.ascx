@@ -257,6 +257,8 @@
                     IsExpanded="false" Text="Security Settings" />
                 <div id="tblSecurity" runat="server" class="sfCollapsecontent">
                     <div class="sfFormwrapper">
+                        <p>   <asp:Label ID="lblUseSSL" runat="server" Text="Run All Page on SSL"></asp:Label> &nbsp;  &nbsp;<asp:CheckBox runat="server" ID="cbUseSSL"/>  </p>
+                       
                         <p class="sfNote">
                             <asp:Label ID="lblAdvancedSettingsHelp" runat="server" Text="In this section, you can set up more advanced settings for your site."
                                 meta:resourcekey="lblAdvancedSettingsHelpResource1"></asp:Label>

@@ -598,7 +598,7 @@
                         Url: "", StartDate: $('#txtStartDate').val(),
                         EndDate: $('#txtEndDate').val(),
                         RefreshInterval: $('#txtRefreshInterval').val() == "" ? 0 : $('#txtRefreshInterval').val(),
-                        PageHeadText: "SageFrame", IsSecure: $('#chkIsSecure').prop("checked") ? true : false,
+                        PageHeadText: "SageFrame", IsSecure: $('#chkUseSSL').is(":checked"),
                         PortalID: p.PortalID,
                         IsActive: true,
                         AddedBy: p.UserName, BeforeID: beforeID, AfterID: afterID,
@@ -808,7 +808,7 @@
                 $('#txtStartDate').val('');
                 $('#txtEndDate').val('');
                 $('#txtRefreshInterval').val('');
-                $('#chkIsSecure').prop("checked", false);
+                $('#chkUseSSL').prop("checked", false);
                 LstPagePermission: lstPagePermission = [];
                 $('#txtPageName').prop('title', 0);
                 $('#cboPositionTab').val('');
