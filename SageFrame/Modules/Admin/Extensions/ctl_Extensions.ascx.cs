@@ -429,11 +429,11 @@ namespace SageFrame.Modules.Admin.Extensions
                     }
 
                     // check IModuleExtraCodeExecute interface is implemented or not for install/unInstall of module
-                    //if (installerClass.IsIModuleExtraCodeInterfaceImplemented(doc))
-                    //{
-                    //    installerClass.ExtraCodeOnUnInstallation(doc);
-                    //}                    
-
+                    if (installerClass.IsIModuleExtraCodeInterfaceImplemented(doc))
+                    {
+                        installerClass.ExtraCodeOnUnInstallation(doc);
+                    }                    
+                  
                     DeleteAllDllsFromBin(dllFiles, moduleFolderPath);
                 }
             }

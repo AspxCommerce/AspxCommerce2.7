@@ -177,7 +177,7 @@
 
                 $('#portalPages').on('click', function () {
                     $('#rdbFronMenu').trigger('click');
-                    // $('#chkIsSecure').prop('checked', true)
+                    $('#chkUseSSL').prop('checked', true)
                     $('#adminPages').removeClass('sfActive');
                     $(this).addClass('sfActive');
                 });
@@ -443,7 +443,7 @@
                         });
                     }
                 }
-                if (data.d.IsSecure == true ? $('#chkIsSecure').prop('checked', true) : $('#chkIsSecure').prop('checked', false));
+                if (data.d.IsSecure == true ? $('#chkUseSSL').prop('checked', true) : $('#chkUseSSL').prop('checked', false));
                 if (data.d.IsVisible == true ? $('#chkMenu').prop('checked', true) : $('#chkMenu').prop('checked', false));
                 if (substr == "0") {
                     $('#chkMenu').prop("checked", false);

@@ -392,6 +392,14 @@
                                                         </div>
                                                     </td>
                                                 </tr>
+                                                 <tr id="tr1">
+                                                        <td>
+                                                            <span class="sfFormlabel">Use SSL</span>
+                                                        </td>
+                                                        <td>
+                                                            <input type="checkbox" id="chkUseSSL" />
+                                                        </td>
+                                                    </tr>
                                                 <tr id="trShowInDashboard">
                                                     <td>
                                                         <span class="sfFormlabel">Show In Dashboard</span>
