@@ -95,7 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SageFrame.Common\SageFrame.Common.csproj">
-      <Project>{6AF77849-4E47-4E74-8944-4BDAD509C0A3}</Project>
+      <Project>{6af77849-4e47-4e74-8944-4bdad509c0a3}</Project>
       <Name>SageFrame.Common</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="api25notification._Default" %>

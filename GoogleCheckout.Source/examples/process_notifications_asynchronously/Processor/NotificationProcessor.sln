@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationProcessor", "NotificationProcessor.csproj", "{ADAA9DD0-7218-4C9D-85FB-34943A04C1C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationQueue", "..\NotificationQueue\NotificationQueue.csproj", "{B7BE3211-25E3-4C85-925A-03D0BA9865F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADAA9DD0-7218-4C9D-85FB-34943A04C1C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADAA9DD0-7218-4C9D-85FB-34943A04C1C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADAA9DD0-7218-4C9D-85FB-34943A04C1C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADAA9DD0-7218-4C9D-85FB-34943A04C1C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BE3211-25E3-4C85-925A-03D0BA9865F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BE3211-25E3-4C85-925A-03D0BA9865F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BE3211-25E3-4C85-925A-03D0BA9865F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BE3211-25E3-4C85-925A-03D0BA9865F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
