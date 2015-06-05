@@ -37,11 +37,15 @@
   <ItemGroup>
     <Reference Include="ImageResizer, Version=3.4.3.103, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ImageResizer.dll</HintPath>
     </Reference>
     <Reference Include="ImageResizer.Mvc, Version=3.4.3.103, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ImageResizer.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="ImageResizer.Plugins.Watermark" />
+    <Reference Include="ImageResizer.Plugins.Watermark">
+      <HintPath>bin\ImageResizer.Plugins.Watermark.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
