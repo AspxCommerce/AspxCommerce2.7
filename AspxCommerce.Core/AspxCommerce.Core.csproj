@@ -202,6 +202,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\CurrencyConverter.cs" />
     <Compile Include="Controller\AspxCoreController.cs" />
     <Compile Include="Controller\AspxCouponStatusMgmtController.cs" />
     <Compile Include="Controller\AspxGetTemplates.cs" />
@@ -551,10 +552,6 @@
     <Compile Include="Entity\UsersInfo\UserRecentHistoryInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CurrencyConvertor\CurrencyConverter.csproj">
-      <Project>{57BAE067-AA7F-497B-AF8B-B45D31C39C2E}</Project>
-      <Name>CurrencyConverter</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SageFrame.Common\SageFrame.Common.csproj">
       <Project>{6AF77849-4E47-4E74-8944-4BDAD509C0A3}</Project>
       <Name>SageFrame.Common</Name>

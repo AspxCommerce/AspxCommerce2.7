@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "api25notification", "..\api25notification", "{E19C3A10-3F72-485E-8D26-3A76135A71A4}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/api25notification-cs"
+		Debug.AspNetCompiler.PhysicalPath = "..\api25notification\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\api25notification-cs\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/api25notification-cs"
+		Release.AspNetCompiler.PhysicalPath = "..\api25notification\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\api25notification-cs\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "38277"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E19C3A10-3F72-485E-8D26-3A76135A71A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E19C3A10-3F72-485E-8D26-3A76135A71A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

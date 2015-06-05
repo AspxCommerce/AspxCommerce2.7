@@ -8,8 +8,8 @@
     <ProjectGuid>{B6E897AE-A59A-483D-8476-3CCCEB62D5A1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ContactUs</RootNamespace>
-    <AssemblyName>ContactUs</AssemblyName>
+    <RootNamespace>SageFrame.ContactUs</RootNamespace>
+    <AssemblyName>SageFrame.ContactUs</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>

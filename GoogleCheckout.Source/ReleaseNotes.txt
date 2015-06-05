@@ -1,0 +1,33 @@
+Version 2.5.0.5 released (Apr 21, 2011)
+
+New
+
+Support for v2.5 Callback API as described here.
+Added new example "api25notification" showing how to process a v2.5 order notification callback. Please see the Examples or Source downloads on the tab here
+
+Bug Fixes
+
+Issue 52: itemshippinginformationlist and trackingdatalist were being set even if they were not used, causing a failure when posted.
+Issue 48: Added the ability to create a notification-history-request with a serial-number instead of an array or order numbers.
+Issue 55: Fixed bug in default-tax-table and alternate-tax-table where rateSpecified was not being set, causing the rate to not be serialized.
+
+v1.3.2 5/14/08 10:45 PM Eastern Time
+Joe Feser joseph.feser@gmail.com
+
+Added:
+
+Added NDepend Reports for Cyclomatic complexity Analysis.
+The ability to obtain GiftCertificateAdjustment from the NewOrderNotificationExtended class.
+
+Bug Fixes:
+
+Issue 29: "MerchantCalculationCallback does not work with non USD Currency " Allow the currency to be set without using the web.config file. This is consistent with the other callback classes.
+Issue 30: "GCheckout problem sending URLEncoded Querystrings". We are using .NET 1.1 so the issue was fixed as close as possible to match the .NET 2.0 fix.
+Issue 31: "GiftCertificateAdjustment Access from the Extended New Order Notification" is fixed.
+Issue 36: "Tax rates entered in UI aren't applied" This was an oversite on my side. We now check to make sure at least one Tax table is in use before building out the node. If the node exists and it is empty, it will override any values entered into the Admin UI.
+
+Fixed the ShoppingCartItem class to allow you to obtain the TaxTableSelector property from a NewOrderNotificationExtended class. The property was not available in the past.
+
+v1.3.1 Experimental Release
+
+Never released.

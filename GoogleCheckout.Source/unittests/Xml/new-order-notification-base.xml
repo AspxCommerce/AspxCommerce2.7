@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<new-order-notification xmlns="http://checkout.google.com/schema/2" serial-number="85f54628-538a-44fc-8605-ae62364f6c71">
+  <timestamp>2006-03-17T12:20:46.137Z</timestamp>
+  <google-order-number>841171949013218</google-order-number>
+  <shopping-cart>
+    <cart-expiration>
+      <good-until-date>2006-12-31T23:59:59</good-until-date>
+    </cart-expiration>
+    <items>
+      <item>
+        <quantity>1</quantity>
+        <unit-price currency="USD">35.00</unit-price>
+        <item-name>Dry Food Pack AA1453</item-name>
+        <item-description>A pack of highly nutritious dried food for emergency - store in your garage for up to one year!!</item-description>
+        <tax-table-selector>food</tax-table-selector>
+      </item>
+      <item>
+        <quantity>1</quantity>
+        <unit-price currency="USD">178.00</unit-price>
+        <item-name>MegaSound 2GB MP3 Player</item-name>
+        <item-description>Portable MP3 player - stores 500 songs, easy-to-use interface, color display</item-description>
+        <merchant-private-item-data>
+          <my-data>
+            <weight>1.5</weight>
+            <color>white</color>
+            <item-note>Popular item: Check inventory and order more if needed</item-note>
+          </my-data>
+        </merchant-private-item-data>
+      </item>
+    </items>
+  </shopping-cart>
+  <buyer-shipping-address>
+    <email>knbw@gmail.com</email>
+    <company-name />
+    <contact-name>Knikki Beckwell</contact-name>
+    <phone />
+    <fax />
+    <address1>1250 Shoreline Blvd</address1>
+    <address2 />
+    <country-code>US</country-code>
+    <city>Mountain View</city>
+    <region>CA</region>
+    <postal-code>94043</postal-code>
+  </buyer-shipping-address>
+  <buyer-billing-address>
+    <email>knbw@gmail.com</email>
+    <company-name />
+    <contact-name>Knikki Beckwell</contact-name>
+    <phone />
+    <fax />
+    <address1>1250 Shoreline Blvd</address1>
+    <address2 />
+    <country-code>US</country-code>
+    <city>Mountain View</city>
+    <region>CA</region>
+    <postal-code>94043</postal-code>
+  </buyer-billing-address>
+  <buyer-marketing-preferences>
+    <email-allowed>false</email-allowed>
+  </buyer-marketing-preferences>
+  <order-adjustment>
+    <merchant-calculation-successful>true</merchant-calculation-successful>
+    <merchant-codes>
+      <coupon-adjustment>
+        <applied-amount currency="USD">5.00</applied-amount>
+        <code>FirstVisitCoupon</code>
+        <calculated-amount currency="USD">5.00</calculated-amount>
+        <message>Congratulations! You saved $5.00 on your first visit!</message>
+      </coupon-adjustment>
+      <gift-certificate-adjustment>
+        <applied-amount currency="USD">10.00</applied-amount>
+        <code>GiftCert012345</code>
+        <calculated-amount currency="USD">10.00</calculated-amount>
+        <message>You used your Gift Certificate!</message>
+      </gift-certificate-adjustment>
+    </merchant-codes>
+    <shipping>
+      <merchant-calculated-shipping-adjustment>
+        <shipping-name>SuperShip</shipping-name>
+        <shipping-cost currency="USD">13.00</shipping-cost>
+      </merchant-calculated-shipping-adjustment>
+    </shipping>
+    <total-tax currency="USD">15.06</total-tax>
+    <adjustment-total currency="USD">13.06</adjustment-total>
+  </order-adjustment>
+  <order-total currency="USD">226.06</order-total>
+  <fulfillment-order-state>NEW</fulfillment-order-state>
+  <financial-order-state>CHARGEABLE</financial-order-state>
+  <buyer-id>419797746651146</buyer-id>
+</new-order-notification>
