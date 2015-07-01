@@ -2385,9 +2385,9 @@ namespace SageFrame.Framework
             html.Append(hostUrl);
             html.Append("/js/jquery-1.9.1.js'></script>");
             html.Append("<script type=\"text/javascript\">var _aspx_token='");
-            html.Append(token );
+            html.Append(token);
             html.Append("'; $.ajaxSetup({'beforeSend': function(xhr) { xhr.setRequestHeader('ASPX-TOKEN', '");
-            html.Append(token );
+            html.Append(token);
             html.Append("');}});</script>");
             html.Append("<script type='text/javascript' src='");
             html.Append(hostUrl);

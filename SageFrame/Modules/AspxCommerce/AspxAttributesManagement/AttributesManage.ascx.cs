@@ -47,10 +47,10 @@ public partial class Modules_AspxAttributesManagement_AttributesManage : BaseAdm
         try
         {
             if (!IsPostBack)
-            {               
+            {
                 IncludeJs("AttributesManage", "/js/GridView/jquery.grid.js", "/js/GridView/SagePaging.js", "/js/GridView/jquery.global.js", "/js/GridView/jquery.dateFormat.js", "/js/MessageBox/jquery.easing.1.3.js",
                     "/js/MessageBox/alertbox.js", "/Modules/AspxCommerce/AspxAttributesManagement/js/AttributesManage.js");
-                IncludeCss("AttributesManage", "/Templates/" + TemplateName + "/css/GridView/tablesort.css", "/Templates/" + TemplateName + "/css/MessageBox/style.css", "/Templates/" + TemplateName + "/css/JQueryUI/jquery.ui.all.css");
+                IncludeCss("AttributesManage", "/Templates/" + TemplateName + "/css/GridView/tablesort.css", "/Templates/" + TemplateName + "/css/MessageBox/style.css");
                 Page.ClientScript.RegisterClientScriptInclude("JQueryFormValidate", ResolveUrl("~/js/FormValidation/jquery.form-validation-and-hints.js"));
                 PortalID = int.Parse(GetPortalID.ToString());
                 StoreID = int.Parse(GetStoreID.ToString());
@@ -58,7 +58,7 @@ public partial class Modules_AspxAttributesManagement_AttributesManage : BaseAdm
                 CultureName = GetCurrentCultureName;
                 UserModuleId = SageUserModuleID;
             }
-           
+
             AddLanguage();
             IncludeLanguageJS();
         }
