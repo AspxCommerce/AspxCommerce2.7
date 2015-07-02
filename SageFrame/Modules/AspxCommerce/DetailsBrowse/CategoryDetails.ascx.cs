@@ -478,6 +478,7 @@ public partial class Modules_AspxDetails_AspxCategoryDetails_CategoryDetails : B
             }
             Page.ClientScript.RegisterArrayDeclaration("arrItemsOptionToBind", json_serializer.Serialize(lstItems));
             string price = "0.00";
+            string listPrice = "0.00";
             foreach (ItemBasicDetailsInfo value in lstItems)
             {
                 string template1 = template;
@@ -507,6 +508,7 @@ public partial class Modules_AspxDetails_AspxCategoryDetails_CategoryDetails : B
 
                 string title = json_serializer.Serialize(value.Name);
                 price = (!string.IsNullOrEmpty(value.Price) ? Convert.ToDecimal(value.Price).ToString("N2") : "0.00");
+                listPrice = (!string.IsNullOrEmpty(value.ListPrice) ? Convert.ToDecimal(value.ListPrice).ToString("N2") : "0.00");
                 Dictionary<string, string> replacements = new Dictionary<string, string>();
                 replacements.Add("${sku}", value.SKU);
                 replacements.Add("${aspxRedirectPath}", aspxRedirectPath);
@@ -522,7 +524,7 @@ public partial class Modules_AspxDetails_AspxCategoryDetails_CategoryDetails : B
                 replacements.Add("${price}", value.Price);
                 if (value.ListPrice != string.Empty)
                 {
-                    replacements.Add("${parseFloat(listPrice).toFixed(2)}", value.ListPrice);
+                    replacements.Add("${parseFloat(listPrice).toFixed(2)}", listPrice);
 
                 }
                 else
