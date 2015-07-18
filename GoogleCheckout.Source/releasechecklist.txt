@@ -1,0 +1,24 @@
+Make sure all unit tests are OK.
+
+Make sure AssemblyInfo.cs has the right version number. 
+
+Recompile the DLL using .NET v2.0.
+
+Make sure these are both installed
+<Warning Text="Sandcastle: http://sandcastle.codeplex.com/" />
+<Warning Text="Sandcastle Help File Builder: http://shfb.codeplex.com/" />
+
+Make the documentation with documentation-Debug.shfbproj
+
+Upload new files to http://code.google.com/p/google-checkout-dotnet-sample-code/downloads/list
+
+Mark old files as Deprecated on the donwnload page.
+
+Add a new tag to the Hg repo.
+
+Update the wiki: http://code.google.com/p/google-checkout-dotnet-sample-code/wiki/Documentation
+
+This next item is not true any more, it is read only
+Make forum post (http://groups.google.com/group/google-checkout-api-dotnet/topics)
+
+Update AssemblyInfo.cs with a new version number and check it in to the trunk.

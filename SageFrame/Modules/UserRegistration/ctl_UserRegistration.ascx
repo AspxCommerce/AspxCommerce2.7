@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ctl_UserRegistration.ascx.cs"
+﻿﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ctl_UserRegistration.ascx.cs"
     Inherits="SageFrame.Modules.UserRegistration.ctl_UserRegistration" %>
 
 <script type="text/javascript">
@@ -10,7 +10,7 @@
                 '<%=Email.UniqueID %>': { email: true }
                 },
                 messages: {
-                    '<%=Email.UniqueID %>': "<br/>Email must be in a correct format."
+                    '<%=Email.UniqueID %>': "Email must be in a correct format."
                 }
             });
 
@@ -23,7 +23,7 @@
         $(pwdID).on("change", function () {
             var len = $(this).val().length;
             if (len < 4 && len != 0) {
-                $(this).after('<label class="sfError" id="lblPassswordLength"><br/>Password must be at least 4 chars long</label>');
+                $(this).after('<label class="sfError" id="lblPassswordLength">Password must be at least 4 chars long</label>');
                 return false;
             }
             else {
@@ -74,7 +74,7 @@
                             <asp:TextBox ID="FirstName" CssClass="sfInputbox" autofocus="autofocus" runat="server"
                                 meta:resourcekey="FirstNameResource1" MaxLength="50"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvFirstName" runat="server" ControlToValidate="FirstName"
-                                Display="Dynamic" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
+                                Display="Static" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
                                 meta:resourcekey="rfvFirstNameResource1"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
@@ -86,7 +86,7 @@
                         <td>
                             <asp:TextBox ID="LastName" CssClass="sfInputbox" runat="server" meta:resourcekey="LastNameResource1" MaxLength="50"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvLastName" runat="server" ControlToValidate="LastName"
-                                Display="Dynamic" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
+                                Display="Static" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
                                 meta:resourcekey="rfvLastNameResource1"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
@@ -98,7 +98,7 @@
                         <td>
                             <asp:TextBox ID="UserName" MaxLength="50" runat="server" CssClass="sfInputbox" meta:resourcekey="UserNameResource1"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvUserNameRequired" runat="server" ControlToValidate="UserName"
-                                Display="Dynamic" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
+                                Display="Static" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
                                 meta:resourcekey="rfvUserNameRequiredResource1"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
@@ -113,7 +113,7 @@
                                 Display="Dynamic" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
                                 meta:resourcekey="rfvEmailRequiredResource1"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="Email"
-                                Display="Dynamic" SetFocusOnError="True" ErrorMessage="*" ValidationGroup="CreateUserWizard1"
+                                Display="Static" SetFocusOnError="True" ErrorMessage="*" ValidationGroup="CreateUserWizard1"
                                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" CssClass="sfError"
                                 meta:resourcekey="revEmailResource1"></asp:RegularExpressionValidator>
                         </td>
@@ -127,7 +127,7 @@
                             <asp:TextBox ID="Password" MaxLength="20" runat="server" TextMode="Password" CssClass="sfInputbox password"
                                 meta:resourcekey="PasswordResource1"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvPasswordRequired" runat="server" ControlToValidate="Password"
-                                Display="Dynamic" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
+                                Display="Static" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
                                 meta:resourcekey="rfvPasswordRequiredResource1"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
@@ -143,7 +143,7 @@
                                 Display="Dynamic" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
                                 meta:resourcekey="rfvConfirmPasswordRequiredResource1"></asp:RequiredFieldValidator>
                             <asp:CompareValidator ID="cvPasswordCompare" runat="server" ControlToCompare="Password"
-                                ControlToValidate="ConfirmPassword" Display="Dynamic" ErrorMessage="*" ValidationGroup="CreateUserWizard1"
+                                ControlToValidate="ConfirmPassword" Display="Static" ErrorMessage="*" ValidationGroup="CreateUserWizard1"
                                 CssClass="sfError" meta:resourcekey="cvPasswordCompareResource1"></asp:CompareValidator>
                         </td>
                     </tr>
@@ -169,9 +169,9 @@
                                 <ContentTemplate>
                                     <asp:TextBox ID="CaptchaValue" runat="server" CssClass="sfInputbox" meta:resourcekey="CaptchaValueResource1"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvCaptchaValueValidator" runat="server" ControlToValidate="CaptchaValue"
-                                        Display="Dynamic" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
+                                        Display="Static" ErrorMessage="*" ValidationGroup="CreateUserWizard1" CssClass="sfError"
                                         meta:resourcekey="rfvCaptchaValueValidatorResource1"></asp:RequiredFieldValidator>
-                                    <%-- <asp:CompareValidator ID="cvCaptchaValue" runat="server" Display="Dynamic" ErrorMessage="*"
+                                    <%-- <asp:CompareValidator ID="cvCaptchaValue" runat="server" Display="Static" ErrorMessage="*"
                                                 ValidationGroup="CreateUserWizard1" ControlToValidate="CaptchaValue"
                                                 CssClass="sfError" meta:resourcekey="cvCaptchaValueResource1"></asp:CompareValidator>--%>
                                 </ContentTemplate>

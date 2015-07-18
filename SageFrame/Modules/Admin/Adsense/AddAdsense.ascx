@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AddAdsense.ascx.cs" Inherits="SageFrame.Modules.Admin.Adsense.AddAdsense" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <%@ Register Src="Adsense.ascx" TagName="Adsense" TagPrefix="uc1" %>
-<%@ Register Assembly="SFE.GoogleAdUnit" Namespace="SFE.GoogleAdUnit" TagPrefix="wwc" %>
+<%@ Register Assembly="SageFrame.GoogleAdUnit" Namespace="SageFrame.GoogleAdUnit" TagPrefix="wwc" %>
 <asp:Panel ID="pnlAdsenseEdit" runat="server" meta:resourcekey="pnlAdsenseEditResource1">
     <div class="sfFormwrapper">
         <table width="100%" cellpadding="0" cellspacing="0">

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ProjectSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectName>Google Checkout</ProjectName>
+  <SatisfactoryCoverageThreshold>95</SatisfactoryCoverageThreshold>
+  <SatisfactoryUnvisitedSequencePoints>0</SatisfactoryUnvisitedSequencePoints>
+  <SatisfactoryFunctionThreshold>80</SatisfactoryFunctionThreshold>
+  <TreeReportStyle>SequencePointCoveragePercentage</TreeReportStyle>
+  <TreeSortStyle>Name</TreeSortStyle>
+  <TreeFilterStyle>None</TreeFilterStyle>
+  <CoverageExclusions />
+  <ModuleThresholds />
+  <NCoverInfo>
+    <NCoverExe>C:\Dev\NCover\Main\Debug\NCover.Console.exe</NCoverExe>
+    <AppToProfileExe>C:\Program Files\NUnit 2.4.8\bin\nunit-console.exe </AppToProfileExe>
+    <AppToProfileArgs>E:\Work\Google\Checkout\Main\google-checkout-dotnet-sample-code\unittests\GoogleCheckoutUnitTests.nunit</AppToProfileArgs>
+    <CoverageFile>Coverage.xml</CoverageFile>
+    <CoverageHtmlPath />
+    <LogLevel>Normal</LogLevel>
+    <LogFile>Coverage.log</LogFile>
+    <WorkingDirectory>e:\Work\Google\Checkout\Main\google-checkout-dotnet-sample-code\unittests</WorkingDirectory>
+    <ExcludeAttributes />
+    <ProfileIIS>false</ProfileIIS>
+    <ProfileService />
+    <AssemblyList />
+    <RegisterCoverLib>true</RegisterCoverLib>
+    <ProfiledProcessModule />
+    <ExcludeAutoGenCode>true</ExcludeAutoGenCode>
+    <CoverageType>SequencePoint Branch</CoverageType>
+    <SymbolSearchPolicy>15</SymbolSearchPolicy>
+    <AdditionalArgs />
+    <TypeExclusionPatterns />
+    <MethodExclusionPatterns />
+    <FileExclusionPatterns />
+    <ServiceTimeout>0</ServiceTimeout>
+  </NCoverInfo>
+  <KeepInSyncWithExportedPath>false</KeepInSyncWithExportedPath>
+  <ProjectGuid>fe19da24-3d60-41aa-9e6c-e06d560a5fe9</ProjectGuid>
+</ProjectSetting>

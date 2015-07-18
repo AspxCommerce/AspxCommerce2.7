@@ -1,0 +1,17 @@
+glob:lib/GCheckout.xml
+glob:lib/bin/*
+glob:lib/obj/*
+glob:unittests/bin/*
+glob:unittests/obj/*
+glob:unittests/GoogleCheckoutUnitTests.suo
+glob:*.suo
+glob:*/process_notifications_asynchronously/NotificationQueue/obj/
+glob:*/process_notifications_asynchronously/Processor/obj/*
+glob:*/process_notifications_asynchronously/Processor/bin/NotificationProcessor.vshost.*
+glob:*/obj/*
+glob:*/notification_sender/bin/notification_sender.vshost.*
+glob:*/notification_sender/obj/*
+glob:*.user
+glob:*/Processor/obj/*
+syntax: glob
+Help/*

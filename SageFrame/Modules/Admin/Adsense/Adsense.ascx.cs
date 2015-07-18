@@ -14,7 +14,7 @@ using System.Web.UI.WebControls;
 using SageFrame.Web;
 using SageFrame.Framework;
 using SageFrame.GoogleAdsense;
-using SFE.GoogleAdUnit;
+using SageFrame.GoogleAdUnit;
 #endregion
 
 namespace SageFrame.Modules.Admin.Adsense
